@@ -53,5 +53,11 @@ namespace SisGesCom
             frmEntradaCombustible ofrmEntradaCombustible = new frmEntradaCombustible();
             ofrmEntradaCombustible.Show();
         }
+
+        private void buttonItem14_Click(object sender, EventArgs e)
+        {
+            frmSalidaCombustible ofrmSalidaCombustible = new frmSalidaCombustible();
+            ofrmSalidaCombustible.Show();
+        }
     }
 }
