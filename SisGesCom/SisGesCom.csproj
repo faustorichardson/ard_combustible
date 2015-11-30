@@ -137,6 +137,12 @@
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSalidaCombustible.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalidaCombustible.Designer.cs">
+      <DependentUpon>frmSalidaCombustible.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSolicitudCombustible.cs">
       <SubType>Form</SubType>
     </Compile>
