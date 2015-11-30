@@ -178,6 +178,9 @@
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSalidaCombustible.resx">
+      <DependentUpon>frmSalidaCombustible.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSolicitudCombustible.resx">
       <DependentUpon>frmSolicitudCombustible.cs</DependentUpon>
     </EmbeddedResource>

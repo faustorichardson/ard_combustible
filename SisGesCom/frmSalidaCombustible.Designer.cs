@@ -28,9 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // lblTituloForm
+            // 
+            this.lblTituloForm.Size = new System.Drawing.Size(364, 22);
+            this.lblTituloForm.Text = "Pantalla de Registro Despacho Combustible";
+            // 
+            // frmSalidaCombustible
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(812, 305);
+            this.Name = "frmSalidaCombustible";
             this.Text = "frmSalidaCombustible";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
