@@ -118,6 +118,46 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="cmdUltimaPag.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk1mAQAAAAAAAHYAAAAoAAAAFAAAABQAAAABAAQAAAAAAAAAAAATCwAAEwsAABAAAAAQAAAAAAAA/wAA
+        gP8AgAD/AICA/4AAAP+AAID/gIAA/4CAgP/AwMD/AAD//wD/AP8A/////wAA//8A/////wD/////////
+        //////////8AAP////////////8AAP////////////8AAP///0////9E//8AAP///0T///9E//8AAP//
+        /0RP//9E//8AAP///0RE//9E//8AAP///0RET/9E//8AAP///0RERP9E//8AAP///0RERE9E//8AAP//
+        /0RERP9E//8AAP///0RET/9E//8AAP///0RE//9E//8AAP///0RP//9E//8AAP///0T///9E//8AAP//
+        /0////9E//8AAP////////////8AAP////////////8AAP////////////8AAP////////////8AAA==
+</value>
+  </data>
+  <data name="cmdSiguiente.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk1mAQAAAAAAAHYAAAAoAAAAFAAAABQAAAABAAQAAAAAAAAAAAATCwAAEwsAABAAAAAQAAAAAAAA/wAA
+        gP8AgAD/AICA/4AAAP+AAID/gIAA/4CAgP/AwMD/AAD//wD/AP8A/////wAA//8A/////wD/////////
+        //////////8AAP////////////8AAP////////////8AAP///0////////8AAP///0T///////8AAP//
+        /0RP//////8AAP///0RE//////8AAP///0RET/////8AAP///0RERP////8AAP///0RERE////8AAP//
+        /0RERP////8AAP///0RET/////8AAP///0RE//////8AAP///0RP//////8AAP///0T///////8AAP//
+        /0////////8AAP////////////8AAP////////////8AAP////////////8AAP////////////8AAA==
+</value>
+  </data>
+  <data name="cmdPrimeraPag.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk1mAQAAAAAAAHYAAAAoAAAAFAAAABQAAAABAAQAAAAAAAAAAAATCwAAEwsAABAAAAAQAAAAAAAA/wAA
+        gP8AgAD/AICA/4AAAP+AAID/gIAA/4CAgP/AwMD/AAD//wD/AP8A/////wAA//8A/////wD/////////
+        //////////8AAP////////////8AAP////////////8AAP//RP////T///8AAP//RP///0T///8AAP//
+        RP//9ET///8AAP//RP//RET///8AAP//RP/0RET///8AAP//RP9ERET///8AAP//RPRERET///8AAP//
+        RP9ERET///8AAP//RP/0RET///8AAP//RP//RET///8AAP//RP//9ET///8AAP//RP///0T///8AAP//
+        RP////T///8AAP////////////8AAP////////////8AAP////////////8AAP////////////8AAA==
+</value>
+  </data>
+  <data name="cmdAnterior.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk1mAQAAAAAAAHYAAAAoAAAAFAAAABQAAAABAAQAAAAAAAAAAAATCwAAEwsAABAAAAAQAAAAAAAA/wAA
+        gP8AgAD/AICA/4AAAP+AAID/gIAA/4CAgP/AwMD/AAD//wD/AP8A/////wAA//8A/////wD/////////
+        //////////8AAP////////////8AAP////////////8AAP////////T///8AAP///////0T///8AAP//
+        ////9ET///8AAP//////RET///8AAP/////0RET///8AAP////9ERET///8AAP////RERET///8AAP//
+        //9ERET///8AAP/////0RET///8AAP//////RET///8AAP//////9ET///8AAP///////0T///8AAP//
+        //////T///8AAP////////////8AAP////////////8AAP////////////8AAP////////////8AAA==
+</value>
+  </data>
   <data name="cmdZoom.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
@@ -171,44 +211,21 @@
         ////i4v/C2+bC2+bC2+b////
 </value>
   </data>
-  <data name="cmdUltimaPag.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="cmdSalir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        Qk1mAQAAAAAAAHYAAAAoAAAAFAAAABQAAAABAAQAAAAAAAAAAAATCwAAEwsAABAAAAAQAAAAAAAA/wAA
-        gP8AgAD/AICA/4AAAP+AAID/gIAA/4CAgP/AwMD/AAD//wD/AP8A/////wAA//8A/////wD/////////
-        //////////8AAP////////////8AAP////////////8AAP///0////9E//8AAP///0T///9E//8AAP//
-        /0RP//9E//8AAP///0RE//9E//8AAP///0RET/9E//8AAP///0RERP9E//8AAP///0RERE9E//8AAP//
-        /0RERP9E//8AAP///0RET/9E//8AAP///0RE//9E//8AAP///0RP//9E//8AAP///0T///9E//8AAP//
-        /0////9E//8AAP////////////8AAP////////////8AAP////////////8AAP////////////8AAA==
-</value>
-  </data>
-  <data name="cmdSiguiente.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        Qk1mAQAAAAAAAHYAAAAoAAAAFAAAABQAAAABAAQAAAAAAAAAAAATCwAAEwsAABAAAAAQAAAAAAAA/wAA
-        gP8AgAD/AICA/4AAAP+AAID/gIAA/4CAgP/AwMD/AAD//wD/AP8A/////wAA//8A/////wD/////////
-        //////////8AAP////////////8AAP////////////8AAP///0////////8AAP///0T///////8AAP//
-        /0RP//////8AAP///0RE//////8AAP///0RET/////8AAP///0RERP////8AAP///0RERE////8AAP//
-        /0RERP////8AAP///0RET/////8AAP///0RE//////8AAP///0RP//////8AAP///0T///////8AAP//
-        /0////////8AAP////////////8AAP////////////8AAP////////////8AAP////////////8AAA==
-</value>
-  </data>
-  <data name="cmdPrimeraPag.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        Qk1mAQAAAAAAAHYAAAAoAAAAFAAAABQAAAABAAQAAAAAAAAAAAATCwAAEwsAABAAAAAQAAAAAAAA/wAA
-        gP8AgAD/AICA/4AAAP+AAID/gIAA/4CAgP/AwMD/AAD//wD/AP8A/////wAA//8A/////wD/////////
-        //////////8AAP////////////8AAP////////////8AAP//RP////T///8AAP//RP///0T///8AAP//
-        RP//9ET///8AAP//RP//RET///8AAP//RP/0RET///8AAP//RP9ERET///8AAP//RPRERET///8AAP//
-        RP9ERET///8AAP//RP/0RET///8AAP//RP//RET///8AAP//RP//9ET///8AAP//RP///0T///8AAP//
-        RP////T///8AAP////////////8AAP////////////8AAP////////////8AAP////////////8AAA==
-</value>
-  </data>
-  <data name="cmdAnterior.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        Qk1mAQAAAAAAAHYAAAAoAAAAFAAAABQAAAABAAQAAAAAAAAAAAATCwAAEwsAABAAAAAQAAAAAAAA/wAA
-        gP8AgAD/AICA/4AAAP+AAID/gIAA/4CAgP/AwMD/AAD//wD/AP8A/////wAA//8A/////wD/////////
-        //////////8AAP////////////8AAP////////////8AAP////////T///8AAP///////0T///8AAP//
-        ////9ET///8AAP//////RET///8AAP/////0RET///8AAP////9ERET///8AAP////RERET///8AAP//
-        //9ERET///8AAP/////0RET///8AAP//////RET///8AAP//////9ET///8AAP///////0T///8AAP//
-        //////T///8AAP////////////8AAP////////////8AAP////////////8AAP////////////8AAA==
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAApBJREFUOE+Vk1lIlGEYhf9xSU2dMrECywrK1MJd1Kw0tMVC08CmXEYLMZdKM5dq
+        SEQxFEwnxxUtXFtIC8NSsIXIrSDzwjBNGpfcEjII0a6e/gtLhMnqwLn4XvieF17OEZZTVoDAFU+BFB+B
+        hdHfVXzKAGWwgCpMh/Zrlrwp9uR5ti3NCnMaE6Xcj9WhKlrK9WAdzdDLRwwIdzMhVdz6sUHO5LdZpifH
+        mfr6mbGRt6jfNzHdeJTauDV/Bhx3XMu53QK9DyOYUZYxV1DGbE09c3cfMd7QxofWfOriTTUD0g7rEepk
+        RoyHQPftIGaSFPwoKOZ7eCTz5TeZzytB/fAWpQkbFgErL+n9fiTItPB1MybWSUJXmTejTa1M1TTwpfkl
+        U+V1zDx9zWjnY1SR0kWAyU19NlauxejFFvxzzQms8ybAW48u8YgTzyIZ77jI0Mtkhl8pGGpPZ/CBHGWI
+        wSLAItMU2wcWBDxzJ/ZdMKqRdFKfyGhNt2C0aj+fqg8wUePCRJ0bk7WuqMvsyTlptPQGWgm6uNY6Ims5
+        SEpPNL7xltw7Y0xfpZzOwhO0ZVkxcceLkWoPPhQ5kHFMfyngl7yjVuAQZIr/Vm3qz5rxPHEdFSFSWtKs
+        GatxR13hQm+eDQo/Xc2AnCCB085GhDiLoYk3oydXDNFVKwZKHBgsFV1iT3f2NpIOaWkGFARLiPFahcxR
+        SnXUaoZL7VCL7lftpO/GDvoLbHidsYnzPhLNgKJwLaL3SjlmZ0J5hDGDN6zpU4rOF523nQGlFR1irKPF
+        jix8WarCMAmKI/rE7TOkXK5Pb+ZmusWNb9LMabu8nhfJZtyPMkS+6x8KpgqVUByqS65Mm8xAEewncOGA
+        QMSe/2jn8hKEn8d5fCurPboGAAAAAElFTkSuQmCC
 </value>
   </data>
 </root>
