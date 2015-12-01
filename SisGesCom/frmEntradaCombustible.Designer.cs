@@ -48,6 +48,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
@@ -55,8 +57,8 @@
             // 
             // lblTituloForm
             // 
-            this.lblTituloForm.Size = new System.Drawing.Size(392, 22);
-            this.lblTituloForm.Text = "Formulario de Registro Entrada de Combustible";
+            this.label1.Size = new System.Drawing.Size(392, 22);
+            this.label1.Text = "Formulario de Registro Entrada de Combustible";
             // 
             // groupBox4
             // 
@@ -68,7 +70,7 @@
             this.groupBox4.Controls.Add(this.btnEditar);
             this.groupBox4.Controls.Add(this.btnGrabar);
             this.groupBox4.Controls.Add(this.btnNuevo);
-            this.groupBox4.Location = new System.Drawing.Point(9, 262);
+            this.groupBox4.Location = new System.Drawing.Point(9, 305);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(795, 65);
             this.groupBox4.TabIndex = 50;
@@ -206,15 +208,15 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(209, 56);
+            this.label2.Location = new System.Drawing.Point(273, 56);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 16);
+            this.label2.Size = new System.Drawing.Size(36, 16);
             this.label2.TabIndex = 54;
-            this.label2.Text = "No. Solicitud:";
+            this.label2.Text = "No.:";
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(315, 154);
+            this.richTextBox1.Location = new System.Drawing.Point(315, 186);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(400, 62);
             this.richTextBox1.TabIndex = 65;
@@ -224,7 +226,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(264, 154);
+            this.label5.Location = new System.Drawing.Point(264, 186);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 16);
             this.label5.TabIndex = 64;
@@ -232,7 +234,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(315, 119);
+            this.textBox1.Location = new System.Drawing.Point(315, 151);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(92, 20);
             this.textBox1.TabIndex = 63;
@@ -241,7 +243,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(235, 121);
+            this.label4.Location = new System.Drawing.Point(235, 153);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 16);
             this.label4.TabIndex = 62;
@@ -250,7 +252,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(315, 85);
+            this.comboBox1.Location = new System.Drawing.Point(315, 117);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(190, 21);
             this.comboBox1.TabIndex = 61;
@@ -259,37 +261,57 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(175, 88);
+            this.label3.Location = new System.Drawing.Point(175, 120);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(134, 16);
             this.label3.TabIndex = 60;
             this.label3.Text = "Tipo Combustible:";
             // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(315, 261);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(190, 21);
+            this.comboBox3.TabIndex = 69;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(195, 264);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(114, 16);
+            this.label7.TabIndex = 68;
+            this.label7.Text = "Autorizado Por:";
+            // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(315, 228);
+            this.comboBox2.Location = new System.Drawing.Point(315, 85);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(190, 21);
-            this.comboBox2.TabIndex = 67;
+            this.comboBox2.Size = new System.Drawing.Size(258, 21);
+            this.comboBox2.TabIndex = 71;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(195, 231);
+            this.label6.Location = new System.Drawing.Point(195, 88);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(114, 16);
-            this.label6.TabIndex = 66;
-            this.label6.Text = "Autorizado Por:";
+            this.label6.TabIndex = 70;
+            this.label6.Text = "Despachado a:";
             // 
             // frmEntradaCombustible
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 341);
+            this.ClientSize = new System.Drawing.Size(812, 387);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox1);
@@ -303,7 +325,7 @@
             this.Controls.Add(this.groupBox4);
             this.Name = "frmEntradaCombustible";
             this.Text = "frmEntradaCombustible";
-            this.Controls.SetChildIndex(this.lblTituloForm, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.groupBox4, 0);
             this.Controls.SetChildIndex(this.dateTimePicker1, 0);
             this.Controls.SetChildIndex(this.label1, 0);
@@ -315,6 +337,8 @@
             this.Controls.SetChildIndex(this.textBox1, 0);
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.richTextBox1, 0);
+            this.Controls.SetChildIndex(this.label7, 0);
+            this.Controls.SetChildIndex(this.comboBox3, 0);
             this.Controls.SetChildIndex(this.label6, 0);
             this.Controls.SetChildIndex(this.comboBox2, 0);
             this.groupBox4.ResumeLayout(false);
@@ -344,6 +368,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label6;
     }

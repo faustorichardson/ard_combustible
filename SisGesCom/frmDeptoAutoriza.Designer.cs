@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDeptoAutoriza));
-            this.txtTipo = new System.Windows.Forms.TextBox();
+            this.txtDepartamento = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,19 +47,19 @@
             // 
             // lblTituloForm
             // 
-            this.lblTituloForm.Size = new System.Drawing.Size(361, 22);
-            this.lblTituloForm.Text = "Formulario Registro Departamento Autoriza";
+            this.lblTituloForm.Size = new System.Drawing.Size(366, 22);
+            this.lblTituloForm.Text = "Pantalla de Registro Departamento Autoriza";
             // 
-            // txtTipo
+            // txtDepartamento
             // 
-            this.txtTipo.Location = new System.Drawing.Point(276, 117);
-            this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(223, 20);
-            this.txtTipo.TabIndex = 57;
+            this.txtDepartamento.Location = new System.Drawing.Point(276, 106);
+            this.txtDepartamento.Name = "txtDepartamento";
+            this.txtDepartamento.Size = new System.Drawing.Size(322, 20);
+            this.txtDepartamento.TabIndex = 57;
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(276, 82);
+            this.txtCodigo.Location = new System.Drawing.Point(276, 70);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(66, 20);
             this.txtCodigo.TabIndex = 56;
@@ -68,17 +68,17 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(226, 117);
+            this.label2.Location = new System.Drawing.Point(160, 108);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
+            this.label2.Size = new System.Drawing.Size(110, 16);
             this.label2.TabIndex = 55;
-            this.label2.Text = "Tipo:";
+            this.label2.Text = "Departamento:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(208, 82);
+            this.label1.Location = new System.Drawing.Point(208, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 16);
             this.label1.TabIndex = 54;
@@ -94,7 +94,7 @@
             this.groupBox4.Controls.Add(this.btnEditar);
             this.groupBox4.Controls.Add(this.btnGrabar);
             this.groupBox4.Controls.Add(this.btnNuevo);
-            this.groupBox4.Location = new System.Drawing.Point(8, 158);
+            this.groupBox4.Location = new System.Drawing.Point(8, 147);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(795, 65);
             this.groupBox4.TabIndex = 53;
@@ -112,6 +112,7 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnImprimir
             // 
@@ -125,6 +126,7 @@
             this.btnImprimir.Text = "Listar";
             this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnSalir
             // 
@@ -138,6 +140,7 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnCancelar
             // 
@@ -151,6 +154,7 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnEliminar
             // 
@@ -164,6 +168,7 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -177,6 +182,7 @@
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnGrabar
             // 
@@ -190,6 +196,7 @@
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // btnNuevo
             // 
@@ -203,13 +210,14 @@
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // frmDeptoAutoriza
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 238);
-            this.Controls.Add(this.txtTipo);
+            this.ClientSize = new System.Drawing.Size(812, 225);
+            this.Controls.Add(this.txtDepartamento);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -217,12 +225,13 @@
             this.Name = "frmDeptoAutoriza";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDeptoAutoriza";
+            this.Load += new System.EventHandler(this.frmDeptoAutoriza_Load);
             this.Controls.SetChildIndex(this.lblTituloForm, 0);
             this.Controls.SetChildIndex(this.groupBox4, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.txtCodigo, 0);
-            this.Controls.SetChildIndex(this.txtTipo, 0);
+            this.Controls.SetChildIndex(this.txtDepartamento, 0);
             this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -231,7 +240,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtTipo;
+        private System.Windows.Forms.TextBox txtDepartamento;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

@@ -36,3 +36,4 @@ C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\obj\x86\Debug\SisGesCom.frm
 C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\obj\x86\Debug\SisGesCom.Properties.Resources.resources
 C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\obj\x86\Debug\SisGesCom.frmPrinter.resources

@@ -14,7 +14,7 @@ namespace SisGesCom
     public partial class frmLogin : Form
     {
 
-        int nIntentos = 0;
+        //int nIntentos = 0;
         public static string cUsuarioActual = "";
         public static int nNivel = 0;
 

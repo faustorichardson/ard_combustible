@@ -47,8 +47,8 @@
             // 
             // lblTituloForm
             // 
-            this.lblTituloForm.Size = new System.Drawing.Size(401, 22);
-            this.lblTituloForm.Text = "Formulario de Registro de Tipos de Beneficiarios";
+            this.label1.Size = new System.Drawing.Size(401, 22);
+            this.label1.Text = "Formulario de Registro de Tipos de Beneficiarios";
             // 
             // groupBox4
             // 
@@ -217,7 +217,7 @@
             this.Name = "frmTipoBeneficiario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTipoBeneficiario";
-            this.Controls.SetChildIndex(this.lblTituloForm, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.groupBox4, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);

@@ -53,8 +53,8 @@
             // 
             // lblTituloForm
             // 
-            this.lblTituloForm.Size = new System.Drawing.Size(372, 22);
-            this.lblTituloForm.Text = "Formulario Registro Solicitud de Combustible";
+            this.label1.Size = new System.Drawing.Size(372, 22);
+            this.label1.Text = "Formulario Registro Solicitud de Combustible";
             // 
             // groupBox4
             // 
@@ -282,7 +282,7 @@
             this.Controls.Add(this.groupBox4);
             this.Name = "frmSolicitudCombustible";
             this.Text = "frmSolicitudCombustible";
-            this.Controls.SetChildIndex(this.lblTituloForm, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.groupBox4, 0);
             this.Controls.SetChildIndex(this.dateTimePicker1, 0);
             this.Controls.SetChildIndex(this.label1, 0);
