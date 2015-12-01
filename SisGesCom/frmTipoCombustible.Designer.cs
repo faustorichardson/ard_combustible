@@ -47,8 +47,8 @@
             // 
             // lblTituloForm
             // 
-            this.label1.Size = new System.Drawing.Size(346, 22);
-            this.label1.Text = "Formulario Registro Tipos de Combustible";
+            this.lblTituloForm.Size = new System.Drawing.Size(342, 22);
+            this.lblTituloForm.Text = "Pantalla de Registro Tipo de Combustible";
             // 
             // groupBox4
             // 
@@ -226,7 +226,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTipoCombustible";
             this.Load += new System.EventHandler(this.frmTipoCombustible_Load);
-            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.lblTituloForm, 0);
             this.Controls.SetChildIndex(this.groupBox4, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);

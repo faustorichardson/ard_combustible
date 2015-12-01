@@ -118,6 +118,11 @@
   <ItemGroup>
     <Compile Include="clsConexion.cs" />
     <Compile Include="clsExceptionLog.cs" />
+    <Compile Include="dsDeptoAutoriza.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsDeptoAutoriza.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsTiposCombustibles.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -185,6 +190,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rptListadoDeptoAutoriza.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptListadoDeptoAutoriza.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="rptTiposCombustibles.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -231,11 +242,26 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="rptListadoDeptoAutoriza.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptListadoDeptoAutoriza.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="rptTiposCombustibles.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptTiposCombustibles.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="App.config" />
+    <None Include="dsDeptoAutoriza.xsc">
+      <DependentUpon>dsDeptoAutoriza.xsd</DependentUpon>
+    </None>
+    <None Include="dsDeptoAutoriza.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsDeptoAutoriza.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsDeptoAutoriza.xss">
+      <DependentUpon>dsDeptoAutoriza.xsd</DependentUpon>
+    </None>
     <None Include="dsTiposCombustibles.xsc">
       <DependentUpon>dsTiposCombustibles.xsd</DependentUpon>
     </None>

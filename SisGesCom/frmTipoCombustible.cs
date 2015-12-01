@@ -417,7 +417,7 @@ namespace SisGesCom
                     //nombre del parametro en CR (Crystal Reports)
                     oParametrosCR[0].Name = "cUsuario";
                     //nombre del TITULO DEL INFORME
-                    cTitulo = "LISTADO DE COMBUSTIBLES";
+                    cTitulo = "LISTADO DE TIPOS DE COMBUSTIBLES";
 
                     //6to Instanciamos nuestro REPORTE
                     //Reportes.ListadoDoctores oListado = new Reportes.ListadoDoctores();
