@@ -123,6 +123,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsDeptoAutoriza.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dsDeptoBeneficiario.cs">
+      <DependentUpon>dsDeptoBeneficiario.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dsDeptoBeneficiario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsDeptoBeneficiario.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsTiposCombustibles.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -196,6 +205,12 @@
       <DependentUpon>rptListadoDeptoAutoriza.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="rptListadoDeptoBeneficiario.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptListadoDeptoBeneficiario.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="rptTiposCombustibles.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -246,6 +261,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptListadoDeptoAutoriza.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="rptListadoDeptoBeneficiario.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptListadoDeptoBeneficiario.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="rptTiposCombustibles.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptTiposCombustibles.cs</LastGenOutput>
@@ -261,6 +280,17 @@
     </None>
     <None Include="dsDeptoAutoriza.xss">
       <DependentUpon>dsDeptoAutoriza.xsd</DependentUpon>
+    </None>
+    <None Include="dsDeptoBeneficiario.xsc">
+      <DependentUpon>dsDeptoBeneficiario.xsd</DependentUpon>
+    </None>
+    <None Include="dsDeptoBeneficiario.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsDeptoBeneficiario.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsDeptoBeneficiario.xss">
+      <DependentUpon>dsDeptoBeneficiario.xsd</DependentUpon>
     </None>
     <None Include="dsTiposCombustibles.xsc">
       <DependentUpon>dsTiposCombustibles.xsd</DependentUpon>
