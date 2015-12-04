@@ -60,7 +60,7 @@
             this.groupBox4.Controls.Add(this.btnEditar);
             this.groupBox4.Controls.Add(this.btnGrabar);
             this.groupBox4.Controls.Add(this.btnNuevo);
-            this.groupBox4.Location = new System.Drawing.Point(9, 143);
+            this.groupBox4.Location = new System.Drawing.Point(9, 129);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(795, 65);
             this.groupBox4.TabIndex = 49;
@@ -180,14 +180,14 @@
             // 
             // txtDepartamento
             // 
-            this.txtDepartamento.Location = new System.Drawing.Point(329, 105);
+            this.txtDepartamento.Location = new System.Drawing.Point(329, 91);
             this.txtDepartamento.Name = "txtDepartamento";
             this.txtDepartamento.Size = new System.Drawing.Size(293, 20);
             this.txtDepartamento.TabIndex = 56;
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(329, 70);
+            this.txtCodigo.Location = new System.Drawing.Point(329, 56);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(66, 20);
             this.txtCodigo.TabIndex = 55;
@@ -196,7 +196,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(182, 107);
+            this.label2.Location = new System.Drawing.Point(182, 93);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(141, 16);
             this.label2.TabIndex = 54;
@@ -206,7 +206,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(261, 70);
+            this.label1.Location = new System.Drawing.Point(261, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 16);
             this.label1.TabIndex = 53;
@@ -216,14 +216,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 227);
+            this.ClientSize = new System.Drawing.Size(812, 210);
             this.Controls.Add(this.txtDepartamento);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox4);
             this.Name = "frmTipoBeneficiario";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTipoBeneficiario";
             this.Load += new System.EventHandler(this.frmTipoBeneficiario_Load);
             this.Controls.SetChildIndex(this.lblTituloForm, 0);

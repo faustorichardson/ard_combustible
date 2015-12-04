@@ -137,6 +137,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsTiposCombustibles.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,12 @@
     </Compile>
     <Compile Include="frmEntradaCombustible.Designer.cs">
       <DependentUpon>frmEntradaCombustible.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInformaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInformaciones.Designer.cs">
+      <DependentUpon>frmInformaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -217,6 +229,9 @@
       <DependentUpon>rptTiposCombustibles.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBase.resx">
       <DependentUpon>frmBase.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEntradaCombustible.resx">
       <DependentUpon>frmEntradaCombustible.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInformaciones.resx">
+      <DependentUpon>frmInformaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

@@ -64,5 +64,17 @@ namespace SisGesCom
         {
             Application.Exit();
         }
+
+        private void buttonItem9_Click(object sender, EventArgs e)
+        {
+            frmAbout ofrmAbout = new frmAbout();
+            ofrmAbout.Show();
+        }
+
+        private void buttonItem2_Click(object sender, EventArgs e)
+        {
+            frmInformaciones ofrmInformaciones = new frmInformaciones();
+            ofrmInformaciones.Show();
+        }
     }
 }

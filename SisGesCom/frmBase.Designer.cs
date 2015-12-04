@@ -54,6 +54,7 @@
             this.Controls.Add(this.lblTituloForm);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmBase";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBase";
             this.ResumeLayout(false);
             this.PerformLayout();

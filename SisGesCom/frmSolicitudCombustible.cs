@@ -16,9 +16,59 @@ namespace SisGesCom
             InitializeComponent();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void frmSolicitudCombustible_Load(object sender, EventArgs e)
         {
 
         }
+
+        private void Limpiar()
+        {
+        }
+
+        private void ProximoCodigo()
+        {
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGrabar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+
+        }        
+
+
     }
 }

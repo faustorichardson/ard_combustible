@@ -100,8 +100,8 @@
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.CaptionVisible = true;
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel2);
             this.ribbonControl1.Controls.Add(this.ribbonPanel5);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel2);
             this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -393,6 +393,7 @@
             this.buttonItem2.Name = "buttonItem2";
             this.buttonItem2.SubItemsExpandWidth = 14;
             this.buttonItem2.Text = "Informaciones del Sistema";
+            this.buttonItem2.Click += new System.EventHandler(this.buttonItem2_Click);
             // 
             // ribbonBar7
             // 
@@ -640,6 +641,7 @@
             this.buttonItem9.Name = "buttonItem9";
             this.buttonItem9.SubItemsExpandWidth = 14;
             this.buttonItem9.Text = "Info";
+            this.buttonItem9.Click += new System.EventHandler(this.buttonItem9_Click);
             // 
             // buttonItem10
             // 

@@ -57,8 +57,8 @@
             // 
             // lblTituloForm
             // 
-            this.label1.Size = new System.Drawing.Size(392, 22);
-            this.label1.Text = "Formulario de Registro Entrada de Combustible";
+            this.lblTituloForm.Size = new System.Drawing.Size(397, 22);
+            this.lblTituloForm.Text = "Pantalla de Registro de Entrada de Combustible";
             // 
             // groupBox4
             // 
@@ -325,7 +325,7 @@
             this.Controls.Add(this.groupBox4);
             this.Name = "frmEntradaCombustible";
             this.Text = "frmEntradaCombustible";
-            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.lblTituloForm, 0);
             this.Controls.SetChildIndex(this.groupBox4, 0);
             this.Controls.SetChildIndex(this.dateTimePicker1, 0);
             this.Controls.SetChildIndex(this.label1, 0);
