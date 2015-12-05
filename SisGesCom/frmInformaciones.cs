@@ -131,7 +131,7 @@ namespace SisGesCom
                     break;
 
                 case "Editar":
-                    this.btnGrabar.Enabled = false;
+                    this.btnGrabar.Enabled = true;
                     this.btnEditar.Enabled = false;                    
                     this.btnCancelar.Enabled = false;
                     this.btnSalir.Enabled = true;
@@ -169,6 +169,91 @@ namespace SisGesCom
 
         private void BuscarInformaciones()
         {
+                        
+            try
+            {
+                // Step 1 - Conexion
+                MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
+
+                // Step 2 - creating the command object
+                MySqlCommand MyCommand = MyConexion.CreateCommand();
+
+                // Step 3 - creating the commandtext
+                MyCommand.CommandText = "SELECT cdtegral, cdtegral_rango, cdtegral_nombre, cdtegral_apellido, " +
+                    "enccomb, enccomb_rango, enccomb_nombre, enccomb_apellido FROM info WHERE id = 1";
+
+                // Step 4 - connection open
+                MyConexion.Open();
+
+                // Step 5 - Creating the DataReader                    
+                MySqlDataReader MyReader = MyCommand.ExecuteReader();
+
+                // Step 6 - Verifying if Reader has rows
+                if (MyReader.HasRows)
+                {
+                    while (MyReader.Read())
+                    {
+                        // Informaciones del Comandante General
+                        
+                        txtCedulaJefe.Text = MyReader["cdtegral"].ToString();
+                        if (txtCedulaJefe.Text == "")
+                        {
+                            break;
+                        }
+
+                        cmbRangoJefe.SelectedValue = MyReader["cdtegral_rango"].ToString();
+                        if (cmbRangoJefe.SelectedValue.ToString() == "")
+                        {
+                            break;
+                        }
+
+                        txtNombreJefe.Text = MyReader["cdtegral_nombre"].ToString();
+                        if (txtNombreJefe.Text == "")
+                        {
+                            break;
+                        }
+
+                        txtApellidoJefe.Text = MyReader["cdtegral_apellido"].ToString();
+                        if (txtApellidoJefe.Text == "")
+                        {
+                            break;
+                        }
+
+                        // Informaciones del Encargado Combustible
+
+                        txtCedulaEncargado.Text = MyReader["enccomb"].ToString();
+                        if (txtCedulaEncargado.Text == "")
+                        {
+                            break;
+                        }
+                        
+                        cmbRangoEncargado.SelectedValue = MyReader["enccomb_rango"].ToString();
+                        if (cmbRangoEncargado.SelectedValue.ToString() == "")
+                        {
+                            break;
+                        }
+
+                        txtNombreEncargado.Text = MyReader["enccomb_nombre"].ToString();
+                        if (txtNombreEncargado.Text == "")
+                        {
+                            break;
+                        }
+
+                        txtApellidoEncargado.Text = MyReader["enccomb_apellido"].ToString();
+                        if (txtApellidoEncargado.Text == "")
+                        {
+                            break;
+                        }
+
+                    }                   
+                }
+
+            }
+            catch (Exception myEx)
+            {
+                MessageBox.Show(myEx.Message);
+                throw;
+            }            
 
         }
 
@@ -183,9 +268,17 @@ namespace SisGesCom
                 MySqlCommand myCommand = MyConexion.CreateCommand();
 
                 // Step 3 - Comando a ejecutar
-                myCommand.CommandText = "UPDATE info SET cdtegral = @cdtegral, enccomb = @enccomb WHERE id = 1";
+                myCommand.CommandText = "UPDATE info SET cdtegral = @cdtegral, cdtegral_rango = @cdtegral_rango, cdtegral_nombre = @cdtegral_nombre, "+
+                    "cdtegral_apellido = @cdtegral_apellido, enccomb = @enccomb, enccomb_rango = @enccomb_rango, enccomb_nombre = @enccomb_nombre, "+
+                    "enccomb_apellido = @enccomb_apellido WHERE id = 1";
                 myCommand.Parameters.AddWithValue("@cdtegral", txtCedulaJefe.Text);
-                myCommand.Parameters.AddWithValue("@enccomb", txtCedulaEncargado.Text);                
+                myCommand.Parameters.AddWithValue("@cdtegral_rango", cmbRangoJefe.SelectedValue);
+                myCommand.Parameters.AddWithValue("@cdtegral_nombre", txtNombreJefe.Text);
+                myCommand.Parameters.AddWithValue("@cdtegral_apellido", txtApellidoJefe.Text);
+                myCommand.Parameters.AddWithValue("@enccomb", txtCedulaEncargado.Text);
+                myCommand.Parameters.AddWithValue("@enccomb_rango", cmbRangoEncargado.SelectedValue);
+                myCommand.Parameters.AddWithValue("@enccomb_nombre", txtNombreEncargado.Text);
+                myCommand.Parameters.AddWithValue("@enccomb_apellido", txtApellidoEncargado.Text);
 
                 // Step 4 - Opening the connection
                 MyConexion.Open();
@@ -237,12 +330,126 @@ namespace SisGesCom
 
         private void btnBuscarJefe_Click(object sender, EventArgs e)
         {
+            frmBuscarMilitar ofrmBuscarMilitar = new frmBuscarMilitar();
+            ofrmBuscarMilitar.ShowDialog();            
+            string cCodigo = ofrmBuscarMilitar.cCodigo;
 
+            // Si selecciono un registro
+            if (cCodigo != "" && cCodigo != null)
+            {
+                // Mostrar el codigo                      
+                txtCedulaJefe.Text = Convert.ToString(cCodigo).Trim();
+                try
+                {
+                    // Step 1 - clsConexion
+                    MySqlConnection MyclsConexion = new MySqlConnection(clsConexion.ConectionString);
+
+                    // Step 2 - creating the command object
+                    MySqlCommand MyCommand = MyclsConexion.CreateCommand();
+
+                    // Step 3 - creating the commandtext
+                    //MyCommand.CommandText = "SELECT *  FROM paciente WHERE cedula = ' " + txtCedula.Text.Trim() + "'  " ;
+                    MyCommand.CommandText = "SELECT * from militar WHERE cedula = '" + txtCedulaJefe.Text.Trim() + "'";
+
+                    // Step 4 - connection open
+                    MyclsConexion.Open();
+
+                    // Step 5 - Creating the DataReader                    
+                    MySqlDataReader MyReader = MyCommand.ExecuteReader();
+
+                    // Step 6 - Verifying if Reader has rows
+                    if (MyReader.HasRows)
+                    {
+                        while (MyReader.Read())
+                        {
+                            cmbRangoJefe.SelectedValue = MyReader["rango"].ToString();
+                            txtNombreJefe.Text = MyReader["nombre"].ToString();
+                            txtApellidoJefe.Text = MyReader["apellido"].ToString();                            
+                        }
+                        this.cModo = "Buscar";
+                        this.Botones();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontraron registros con esta cedula...", "SisGesCom", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //this.txtCedula.Focus();
+                        this.cModo = "Inicio";
+                        this.Botones();
+                        //this.Limpiar();
+                        //this.txtID.Focus();
+                    }
+                    // Step 6 - Closing all
+                    MyReader.Close();
+                    MyCommand.Dispose();
+                    MyclsConexion.Close();
+                }
+                catch (Exception MyEx)
+                {
+                    MessageBox.Show(MyEx.Message);
+                }
+            }
         }
 
         private void btnBuscarEncargado_Click(object sender, EventArgs e)
         {
+            frmBuscarMilitar ofrmBuscarMilitar = new frmBuscarMilitar();
+            ofrmBuscarMilitar.ShowDialog();
+            string cCodigo = ofrmBuscarMilitar.cCodigo;
 
+            // Si selecciono un registro
+            if (cCodigo != "" && cCodigo != null)
+            {
+                // Mostrar el codigo                      
+                txtCedulaEncargado.Text = Convert.ToString(cCodigo).Trim();
+                try
+                {
+                    // Step 1 - clsConexion
+                    MySqlConnection MyclsConexion = new MySqlConnection(clsConexion.ConectionString);
+
+                    // Step 2 - creating the command object
+                    MySqlCommand MyCommand = MyclsConexion.CreateCommand();
+
+                    // Step 3 - creating the commandtext
+                    //MyCommand.CommandText = "SELECT *  FROM paciente WHERE cedula = ' " + txtCedula.Text.Trim() + "'  " ;
+                    MyCommand.CommandText = "SELECT * from militar WHERE cedula = '" + txtCedulaEncargado.Text.Trim() + "'";
+
+                    // Step 4 - connection open
+                    MyclsConexion.Open();
+
+                    // Step 5 - Creating the DataReader                    
+                    MySqlDataReader MyReader = MyCommand.ExecuteReader();
+
+                    // Step 6 - Verifying if Reader has rows
+                    if (MyReader.HasRows)
+                    {
+                        while (MyReader.Read())
+                        {
+                            cmbRangoEncargado.SelectedValue = MyReader["rango"].ToString();
+                            txtNombreEncargado.Text = MyReader["nombre"].ToString();
+                            txtApellidoEncargado.Text = MyReader["apellido"].ToString();
+                        }
+                        this.cModo = "Buscar";
+                        this.Botones();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontraron registros con esta cedula...", "SisGesCom", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //this.txtCedula.Focus();
+                        this.cModo = "Inicio";
+                        this.Botones();
+                        //this.Limpiar();
+                        //this.txtID.Focus();
+                    }
+                    // Step 6 - Closing all
+                    MyReader.Close();
+                    MyCommand.Dispose();
+                    MyclsConexion.Close();
+                }
+                catch (Exception MyEx)
+                {
+                    MessageBox.Show(MyEx.Message);
+                }
+            }
         }
 
 

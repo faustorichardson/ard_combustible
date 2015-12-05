@@ -48,6 +48,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtFechaSolicitud = new System.Windows.Forms.DateTimePicker();
+            this.lblCdteGral = new System.Windows.Forms.Label();
+            this.lblEncComb = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -208,6 +210,7 @@
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(92, 20);
             this.txtCantidad.TabIndex = 79;
+            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // label4
             // 
@@ -243,6 +246,7 @@
             this.txtSolicitud.Name = "txtSolicitud";
             this.txtSolicitud.Size = new System.Drawing.Size(66, 20);
             this.txtSolicitud.TabIndex = 75;
+            this.txtSolicitud.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSolicitud_KeyPress);
             // 
             // label2
             // 
@@ -271,11 +275,33 @@
             this.dtFechaSolicitud.Size = new System.Drawing.Size(200, 20);
             this.dtFechaSolicitud.TabIndex = 72;
             // 
+            // lblCdteGral
+            // 
+            this.lblCdteGral.AutoSize = true;
+            this.lblCdteGral.Location = new System.Drawing.Point(736, 131);
+            this.lblCdteGral.Name = "lblCdteGral";
+            this.lblCdteGral.Size = new System.Drawing.Size(35, 13);
+            this.lblCdteGral.TabIndex = 82;
+            this.lblCdteGral.Text = "label6";
+            this.lblCdteGral.Visible = false;
+            // 
+            // lblEncComb
+            // 
+            this.lblEncComb.AutoSize = true;
+            this.lblEncComb.Location = new System.Drawing.Point(736, 154);
+            this.lblEncComb.Name = "lblEncComb";
+            this.lblEncComb.Size = new System.Drawing.Size(35, 13);
+            this.lblEncComb.TabIndex = 83;
+            this.lblEncComb.Text = "label6";
+            this.lblEncComb.Visible = false;
+            // 
             // frmSolicitudCombustible
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(812, 316);
+            this.Controls.Add(this.lblEncComb);
+            this.Controls.Add(this.lblCdteGral);
             this.Controls.Add(this.txtNota);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtCantidad);
@@ -302,6 +328,8 @@
             this.Controls.SetChildIndex(this.txtCantidad, 0);
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.txtNota, 0);
+            this.Controls.SetChildIndex(this.lblCdteGral, 0);
+            this.Controls.SetChildIndex(this.lblEncComb, 0);
             this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -329,5 +357,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtFechaSolicitud;
+        private System.Windows.Forms.Label lblCdteGral;
+        private System.Windows.Forms.Label lblEncComb;
     }
 }

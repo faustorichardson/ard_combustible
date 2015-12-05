@@ -118,6 +118,7 @@
   <ItemGroup>
     <Compile Include="clsConexion.cs" />
     <Compile Include="clsExceptionLog.cs" />
+    <Compile Include="clsProcesos.cs" />
     <Compile Include="dsDeptoAutoriza.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -131,6 +132,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsDeptoBeneficiario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsSolicitudCombustible.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSolicitudCombustible.xsd</DependentUpon>
     </Compile>
     <Compile Include="dsTiposCombustibles.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -148,6 +154,12 @@
     </Compile>
     <Compile Include="frmBase.Designer.cs">
       <DependentUpon>frmBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarMilitar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarMilitar.Designer.cs">
+      <DependentUpon>frmBuscarMilitar.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDeptoAutoriza.cs">
       <SubType>Form</SubType>
@@ -235,6 +247,9 @@
     <EmbeddedResource Include="frmBase.resx">
       <DependentUpon>frmBase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarMilitar.resx">
+      <DependentUpon>frmBuscarMilitar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDeptoAutoriza.resx">
       <DependentUpon>frmDeptoAutoriza.cs</DependentUpon>
     </EmbeddedResource>
@@ -309,6 +324,17 @@
     </None>
     <None Include="dsDeptoBeneficiario.xss">
       <DependentUpon>dsDeptoBeneficiario.xsd</DependentUpon>
+    </None>
+    <None Include="dsSolicitudCombustible.xsc">
+      <DependentUpon>dsSolicitudCombustible.xsd</DependentUpon>
+    </None>
+    <None Include="dsSolicitudCombustible.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSolicitudCombustible.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsSolicitudCombustible.xss">
+      <DependentUpon>dsSolicitudCombustible.xsd</DependentUpon>
     </None>
     <None Include="dsTiposCombustibles.xsc">
       <DependentUpon>dsTiposCombustibles.xsd</DependentUpon>
