@@ -16,7 +16,7 @@
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:string" minOccurs="0" />
-              <xs:element name="tipo_combustible" msprop:Generator_ColumnVarNameInTable="columntipo_combustible" msprop:Generator_ColumnPropNameInRow="tipo_combustible" msprop:Generator_ColumnPropNameInTable="tipo_combustibleColumn" msprop:Generator_UserColumnName="tipo_combustible" type="xs:string" minOccurs="0" />
+              <xs:element name="tipocombustible" msprop:Generator_ColumnVarNameInTable="columntipocombustible" msprop:Generator_ColumnPropNameInRow="tipocombustible" msprop:Generator_ColumnPropNameInTable="tipocombustibleColumn" msprop:Generator_UserColumnName="tipocombustible" type="xs:string" minOccurs="0" />
               <xs:element name="cantidad" msprop:Generator_ColumnVarNameInTable="columncantidad" msprop:Generator_ColumnPropNameInRow="cantidad" msprop:Generator_ColumnPropNameInTable="cantidadColumn" msprop:Generator_UserColumnName="cantidad" type="xs:string" minOccurs="0" />
               <xs:element name="nota" msprop:Generator_ColumnVarNameInTable="columnnota" msprop:Generator_ColumnPropNameInRow="nota" msprop:Generator_ColumnPropNameInTable="notaColumn" msprop:Generator_UserColumnName="nota" type="xs:string" minOccurs="0" />
               <xs:element name="enccomb" msprop:Generator_ColumnVarNameInTable="columnenccomb" msprop:Generator_ColumnPropNameInRow="enccomb" msprop:Generator_ColumnPropNameInTable="enccombColumn" msprop:Generator_UserColumnName="enccomb" type="xs:string" minOccurs="0" />

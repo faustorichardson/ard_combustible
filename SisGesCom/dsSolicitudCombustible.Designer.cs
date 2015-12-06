@@ -281,7 +281,7 @@ namespace SisGesCom {
             
             private global::System.Data.DataColumn columnid;
             
-            private global::System.Data.DataColumn columntipo_combustible;
+            private global::System.Data.DataColumn columntipocombustible;
             
             private global::System.Data.DataColumn columncantidad;
             
@@ -336,9 +336,9 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn tipo_combustibleColumn {
+            public global::System.Data.DataColumn tipocombustibleColumn {
                 get {
-                    return this.columntipo_combustible;
+                    return this.columntipocombustible;
                 }
             }
             
@@ -419,11 +419,11 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public dtSolicitudCombustibleRow AdddtSolicitudCombustibleRow(string id, string tipo_combustible, string cantidad, string nota, string enccomb, string cdtegral, string fecha) {
+            public dtSolicitudCombustibleRow AdddtSolicitudCombustibleRow(string id, string tipocombustible, string cantidad, string nota, string enccomb, string cdtegral, string fecha) {
                 dtSolicitudCombustibleRow rowdtSolicitudCombustibleRow = ((dtSolicitudCombustibleRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
-                        tipo_combustible,
+                        tipocombustible,
                         cantidad,
                         nota,
                         enccomb,
@@ -452,7 +452,7 @@ namespace SisGesCom {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnid = base.Columns["id"];
-                this.columntipo_combustible = base.Columns["tipo_combustible"];
+                this.columntipocombustible = base.Columns["tipocombustible"];
                 this.columncantidad = base.Columns["cantidad"];
                 this.columnnota = base.Columns["nota"];
                 this.columnenccomb = base.Columns["enccomb"];
@@ -465,8 +465,8 @@ namespace SisGesCom {
             private void InitClass() {
                 this.columnid = new global::System.Data.DataColumn("id", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid);
-                this.columntipo_combustible = new global::System.Data.DataColumn("tipo_combustible", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntipo_combustible);
+                this.columntipocombustible = new global::System.Data.DataColumn("tipocombustible", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntipocombustible);
                 this.columncantidad = new global::System.Data.DataColumn("cantidad", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncantidad);
                 this.columnnota = new global::System.Data.DataColumn("nota", typeof(string), null, global::System.Data.MappingType.Element);
@@ -635,18 +635,18 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string tipo_combustible {
+            public string tipocombustible {
                 get {
                     try {
-                        return ((string)(this[this.tabledtSolicitudCombustible.tipo_combustibleColumn]));
+                        return ((string)(this[this.tabledtSolicitudCombustible.tipocombustibleColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'tipo_combustible\' in table \'dtSolicitudCombustible\' is DBNu" +
-                                "ll.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'tipocombustible\' in table \'dtSolicitudCombustible\' is DBNul" +
+                                "l.", e);
                     }
                 }
                 set {
-                    this[this.tabledtSolicitudCombustible.tipo_combustibleColumn] = value;
+                    this[this.tabledtSolicitudCombustible.tipocombustibleColumn] = value;
                 }
             }
             
@@ -744,14 +744,14 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Istipo_combustibleNull() {
-                return this.IsNull(this.tabledtSolicitudCombustible.tipo_combustibleColumn);
+            public bool IstipocombustibleNull() {
+                return this.IsNull(this.tabledtSolicitudCombustible.tipocombustibleColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Settipo_combustibleNull() {
-                this[this.tabledtSolicitudCombustible.tipo_combustibleColumn] = global::System.Convert.DBNull;
+            public void SettipocombustibleNull() {
+                this[this.tabledtSolicitudCombustible.tipocombustibleColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

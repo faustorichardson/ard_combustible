@@ -133,6 +133,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsDeptoBeneficiario.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dsSolicitudCombustible.cs">
+      <DependentUpon>dsSolicitudCombustible.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="dsSolicitudCombustible.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -235,6 +239,12 @@
       <DependentUpon>rptListadoDeptoBeneficiario.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="rptSolicitudCombustible.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSolicitudCombustible.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="rptTiposCombustibles.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -297,6 +307,10 @@
     <EmbeddedResource Include="rptListadoDeptoBeneficiario.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptListadoDeptoBeneficiario.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptSolicitudCombustible.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSolicitudCombustible.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="rptTiposCombustibles.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

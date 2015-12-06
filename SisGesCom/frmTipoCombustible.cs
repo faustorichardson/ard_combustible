@@ -176,7 +176,8 @@ namespace SisGesCom
         }
 
         private void btnGrabar_Click(object sender, EventArgs e)
-        {
+        {            
+            
             if (this.txtTipo.Text == "")
             {
                 MessageBox.Show("No se permiten campos vacios...");
@@ -184,6 +185,7 @@ namespace SisGesCom
             }
             else
             {
+                // REGISTRO DE INFORMACIONES EN LA TABLA TIPO_COMBUSTIBLE
                 if (cModo == "Nuevo")
                 {
                     try
@@ -208,6 +210,44 @@ namespace SisGesCom
                         MyConexion.Close();
 
                         MessageBox.Show("Informacion guardada satisfactoriamente...");
+
+                        // Cerramos la conexion
+                        MyConexion.Close();
+                        myCommand.Dispose();
+                    }
+                    catch (Exception myEx)
+                    {
+                        MessageBox.Show(myEx.Message);
+                        throw;
+                    }
+
+
+                    // REGISTRO DE TIPO COMBUSTIBLES EN LA TABLA EXISTENCIA
+                    try
+                    {
+                        // Step 1 - Stablishing the connection
+                        MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
+
+                        // Step 2 - Crear el comando de ejecucion
+                        MySqlCommand myCommand = MyConexion.CreateCommand();
+
+                        // Step 3 - Comando a ejecutar                        
+                        //Int32 cantidad = 0;
+                        //Int32 codigo = Convert.ToInt32(txtCodigo.Text);
+                        myCommand.CommandText = "INSERT INTO existencia(tipocombustible, cantidad) values(@tipocombustible, @cantidad)";
+                        myCommand.Parameters.AddWithValue("@tipocombustible", txtCodigo.Text);
+                        myCommand.Parameters.AddWithValue("@cantidad", 0);
+
+                        // Step 4 - Opening the connection
+                        MyConexion.Open();
+
+                        // Step 5 - Executing the query
+                        myCommand.ExecuteNonQuery();
+
+                        // Step 6 - Closing the connection
+                        MyConexion.Close();
+
+                        //MessageBox.Show("Informacion guardada satisfactoriamente...");
 
                         // Cerramos la conexion
                         MyConexion.Close();
@@ -263,6 +303,8 @@ namespace SisGesCom
                     this.cModo = "Inicio";
                     this.Botones();
                 }
+
+                // 
             }
         }
 
