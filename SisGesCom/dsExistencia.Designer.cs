@@ -20,17 +20,17 @@ namespace SisGesCom {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("dsSolicitudCombustible")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dsExistencia")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class dsSolicitudCombustible : global::System.Data.DataSet {
+    public partial class dsExistencia : global::System.Data.DataSet {
         
-        private dtSolicitudCombustibleDataTable tabledtSolicitudCombustible;
+        private dtExistenciaDataTable tabledtExistencia;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public dsSolicitudCombustible() {
+        public dsExistencia() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace SisGesCom {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected dsSolicitudCombustible(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dsExistencia(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace SisGesCom {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["dtSolicitudCombustible"] != null)) {
-                    base.Tables.Add(new dtSolicitudCombustibleDataTable(ds.Tables["dtSolicitudCombustible"]));
+                if ((ds.Tables["dtExistencia"] != null)) {
+                    base.Tables.Add(new dtExistenciaDataTable(ds.Tables["dtExistencia"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace SisGesCom {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public dtSolicitudCombustibleDataTable dtSolicitudCombustible {
+        public dtExistenciaDataTable dtExistencia {
             get {
-                return this.tabledtSolicitudCombustible;
+                return this.tabledtExistencia;
             }
         }
         
@@ -127,7 +127,7 @@ namespace SisGesCom {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            dsSolicitudCombustible cln = ((dsSolicitudCombustible)(base.Clone()));
+            dsExistencia cln = ((dsExistencia)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace SisGesCom {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["dtSolicitudCombustible"] != null)) {
-                    base.Tables.Add(new dtSolicitudCombustibleDataTable(ds.Tables["dtSolicitudCombustible"]));
+                if ((ds.Tables["dtExistencia"] != null)) {
+                    base.Tables.Add(new dtExistenciaDataTable(ds.Tables["dtExistencia"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace SisGesCom {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tabledtSolicitudCombustible = ((dtSolicitudCombustibleDataTable)(base.Tables["dtSolicitudCombustible"]));
+            this.tabledtExistencia = ((dtExistenciaDataTable)(base.Tables["dtExistencia"]));
             if ((initTable == true)) {
-                if ((this.tabledtSolicitudCombustible != null)) {
-                    this.tabledtSolicitudCombustible.InitVars();
+                if ((this.tabledtExistencia != null)) {
+                    this.tabledtExistencia.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace SisGesCom {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "dsSolicitudCombustible";
+            this.DataSetName = "dsExistencia";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dsSolicitudCombustible.xsd";
+            this.Namespace = "http://tempuri.org/dsExistencia.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tabledtSolicitudCombustible = new dtSolicitudCombustibleDataTable();
-            base.Tables.Add(this.tabledtSolicitudCombustible);
+            this.tabledtExistencia = new dtExistenciaDataTable();
+            base.Tables.Add(this.tabledtExistencia);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializedtSolicitudCombustible() {
+        private bool ShouldSerializedtExistencia() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace SisGesCom {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            dsSolicitudCombustible ds = new dsSolicitudCombustible();
+            dsExistencia ds = new dsExistencia();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,33 +270,23 @@ namespace SisGesCom {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void dtSolicitudCombustibleRowChangeEventHandler(object sender, dtSolicitudCombustibleRowChangeEvent e);
+        public delegate void dtExistenciaRowChangeEventHandler(object sender, dtExistenciaRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class dtSolicitudCombustibleDataTable : global::System.Data.TypedTableBase<dtSolicitudCombustibleRow> {
-            
-            private global::System.Data.DataColumn columnid;
+        public partial class dtExistenciaDataTable : global::System.Data.TypedTableBase<dtExistenciaRow> {
             
             private global::System.Data.DataColumn columntipocombustible;
             
             private global::System.Data.DataColumn columncantidad;
             
-            private global::System.Data.DataColumn columnnota;
-            
-            private global::System.Data.DataColumn columnenccomb;
-            
-            private global::System.Data.DataColumn columncdtegral;
-            
-            private global::System.Data.DataColumn columnfecha;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public dtSolicitudCombustibleDataTable() {
-                this.TableName = "dtSolicitudCombustible";
+            public dtExistenciaDataTable() {
+                this.TableName = "dtExistencia";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -304,7 +294,7 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal dtSolicitudCombustibleDataTable(global::System.Data.DataTable table) {
+            internal dtExistenciaDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -321,17 +311,9 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected dtSolicitudCombustibleDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected dtExistenciaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn idColumn {
-                get {
-                    return this.columnid;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -352,38 +334,6 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn notaColumn {
-                get {
-                    return this.columnnota;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn enccombColumn {
-                get {
-                    return this.columnenccomb;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn cdtegralColumn {
-                get {
-                    return this.columncdtegral;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn fechaColumn {
-                get {
-                    return this.columnfecha;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -393,51 +343,46 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public dtSolicitudCombustibleRow this[int index] {
+            public dtExistenciaRow this[int index] {
                 get {
-                    return ((dtSolicitudCombustibleRow)(this.Rows[index]));
+                    return ((dtExistenciaRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event dtSolicitudCombustibleRowChangeEventHandler dtSolicitudCombustibleRowChanging;
+            public event dtExistenciaRowChangeEventHandler dtExistenciaRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event dtSolicitudCombustibleRowChangeEventHandler dtSolicitudCombustibleRowChanged;
+            public event dtExistenciaRowChangeEventHandler dtExistenciaRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event dtSolicitudCombustibleRowChangeEventHandler dtSolicitudCombustibleRowDeleting;
+            public event dtExistenciaRowChangeEventHandler dtExistenciaRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event dtSolicitudCombustibleRowChangeEventHandler dtSolicitudCombustibleRowDeleted;
+            public event dtExistenciaRowChangeEventHandler dtExistenciaRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AdddtSolicitudCombustibleRow(dtSolicitudCombustibleRow row) {
+            public void AdddtExistenciaRow(dtExistenciaRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public dtSolicitudCombustibleRow AdddtSolicitudCombustibleRow(string id, string tipocombustible, int cantidad, string nota, string enccomb, string cdtegral, System.DateTime fecha) {
-                dtSolicitudCombustibleRow rowdtSolicitudCombustibleRow = ((dtSolicitudCombustibleRow)(this.NewRow()));
+            public dtExistenciaRow AdddtExistenciaRow(int tipocombustible, int cantidad) {
+                dtExistenciaRow rowdtExistenciaRow = ((dtExistenciaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        id,
                         tipocombustible,
-                        cantidad,
-                        nota,
-                        enccomb,
-                        cdtegral,
-                        fecha};
-                rowdtSolicitudCombustibleRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowdtSolicitudCombustibleRow);
-                return rowdtSolicitudCombustibleRow;
+                        cantidad};
+                rowdtExistenciaRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowdtExistenciaRow);
+                return rowdtExistenciaRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                dtSolicitudCombustibleDataTable cln = ((dtSolicitudCombustibleDataTable)(base.Clone()));
+                dtExistenciaDataTable cln = ((dtExistenciaDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -445,64 +390,49 @@ namespace SisGesCom {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new dtSolicitudCombustibleDataTable();
+                return new dtExistenciaDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnid = base.Columns["id"];
                 this.columntipocombustible = base.Columns["tipocombustible"];
                 this.columncantidad = base.Columns["cantidad"];
-                this.columnnota = base.Columns["nota"];
-                this.columnenccomb = base.Columns["enccomb"];
-                this.columncdtegral = base.Columns["cdtegral"];
-                this.columnfecha = base.Columns["fecha"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnid = new global::System.Data.DataColumn("id", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid);
-                this.columntipocombustible = new global::System.Data.DataColumn("tipocombustible", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columntipocombustible = new global::System.Data.DataColumn("tipocombustible", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntipocombustible);
                 this.columncantidad = new global::System.Data.DataColumn("cantidad", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncantidad);
-                this.columnnota = new global::System.Data.DataColumn("nota", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnota);
-                this.columnenccomb = new global::System.Data.DataColumn("enccomb", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnenccomb);
-                this.columncdtegral = new global::System.Data.DataColumn("cdtegral", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncdtegral);
-                this.columnfecha = new global::System.Data.DataColumn("fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfecha);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public dtSolicitudCombustibleRow NewdtSolicitudCombustibleRow() {
-                return ((dtSolicitudCombustibleRow)(this.NewRow()));
+            public dtExistenciaRow NewdtExistenciaRow() {
+                return ((dtExistenciaRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new dtSolicitudCombustibleRow(builder);
+                return new dtExistenciaRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(dtSolicitudCombustibleRow);
+                return typeof(dtExistenciaRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.dtSolicitudCombustibleRowChanged != null)) {
-                    this.dtSolicitudCombustibleRowChanged(this, new dtSolicitudCombustibleRowChangeEvent(((dtSolicitudCombustibleRow)(e.Row)), e.Action));
+                if ((this.dtExistenciaRowChanged != null)) {
+                    this.dtExistenciaRowChanged(this, new dtExistenciaRowChangeEvent(((dtExistenciaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -510,8 +440,8 @@ namespace SisGesCom {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.dtSolicitudCombustibleRowChanging != null)) {
-                    this.dtSolicitudCombustibleRowChanging(this, new dtSolicitudCombustibleRowChangeEvent(((dtSolicitudCombustibleRow)(e.Row)), e.Action));
+                if ((this.dtExistenciaRowChanging != null)) {
+                    this.dtExistenciaRowChanging(this, new dtExistenciaRowChangeEvent(((dtExistenciaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -519,8 +449,8 @@ namespace SisGesCom {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.dtSolicitudCombustibleRowDeleted != null)) {
-                    this.dtSolicitudCombustibleRowDeleted(this, new dtSolicitudCombustibleRowChangeEvent(((dtSolicitudCombustibleRow)(e.Row)), e.Action));
+                if ((this.dtExistenciaRowDeleted != null)) {
+                    this.dtExistenciaRowDeleted(this, new dtExistenciaRowChangeEvent(((dtExistenciaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -528,14 +458,14 @@ namespace SisGesCom {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.dtSolicitudCombustibleRowDeleting != null)) {
-                    this.dtSolicitudCombustibleRowDeleting(this, new dtSolicitudCombustibleRowChangeEvent(((dtSolicitudCombustibleRow)(e.Row)), e.Action));
+                if ((this.dtExistenciaRowDeleting != null)) {
+                    this.dtExistenciaRowDeleting(this, new dtExistenciaRowChangeEvent(((dtExistenciaRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemovedtSolicitudCombustibleRow(dtSolicitudCombustibleRow row) {
+            public void RemovedtExistenciaRow(dtExistenciaRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -544,7 +474,7 @@ namespace SisGesCom {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dsSolicitudCombustible ds = new dsSolicitudCombustible();
+                dsExistencia ds = new dsExistencia();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -562,7 +492,7 @@ namespace SisGesCom {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "dtSolicitudCombustibleDataTable";
+                attribute2.FixedValue = "dtExistenciaDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -606,47 +536,30 @@ namespace SisGesCom {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class dtSolicitudCombustibleRow : global::System.Data.DataRow {
+        public partial class dtExistenciaRow : global::System.Data.DataRow {
             
-            private dtSolicitudCombustibleDataTable tabledtSolicitudCombustible;
+            private dtExistenciaDataTable tabledtExistencia;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal dtSolicitudCombustibleRow(global::System.Data.DataRowBuilder rb) : 
+            internal dtExistenciaRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabledtSolicitudCombustible = ((dtSolicitudCombustibleDataTable)(this.Table));
+                this.tabledtExistencia = ((dtExistenciaDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string id {
+            public int tipocombustible {
                 get {
                     try {
-                        return ((string)(this[this.tabledtSolicitudCombustible.idColumn]));
+                        return ((int)(this[this.tabledtExistencia.tipocombustibleColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'id\' in table \'dtSolicitudCombustible\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'tipocombustible\' in table \'dtExistencia\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledtSolicitudCombustible.idColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string tipocombustible {
-                get {
-                    try {
-                        return ((string)(this[this.tabledtSolicitudCombustible.tipocombustibleColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'tipocombustible\' in table \'dtSolicitudCombustible\' is DBNul" +
-                                "l.", e);
-                    }
-                }
-                set {
-                    this[this.tabledtSolicitudCombustible.tipocombustibleColumn] = value;
+                    this[this.tabledtExistencia.tipocombustibleColumn] = value;
                 }
             }
             
@@ -655,163 +568,39 @@ namespace SisGesCom {
             public int cantidad {
                 get {
                     try {
-                        return ((int)(this[this.tabledtSolicitudCombustible.cantidadColumn]));
+                        return ((int)(this[this.tabledtExistencia.cantidadColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'cantidad\' in table \'dtSolicitudCombustible\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'cantidad\' in table \'dtExistencia\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledtSolicitudCombustible.cantidadColumn] = value;
+                    this[this.tabledtExistencia.cantidadColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string nota {
-                get {
-                    try {
-                        return ((string)(this[this.tabledtSolicitudCombustible.notaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'nota\' in table \'dtSolicitudCombustible\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabledtSolicitudCombustible.notaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string enccomb {
-                get {
-                    try {
-                        return ((string)(this[this.tabledtSolicitudCombustible.enccombColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'enccomb\' in table \'dtSolicitudCombustible\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabledtSolicitudCombustible.enccombColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cdtegral {
-                get {
-                    try {
-                        return ((string)(this[this.tabledtSolicitudCombustible.cdtegralColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'cdtegral\' in table \'dtSolicitudCombustible\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabledtSolicitudCombustible.cdtegralColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime fecha {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tabledtSolicitudCombustible.fechaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'fecha\' in table \'dtSolicitudCombustible\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabledtSolicitudCombustible.fechaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsidNull() {
-                return this.IsNull(this.tabledtSolicitudCombustible.idColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetidNull() {
-                this[this.tabledtSolicitudCombustible.idColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IstipocombustibleNull() {
-                return this.IsNull(this.tabledtSolicitudCombustible.tipocombustibleColumn);
+                return this.IsNull(this.tabledtExistencia.tipocombustibleColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SettipocombustibleNull() {
-                this[this.tabledtSolicitudCombustible.tipocombustibleColumn] = global::System.Convert.DBNull;
+                this[this.tabledtExistencia.tipocombustibleColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IscantidadNull() {
-                return this.IsNull(this.tabledtSolicitudCombustible.cantidadColumn);
+                return this.IsNull(this.tabledtExistencia.cantidadColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetcantidadNull() {
-                this[this.tabledtSolicitudCombustible.cantidadColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsnotaNull() {
-                return this.IsNull(this.tabledtSolicitudCombustible.notaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetnotaNull() {
-                this[this.tabledtSolicitudCombustible.notaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsenccombNull() {
-                return this.IsNull(this.tabledtSolicitudCombustible.enccombColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetenccombNull() {
-                this[this.tabledtSolicitudCombustible.enccombColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IscdtegralNull() {
-                return this.IsNull(this.tabledtSolicitudCombustible.cdtegralColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetcdtegralNull() {
-                this[this.tabledtSolicitudCombustible.cdtegralColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsfechaNull() {
-                return this.IsNull(this.tabledtSolicitudCombustible.fechaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetfechaNull() {
-                this[this.tabledtSolicitudCombustible.fechaColumn] = global::System.Convert.DBNull;
+                this[this.tabledtExistencia.cantidadColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -819,22 +608,22 @@ namespace SisGesCom {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class dtSolicitudCombustibleRowChangeEvent : global::System.EventArgs {
+        public class dtExistenciaRowChangeEvent : global::System.EventArgs {
             
-            private dtSolicitudCombustibleRow eventRow;
+            private dtExistenciaRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public dtSolicitudCombustibleRowChangeEvent(dtSolicitudCombustibleRow row, global::System.Data.DataRowAction action) {
+            public dtExistenciaRowChangeEvent(dtExistenciaRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public dtSolicitudCombustibleRow Row {
+            public dtExistenciaRow Row {
                 get {
                     return this.eventRow;
                 }

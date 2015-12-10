@@ -19,81 +19,26 @@ using System.IO;
 
 namespace SisGesCom
 {
-    public partial class frmMenu : Form
+    public partial class frmPrintListadoSolicitudCombustible : frmBase
     {
-
-        public string cUsuarioActual = frmLogin.cUsuarioActual;
-        
-        public frmMenu()
+        public frmPrintListadoSolicitudCombustible()
         {
             InitializeComponent();
         }
 
-        private void buttonItem7_Click(object sender, EventArgs e)
+        private void frmPrintListadoSolicitudCombustible_Load(object sender, EventArgs e)
         {
-            Application.Exit();
+            
+
+
         }
 
-        private void buttonItem15_Click(object sender, EventArgs e)
+        private void btnSalir_Click(object sender, EventArgs e)
         {
-            frmTipoCombustible ofrmTipoCombustible = new frmTipoCombustible();
-            ofrmTipoCombustible.Show();
+            this.Close();
         }
 
-        private void buttonItem16_Click(object sender, EventArgs e)
-        {
-            frmDeptoAutoriza ofrmDeptoAutoriza = new frmDeptoAutoriza();
-            ofrmDeptoAutoriza.Show();
-        }
-
-        private void buttonItem3_Click(object sender, EventArgs e)
-        {
-            frmTipoBeneficiario ofrmTipoBeneficiario = new frmTipoBeneficiario();
-            ofrmTipoBeneficiario.Show();
-        }
-
-        private void buttonItem1_Click(object sender, EventArgs e)
-        {
-            frmSolicitudCombustible ofrmSolicitudCombustible = new frmSolicitudCombustible();
-            ofrmSolicitudCombustible.Show();
-        }
-
-        private void buttonItem11_Click(object sender, EventArgs e)
-        {
-            frmEntradaCombustible ofrmEntradaCombustible = new frmEntradaCombustible();
-            ofrmEntradaCombustible.Show();
-        }
-
-        private void buttonItem14_Click(object sender, EventArgs e)
-        {
-            frmSalidaCombustible ofrmSalidaCombustible = new frmSalidaCombustible();
-            ofrmSalidaCombustible.Show();
-        }
-
-        private void buttonItem10_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void buttonItem9_Click(object sender, EventArgs e)
-        {
-            frmAbout ofrmAbout = new frmAbout();
-            ofrmAbout.Show();
-        }
-
-        private void buttonItem2_Click(object sender, EventArgs e)
-        {
-            frmInformaciones ofrmInformaciones = new frmInformaciones();
-            ofrmInformaciones.Show();
-        }
-
-        private void buttonItem6_Click(object sender, EventArgs e)
-        {
-            frmPrintListadoSolicitudCombustible ofrmPrintListadoSolicitudCombustible = new frmPrintListadoSolicitudCombustible();
-            ofrmPrintListadoSolicitudCombustible.Show();
-        }
-
-        private void buttonItem25_Click(object sender, EventArgs e)
+        private void btnImprimir_Click(object sender, EventArgs e)
         {
             //Conexion a la base de datos
             MySqlConnection myConexion = new MySqlConnection(clsConexion.ConectionString);
@@ -116,29 +61,59 @@ namespace SisGesCom
                 myCommand = myConexion.CreateCommand();
                 // Adhiero el comando a la conexion
                 myCommand.Connection = myConexion;
-                // Filtros de la busqueda               
-                //string fechadesde = dtDesde.Value.ToString("yyyy-MM-dd");
-                //string fechahasta = dtHasta.Value.ToString("yyyy-MM-dd");
-                //cWhere = cWhere + " AND fecha >= " + "'" + fechadesde + "'" + " AND fecha <= " + "'" + fechahasta + "'" + "";
-                sbQuery.Clear();
-                sbQuery.Append("SELECT tipo_combustible.combustible as tipocombustible, existencia.cantidad ");                
-                sbQuery.Append(" FROM existencia ");
-                sbQuery.Append(" INNER JOIN tipo_combustible ON tipo_combustible.id = existencia.tipocombustible");
-                sbQuery.Append(cWhere);
-                
+                // Filtros de la busqueda
+                if (rbTodas.Checked)
+                {
+                    string fechadesde = dtDesde.Value.ToString("yyyy-MM-dd");
+                    string fechahasta = dtHasta.Value.ToString("yyyy-MM-dd");
+                    cWhere = cWhere + " AND fecha >= " + "'" + fechadesde + "'" + " AND fecha <= " + "'" + fechahasta + "'" + "";
+                    sbQuery.Clear();
+                    sbQuery.Append("SELECT solicitud.id, tipo_combustible.combustible as tipocombustible, solicitud.cantidad, ");
+                    sbQuery.Append(" solicitud.fecha, solicitud.nota");
+                    sbQuery.Append(" FROM solicitud ");
+                    sbQuery.Append(" INNER JOIN tipo_combustible ON tipo_combustible.id = solicitud.tipo_combustible");                    
+                    sbQuery.Append(cWhere);
+                }
+                else if (rbAprobadas.Checked)
+                {
+                    string fechadesde = dtDesde.Value.ToString("yyyy-MM-dd");
+                    string fechahasta = dtHasta.Value.ToString("yyyy-MM-dd");
+                    cWhere = cWhere + " AND fecha >= " + "'" + fechadesde + "'" + " AND fecha <= " + "'" + fechahasta + "'" + "";
+                    cWhere = cWhere + " AND status = 0";
+                    sbQuery.Clear();
+                    sbQuery.Append("SELECT solicitud.id, tipo_combustible.combustible as tipocombustible, solicitud.cantidad, ");
+                    sbQuery.Append(" solicitud.fecha, solicitud.nota");
+                    sbQuery.Append(" FROM solicitud ");
+                    sbQuery.Append(" INNER JOIN tipo_combustible ON tipo_combustible.id = solicitud.tipo_combustible");
+                    sbQuery.Append(cWhere);
+                }
+                else if (rbPendientes.Checked)
+                {
+                    string fechadesde = dtDesde.Value.ToString("yyyy-MM-dd");
+                    string fechahasta = dtHasta.Value.ToString("yyyy-MM-dd");
+                    cWhere = cWhere + " AND fecha >= " + "'" + fechadesde + "'" + " AND fecha <= " + "'" + fechahasta + "'" + "";
+                    cWhere = cWhere + " AND status = 1";
+                    sbQuery.Clear();
+                    sbQuery.Append("SELECT solicitud.id, tipo_combustible.combustible as tipocombustible, solicitud.cantidad, ");
+                    sbQuery.Append(" solicitud.fecha, solicitud.nota");
+                    sbQuery.Append(" FROM solicitud ");
+                    sbQuery.Append(" INNER JOIN tipo_combustible ON tipo_combustible.id = solicitud.tipo_combustible");
+                    sbQuery.Append(cWhere);
+                }
+
                 // Paso los valores de sbQuery al CommandText
                 myCommand.CommandText = sbQuery.ToString();
                 // Creo el objeto Data Adapter y ejecuto el command en el
                 myAdapter = new MySqlDataAdapter(myCommand);
                 // Creo el objeto Data Table
-                DataTable dtExistencia = new DataTable();
+                DataTable dtSolicitudCombustible = new DataTable();
                 // Lleno el data adapter
-                myAdapter.Fill(dtExistencia);
+                myAdapter.Fill(dtSolicitudCombustible);
                 // Cierro el objeto conexion
                 myConexion.Close();
 
                 // Verifico cantidad de datos encontrados
-                int nRegistro = dtExistencia.Rows.Count;
+                int nRegistro = dtSolicitudCombustible.Rows.Count;
                 if (nRegistro == 0)
                 {
                     MessageBox.Show("No Hay Datos Para Mostrar, Favor Verificar", "Sistema de Gestion de Combustible", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -175,19 +150,19 @@ namespace SisGesCom
                     oParametrosCR[0].Name = "cUsuario";
 
                     //nombre del TITULO DEL INFORME
-                    cTitulo = "REPORTE DE EXISTENCIA DE COMBUSTIBLE";
+                    cTitulo = "REPORTE DE SOLICITUDES DE COMBUSTIBLE";
 
                     //6to Instanciamos nuestro REPORTE
                     //Reportes.ListadoDoctores oListado = new Reportes.ListadoDoctores();
-                    rptExistencia orptExistencia = new rptExistencia();
+                    rptListadoSolicitudCombustible orptListadoSolicitudCombustible = new rptListadoSolicitudCombustible();
 
                     //pasamos el nombre del TITULO del Listado
                     //SumaryInfo es un objeto que se utiliza para leer,crear y actualizar las propiedades del reporte
                     // oListado.SummaryInfo.ReportTitle = cTitulo;
-                    orptExistencia.SummaryInfo.ReportTitle = cTitulo;
+                    orptListadoSolicitudCombustible.SummaryInfo.ReportTitle = cTitulo;
 
                     //7mo. instanciamos nuestro el FORMULARIO donde esta nuestro ReportViewer
-                    frmPrinter ofrmPrinter = new frmPrinter(dtExistencia, orptExistencia, cTitulo);
+                    frmPrinter ofrmPrinter = new frmPrinter(dtSolicitudCombustible, orptListadoSolicitudCombustible, cTitulo);
 
                     //ParameterFieldInfo Obtiene o establece la colección de campos de parámetros.
                     ofrmPrinter.CrystalReportViewer1.ParameterFieldInfo = oParametrosCR;
@@ -201,6 +176,7 @@ namespace SisGesCom
                 //ExceptionLog.LogError(myEx, false);
                 return;
             }
+
         }
     }
 }
