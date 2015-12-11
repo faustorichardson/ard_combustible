@@ -164,6 +164,12 @@
     <Compile Include="frmBase.Designer.cs">
       <DependentUpon>frmBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBeneficiariosTickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBeneficiariosTickets.Designer.cs">
+      <DependentUpon>frmBeneficiariosTickets.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBuscarMilitar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +242,11 @@
     <Compile Include="frmTipoCombustible.Designer.cs">
       <DependentUpon>frmTipoCombustible.cs</DependentUpon>
     </Compile>
+    <Compile Include="mdeg_combustibleDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mdeg_combustibleDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="rptExistencia.cs">
@@ -279,6 +290,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBase.resx">
       <DependentUpon>frmBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBeneficiariosTickets.resx">
+      <DependentUpon>frmBeneficiariosTickets.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarMilitar.resx">
       <DependentUpon>frmBuscarMilitar.cs</DependentUpon>
@@ -405,6 +419,17 @@
     </None>
     <None Include="dsTiposCombustibles.xss">
       <DependentUpon>dsTiposCombustibles.xsd</DependentUpon>
+    </None>
+    <None Include="mdeg_combustibleDataSet.xsc">
+      <DependentUpon>mdeg_combustibleDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="mdeg_combustibleDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>mdeg_combustibleDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="mdeg_combustibleDataSet.xss">
+      <DependentUpon>mdeg_combustibleDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

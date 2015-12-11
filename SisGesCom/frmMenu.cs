@@ -202,5 +202,11 @@ namespace SisGesCom
                 return;
             }
         }
+
+        private void buttonItem17_Click(object sender, EventArgs e)
+        {
+            frmBeneficiariosTickets ofrmBeneficiarioTickets = new frmBeneficiariosTickets();
+            ofrmBeneficiarioTickets.Show();
+        }
     }
 }
