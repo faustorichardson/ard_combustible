@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBeneficiariosTickets));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnActualiza = new System.Windows.Forms.Button();
             this.btnBuscarJefe = new System.Windows.Forms.Button();
             this.cmbRangoJefe = new System.Windows.Forms.ComboBox();
             this.txtApellidoJefe = new System.Windows.Forms.TextBox();
@@ -38,11 +37,16 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnGrabar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtCedulaJefe = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgview = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgview)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTituloForm
@@ -52,7 +56,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnActualiza);
             this.groupBox1.Controls.Add(this.btnBuscarJefe);
             this.groupBox1.Controls.Add(this.cmbRangoJefe);
             this.groupBox1.Controls.Add(this.txtApellidoJefe);
@@ -60,43 +63,32 @@
             this.groupBox1.Controls.Add(this.btnEliminar);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.btnGrabar);
+            this.groupBox1.Controls.Add(this.btnNuevo);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtCedulaJefe);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 51);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(387, 232);
+            this.groupBox1.Size = new System.Drawing.Size(536, 186);
             this.groupBox1.TabIndex = 76;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Comandante General";
-            // 
-            // btnActualiza
-            // 
-            this.btnActualiza.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualiza.Image = ((System.Drawing.Image)(resources.GetObject("btnActualiza.Image")));
-            this.btnActualiza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualiza.Location = new System.Drawing.Point(197, 175);
-            this.btnActualiza.Name = "btnActualiza";
-            this.btnActualiza.Size = new System.Drawing.Size(92, 45);
-            this.btnActualiza.TabIndex = 24;
-            this.btnActualiza.Text = "Guardar";
-            this.btnActualiza.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnActualiza.UseVisualStyleBackColor = true;
+            this.groupBox1.Text = "Busqueda de Militar";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnBuscarJefe
             // 
             this.btnBuscarJefe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarJefe.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarJefe.Image")));
             this.btnBuscarJefe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarJefe.Location = new System.Drawing.Point(6, 176);
+            this.btnBuscarJefe.Location = new System.Drawing.Point(407, 23);
             this.btnBuscarJefe.Name = "btnBuscarJefe";
             this.btnBuscarJefe.Size = new System.Drawing.Size(95, 42);
             this.btnBuscarJefe.TabIndex = 23;
             this.btnBuscarJefe.Text = "Buscar";
             this.btnBuscarJefe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscarJefe.UseVisualStyleBackColor = true;
+            this.btnBuscarJefe.Click += new System.EventHandler(this.btnBuscarJefe_Click);
             // 
             // cmbRangoJefe
             // 
@@ -130,13 +122,14 @@
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(290, 175);
+            this.btnEliminar.Location = new System.Drawing.Point(407, 132);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(92, 45);
+            this.btnEliminar.Size = new System.Drawing.Size(95, 42);
             this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // label4
             // 
@@ -158,18 +151,19 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Nombre(s):";
             // 
-            // btnGrabar
+            // btnNuevo
             // 
-            this.btnGrabar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrabar.Image = ((System.Drawing.Image)(resources.GetObject("btnGrabar.Image")));
-            this.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGrabar.Location = new System.Drawing.Point(103, 175);
-            this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(92, 45);
-            this.btnGrabar.TabIndex = 1;
-            this.btnGrabar.Text = "Agregar";
-            this.btnGrabar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
+            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevo.Location = new System.Drawing.Point(407, 77);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(95, 42);
+            this.btnNuevo.TabIndex = 1;
+            this.btnNuevo.Text = "Agregar";
+            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // label2
             // 
@@ -201,18 +195,63 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Cedula:";
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalir.Location = new System.Drawing.Point(577, 51);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(92, 45);
+            this.btnSalir.TabIndex = 25;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dgview);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(13, 244);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(535, 303);
+            this.groupBox2.TabIndex = 77;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "LISTADO";
+            // 
+            // dgview
+            // 
+            this.dgview.AllowUserToAddRows = false;
+            this.dgview.AllowUserToDeleteRows = false;
+            this.dgview.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgview.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgview.Location = new System.Drawing.Point(3, 16);
+            this.dgview.Name = "dgview";
+            this.dgview.ReadOnly = true;
+            this.dgview.Size = new System.Drawing.Size(529, 284);
+            this.dgview.TabIndex = 78;
+            // 
             // frmBeneficiariosTickets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(866, 302);
+            this.ClientSize = new System.Drawing.Size(677, 559);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmBeneficiariosTickets";
             this.Text = "frmBeneficiariosTickets";
+            this.Load += new System.EventHandler(this.frmBeneficiariosTickets_Load);
             this.Controls.SetChildIndex(this.lblTituloForm, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
+            this.Controls.SetChildIndex(this.btnSalir, 0);
+            this.Controls.SetChildIndex(this.groupBox2, 0);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,7 +260,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnActualiza;
         private System.Windows.Forms.Button btnBuscarJefe;
         private System.Windows.Forms.ComboBox cmbRangoJefe;
         private System.Windows.Forms.TextBox txtApellidoJefe;
@@ -229,9 +267,12 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnGrabar;
+        private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MaskedTextBox txtCedulaJefe;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView dgview;
     }
 }

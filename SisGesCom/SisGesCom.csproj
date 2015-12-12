@@ -138,6 +138,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsExistencia.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dsMovimientoCombustible.cs">
+      <DependentUpon>dsMovimientoCombustible.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dsMovimientoCombustible.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMovimientoCombustible.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsSolicitudCombustible.cs">
       <DependentUpon>dsSolicitudCombustible.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -146,6 +155,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsSolicitudCombustible.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsTickets.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTickets.xsd</DependentUpon>
     </Compile>
     <Compile Include="dsTiposCombustibles.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -206,6 +220,18 @@
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPrintDespachoCombustible.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrintDespachoCombustible.Designer.cs">
+      <DependentUpon>frmPrintDespachoCombustible.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrintEntradaCombustible.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrintEntradaCombustible.Designer.cs">
+      <DependentUpon>frmPrintEntradaCombustible.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrinter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +243,12 @@
     </Compile>
     <Compile Include="frmPrintListadoSolicitudCombustible.Designer.cs">
       <DependentUpon>frmPrintListadoSolicitudCombustible.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistroTickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistroTickets.Designer.cs">
+      <DependentUpon>frmRegistroTickets.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSalidaCombustible.cs">
       <SubType>Form</SubType>
@@ -249,10 +281,28 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rptDespachoCombustibleResumido.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDespachoCombustibleResumido.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptEntradaCombustible.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptEntradaCombustible.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="rptExistencia.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptExistencia.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptListadoBeneficiariosTickets.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptListadoBeneficiariosTickets.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="rptListadoDeptoAutoriza.cs">
@@ -312,11 +362,20 @@
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPrintDespachoCombustible.resx">
+      <DependentUpon>frmPrintDespachoCombustible.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrintEntradaCombustible.resx">
+      <DependentUpon>frmPrintEntradaCombustible.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrinter.resx">
       <DependentUpon>frmPrinter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrintListadoSolicitudCombustible.resx">
       <DependentUpon>frmPrintListadoSolicitudCombustible.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistroTickets.resx">
+      <DependentUpon>frmRegistroTickets.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSalidaCombustible.resx">
       <DependentUpon>frmSalidaCombustible.cs</DependentUpon>
@@ -340,9 +399,21 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="rptDespachoCombustibleResumido.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDespachoCombustibleResumido.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptEntradaCombustible.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptEntradaCombustible.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="rptExistencia.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptExistencia.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptListadoBeneficiariosTickets.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptListadoBeneficiariosTickets.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="rptListadoDeptoAutoriza.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -398,6 +469,17 @@
     <None Include="dsExistencia.xss">
       <DependentUpon>dsExistencia.xsd</DependentUpon>
     </None>
+    <None Include="dsMovimientoCombustible.xsc">
+      <DependentUpon>dsMovimientoCombustible.xsd</DependentUpon>
+    </None>
+    <None Include="dsMovimientoCombustible.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMovimientoCombustible.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsMovimientoCombustible.xss">
+      <DependentUpon>dsMovimientoCombustible.xsd</DependentUpon>
+    </None>
     <None Include="dsSolicitudCombustible.xsc">
       <DependentUpon>dsSolicitudCombustible.xsd</DependentUpon>
     </None>
@@ -408,6 +490,17 @@
     </None>
     <None Include="dsSolicitudCombustible.xss">
       <DependentUpon>dsSolicitudCombustible.xsd</DependentUpon>
+    </None>
+    <None Include="dsTickets.xsc">
+      <DependentUpon>dsTickets.xsd</DependentUpon>
+    </None>
+    <None Include="dsTickets.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTickets.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsTickets.xss">
+      <DependentUpon>dsTickets.xsd</DependentUpon>
     </None>
     <None Include="dsTiposCombustibles.xsc">
       <DependentUpon>dsTiposCombustibles.xsd</DependentUpon>
