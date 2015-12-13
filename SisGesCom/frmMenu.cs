@@ -54,7 +54,7 @@ namespace SisGesCom
 
         private void buttonItem1_Click(object sender, EventArgs e)
         {
-            frmSolicitudCombustible ofrmSolicitudCombustible = new frmSolicitudCombustible();
+            frmSolicitudCombustibles ofrmSolicitudCombustible = new frmSolicitudCombustibles();
             ofrmSolicitudCombustible.Show();
         }
 

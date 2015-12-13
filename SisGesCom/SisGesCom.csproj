@@ -256,11 +256,11 @@
     <Compile Include="frmSalidaCombustible.Designer.cs">
       <DependentUpon>frmSalidaCombustible.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSolicitudCombustible.cs">
+    <Compile Include="frmSolicitudCombustibles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSolicitudCombustible.Designer.cs">
-      <DependentUpon>frmSolicitudCombustible.cs</DependentUpon>
+    <Compile Include="frmSolicitudCombustibles.Designer.cs">
+      <DependentUpon>frmSolicitudCombustibles.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTipoBeneficiario.cs">
       <SubType>Form</SubType>
@@ -380,8 +380,8 @@
     <EmbeddedResource Include="frmSalidaCombustible.resx">
       <DependentUpon>frmSalidaCombustible.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSolicitudCombustible.resx">
-      <DependentUpon>frmSolicitudCombustible.cs</DependentUpon>
+    <EmbeddedResource Include="frmSolicitudCombustibles.resx">
+      <DependentUpon>frmSolicitudCombustibles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTipoBeneficiario.resx">
       <DependentUpon>frmTipoBeneficiario.cs</DependentUpon>
