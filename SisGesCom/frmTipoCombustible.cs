@@ -39,8 +39,9 @@ namespace SisGesCom
 
         private void Limpiar()
         {
-            txtCodigo.Clear();
-            txtTipo.Clear();
+            this.txtCodigo.Clear();
+            this.txtTipo.Clear();
+            this.txtMedida.Clear();
         }
 
         private void Botones()
@@ -58,6 +59,10 @@ namespace SisGesCom
                     this.btnSalir.Enabled = true;
                     this.txtCodigo.Enabled = true;
                     this.txtTipo.Enabled = false;
+                    //
+                    this.txtCodigo.Enabled = true;
+                    this.txtMedida.Enabled = false;
+                    this.txtTipo.Enabled = false;
                     break;
 
                 case "Nuevo":
@@ -70,6 +75,10 @@ namespace SisGesCom
                     this.btnCancelar.Enabled = true;
                     this.btnSalir.Enabled = true;
                     this.txtCodigo.Enabled = false;
+                    this.txtTipo.Enabled = true;
+                    //
+                    this.txtCodigo.Enabled = false;
+                    this.txtMedida.Enabled = true;
                     this.txtTipo.Enabled = true;
                     break;
 
@@ -84,6 +93,10 @@ namespace SisGesCom
                     this.btnSalir.Enabled = true;
                     this.txtCodigo.Enabled = true;
                     this.txtTipo.Enabled = false;
+                    //
+                    this.txtCodigo.Enabled = true;
+                    this.txtMedida.Enabled = false;
+                    this.txtTipo.Enabled = false;
                     break;
 
                 case "Editar":
@@ -97,6 +110,10 @@ namespace SisGesCom
                     this.btnSalir.Enabled = true;
                     this.txtCodigo.Enabled = false;
                     this.txtTipo.Enabled = true;
+                    //
+                    this.txtCodigo.Enabled = false;
+                    this.txtMedida.Enabled = true;
+                    this.txtTipo.Enabled = true;
                     break;
 
                 case "Buscar":
@@ -109,6 +126,10 @@ namespace SisGesCom
                     this.btnCancelar.Enabled = false;
                     this.btnSalir.Enabled = true;
                     this.txtCodigo.Enabled = true;
+                    this.txtTipo.Enabled = false;
+                    //
+                    this.txtCodigo.Enabled = true;
+                    this.txtMedida.Enabled = false;
                     this.txtTipo.Enabled = false;
                     break;
 
@@ -124,6 +145,10 @@ namespace SisGesCom
                     this.btnEliminar.Enabled = false;
                     this.btnCancelar.Enabled = false;
                     this.btnSalir.Enabled = true;
+                    //
+                    this.txtCodigo.Enabled = true;
+                    this.txtMedida.Enabled = false;
+                    this.txtTipo.Enabled = false;
                     break;
 
                 default:
@@ -197,8 +222,9 @@ namespace SisGesCom
                         MySqlCommand myCommand = MyConexion.CreateCommand();
 
                         // Step 3 - Comando a ejecutar                        
-                        myCommand.CommandText = "INSERT INTO tipo_combustible(combustible) values(@combustible)";
-                        myCommand.Parameters.AddWithValue("@combustible", txtTipo.Text);                        
+                        myCommand.CommandText = "INSERT INTO tipo_combustible(combustible, medida) values(@combustible, @medida)";
+                        myCommand.Parameters.AddWithValue("@combustible", txtTipo.Text);
+                        myCommand.Parameters.AddWithValue("@medida", txtMedida.Text);
 
                         // Step 4 - Opening the connection
                         MyConexion.Open();
@@ -274,9 +300,10 @@ namespace SisGesCom
                         MySqlCommand myCommand = MyConexion.CreateCommand();
 
                         // Step 3 - Comando a ejecutar
-                        myCommand.CommandText = "UPDATE tipo_combustible SET combustible = @combustible" +
+                        myCommand.CommandText = "UPDATE tipo_combustible SET combustible = @combustible, medida = @medida" +
                             " WHERE id = " + txtCodigo.Text + "";
-                        myCommand.Parameters.AddWithValue("@combustible", txtTipo.Text);                        
+                        myCommand.Parameters.AddWithValue("@combustible", txtTipo.Text);
+                        myCommand.Parameters.AddWithValue("@medida", txtMedida.Text);
 
                         // Step 4 - Opening the connection
                         MyConexion.Open();
@@ -333,7 +360,7 @@ namespace SisGesCom
                     MySqlCommand MyCommand = MyConexion.CreateCommand();
 
                     // Step 3 - creating the commandtext
-                    MyCommand.CommandText = "SELECT combustible FROM tipo_combustible WHERE id = " + txtCodigo.Text + "";
+                    MyCommand.CommandText = "SELECT combustible, medida FROM tipo_combustible WHERE id = " + txtCodigo.Text + "";
 
                     // Step 4 - connection open
                     MyConexion.Open();
@@ -346,7 +373,8 @@ namespace SisGesCom
                     {
                         while (MyReader.Read())
                         {
-                            txtTipo.Text = MyReader["combustible"].ToString();                            
+                            txtTipo.Text = MyReader["combustible"].ToString();
+                            txtMedida.Text = MyReader["medida"].ToString();
                         }
 
                         this.cModo = "Buscar";
@@ -404,7 +432,7 @@ namespace SisGesCom
                 //cWhere = cWhere + " AND fechacita >= "+"'"+ fechadesde +"'" +" AND fechacita <= "+"'"+ fechahasta +"'"+"";
                 //cWhere = cWhere + " AND year = '" + txtYear.Text + "'";
                 sbQuery.Clear();
-                sbQuery.Append("SELECT tipo_combustible.id, tipo_combustible.combustible");
+                sbQuery.Append("SELECT tipo_combustible.id, tipo_combustible.combustible, tipo_combustible.medida");
                 sbQuery.Append(" FROM tipo_combustible ");
                 //sbQuery.Append(" INNER JOIN provincias ON provincias.idprovincia = clientes.provincia");
                 sbQuery.Append(cWhere);

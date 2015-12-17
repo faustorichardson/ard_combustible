@@ -42,6 +42,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.txtTipo = new System.Windows.Forms.TextBox();
+            this.txtMedida = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +62,7 @@
             this.groupBox4.Controls.Add(this.btnEditar);
             this.groupBox4.Controls.Add(this.btnGrabar);
             this.groupBox4.Controls.Add(this.btnNuevo);
-            this.groupBox4.Location = new System.Drawing.Point(5, 140);
+            this.groupBox4.Location = new System.Drawing.Point(5, 172);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(795, 65);
             this.groupBox4.TabIndex = 48;
@@ -208,22 +210,42 @@
             // txtTipo
             // 
             this.txtTipo.Location = new System.Drawing.Point(273, 99);
+            this.txtTipo.MaxLength = 75;
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(223, 20);
             this.txtTipo.TabIndex = 52;
+            // 
+            // txtMedida
+            // 
+            this.txtMedida.Location = new System.Drawing.Point(273, 132);
+            this.txtMedida.MaxLength = 25;
+            this.txtMedida.Name = "txtMedida";
+            this.txtMedida.Size = new System.Drawing.Size(81, 20);
+            this.txtMedida.TabIndex = 54;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(121, 134);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(146, 16);
+            this.label3.TabIndex = 53;
+            this.label3.Text = "Medida(Abreviada):";
             // 
             // frmTipoCombustible
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(807, 214);
+            this.ClientSize = new System.Drawing.Size(807, 249);
+            this.Controls.Add(this.txtMedida);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtTipo);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox4);
             this.Name = "frmTipoCombustible";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTipoCombustible";
             this.Load += new System.EventHandler(this.frmTipoCombustible_Load);
             this.Controls.SetChildIndex(this.lblTituloForm, 0);
@@ -232,6 +254,8 @@
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.txtCodigo, 0);
             this.Controls.SetChildIndex(this.txtTipo, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.txtMedida, 0);
             this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -253,5 +277,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.TextBox txtTipo;
+        private System.Windows.Forms.TextBox txtMedida;
+        private System.Windows.Forms.Label label3;
     }
 }

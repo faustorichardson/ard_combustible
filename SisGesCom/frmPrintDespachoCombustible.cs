@@ -60,17 +60,20 @@ namespace SisGesCom
                 // Filtros de la busqueda                
                 string fechadesde = dtDesde.Value.ToString("yyyy-MM-dd");
                 string fechahasta = dtHasta.Value.ToString("yyyy-MM-dd");
-                cWhere = cWhere + " AND fecha >= " + "'" + fechadesde + "'" + " AND fecha <= " + "'" + fechahasta + "'" + "";
+                cWhere = cWhere + " AND combustible_salida.fecha >= " + "'" + fechadesde + "'" + " AND combustible_salida.fecha <= " + "'" + fechahasta + "'" + "";
+                cWhere = cWhere + " AND movimientocombustible.tipo_movimiento = 'S'";
                 sbQuery.Clear();
-                sbQuery.Append(" SELECT movimientocombustible.id, sum(movimientocombustible.cantidad) as cantidad,");
-                sbQuery.Append(" movimientocombustible.beneficiario, movimientocombustible.fecha, tipo_combustible.combustible as tipo_combustible,");
-                sbQuery.Append(" departamento_autoriza.departamento as autorizadopor,deptobeneficiario.deptobeneficiario as tipobeneficiario");
-                sbQuery.Append(" FROM movimientocombustible ");
+                sbQuery.Append(" SELECT combustible_salida.id, sum(movimientocombustible.cantidad) as cantidad,");
+                sbQuery.Append(" combustible_salida.beneficiario_depto,	combustible_salida.fecha, ");
+                sbQuery.Append(" tipo_combustible.combustible as tipo_combustible, departamento_autoriza.departamento as autorizadopor, ");
+                sbQuery.Append(" deptobeneficiario.deptobeneficiario as tipobeneficiario, tipo_combustible.medida");
+                sbQuery.Append(" FROM combustible_salida");
+                sbQuery.Append(" INNER JOIN movimientocombustible ON movimientocombustible.id = combustible_salida.id");
                 sbQuery.Append(" INNER JOIN tipo_combustible ON tipo_combustible.id = movimientocombustible.tipo_combustible");
-                sbQuery.Append(" INNER JOIN departamento_autoriza ON departamento_autoriza.id = movimientocombustible.autorizadopor");
-                sbQuery.Append(" INNER JOIN deptobeneficiario ON deptobeneficiario.id = movimientocombustible.tipobeneficiario");
+                sbQuery.Append(" INNER JOIN departamento_autoriza ON departamento_autoriza.id = combustible_salida.autorizadopor");
+                sbQuery.Append(" INNER JOIN deptobeneficiario ON deptobeneficiario.id = combustible_salida.beneficiario_depto");
                 sbQuery.Append(cWhere);
-                sbQuery.Append(" AND tipo_movimiento = 'S'");
+                
                 sbQuery.Append(" GROUP BY tipo_combustible, tipobeneficiario");
 
                 // Paso los valores de sbQuery al CommandText

@@ -196,11 +196,17 @@
     <Compile Include="frmDeptoAutoriza.Designer.cs">
       <DependentUpon>frmDeptoAutoriza.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEntradaCombustible.cs">
+    <Compile Include="frmDespachoCombustibles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEntradaCombustible.Designer.cs">
-      <DependentUpon>frmEntradaCombustible.cs</DependentUpon>
+    <Compile Include="frmDespachoCombustibles.Designer.cs">
+      <DependentUpon>frmDespachoCombustibles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEntradaCombustibles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEntradaCombustibles.Designer.cs">
+      <DependentUpon>frmEntradaCombustibles.cs</DependentUpon>
     </Compile>
     <Compile Include="frmInformaciones.cs">
       <SubType>Form</SubType>
@@ -350,8 +356,11 @@
     <EmbeddedResource Include="frmDeptoAutoriza.resx">
       <DependentUpon>frmDeptoAutoriza.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEntradaCombustible.resx">
-      <DependentUpon>frmEntradaCombustible.cs</DependentUpon>
+    <EmbeddedResource Include="frmDespachoCombustibles.resx">
+      <DependentUpon>frmDespachoCombustibles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEntradaCombustibles.resx">
+      <DependentUpon>frmEntradaCombustibles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInformaciones.resx">
       <DependentUpon>frmInformaciones.cs</DependentUpon>

@@ -17,6 +17,7 @@
             <xs:sequence>
               <xs:element name="tipocombustible" msprop:Generator_ColumnVarNameInTable="columntipocombustible" msprop:Generator_ColumnPropNameInRow="tipocombustible" msprop:Generator_ColumnPropNameInTable="tipocombustibleColumn" msprop:Generator_UserColumnName="tipocombustible" type="xs:int" minOccurs="0" />
               <xs:element name="cantidad" msprop:Generator_ColumnVarNameInTable="columncantidad" msprop:Generator_ColumnPropNameInRow="cantidad" msprop:Generator_ColumnPropNameInTable="cantidadColumn" msprop:Generator_UserColumnName="cantidad" type="xs:int" minOccurs="0" />
+              <xs:element name="medida" msprop:Generator_ColumnVarNameInTable="columnmedida" msprop:Generator_ColumnPropNameInRow="medida" msprop:Generator_ColumnPropNameInTable="medidaColumn" msprop:Generator_UserColumnName="medida" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -24,6 +24,7 @@
               <xs:element name="autorizadopor" msprop:Generator_ColumnVarNameInTable="columnautorizadopor" msprop:Generator_ColumnPropNameInRow="autorizadopor" msprop:Generator_ColumnPropNameInTable="autorizadoporColumn" msprop:Generator_UserColumnName="autorizadopor" type="xs:string" minOccurs="0" />
               <xs:element name="tipobeneficiario" msprop:Generator_ColumnVarNameInTable="columntipobeneficiario" msprop:Generator_ColumnPropNameInRow="tipobeneficiario" msprop:Generator_ColumnPropNameInTable="tipobeneficiarioColumn" msprop:Generator_UserColumnName="tipobeneficiario" type="xs:string" minOccurs="0" />
               <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="medida" msprop:Generator_ColumnVarNameInTable="columnmedida" msprop:Generator_ColumnPropNameInRow="medida" msprop:Generator_ColumnPropNameInTable="medidaColumn" msprop:Generator_UserColumnName="medida" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

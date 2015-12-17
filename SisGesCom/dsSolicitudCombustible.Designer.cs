@@ -293,6 +293,8 @@ namespace SisGesCom {
             
             private global::System.Data.DataColumn columnfecha;
             
+            private global::System.Data.DataColumn columnmedida;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public dtSolicitudCombustibleDataTable() {
@@ -384,6 +386,14 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn medidaColumn {
+                get {
+                    return this.columnmedida;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -419,7 +429,7 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public dtSolicitudCombustibleRow AdddtSolicitudCombustibleRow(string id, string tipocombustible, int cantidad, string nota, string enccomb, string cdtegral, System.DateTime fecha) {
+            public dtSolicitudCombustibleRow AdddtSolicitudCombustibleRow(string id, string tipocombustible, int cantidad, string nota, string enccomb, string cdtegral, System.DateTime fecha, string medida) {
                 dtSolicitudCombustibleRow rowdtSolicitudCombustibleRow = ((dtSolicitudCombustibleRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
@@ -428,7 +438,8 @@ namespace SisGesCom {
                         nota,
                         enccomb,
                         cdtegral,
-                        fecha};
+                        fecha,
+                        medida};
                 rowdtSolicitudCombustibleRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowdtSolicitudCombustibleRow);
                 return rowdtSolicitudCombustibleRow;
@@ -458,6 +469,7 @@ namespace SisGesCom {
                 this.columnenccomb = base.Columns["enccomb"];
                 this.columncdtegral = base.Columns["cdtegral"];
                 this.columnfecha = base.Columns["fecha"];
+                this.columnmedida = base.Columns["medida"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -477,6 +489,8 @@ namespace SisGesCom {
                 base.Columns.Add(this.columncdtegral);
                 this.columnfecha = new global::System.Data.DataColumn("fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfecha);
+                this.columnmedida = new global::System.Data.DataColumn("medida", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmedida);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -732,6 +746,22 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string medida {
+                get {
+                    try {
+                        return ((string)(this[this.tabledtSolicitudCombustible.medidaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'medida\' in table \'dtSolicitudCombustible\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtSolicitudCombustible.medidaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsidNull() {
                 return this.IsNull(this.tabledtSolicitudCombustible.idColumn);
             }
@@ -812,6 +842,18 @@ namespace SisGesCom {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetfechaNull() {
                 this[this.tabledtSolicitudCombustible.fechaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsmedidaNull() {
+                return this.IsNull(this.tabledtSolicitudCombustible.medidaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetmedidaNull() {
+                this[this.tabledtSolicitudCombustible.medidaColumn] = global::System.Convert.DBNull;
             }
         }
         

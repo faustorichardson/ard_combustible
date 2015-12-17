@@ -60,14 +60,14 @@ namespace SisGesCom
 
         private void buttonItem11_Click(object sender, EventArgs e)
         {
-            frmEntradaCombustible ofrmEntradaCombustible = new frmEntradaCombustible();
+            frmEntradaCombustibles ofrmEntradaCombustible = new frmEntradaCombustibles();
             ofrmEntradaCombustible.Show();
         }
 
         private void buttonItem14_Click(object sender, EventArgs e)
         {
-            frmSalidaCombustible ofrmSalidaCombustible = new frmSalidaCombustible();
-            ofrmSalidaCombustible.Show();
+            frmDespachoCombustibles ofrmDespachoCombustible = new frmDespachoCombustibles();
+            ofrmDespachoCombustible.Show();            
         }
 
         private void buttonItem10_Click(object sender, EventArgs e)
@@ -124,7 +124,7 @@ namespace SisGesCom
                 //string fechahasta = dtHasta.Value.ToString("yyyy-MM-dd");
                 //cWhere = cWhere + " AND fecha >= " + "'" + fechadesde + "'" + " AND fecha <= " + "'" + fechahasta + "'" + "";
                 sbQuery.Clear();
-                sbQuery.Append("SELECT tipo_combustible.combustible as tipocombustible, existencia.cantidad ");                
+                sbQuery.Append("SELECT tipo_combustible.combustible as tipocombustible, existencia.cantidad, tipo_combustible.medida ");                
                 sbQuery.Append(" FROM existencia ");
                 sbQuery.Append(" INNER JOIN tipo_combustible ON tipo_combustible.id = existencia.tipocombustible");
                 sbQuery.Append(cWhere);
@@ -178,7 +178,7 @@ namespace SisGesCom
                     oParametrosCR[0].Name = "cUsuario";
 
                     //nombre del TITULO DEL INFORME
-                    cTitulo = "REPORTE DE EXISTENCIA DE COMBUSTIBLE";
+                    cTitulo = "REPORTE DE EXISTENCIA DE COMBUSTIBLES";
 
                     //6to Instanciamos nuestro REPORTE
                     //Reportes.ListadoDoctores oListado = new Reportes.ListadoDoctores();

@@ -215,6 +215,7 @@
             this.txtNota.Size = new System.Drawing.Size(400, 62);
             this.txtNota.TabIndex = 77;
             this.txtNota.Text = "";
+            this.txtNota.TextChanged += new System.EventHandler(this.txtNota_TextChanged);
             // 
             // label5
             // 
@@ -225,6 +226,7 @@
             this.label5.Size = new System.Drawing.Size(45, 16);
             this.label5.TabIndex = 76;
             this.label5.Text = "Nota:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // txtCantidad
             // 
@@ -284,6 +286,7 @@
             this.txtBeneficiario.Name = "txtBeneficiario";
             this.txtBeneficiario.Size = new System.Drawing.Size(253, 20);
             this.txtBeneficiario.TabIndex = 71;
+            this.txtBeneficiario.TextChanged += new System.EventHandler(this.txtBeneficiario_TextChanged);
             // 
             // label2
             // 
@@ -294,6 +297,7 @@
             this.label2.Size = new System.Drawing.Size(95, 16);
             this.label2.TabIndex = 70;
             this.label2.Text = "Beneficiario:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // cmbRenglonBeneficiario
             // 
@@ -302,6 +306,7 @@
             this.cmbRenglonBeneficiario.Name = "cmbRenglonBeneficiario";
             this.cmbRenglonBeneficiario.Size = new System.Drawing.Size(225, 21);
             this.cmbRenglonBeneficiario.TabIndex = 81;
+            this.cmbRenglonBeneficiario.SelectedIndexChanged += new System.EventHandler(this.cmbRenglonBeneficiario_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -312,6 +317,7 @@
             this.label7.Size = new System.Drawing.Size(157, 16);
             this.label7.TabIndex = 80;
             this.label7.Text = "Renglon Beneficiario:";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // txtCodigo
             // 
@@ -319,6 +325,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(92, 20);
             this.txtCodigo.TabIndex = 83;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // label8
             // 
@@ -329,6 +336,7 @@
             this.label8.Size = new System.Drawing.Size(111, 16);
             this.label8.TabIndex = 82;
             this.label8.Text = "No. Despacho:";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // frmSalidaCombustible
             // 
