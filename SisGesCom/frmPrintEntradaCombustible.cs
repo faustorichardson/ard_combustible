@@ -58,7 +58,7 @@ namespace SisGesCom
                 cWhere = cWhere + " AND fecha >= " + "'" + fechadesde + "'" + " AND fecha <= " + "'" + fechahasta + "'" + "";
                 sbQuery.Clear();
                 sbQuery.Append("SELECT tipo_combustible.combustible as tipo_combustible, movimientocombustible.cantidad, ");
-                sbQuery.Append(" movimientocombustible.fecha, movimientocombustible.id");
+                sbQuery.Append(" movimientocombustible.fecha, movimientocombustible.id, tipo_combustible.medida");
                 sbQuery.Append(" FROM movimientocombustible ");
                 sbQuery.Append(" INNER JOIN tipo_combustible ON tipo_combustible.id = movimientocombustible.tipo_combustible");                
                 sbQuery.Append(cWhere);
@@ -144,6 +144,11 @@ namespace SisGesCom
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmPrintEntradaCombustible_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

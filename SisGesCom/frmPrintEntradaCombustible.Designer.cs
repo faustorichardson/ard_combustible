@@ -117,6 +117,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmPrintEntradaCombustible";
             this.Text = "frmPrintEntradaCombustible";
+            this.Load += new System.EventHandler(this.frmPrintEntradaCombustible_Load);
             this.Controls.SetChildIndex(this.lblTituloForm, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.dtDesde, 0);

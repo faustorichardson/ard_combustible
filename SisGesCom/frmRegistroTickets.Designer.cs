@@ -44,8 +44,6 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnGrabar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.cmbAutorizadoPor = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +55,7 @@
             // txtCantidad
             // 
             this.txtCantidad.Enabled = false;
-            this.txtCantidad.Location = new System.Drawing.Point(315, 111);
+            this.txtCantidad.Location = new System.Drawing.Point(315, 109);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(92, 20);
             this.txtCantidad.TabIndex = 87;
@@ -67,7 +65,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(235, 114);
+            this.label4.Location = new System.Drawing.Point(230, 112);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 16);
             this.label4.TabIndex = 86;
@@ -75,7 +73,7 @@
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(315, 81);
+            this.txtCodigo.Location = new System.Drawing.Point(315, 79);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(66, 20);
             this.txtCodigo.TabIndex = 85;
@@ -84,17 +82,17 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(209, 84);
+            this.label2.Location = new System.Drawing.Point(268, 82);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 16);
+            this.label2.Size = new System.Drawing.Size(36, 16);
             this.label2.TabIndex = 84;
-            this.label2.Text = "No. Solicitud:";
+            this.label2.Text = "No.:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(249, 54);
+            this.label1.Location = new System.Drawing.Point(249, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 16);
             this.label1.TabIndex = 83;
@@ -102,7 +100,7 @@
             // 
             // dtFecha
             // 
-            this.dtFecha.Location = new System.Drawing.Point(315, 52);
+            this.dtFecha.Location = new System.Drawing.Point(315, 50);
             this.dtFecha.Name = "dtFecha";
             this.dtFecha.Size = new System.Drawing.Size(200, 20);
             this.dtFecha.TabIndex = 82;
@@ -117,7 +115,7 @@
             this.groupBox4.Controls.Add(this.btnEditar);
             this.groupBox4.Controls.Add(this.btnGrabar);
             this.groupBox4.Controls.Add(this.btnNuevo);
-            this.groupBox4.Location = new System.Drawing.Point(9, 185);
+            this.groupBox4.Location = new System.Drawing.Point(9, 140);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(795, 65);
             this.groupBox4.TabIndex = 81;
@@ -235,31 +233,11 @@
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // cmbAutorizadoPor
-            // 
-            this.cmbAutorizadoPor.FormattingEnabled = true;
-            this.cmbAutorizadoPor.Location = new System.Drawing.Point(315, 142);
-            this.cmbAutorizadoPor.Name = "cmbAutorizadoPor";
-            this.cmbAutorizadoPor.Size = new System.Drawing.Size(190, 21);
-            this.cmbAutorizadoPor.TabIndex = 91;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(195, 145);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 16);
-            this.label6.TabIndex = 90;
-            this.label6.Text = "Autorizado Por:";
-            // 
             // frmRegistroTickets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 262);
-            this.Controls.Add(this.cmbAutorizadoPor);
-            this.Controls.Add(this.label6);
+            this.ClientSize = new System.Drawing.Size(812, 215);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtCodigo);
@@ -278,8 +256,6 @@
             this.Controls.SetChildIndex(this.txtCodigo, 0);
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.txtCantidad, 0);
-            this.Controls.SetChildIndex(this.label6, 0);
-            this.Controls.SetChildIndex(this.cmbAutorizadoPor, 0);
             this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -303,7 +279,5 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnGrabar;
         private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.ComboBox cmbAutorizadoPor;
-        private System.Windows.Forms.Label label6;
     }
 }

@@ -248,10 +248,10 @@ namespace SisGesCom
                 //cWhere = cWhere + " AND fecha >= " + "'" + fechadesde + "'" + " AND fecha <= " + "'" + fechahasta + "'" + "";
                 sbQuery.Clear();
                 sbQuery.Append("SELECT tickets.rango as id, tickets.cedula, tickets.nombre, tickets.apellido, rangos.rango_descripcion as rango,");
-                sbQuery.Append(" rangos.rangoabrev");
+                sbQuery.Append(" rangos.rangoabrev, rangos.orden");
                 sbQuery.Append(" FROM tickets ");
                 sbQuery.Append(" INNER JOIN rangos ON rangos.rango_id = tickets.rango");
-                sbQuery.Append(" ORDER BY tickets.rango, tickets.apellido ASC");
+                sbQuery.Append(" ORDER BY rangos.orden, tickets.apellido ASC");
                 //sbQuery.Append(cWhere);
                 
                 // Paso los valores de sbQuery al CommandText
@@ -347,6 +347,30 @@ namespace SisGesCom
         {
             frmPrintDespachoCombustible ofrmPrintDespachoCombustible = new frmPrintDespachoCombustible();
             ofrmPrintDespachoCombustible.Show();
+        }
+
+        private void buttonItem4_Click(object sender, EventArgs e)
+        {
+            frmPrintDespachoCombustibleDetallado ofrmPrintDespachoCombustibleDetallado = new frmPrintDespachoCombustibleDetallado();
+            ofrmPrintDespachoCombustibleDetallado.Show();
+        }
+
+        private void buttonItem12_Click(object sender, EventArgs e)
+        {
+            frmPrintResumenCombustibleSolicitado ofrmPrintResumenCombustibleSolicitado = new frmPrintResumenCombustibleSolicitado();
+            ofrmPrintResumenCombustibleSolicitado.Show();
+        }
+
+        private void buttonItem18_Click(object sender, EventArgs e)
+        {
+            frmDespachoTickets ofrmDespachoTickets = new frmDespachoTickets();
+            ofrmDespachoTickets.Show();
+        }
+
+        private void buttonItem26_Click(object sender, EventArgs e)
+        {
+            frmPrintTicketsEntregados ofrmPrintTicketsEntregados = new frmPrintTicketsEntregados();
+            ofrmPrintTicketsEntregados.Show();
         }
     }
 }

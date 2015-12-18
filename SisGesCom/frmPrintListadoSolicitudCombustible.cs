@@ -66,39 +66,40 @@ namespace SisGesCom
                 {
                     string fechadesde = dtDesde.Value.ToString("yyyy-MM-dd");
                     string fechahasta = dtHasta.Value.ToString("yyyy-MM-dd");
-                    cWhere = cWhere + " AND fecha >= " + "'" + fechadesde + "'" + " AND fecha <= " + "'" + fechahasta + "'" + "";
+                    cWhere = cWhere + " AND secuencia_solicitudcombustible.fecha >= " + "'" + fechadesde + "'" + " AND secuencia_solicitudcombustible.fecha <= " + "'" + fechahasta + "'" + "";
                     sbQuery.Clear();
-                    sbQuery.Append("SELECT solicitud.id, tipo_combustible.combustible as tipocombustible, solicitud.cantidad, ");
-                    sbQuery.Append(" solicitud.fecha, solicitud.nota");
-                    sbQuery.Append(" FROM solicitud ");
-                    sbQuery.Append(" INNER JOIN tipo_combustible ON tipo_combustible.id = solicitud.tipo_combustible");                    
+                    sbQuery.Append("SELECT secuencia_solicitudcombustible.id, solicitud.descripcion_combustible as tipocombustible, solicitud.cantidad, ");
+                    sbQuery.Append(" secuencia_solicitudcombustible.fecha, secuencia_solicitudcombustible.nota");
+                    sbQuery.Append(" FROM secuencia_solicitudcombustible ");
+                    sbQuery.Append(" INNER JOIN solicitud ON solicitud.id = secuencia_solicitudcombustible.id");
+                    //sbQuery.Append(" INNER JOIN tipo_combustible ON tipo_combustible.id = solicitud.tipo_combustible");                    
                     sbQuery.Append(cWhere);
                 }
                 else if (rbAprobadas.Checked)
                 {
-                    string fechadesde = dtDesde.Value.ToString("yyyy-MM-dd");
-                    string fechahasta = dtHasta.Value.ToString("yyyy-MM-dd");
-                    cWhere = cWhere + " AND fecha >= " + "'" + fechadesde + "'" + " AND fecha <= " + "'" + fechahasta + "'" + "";
-                    cWhere = cWhere + " AND status = 0";
-                    sbQuery.Clear();
-                    sbQuery.Append("SELECT solicitud.id, tipo_combustible.combustible as tipocombustible, solicitud.cantidad, ");
-                    sbQuery.Append(" solicitud.fecha, solicitud.nota");
-                    sbQuery.Append(" FROM solicitud ");
-                    sbQuery.Append(" INNER JOIN tipo_combustible ON tipo_combustible.id = solicitud.tipo_combustible");
-                    sbQuery.Append(cWhere);
+                    //string fechadesde = dtDesde.Value.ToString("yyyy-MM-dd");
+                    //string fechahasta = dtHasta.Value.ToString("yyyy-MM-dd");
+                    //cWhere = cWhere + " AND fecha >= " + "'" + fechadesde + "'" + " AND fecha <= " + "'" + fechahasta + "'" + "";
+                    //cWhere = cWhere + " AND status = 0";
+                    //sbQuery.Clear();
+                    //sbQuery.Append("SELECT solicitud.id, tipo_combustible.combustible as tipocombustible, solicitud.cantidad, ");
+                    //sbQuery.Append(" solicitud.fecha, solicitud.nota");
+                    //sbQuery.Append(" FROM solicitud ");
+                    //sbQuery.Append(" INNER JOIN tipo_combustible ON tipo_combustible.id = solicitud.tipo_combustible");
+                    //sbQuery.Append(cWhere);
                 }
                 else if (rbPendientes.Checked)
                 {
-                    string fechadesde = dtDesde.Value.ToString("yyyy-MM-dd");
-                    string fechahasta = dtHasta.Value.ToString("yyyy-MM-dd");
-                    cWhere = cWhere + " AND fecha >= " + "'" + fechadesde + "'" + " AND fecha <= " + "'" + fechahasta + "'" + "";
-                    cWhere = cWhere + " AND status = 1";
-                    sbQuery.Clear();
-                    sbQuery.Append("SELECT solicitud.id, tipo_combustible.combustible as tipocombustible, solicitud.cantidad, ");
-                    sbQuery.Append(" solicitud.fecha, solicitud.nota");
-                    sbQuery.Append(" FROM solicitud ");
-                    sbQuery.Append(" INNER JOIN tipo_combustible ON tipo_combustible.id = solicitud.tipo_combustible");
-                    sbQuery.Append(cWhere);
+                    //string fechadesde = dtDesde.Value.ToString("yyyy-MM-dd");
+                    //string fechahasta = dtHasta.Value.ToString("yyyy-MM-dd");
+                    //cWhere = cWhere + " AND fecha >= " + "'" + fechadesde + "'" + " AND fecha <= " + "'" + fechahasta + "'" + "";
+                    //cWhere = cWhere + " AND status = 1";
+                    //sbQuery.Clear();
+                    //sbQuery.Append("SELECT solicitud.id, tipo_combustible.combustible as tipocombustible, solicitud.cantidad, ");
+                    //sbQuery.Append(" solicitud.fecha, solicitud.nota");
+                    //sbQuery.Append(" FROM solicitud ");
+                    //sbQuery.Append(" INNER JOIN tipo_combustible ON tipo_combustible.id = solicitud.tipo_combustible");
+                    //sbQuery.Append(cWhere);
                 }
 
                 // Paso los valores de sbQuery al CommandText

@@ -35,7 +35,7 @@ namespace SisGesCom
             this.Limpiar();
             this.cModo = "Inicio";
             this.Botones();
-            this.fillCmbAutorizadoPor();
+            //this.fillCmbAutorizadoPor();
         }
 
         private void fillCmbAutorizadoPor()
@@ -62,9 +62,9 @@ namespace SisGesCom
                 MyDataTable.Load(MyReader);
 
                 // Step 6
-                cmbAutorizadoPor.ValueMember = "id";
-                cmbAutorizadoPor.DisplayMember = "departamento";
-                cmbAutorizadoPor.DataSource = MyDataTable;
+                //cmbAutorizadoPor.ValueMember = "id";
+                //cmbAutorizadoPor.DisplayMember = "departamento";
+                //cmbAutorizadoPor.DataSource = MyDataTable;
 
                 // Step 7
                 MyConexion.Close();
@@ -93,7 +93,7 @@ namespace SisGesCom
                 MySqlCommand myCommand = MyConexion.CreateCommand();
 
                 // Step 3 - Comando a ejecutar                        
-                myCommand.CommandText = "SELECT cantidad FROM existencia WHERE tipocombustible = 4";
+                myCommand.CommandText = "SELECT cantidad FROM existencia WHERE tipocombustible = 1000";
 
                 // Step 4 - Opening the connection
                 MyConexion.Open();
@@ -181,7 +181,7 @@ namespace SisGesCom
                     this.dtFecha.Enabled = false;
                     this.txtCodigo.Enabled = true;
                     this.txtCantidad.Enabled = false;
-                    this.cmbAutorizadoPor.Enabled = false;
+                    //this.cmbAutorizadoPor.Enabled = false;
                     break;
 
                 case "Nuevo":
@@ -197,7 +197,7 @@ namespace SisGesCom
                     this.dtFecha.Enabled = true;
                     this.txtCodigo.Enabled = false;
                     this.txtCantidad.Enabled = true;
-                    this.cmbAutorizadoPor.Enabled = true;
+                    //this.cmbAutorizadoPor.Enabled = true;
                     break;
 
                 case "Grabar":
@@ -213,7 +213,7 @@ namespace SisGesCom
                     this.dtFecha.Enabled = false;
                     this.txtCodigo.Enabled = true;
                     this.txtCantidad.Enabled = false;
-                    this.cmbAutorizadoPor.Enabled = false;
+                    //this.cmbAutorizadoPor.Enabled = false;
                     break;
 
                 case "Editar":
@@ -229,7 +229,7 @@ namespace SisGesCom
                     this.dtFecha.Enabled = true;
                     this.txtCodigo.Enabled = false;
                     this.txtCantidad.Enabled = true;
-                    this.cmbAutorizadoPor.Enabled = true;
+                    //this.cmbAutorizadoPor.Enabled = true;
                     break;
 
                 case "Buscar":
@@ -245,7 +245,7 @@ namespace SisGesCom
                     this.dtFecha.Enabled = false;
                     this.txtCodigo.Enabled = true;
                     this.txtCantidad.Enabled = false;
-                    this.cmbAutorizadoPor.Enabled = false;
+                    //this.cmbAutorizadoPor.Enabled = false;
                     break;
 
                 case "Eliminar":
@@ -264,7 +264,7 @@ namespace SisGesCom
                     this.dtFecha.Enabled = false;
                     this.txtCodigo.Enabled = true;
                     this.txtCantidad.Enabled = false;
-                    this.cmbAutorizadoPor.Enabled = false;
+                    //this.cmbAutorizadoPor.Enabled = false;
                     break;
 
                 default:
@@ -301,12 +301,12 @@ namespace SisGesCom
                         MySqlCommand myCommand = MyConexion.CreateCommand();
 
                         // Step 3 - Comando a ejecutar                        
-                        myCommand.CommandText = "INSERT INTO movimientotickets(tipo_movimiento, cantidad, fecha, autorizadopor)"+
-                            " values(@tipo_movimiento, @cantidad, @fecha, @autorizadopor)";
+                        myCommand.CommandText = "INSERT INTO movimientotickets(tipo_movimiento, cantidad, fecha)"+
+                            " values(@tipo_movimiento, @cantidad, @fecha)";
                         myCommand.Parameters.AddWithValue("@tipo_movimiento", 'E');
                         myCommand.Parameters.AddWithValue("@cantidad", txtCantidad.Text);
                         myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd HH:mm:ss"));
-                        myCommand.Parameters.AddWithValue("@autorizadopor", cmbAutorizadoPor.SelectedValue);
+                        //myCommand.Parameters.AddWithValue("@autorizadopor", cmbAutorizadoPor.SelectedValue);
 
                         // Step 4 - Opening the connection
                         MyConexion.Open();
@@ -338,7 +338,7 @@ namespace SisGesCom
                         buscarCombustible();
                         cCombustible = cCombustible + Convert.ToInt32(txtCantidad.Text);
                         //
-                        myCommand.CommandText = "UPDATE existencia SET cantidad = @cCombustible WHERE tipocombustible = 4";
+                        myCommand.CommandText = "UPDATE existencia SET cantidad = @cCombustible WHERE tipocombustible = 1000";
                         myCommand.Parameters.AddWithValue("@cCombustible", cCombustible);
 
                         // Step 4 - Opening the connection
@@ -359,38 +359,38 @@ namespace SisGesCom
                 }
                 else
                 {
-                    try
-                    {
-                        // Step 1 - Stablishing the connection
-                        MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
+                    //try
+                    //{
+                    //    // Step 1 - Stablishing the connection
+                    //    MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
 
-                        // Step 2 - Crear el comando de ejecucion
-                        MySqlCommand myCommand = MyConexion.CreateCommand();
+                    //    // Step 2 - Crear el comando de ejecucion
+                    //    MySqlCommand myCommand = MyConexion.CreateCommand();
 
-                        // Step 3 - Comando a ejecutar                        
-                        myCommand.CommandText = "UPDATE movimientotickets SET tipo_movimiento = @tipo_movimiento, cantidad = @cantidad, " +
-                            " fecha = @fecha, autorizadopor = @autorizadopor) WHERE id =" + txtCodigo.Text + "";                            
-                        myCommand.Parameters.AddWithValue("@tipo_movimiento", 'E');
-                        myCommand.Parameters.AddWithValue("@cantidad", txtCantidad.Text);
-                        myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd HH:mm:ss"));
-                        myCommand.Parameters.AddWithValue("@autorizadopor", cmbAutorizadoPor.SelectedValue);
+                    //    // Step 3 - Comando a ejecutar                        
+                    //    myCommand.CommandText = "UPDATE movimientotickets SET tipo_movimiento = @tipo_movimiento, cantidad = @cantidad, " +
+                    //        " fecha = @fecha, autorizadopor = @autorizadopor) WHERE id =" + txtCodigo.Text + "";                            
+                    //    myCommand.Parameters.AddWithValue("@tipo_movimiento", 'E');
+                    //    myCommand.Parameters.AddWithValue("@cantidad", txtCantidad.Text);
+                    //    myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd HH:mm:ss"));
+                    //    myCommand.Parameters.AddWithValue("@autorizadopor", cmbAutorizadoPor.SelectedValue);
 
-                        // Step 4 - Opening the connection
-                        MyConexion.Open();
+                    //    // Step 4 - Opening the connection
+                    //    MyConexion.Open();
 
-                        // Step 5 - Executing the query
-                        myCommand.ExecuteNonQuery();
+                    //    // Step 5 - Executing the query
+                    //    myCommand.ExecuteNonQuery();
 
-                        // Step 6 - Closing the connection
-                        MyConexion.Close();
+                    //    // Step 6 - Closing the connection
+                    //    MyConexion.Close();
 
-                        MessageBox.Show("Informacion guardada satisfactoriamente...");
-                    }
-                    catch (Exception myEx)
-                    {
-                        MessageBox.Show(myEx.Message);
-                        throw;
-                    }
+                    //    MessageBox.Show("Informacion guardada satisfactoriamente...");
+                    //}
+                    //catch (Exception myEx)
+                    //{
+                    //    MessageBox.Show(myEx.Message);
+                    //    throw;
+                    //}
                 }
 
                 // IMPRIMIENDO EL REGISTRO

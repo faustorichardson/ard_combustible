@@ -46,3 +46,8 @@ C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\obj\x86\Debug\SisGesCom.exe
 C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\obj\x86\Debug\SisGesCom.pdb
 C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\obj\x86\Debug\SisGesCom.frmEntradaCombustibles.resources
 C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\obj\x86\Debug\SisGesCom.frmDespachoCombustibles.resources
+C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\obj\x86\Debug\SisGesCom.frmPrintDespachoCombustibleDetallado.resources
+C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\obj\x86\Debug\SisGesCom.frmPrintResumenCombustibleSolicitado.resources
+C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\obj\x86\Debug\SisGesCom.frmDespachoTickets.resources
+C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\obj\x86\Debug\SisGesCom.frmPrintTicketsEntregados.resources
+C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\obj\x86\Debug\SisGesCom.frmPrintTicketsRecibidos.resources

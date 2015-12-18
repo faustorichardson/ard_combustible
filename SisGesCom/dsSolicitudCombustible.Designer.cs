@@ -287,10 +287,6 @@ namespace SisGesCom {
             
             private global::System.Data.DataColumn columnnota;
             
-            private global::System.Data.DataColumn columnenccomb;
-            
-            private global::System.Data.DataColumn columncdtegral;
-            
             private global::System.Data.DataColumn columnfecha;
             
             private global::System.Data.DataColumn columnmedida;
@@ -362,22 +358,6 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn enccombColumn {
-                get {
-                    return this.columnenccomb;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn cdtegralColumn {
-                get {
-                    return this.columncdtegral;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn fechaColumn {
                 get {
                     return this.columnfecha;
@@ -429,15 +409,13 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public dtSolicitudCombustibleRow AdddtSolicitudCombustibleRow(string id, string tipocombustible, int cantidad, string nota, string enccomb, string cdtegral, System.DateTime fecha, string medida) {
+            public dtSolicitudCombustibleRow AdddtSolicitudCombustibleRow(string id, string tipocombustible, int cantidad, string nota, System.DateTime fecha, string medida) {
                 dtSolicitudCombustibleRow rowdtSolicitudCombustibleRow = ((dtSolicitudCombustibleRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
                         tipocombustible,
                         cantidad,
                         nota,
-                        enccomb,
-                        cdtegral,
                         fecha,
                         medida};
                 rowdtSolicitudCombustibleRow.ItemArray = columnValuesArray;
@@ -466,8 +444,6 @@ namespace SisGesCom {
                 this.columntipocombustible = base.Columns["tipocombustible"];
                 this.columncantidad = base.Columns["cantidad"];
                 this.columnnota = base.Columns["nota"];
-                this.columnenccomb = base.Columns["enccomb"];
-                this.columncdtegral = base.Columns["cdtegral"];
                 this.columnfecha = base.Columns["fecha"];
                 this.columnmedida = base.Columns["medida"];
             }
@@ -483,10 +459,6 @@ namespace SisGesCom {
                 base.Columns.Add(this.columncantidad);
                 this.columnnota = new global::System.Data.DataColumn("nota", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnota);
-                this.columnenccomb = new global::System.Data.DataColumn("enccomb", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnenccomb);
-                this.columncdtegral = new global::System.Data.DataColumn("cdtegral", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncdtegral);
                 this.columnfecha = new global::System.Data.DataColumn("fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfecha);
                 this.columnmedida = new global::System.Data.DataColumn("medida", typeof(string), null, global::System.Data.MappingType.Element);
@@ -698,38 +670,6 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string enccomb {
-                get {
-                    try {
-                        return ((string)(this[this.tabledtSolicitudCombustible.enccombColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'enccomb\' in table \'dtSolicitudCombustible\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabledtSolicitudCombustible.enccombColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cdtegral {
-                get {
-                    try {
-                        return ((string)(this[this.tabledtSolicitudCombustible.cdtegralColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'cdtegral\' in table \'dtSolicitudCombustible\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabledtSolicitudCombustible.cdtegralColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.DateTime fecha {
                 get {
                     try {
@@ -806,30 +746,6 @@ namespace SisGesCom {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetnotaNull() {
                 this[this.tabledtSolicitudCombustible.notaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsenccombNull() {
-                return this.IsNull(this.tabledtSolicitudCombustible.enccombColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetenccombNull() {
-                this[this.tabledtSolicitudCombustible.enccombColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IscdtegralNull() {
-                return this.IsNull(this.tabledtSolicitudCombustible.cdtegralColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetcdtegralNull() {
-                this[this.tabledtSolicitudCombustible.cdtegralColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

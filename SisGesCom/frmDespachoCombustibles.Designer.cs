@@ -341,7 +341,7 @@
             this.cmbRenglonBeneficiario.FormattingEnabled = true;
             this.cmbRenglonBeneficiario.Location = new System.Drawing.Point(196, 99);
             this.cmbRenglonBeneficiario.Name = "cmbRenglonBeneficiario";
-            this.cmbRenglonBeneficiario.Size = new System.Drawing.Size(225, 21);
+            this.cmbRenglonBeneficiario.Size = new System.Drawing.Size(269, 21);
             this.cmbRenglonBeneficiario.TabIndex = 98;
             // 
             // label7
@@ -358,7 +358,7 @@
             // 
             this.txtBeneficiario.Location = new System.Drawing.Point(196, 73);
             this.txtBeneficiario.Name = "txtBeneficiario";
-            this.txtBeneficiario.Size = new System.Drawing.Size(253, 20);
+            this.txtBeneficiario.Size = new System.Drawing.Size(326, 20);
             this.txtBeneficiario.TabIndex = 96;
             // 
             // label2
