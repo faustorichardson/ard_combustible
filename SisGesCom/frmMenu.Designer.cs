@@ -305,6 +305,7 @@
             this.buttonItem27.Name = "buttonItem27";
             this.buttonItem27.SubItemsExpandWidth = 14;
             this.buttonItem27.Text = "Tickets Recibidos";
+            this.buttonItem27.Click += new System.EventHandler(this.buttonItem27_Click);
             // 
             // buttonItem26
             // 

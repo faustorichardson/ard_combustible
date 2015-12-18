@@ -372,5 +372,11 @@ namespace SisGesCom
             frmPrintTicketsEntregados ofrmPrintTicketsEntregados = new frmPrintTicketsEntregados();
             ofrmPrintTicketsEntregados.Show();
         }
+
+        private void buttonItem27_Click(object sender, EventArgs e)
+        {
+            frmPrintTicketsRecibidos ofrmPrintTicketsRecibidos = new frmPrintTicketsRecibidos();
+            ofrmPrintTicketsRecibidos.Show();
+        }
     }
 }
