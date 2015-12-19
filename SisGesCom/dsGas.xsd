@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsGas" targetNamespace="http://tempuri.org/dsGas.xsd" xmlns:mstns="http://tempuri.org/dsGas.xsd" xmlns="http://tempuri.org/dsGas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsGas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsGas" msprop:Generator_UserDSName="dsGas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtGas" msprop:Generator_TableClassName="dtGasDataTable" msprop:Generator_TableVarName="tabledtGas" msprop:Generator_TablePropName="dtGas" msprop:Generator_RowDeletingName="dtGasRowDeleting" msprop:Generator_UserTableName="dtGas" msprop:Generator_RowChangingName="dtGasRowChanging" msprop:Generator_RowEvHandlerName="dtGasRowChangeEventHandler" msprop:Generator_RowDeletedName="dtGasRowDeleted" msprop:Generator_RowEvArgName="dtGasRowChangeEvent" msprop:Generator_RowChangedName="dtGasRowChanged" msprop:Generator_RowClassName="dtGasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" minOccurs="0" />
+              <xs:element name="departamento" msprop:Generator_ColumnVarNameInTable="columndepartamento" msprop:Generator_ColumnPropNameInRow="departamento" msprop:Generator_ColumnPropNameInTable="departamentoColumn" msprop:Generator_UserColumnName="departamento" type="xs:string" minOccurs="0" />
+              <xs:element name="tipodescripcion" msprop:Generator_ColumnVarNameInTable="columntipodescripcion" msprop:Generator_ColumnPropNameInRow="tipodescripcion" msprop:Generator_ColumnPropNameInTable="tipodescripcionColumn" msprop:Generator_UserColumnName="tipodescripcion" type="xs:string" minOccurs="0" />
+              <xs:element name="suplidor" msprop:Generator_ColumnVarNameInTable="columnsuplidor" msprop:Generator_ColumnPropNameInRow="suplidor" msprop:Generator_ColumnPropNameInTable="suplidorColumn" msprop:Generator_UserColumnName="suplidor" type="xs:string" minOccurs="0" />
+              <xs:element name="nota" msprop:Generator_ColumnVarNameInTable="columnnota" msprop:Generator_ColumnPropNameInRow="nota" msprop:Generator_ColumnPropNameInTable="notaColumn" msprop:Generator_UserColumnName="nota" type="xs:string" minOccurs="0" />
+              <xs:element name="id_despacho" msprop:Generator_ColumnVarNameInTable="columnid_despacho" msprop:Generator_ColumnPropNameInRow="id_despacho" msprop:Generator_ColumnPropNameInTable="id_despachoColumn" msprop:Generator_UserColumnName="id_despacho" type="xs:string" minOccurs="0" />
+              <xs:element name="cantidad" msprop:Generator_ColumnVarNameInTable="columncantidad" msprop:Generator_ColumnPropNameInRow="cantidad" msprop:Generator_ColumnPropNameInTable="cantidadColumn" msprop:Generator_UserColumnName="cantidad" type="xs:double" minOccurs="0" />
+              <xs:element name="tarjeta" msprop:Generator_ColumnVarNameInTable="columntarjeta" msprop:Generator_ColumnPropNameInRow="tarjeta" msprop:Generator_ColumnPropNameInTable="tarjetaColumn" msprop:Generator_UserColumnName="tarjeta" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

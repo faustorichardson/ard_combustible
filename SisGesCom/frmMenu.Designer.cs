@@ -47,7 +47,6 @@
             this.ribbonPanel2 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonBar6 = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem20 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem21 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar5 = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem19 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem18 = new DevComponents.DotNetBar.ButtonItem();
@@ -56,8 +55,6 @@
             this.buttonItem11 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem14 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel5 = new DevComponents.DotNetBar.RibbonPanel();
-            this.ribbonBar8 = new DevComponents.DotNetBar.RibbonBar();
-            this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar7 = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem22 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem23 = new DevComponents.DotNetBar.ButtonItem();
@@ -109,8 +106,8 @@
             this.ribbonControl1.BackgroundStyle.Class = "";
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.CaptionVisible = true;
-            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel2);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel5);
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -158,6 +155,7 @@
             this.ribbonPanel3.StyleMouseOver.Class = "";
             this.ribbonPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel3.TabIndex = 3;
+            this.ribbonPanel3.Visible = false;
             // 
             // ribbonBar10
             // 
@@ -221,6 +219,7 @@
             this.buttonItem28.Name = "buttonItem28";
             this.buttonItem28.SubItemsExpandWidth = 14;
             this.buttonItem28.Text = "Resumen Tickets Entregados";
+            this.buttonItem28.Click += new System.EventHandler(this.buttonItem28_Click);
             // 
             // ribbonBar9
             // 
@@ -343,7 +342,6 @@
             this.ribbonPanel2.StyleMouseOver.Class = "";
             this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel2.TabIndex = 2;
-            this.ribbonPanel2.Visible = false;
             // 
             // ribbonBar6
             // 
@@ -362,11 +360,10 @@
             this.ribbonBar6.Dock = System.Windows.Forms.DockStyle.Left;
             this.ribbonBar6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ribbonBar6.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem20,
-            this.buttonItem21});
+            this.buttonItem20});
             this.ribbonBar6.Location = new System.Drawing.Point(331, 0);
             this.ribbonBar6.Name = "ribbonBar6";
-            this.ribbonBar6.Size = new System.Drawing.Size(150, 96);
+            this.ribbonBar6.Size = new System.Drawing.Size(139, 96);
             this.ribbonBar6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar6.TabIndex = 2;
             this.ribbonBar6.Text = "GESTION DE GAS";
@@ -388,14 +385,7 @@
             this.buttonItem20.Name = "buttonItem20";
             this.buttonItem20.SubItemsExpandWidth = 14;
             this.buttonItem20.Text = "Despacho Gas";
-            // 
-            // buttonItem21
-            // 
-            this.buttonItem21.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem21.Image")));
-            this.buttonItem21.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem21.Name = "buttonItem21";
-            this.buttonItem21.SubItemsExpandWidth = 14;
-            this.buttonItem21.Text = "Listado Departamentos";
+            this.buttonItem20.Click += new System.EventHandler(this.buttonItem20_Click);
             // 
             // ribbonBar5
             // 
@@ -518,7 +508,6 @@
             // ribbonPanel5
             // 
             this.ribbonPanel5.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel5.Controls.Add(this.ribbonBar8);
             this.ribbonPanel5.Controls.Add(this.ribbonBar7);
             this.ribbonPanel5.Controls.Add(this.ribbonBar4);
             this.ribbonPanel5.Controls.Add(this.ribbonBar3);
@@ -544,50 +533,6 @@
             this.ribbonPanel5.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel5.TabIndex = 5;
             this.ribbonPanel5.Visible = false;
-            // 
-            // ribbonBar8
-            // 
-            this.ribbonBar8.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.ribbonBar8.BackgroundMouseOverStyle.Class = "";
-            this.ribbonBar8.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar8.BackgroundStyle.Class = "";
-            this.ribbonBar8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar8.ContainerControlProcessDialogKey = true;
-            this.ribbonBar8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBar8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ribbonBar8.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem2});
-            this.ribbonBar8.Location = new System.Drawing.Point(523, 0);
-            this.ribbonBar8.Name = "ribbonBar8";
-            this.ribbonBar8.Size = new System.Drawing.Size(117, 96);
-            this.ribbonBar8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonBar8.TabIndex = 3;
-            this.ribbonBar8.Text = "INFORMACIONES";
-            // 
-            // 
-            // 
-            this.ribbonBar8.TitleStyle.Class = "";
-            this.ribbonBar8.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar8.TitleStyleMouseOver.Class = "";
-            this.ribbonBar8.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // buttonItem2
-            // 
-            this.buttonItem2.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem2.Image")));
-            this.buttonItem2.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem2.Name = "buttonItem2";
-            this.buttonItem2.SubItemsExpandWidth = 14;
-            this.buttonItem2.Text = "Informaciones del Sistema";
-            this.buttonItem2.Click += new System.EventHandler(this.buttonItem2_Click);
             // 
             // ribbonBar7
             // 
@@ -632,6 +577,7 @@
             this.buttonItem22.Name = "buttonItem22";
             this.buttonItem22.SubItemsExpandWidth = 14;
             this.buttonItem22.Text = "Beneficiarios";
+            this.buttonItem22.Click += new System.EventHandler(this.buttonItem22_Click);
             // 
             // buttonItem23
             // 
@@ -640,6 +586,7 @@
             this.buttonItem23.Name = "buttonItem23";
             this.buttonItem23.SubItemsExpandWidth = 14;
             this.buttonItem23.Text = "Listado Gas";
+            this.buttonItem23.Click += new System.EventHandler(this.buttonItem23_Click);
             // 
             // ribbonBar4
             // 
@@ -953,6 +900,7 @@
             // 
             // ribbonTabItem2
             // 
+            this.ribbonTabItem2.Checked = true;
             this.ribbonTabItem2.FontBold = true;
             this.ribbonTabItem2.Name = "ribbonTabItem2";
             this.ribbonTabItem2.Panel = this.ribbonPanel2;
@@ -961,7 +909,6 @@
             // 
             // ribbonTabItem3
             // 
-            this.ribbonTabItem3.Checked = true;
             this.ribbonTabItem3.FontBold = true;
             this.ribbonTabItem3.Name = "ribbonTabItem3";
             this.ribbonTabItem3.Panel = this.ribbonPanel3;
@@ -1062,13 +1009,10 @@
         private DevComponents.DotNetBar.ButtonItem buttonItem19;
         private DevComponents.DotNetBar.RibbonBar ribbonBar6;
         private DevComponents.DotNetBar.ButtonItem buttonItem20;
-        private DevComponents.DotNetBar.ButtonItem buttonItem21;
         private DevComponents.DotNetBar.RibbonBar ribbonBar7;
         private DevComponents.DotNetBar.ButtonItem buttonItem22;
         private DevComponents.DotNetBar.ButtonItem buttonItem23;
         private DevComponents.DotNetBar.ButtonItem buttonItem24;
-        private DevComponents.DotNetBar.RibbonBar ribbonBar8;
-        private DevComponents.DotNetBar.ButtonItem buttonItem2;
         private DevComponents.DotNetBar.ButtonItem buttonItem3;
         private DevComponents.DotNetBar.RibbonBar ribbonBar10;
         private DevComponents.DotNetBar.ButtonItem buttonItem5;
