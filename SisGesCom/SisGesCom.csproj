@@ -265,6 +265,12 @@
     <Compile Include="frmPrintDespachoCombustible.Designer.cs">
       <DependentUpon>frmPrintDespachoCombustible.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPrintDespachoGas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrintDespachoGas.Designer.cs">
+      <DependentUpon>frmPrintDespachoGas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrintEntradaCombustible.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -354,6 +360,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptDespachoCombustibleResumido.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptDespachoGasDetallado.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDespachoGasDetallado.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="rptEntradaCombustible.cs">
@@ -485,6 +497,9 @@
     <EmbeddedResource Include="frmPrintDespachoCombustibleDetallado.resx">
       <DependentUpon>frmPrintDespachoCombustibleDetallado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPrintDespachoGas.resx">
+      <DependentUpon>frmPrintDespachoGas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrintEntradaCombustible.resx">
       <DependentUpon>frmPrintEntradaCombustible.cs</DependentUpon>
     </EmbeddedResource>
@@ -538,6 +553,10 @@
     <EmbeddedResource Include="rptDespachoCombustibleResumido.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptDespachoCombustibleResumido.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDespachoGasDetallado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDespachoGasDetallado.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="rptEntradaCombustible.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

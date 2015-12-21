@@ -514,5 +514,11 @@ namespace SisGesCom
             frmDespachoGas ofrmDespachoGas = new frmDespachoGas();
             ofrmDespachoGas.Show();
         }
+
+        private void buttonItem2_Click_1(object sender, EventArgs e)
+        {
+            frmPrintDespachoGas ofrmPrintDespachoGas = new frmPrintDespachoGas();
+            ofrmPrintDespachoGas.Show();
+        }
     }
 }
