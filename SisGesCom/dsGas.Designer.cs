@@ -295,6 +295,12 @@ namespace SisGesCom {
             
             private global::System.Data.DataColumn columntarjeta;
             
+            private global::System.Data.DataColumn columndescripciondepto;
+            
+            private global::System.Data.DataColumn columnfecha;
+            
+            private global::System.Data.DataColumn columnidtipo;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public dtGasDataTable() {
@@ -394,6 +400,30 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn descripciondeptoColumn {
+                get {
+                    return this.columndescripciondepto;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn fechaColumn {
+                get {
+                    return this.columnfecha;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn idtipoColumn {
+                get {
+                    return this.columnidtipo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -429,7 +459,7 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public dtGasRow AdddtGasRow(int id, string departamento, string tipodescripcion, string suplidor, string nota, string id_despacho, double cantidad, string tarjeta) {
+            public dtGasRow AdddtGasRow(int id, string departamento, string tipodescripcion, string suplidor, string nota, string id_despacho, double cantidad, string tarjeta, string descripciondepto, System.DateTime fecha, int idtipo) {
                 dtGasRow rowdtGasRow = ((dtGasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
@@ -439,7 +469,10 @@ namespace SisGesCom {
                         nota,
                         id_despacho,
                         cantidad,
-                        tarjeta};
+                        tarjeta,
+                        descripciondepto,
+                        fecha,
+                        idtipo};
                 rowdtGasRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowdtGasRow);
                 return rowdtGasRow;
@@ -470,6 +503,9 @@ namespace SisGesCom {
                 this.columnid_despacho = base.Columns["id_despacho"];
                 this.columncantidad = base.Columns["cantidad"];
                 this.columntarjeta = base.Columns["tarjeta"];
+                this.columndescripciondepto = base.Columns["descripciondepto"];
+                this.columnfecha = base.Columns["fecha"];
+                this.columnidtipo = base.Columns["idtipo"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -491,6 +527,12 @@ namespace SisGesCom {
                 base.Columns.Add(this.columncantidad);
                 this.columntarjeta = new global::System.Data.DataColumn("tarjeta", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntarjeta);
+                this.columndescripciondepto = new global::System.Data.DataColumn("descripciondepto", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndescripciondepto);
+                this.columnfecha = new global::System.Data.DataColumn("fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfecha);
+                this.columnidtipo = new global::System.Data.DataColumn("idtipo", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidtipo);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -761,6 +803,54 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string descripciondepto {
+                get {
+                    try {
+                        return ((string)(this[this.tabledtGas.descripciondeptoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'descripciondepto\' in table \'dtGas\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtGas.descripciondeptoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime fecha {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tabledtGas.fechaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'fecha\' in table \'dtGas\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtGas.fechaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int idtipo {
+                get {
+                    try {
+                        return ((int)(this[this.tabledtGas.idtipoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'idtipo\' in table \'dtGas\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtGas.idtipoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsidNull() {
                 return this.IsNull(this.tabledtGas.idColumn);
             }
@@ -853,6 +943,42 @@ namespace SisGesCom {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SettarjetaNull() {
                 this[this.tabledtGas.tarjetaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsdescripciondeptoNull() {
+                return this.IsNull(this.tabledtGas.descripciondeptoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetdescripciondeptoNull() {
+                this[this.tabledtGas.descripciondeptoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsfechaNull() {
+                return this.IsNull(this.tabledtGas.fechaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetfechaNull() {
+                this[this.tabledtGas.fechaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsidtipoNull() {
+                return this.IsNull(this.tabledtGas.idtipoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetidtipoNull() {
+                this[this.tabledtGas.idtipoColumn] = global::System.Convert.DBNull;
             }
         }
         
