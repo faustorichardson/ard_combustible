@@ -861,10 +861,69 @@ namespace SisGesCom
             }
             else
             {
-                // Agrego la informacion al Grid
-                dt.Rows.Add(cmbCombustible.SelectedValue, lblDescripcionCombustible.Text, Convert.ToInt32(txtCantidad.Text));
-                dgview.DataSource = dt;
-                this.LimpiaCampo();
+                try
+                {
+                    // Step 1 - Conexion
+                    MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
+
+                    // Step 2 - creating the command object
+                    MySqlCommand MyCommand = MyConexion.CreateCommand();
+
+                    // Step 3 - creating the commandtext
+                    MyCommand.CommandText = "SELECT tipocombustible, cantidad FROM existencia WHERE tipocombustible = " + Convert.ToString(cmbCombustible.SelectedValue) + "";
+
+                    // Step 4 - connection open
+                    MyConexion.Open();
+
+                    // Step 5 - Creating the DataReader                    
+                    MySqlDataReader MyReader = MyCommand.ExecuteReader();
+
+                    // Step 6 - Verifying if Reader has rows
+                    if (MyReader.HasRows)
+                    {
+                        if (MyReader.Read())
+                        {
+                            // Si encuentra registros, verifico que la cantidad en existencia sea mayor que 0.
+                            Int32 Cant = Convert.ToInt32(MyReader["cantidad"]);
+                            if (Cant > 0)
+                            {
+                                if (Cant > Convert.ToInt32(txtCantidad.Text))
+                                {
+                                    // Agrego la informacion al Grid
+                                    dt.Rows.Add(cmbCombustible.SelectedValue, lblDescripcionCombustible.Text, Convert.ToInt32(txtCantidad.Text));
+                                    dgview.DataSource = dt;
+                                    this.LimpiaCampo();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("La cantidad en existencia es menor a la que se quiere despachar...");
+                                    this.txtCantidad.Focus();
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Este combustible no tiene existencia...");
+                                this.LimpiaCampo();
+                            }
+                        }                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontraron registros de este tipo de combustible...");
+                        this.LimpiaCampo();
+                    }
+
+                    // Step 6 - Closing all
+                    MyReader.Close();
+                    MyCommand.Dispose();
+                    MyConexion.Close();
+
+                }
+                catch (Exception MyEx)
+                {
+                    MessageBox.Show(MyEx.Message);
+                }
+                
             }
         }
 

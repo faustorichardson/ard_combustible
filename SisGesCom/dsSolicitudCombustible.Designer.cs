@@ -291,6 +291,10 @@ namespace SisGesCom {
             
             private global::System.Data.DataColumn columnmedida;
             
+            private global::System.Data.DataColumn columnfechadesde;
+            
+            private global::System.Data.DataColumn columnfechahasta;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public dtSolicitudCombustibleDataTable() {
@@ -374,6 +378,22 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn fechadesdeColumn {
+                get {
+                    return this.columnfechadesde;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn fechahastaColumn {
+                get {
+                    return this.columnfechahasta;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -409,7 +429,7 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public dtSolicitudCombustibleRow AdddtSolicitudCombustibleRow(string id, string tipocombustible, int cantidad, string nota, System.DateTime fecha, string medida) {
+            public dtSolicitudCombustibleRow AdddtSolicitudCombustibleRow(string id, string tipocombustible, int cantidad, string nota, System.DateTime fecha, string medida, System.DateTime fechadesde, System.DateTime fechahasta) {
                 dtSolicitudCombustibleRow rowdtSolicitudCombustibleRow = ((dtSolicitudCombustibleRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
@@ -417,7 +437,9 @@ namespace SisGesCom {
                         cantidad,
                         nota,
                         fecha,
-                        medida};
+                        medida,
+                        fechadesde,
+                        fechahasta};
                 rowdtSolicitudCombustibleRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowdtSolicitudCombustibleRow);
                 return rowdtSolicitudCombustibleRow;
@@ -446,6 +468,8 @@ namespace SisGesCom {
                 this.columnnota = base.Columns["nota"];
                 this.columnfecha = base.Columns["fecha"];
                 this.columnmedida = base.Columns["medida"];
+                this.columnfechadesde = base.Columns["fechadesde"];
+                this.columnfechahasta = base.Columns["fechahasta"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -463,6 +487,10 @@ namespace SisGesCom {
                 base.Columns.Add(this.columnfecha);
                 this.columnmedida = new global::System.Data.DataColumn("medida", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmedida);
+                this.columnfechadesde = new global::System.Data.DataColumn("fechadesde", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfechadesde);
+                this.columnfechahasta = new global::System.Data.DataColumn("fechahasta", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfechahasta);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -702,6 +730,38 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime fechadesde {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tabledtSolicitudCombustible.fechadesdeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'fechadesde\' in table \'dtSolicitudCombustible\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtSolicitudCombustible.fechadesdeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime fechahasta {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tabledtSolicitudCombustible.fechahastaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'fechahasta\' in table \'dtSolicitudCombustible\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtSolicitudCombustible.fechahastaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsidNull() {
                 return this.IsNull(this.tabledtSolicitudCombustible.idColumn);
             }
@@ -770,6 +830,30 @@ namespace SisGesCom {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetmedidaNull() {
                 this[this.tabledtSolicitudCombustible.medidaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsfechadesdeNull() {
+                return this.IsNull(this.tabledtSolicitudCombustible.fechadesdeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetfechadesdeNull() {
+                this[this.tabledtSolicitudCombustible.fechadesdeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsfechahastaNull() {
+                return this.IsNull(this.tabledtSolicitudCombustible.fechahastaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetfechahastaNull() {
+                this[this.tabledtSolicitudCombustible.fechahastaColumn] = global::System.Convert.DBNull;
             }
         }
         

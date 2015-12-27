@@ -21,6 +21,8 @@
               <xs:element name="nota" msprop:Generator_ColumnVarNameInTable="columnnota" msprop:Generator_ColumnPropNameInRow="nota" msprop:Generator_ColumnPropNameInTable="notaColumn" msprop:Generator_UserColumnName="nota" type="xs:string" minOccurs="0" />
               <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha" type="xs:dateTime" minOccurs="0" />
               <xs:element name="medida" msprop:Generator_ColumnVarNameInTable="columnmedida" msprop:Generator_ColumnPropNameInRow="medida" msprop:Generator_ColumnPropNameInTable="medidaColumn" msprop:Generator_UserColumnName="medida" type="xs:string" minOccurs="0" />
+              <xs:element name="fechadesde" msprop:Generator_ColumnVarNameInTable="columnfechadesde" msprop:Generator_ColumnPropNameInRow="fechadesde" msprop:Generator_ColumnPropNameInTable="fechadesdeColumn" msprop:Generator_UserColumnName="fechadesde" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="fechahasta" msprop:Generator_ColumnVarNameInTable="columnfechahasta" msprop:Generator_ColumnPropNameInRow="fechahasta" msprop:Generator_ColumnPropNameInTable="fechahastaColumn" msprop:Generator_UserColumnName="fechahasta" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

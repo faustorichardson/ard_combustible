@@ -63,7 +63,7 @@ namespace SisGesCom
                 cWhere = cWhere + " AND combustible_salida.fecha >= " + "'" + fechadesde + "'" + " AND combustible_salida.fecha <= " + "'" + fechahasta + "'" + "";
                 cWhere = cWhere + " AND movimientocombustible.tipo_movimiento = 'S'";
                 sbQuery.Clear();                                
-                sbQuery.Append(" SELECT combustible_salida.id, movimientocombustible.descripcion_combustible,");
+                sbQuery.Append(" SELECT combustible_salida.id, movimientocombustible.descripcion_combustible, combustible_salida.nota,");
                 sbQuery.Append(" movimientocombustible.cantidad as cantidad, combustible_salida.beneficiario,");
                 sbQuery.Append(" combustible_salida.beneficiario_depto,	movimientocombustible.fecha,");
                 sbQuery.Append(" tipo_combustible.combustible as tipo_combustible, departamento_autoriza.departamento as autorizadopor,");
