@@ -255,9 +255,9 @@
             // 
             this.groupBox2.Controls.Add(this.dgview);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(100, 322);
+            this.groupBox2.Location = new System.Drawing.Point(58, 322);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(481, 170);
+            this.groupBox2.Size = new System.Drawing.Size(596, 170);
             this.groupBox2.TabIndex = 106;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "LISTADO";
@@ -271,7 +271,7 @@
             this.dgview.Location = new System.Drawing.Point(6, 16);
             this.dgview.Name = "dgview";
             this.dgview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dgview.Size = new System.Drawing.Size(469, 149);
+            this.dgview.Size = new System.Drawing.Size(584, 149);
             this.dgview.TabIndex = 78;
             // 
             // groupBox1
@@ -285,9 +285,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.Combustible);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(100, 156);
+            this.groupBox1.Location = new System.Drawing.Point(58, 156);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(481, 160);
+            this.groupBox1.Size = new System.Drawing.Size(596, 160);
             this.groupBox1.TabIndex = 105;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Combustibles";
@@ -297,7 +297,7 @@
             this.btnAdiciona.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdiciona.Image = ((System.Drawing.Image)(resources.GetObject("btnAdiciona.Image")));
             this.btnAdiciona.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdiciona.Location = new System.Drawing.Point(376, 17);
+            this.btnAdiciona.Location = new System.Drawing.Point(494, 17);
             this.btnAdiciona.Name = "btnAdiciona";
             this.btnAdiciona.Size = new System.Drawing.Size(95, 42);
             this.btnAdiciona.TabIndex = 25;
@@ -311,13 +311,14 @@
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(376, 113);
+            this.btnUpdate.Location = new System.Drawing.Point(494, 113);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(95, 42);
             this.btnUpdate.TabIndex = 24;
             this.btnUpdate.Text = "Actualizar";
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Visible = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // lblDescripcionCombustible
@@ -337,7 +338,7 @@
             this.cmbDepartamento.FormattingEnabled = true;
             this.cmbDepartamento.Location = new System.Drawing.Point(119, 32);
             this.cmbDepartamento.Name = "cmbDepartamento";
-            this.cmbDepartamento.Size = new System.Drawing.Size(244, 21);
+            this.cmbDepartamento.Size = new System.Drawing.Size(369, 21);
             this.cmbDepartamento.TabIndex = 22;
             this.cmbDepartamento.Leave += new System.EventHandler(this.cmbDepartamento_Leave);
             // 
@@ -356,7 +357,7 @@
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(376, 65);
+            this.btnEliminar.Location = new System.Drawing.Point(494, 65);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(95, 42);
             this.btnEliminar.TabIndex = 4;

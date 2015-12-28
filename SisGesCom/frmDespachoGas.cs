@@ -653,13 +653,13 @@ namespace SisGesCom
                     sbQuery.Clear();
                     sbQuery.Append("SELECT combustible_gas.id as id_despacho, combustible_gas.fecha, combustible_gas.suplidor, combustible_gas.nota,");
                     sbQuery.Append(" movimientogas.id, movimientogas.cantidad, movimientogas.departamento_descripcion as departamento,");
-                    sbQuery.Append(" tipo_deptogas.id, tipo_deptogas.tipo as tipodescripcion, deptobeneficiariogas.tarjeta");                    
-                    sbQuery.Append(" FROM combustible_gas");
-                    sbQuery.Append(" INNER JOIN movimientogas ON movimientogas.id = combustible_gas.id");
-                    sbQuery.Append(" INNER JOIN tipo_deptogas ON tipo_deptogas.id = movimientogas.departamento");
+                    sbQuery.Append(" deptobeneficiariogas.tarjeta");                    
+                    sbQuery.Append(" FROM movimientogas");
+                    sbQuery.Append(" INNER JOIN combustible_gas ON combustible_gas.id = movimientogas.id");
+                    // sbQuery.Append(" INNER JOIN tipo_deptogas ON tipo_deptogas.id = movimientogas.departamento");
                     sbQuery.Append(" INNER JOIN deptobeneficiariogas ON deptobeneficiariogas.id = movimientogas.departamento");
                     sbQuery.Append(cWhere);
-                    sbQuery.Append(" ORDER BY tipo_deptogas.id ASC");
+                    //sbQuery.Append(" ORDER BY tipo_deptogas.id ASC");
 
                     // Paso los valores de sbQuery al CommandText
                     myCommand.CommandText = sbQuery.ToString();

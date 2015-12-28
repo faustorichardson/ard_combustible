@@ -425,7 +425,7 @@ namespace SisGesCom
                 //cWhere = cWhere + " AND year = '" + txtYear.Text + "'";
                 sbQuery.Clear();
                 sbQuery.Append("SELECT deptobeneficiariogas.id, deptobeneficiariogas.departamento, deptobeneficiariogas.tipo,");
-                sbQuery.Append(" tipo_deptogas.tipo as tipodescripcion, tipo_deptogas.id");
+                sbQuery.Append(" deptobeneficiariogas.tarjeta, tipo_deptogas.tipo as tipodescripcion, tipo_deptogas.id");
                 sbQuery.Append(" FROM deptobeneficiariogas ");
                 sbQuery.Append(" INNER JOIN tipo_deptogas ON tipo_deptogas.id = deptobeneficiariogas.tipo");
                 sbQuery.Append(cWhere);
@@ -481,7 +481,7 @@ namespace SisGesCom
                     //nombre del parametro en CR (Crystal Reports)
                     oParametrosCR[0].Name = "cUsuario";
                     //nombre del TITULO DEL INFORME
-                    cTitulo = "LISTADO DE DEPARTAMENTOS BENEFICIARIOS DE GAS";
+                    cTitulo = "LISTADO DE DEPENDENCIAS BENEFICIARIOS DE GAS";
 
                     //6to Instanciamos nuestro REPORTE
                     //Reportes.ListadoDoctores oListado = new Reportes.ListadoDoctores();
