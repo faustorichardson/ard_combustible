@@ -92,25 +92,39 @@ namespace SisGesCom
 
                     //2do.CREAMOS LOS PARAMETROS
                     ParameterField oUsuario = new ParameterField();
+                    ParameterField oFechaInicial = new ParameterField();
+                    ParameterField oFechaFinal = new ParameterField();
+
                     //parametervaluetype especifica el TIPO de valor de parametro
                     //ParameterValueKind especifica el tipo de valor de parametro en la PARAMETERVALUETYPE de la Clase PARAMETERFIELD
                     oUsuario.ParameterValueType = ParameterValueKind.StringParameter;
+                    oFechaInicial.ParameterValueType = ParameterValueKind.DateTimeParameter;
+                    oFechaFinal.ParameterValueType = ParameterValueKind.DateTimeParameter;
 
                     //3ero.VALORES PARA LOS PARAMETROS
                     //ParameterDiscreteValue proporciona propiedades para la recuperacion y configuracion de 
                     //parametros de valores discretos
                     ParameterDiscreteValue oUsuarioDValue = new ParameterDiscreteValue();
                     oUsuarioDValue.Value = cUsuario;
+                    ParameterDiscreteValue oFechaDValue = new ParameterDiscreteValue();
+                    oFechaDValue.Value = fechadesde;
+                    ParameterDiscreteValue oFechaFinDValue = new ParameterDiscreteValue();
+                    oFechaFinDValue.Value = fechahasta;
 
                     //4to. AGREGAMOS LOS VALORES A LOS PARAMETROS
                     oUsuario.CurrentValues.Add(oUsuarioDValue);
-
+                    oFechaInicial.CurrentValues.Add(oFechaDValue);
+                    oFechaFinal.CurrentValues.Add(oFechaFinDValue);
 
                     //5to. AGREGAMOS LOS PARAMETROS A LA COLECCION 
                     oParametrosCR.Add(oUsuario);
+                    oParametrosCR.Add(oFechaInicial);
+                    oParametrosCR.Add(oFechaFinal);
 
                     //nombre del parametro en CR (Crystal Reports)
                     oParametrosCR[0].Name = "cUsuario";
+                    oParametrosCR[1].Name = "cFechaInicial";
+                    oParametrosCR[2].Name = "cFechaFinal";
 
                     //nombre del TITULO DEL INFORME
                     cTitulo = "REPORTE DE ENTRADA DE COMBUSTIBLE";

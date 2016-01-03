@@ -62,8 +62,8 @@ namespace SisGesCom
                 // Adhiero el comando a la conexion
                 myCommand.Connection = myConexion;
                 // Filtros de la busqueda
-                if (rbTodas.Checked)
-                {
+                //if (rbTodas.Checked)
+                //{
                     string fechadesde = dtDesde.Value.ToString("yyyy-MM-dd");
                     string fechahasta = dtHasta.Value.ToString("yyyy-MM-dd");
                     cWhere = cWhere + " AND secuencia_solicitudcombustible.fecha >= " + "'" + fechadesde + "'" + " AND secuencia_solicitudcombustible.fecha <= " + "'" + fechahasta + "'" + "";
@@ -74,9 +74,9 @@ namespace SisGesCom
                     sbQuery.Append(" INNER JOIN solicitud ON solicitud.id = secuencia_solicitudcombustible.id");
                     //sbQuery.Append(" INNER JOIN tipo_combustible ON tipo_combustible.id = solicitud.tipo_combustible");                    
                     sbQuery.Append(cWhere);
-                }
-                else if (rbAprobadas.Checked)
-                {
+                //}
+                //else if (rbAprobadas.Checked)
+                //{
                     //string fechadesde = dtDesde.Value.ToString("yyyy-MM-dd");
                     //string fechahasta = dtHasta.Value.ToString("yyyy-MM-dd");
                     //cWhere = cWhere + " AND fecha >= " + "'" + fechadesde + "'" + " AND fecha <= " + "'" + fechahasta + "'" + "";
@@ -87,9 +87,9 @@ namespace SisGesCom
                     //sbQuery.Append(" FROM solicitud ");
                     //sbQuery.Append(" INNER JOIN tipo_combustible ON tipo_combustible.id = solicitud.tipo_combustible");
                     //sbQuery.Append(cWhere);
-                }
-                else if (rbPendientes.Checked)
-                {
+                //}
+                //else if (rbPendientes.Checked)
+                //{
                     //string fechadesde = dtDesde.Value.ToString("yyyy-MM-dd");
                     //string fechahasta = dtHasta.Value.ToString("yyyy-MM-dd");
                     //cWhere = cWhere + " AND fecha >= " + "'" + fechadesde + "'" + " AND fecha <= " + "'" + fechahasta + "'" + "";
@@ -100,7 +100,7 @@ namespace SisGesCom
                     //sbQuery.Append(" FROM solicitud ");
                     //sbQuery.Append(" INNER JOIN tipo_combustible ON tipo_combustible.id = solicitud.tipo_combustible");
                     //sbQuery.Append(cWhere);
-                }
+                //}
 
                 // Paso los valores de sbQuery al CommandText
                 myCommand.CommandText = sbQuery.ToString();
@@ -130,25 +130,37 @@ namespace SisGesCom
 
                     //2do.CREAMOS LOS PARAMETROS
                     ParameterField oUsuario = new ParameterField();
+                    ParameterField oFechaInicial = new ParameterField();
+                    ParameterField oFechaFinal = new ParameterField();
                     //parametervaluetype especifica el TIPO de valor de parametro
                     //ParameterValueKind especifica el tipo de valor de parametro en la PARAMETERVALUETYPE de la Clase PARAMETERFIELD
                     oUsuario.ParameterValueType = ParameterValueKind.StringParameter;
+                    oFechaInicial.ParameterValueType = ParameterValueKind.DateTimeParameter;
+                    oFechaFinal.ParameterValueType = ParameterValueKind.DateTimeParameter;
 
                     //3ero.VALORES PARA LOS PARAMETROS
                     //ParameterDiscreteValue proporciona propiedades para la recuperacion y configuracion de 
                     //parametros de valores discretos
                     ParameterDiscreteValue oUsuarioDValue = new ParameterDiscreteValue();
                     oUsuarioDValue.Value = cUsuario;
+                    ParameterDiscreteValue oFechaDValue = new ParameterDiscreteValue();
+                    oFechaDValue.Value = fechadesde;
+                    ParameterDiscreteValue oFechaFinDValue = new ParameterDiscreteValue();
+                    oFechaFinDValue.Value = fechahasta;
 
                     //4to. AGREGAMOS LOS VALORES A LOS PARAMETROS
                     oUsuario.CurrentValues.Add(oUsuarioDValue);
-
+                    oFechaInicial.CurrentValues.Add(oFechaDValue);
+                    oFechaFinal.CurrentValues.Add(oFechaFinDValue);
 
                     //5to. AGREGAMOS LOS PARAMETROS A LA COLECCION 
                     oParametrosCR.Add(oUsuario);
-
+                    oParametrosCR.Add(oFechaInicial);
+                    oParametrosCR.Add(oFechaFinal);
                     //nombre del parametro en CR (Crystal Reports)
                     oParametrosCR[0].Name = "cUsuario";
+                    oParametrosCR[1].Name = "cFechaInicial";
+                    oParametrosCR[2].Name = "cFechaFinal";
 
                     //nombre del TITULO DEL INFORME
                     cTitulo = "REPORTE DE SOLICITUDES DE COMBUSTIBLE";
