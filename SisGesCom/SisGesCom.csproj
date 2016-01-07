@@ -223,6 +223,12 @@
     <Compile Include="frmDespachoTickets.Designer.cs">
       <DependentUpon>frmDespachoTickets.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDespachoTicketsDepto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDespachoTicketsDepto.Designer.cs">
+      <DependentUpon>frmDespachoTicketsDepto.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrintDespachoCombustibleDetallado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -478,6 +484,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDespachoTickets.resx">
       <DependentUpon>frmDespachoTickets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDespachoTicketsDepto.resx">
+      <DependentUpon>frmDespachoTicketsDepto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEntradaCombustibles.resx">
       <DependentUpon>frmEntradaCombustibles.cs</DependentUpon>

@@ -345,15 +345,49 @@ namespace SisGesCom
         {
             if (txtCantidad.Text == "")
             {
-                MessageBox.Show("No se puede agregar informacion sin cantidad");
+                MessageBox.Show("No se puede agregar informacion sin cantidad...");
                 txtCantidad.Focus();
             }
             else
             {
-                // Agrego la informacion al Grid
-                dt.Rows.Add(cmbCombustible.SelectedValue, lblDescripcionCombustible.Text, Convert.ToInt32(txtCantidad.Text));
-                dgview.DataSource = dt;
-                this.LimpiaCampo();
+                // Step 1 - Conexion
+                MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
+
+                // Step 2 - creating the command object
+                MySqlCommand MyCommand = MyConexion.CreateCommand();
+
+                // Step 3 - creating the commandtext
+                MyCommand.CommandText = "SELECT id, tipo_combustible FROM solicitud " +
+                    "WHERE id = " + txtSolicitud.Text + " AND tipo_combustible = " + cmbCombustible.SelectedValue + "";
+
+                // Step 4 - connection open
+                MyConexion.Open();
+
+                // Step 5 - Creating the DataReader                    
+                MySqlDataReader MyReader = MyCommand.ExecuteReader();
+
+                // Step 6 - Verifying if Reader has rows
+                if (MyReader.HasRows)
+                {
+                    // Agrego la informacion al Grid
+                    dt.Rows.Add(cmbCombustible.SelectedValue, lblDescripcionCombustible.Text, Convert.ToInt32(txtCantidad.Text));
+                    dgview.DataSource = dt;
+                    this.LimpiaCampo();                    
+                }
+                else
+                {
+                    MessageBox.Show("No se encontraron registros de este tipo combustible en esta solicitud...");
+                    //this.cModo = "Inicio";
+                    //this.Botones();
+                    this.LimpiaCampo();
+                    this.cmbCombustible.Focus();
+                }
+
+                // Step 6 - Closing all
+                MyReader.Close();
+                MyCommand.Dispose();
+                MyConexion.Close();
+                
             }
         }
 
@@ -373,10 +407,10 @@ namespace SisGesCom
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            DataGridViewRow row = dgview.Rows[i];
-            row.Cells[0].Value = cmbCombustible.SelectedValue;
-            row.Cells[1].Value = lblDescripcionCombustible.Text;
-            row.Cells[2].Value = txtCantidad.Text;
+            //DataGridViewRow row = dgview.Rows[i];
+            //row.Cells[0].Value = cmbCombustible.SelectedValue;
+            //row.Cells[1].Value = lblDescripcionCombustible.Text;
+            //row.Cells[2].Value = txtCantidad.Text;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 ﻿namespace SisGesCom
 {
-    partial class frmEntradaCombustibles
+    partial class frmDespachoTicketsDepto
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEntradaCombustibles));
-            this.btnUpdate = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDespachoTicketsDepto));
             this.label2 = new System.Windows.Forms.Label();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.txtSolicitud = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -44,18 +40,15 @@
             this.btnGrabar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgview = new System.Windows.Forms.DataGridView();
-            this.btnAdiciona = new System.Windows.Forms.Button();
             this.dtFecha = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnAdiciona = new System.Windows.Forms.Button();
             this.lblDescripcionCombustible = new System.Windows.Forms.Label();
             this.cmbCombustible = new System.Windows.Forms.ComboBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.Combustible = new System.Windows.Forms.Label();
-            this.txtEntrada = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtNota = new System.Windows.Forms.RichTextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgview)).BeginInit();
@@ -64,65 +57,18 @@
             // 
             // lblTituloForm
             // 
-            this.lblTituloForm.Size = new System.Drawing.Size(356, 22);
-            this.lblTituloForm.Text = "Pantalla Registro Entrada de Combustibles";
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
-            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(376, 113);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(95, 42);
-            this.btnUpdate.TabIndex = 24;
-            this.btnUpdate.Text = "Actualizar";
-            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.lblTituloForm.Size = new System.Drawing.Size(482, 22);
+            this.lblTituloForm.Text = "Pantalla de Registro Despacho Tickets por Departamentos";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(108, 64);
+            this.label2.Location = new System.Drawing.Point(121, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 16);
-            this.label2.TabIndex = 92;
+            this.label2.TabIndex = 97;
             this.label2.Text = "Fecha:";
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(376, 65);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(95, 42);
-            this.btnEliminar.TabIndex = 4;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // txtSolicitud
-            // 
-            this.txtSolicitud.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSolicitud.Location = new System.Drawing.Point(488, 60);
-            this.txtSolicitud.Name = "txtSolicitud";
-            this.txtSolicitud.Size = new System.Drawing.Size(72, 22);
-            this.txtSolicitud.TabIndex = 87;
-            this.txtSolicitud.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSolicitud_KeyPress);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(382, 63);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 16);
-            this.label1.TabIndex = 86;
-            this.label1.Text = "No. Solicitud:";
             // 
             // groupBox4
             // 
@@ -133,10 +79,10 @@
             this.groupBox4.Controls.Add(this.btnCancelar);
             this.groupBox4.Controls.Add(this.btnEditar);
             this.groupBox4.Controls.Add(this.btnGrabar);
-            this.groupBox4.Location = new System.Drawing.Point(8, 511);
+            this.groupBox4.Location = new System.Drawing.Point(16, 371);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(694, 65);
-            this.groupBox4.TabIndex = 91;
+            this.groupBox4.TabIndex = 96;
             this.groupBox4.TabStop = false;
             // 
             // btnNuevo
@@ -242,10 +188,10 @@
             // 
             this.groupBox2.Controls.Add(this.dgview);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(116, 336);
+            this.groupBox2.Location = new System.Drawing.Point(124, 193);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(481, 174);
-            this.groupBox2.TabIndex = 90;
+            this.groupBox2.TabIndex = 95;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "LISTADO";
             // 
@@ -261,6 +207,30 @@
             this.dgview.Size = new System.Drawing.Size(469, 153);
             this.dgview.TabIndex = 78;
             // 
+            // dtFecha
+            // 
+            this.dtFecha.Location = new System.Drawing.Point(182, 46);
+            this.dtFecha.Name = "dtFecha";
+            this.dtFecha.Size = new System.Drawing.Size(200, 20);
+            this.dtFecha.TabIndex = 94;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnAdiciona);
+            this.groupBox1.Controls.Add(this.lblDescripcionCombustible);
+            this.groupBox1.Controls.Add(this.cmbCombustible);
+            this.groupBox1.Controls.Add(this.txtCantidad);
+            this.groupBox1.Controls.Add(this.btnEliminar);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.Combustible);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(124, 70);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(481, 120);
+            this.groupBox1.TabIndex = 93;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Dependencias";
+            // 
             // btnAdiciona
             // 
             this.btnAdiciona.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -275,36 +245,11 @@
             this.btnAdiciona.UseVisualStyleBackColor = true;
             this.btnAdiciona.Click += new System.EventHandler(this.btnAdiciona_Click);
             // 
-            // dtFecha
-            // 
-            this.dtFecha.Location = new System.Drawing.Point(169, 62);
-            this.dtFecha.Name = "dtFecha";
-            this.dtFecha.Size = new System.Drawing.Size(200, 20);
-            this.dtFecha.TabIndex = 89;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btnAdiciona);
-            this.groupBox1.Controls.Add(this.btnUpdate);
-            this.groupBox1.Controls.Add(this.lblDescripcionCombustible);
-            this.groupBox1.Controls.Add(this.cmbCombustible);
-            this.groupBox1.Controls.Add(this.txtCantidad);
-            this.groupBox1.Controls.Add(this.btnEliminar);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.Combustible);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(116, 170);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(481, 160);
-            this.groupBox1.TabIndex = 88;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Combustibles";
-            // 
             // lblDescripcionCombustible
             // 
             this.lblDescripcionCombustible.AutoSize = true;
             this.lblDescripcionCombustible.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcionCombustible.Location = new System.Drawing.Point(188, 126);
+            this.lblDescripcionCombustible.Location = new System.Drawing.Point(238, 78);
             this.lblDescripcionCombustible.Name = "lblDescripcionCombustible";
             this.lblDescripcionCombustible.Size = new System.Drawing.Size(47, 15);
             this.lblDescripcionCombustible.TabIndex = 23;
@@ -317,7 +262,7 @@
             this.cmbCombustible.FormattingEnabled = true;
             this.cmbCombustible.Location = new System.Drawing.Point(87, 32);
             this.cmbCombustible.Name = "cmbCombustible";
-            this.cmbCombustible.Size = new System.Drawing.Size(258, 21);
+            this.cmbCombustible.Size = new System.Drawing.Size(283, 21);
             this.cmbCombustible.TabIndex = 22;
             this.cmbCombustible.Leave += new System.EventHandler(this.cmbCombustible_Leave);
             // 
@@ -329,6 +274,20 @@
             this.txtCantidad.Size = new System.Drawing.Size(72, 20);
             this.txtCantidad.TabIndex = 11;
             this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.Location = new System.Drawing.Point(376, 65);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(95, 42);
+            this.btnEliminar.TabIndex = 4;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // label3
             // 
@@ -350,74 +309,25 @@
             this.Combustible.TabIndex = 7;
             this.Combustible.Text = "Tipo:";
             // 
-            // txtEntrada
-            // 
-            this.txtEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEntrada.Location = new System.Drawing.Point(488, 32);
-            this.txtEntrada.Name = "txtEntrada";
-            this.txtEntrada.Size = new System.Drawing.Size(72, 22);
-            this.txtEntrada.TabIndex = 95;
-            this.txtEntrada.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEntrada_KeyPress);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(388, 35);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 16);
-            this.label5.TabIndex = 94;
-            this.label5.Text = "No. Entrada:";
-            // 
-            // txtNota
-            // 
-            this.txtNota.Location = new System.Drawing.Point(165, 99);
-            this.txtNota.Name = "txtNota";
-            this.txtNota.Size = new System.Drawing.Size(422, 65);
-            this.txtNota.TabIndex = 97;
-            this.txtNota.Text = "";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(115, 100);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 16);
-            this.label4.TabIndex = 96;
-            this.label4.Text = "Nota:";
-            // 
-            // frmEntradaCombustibles
+            // frmDespachoTicketsDepto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(713, 590);
-            this.Controls.Add(this.txtNota);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtEntrada);
-            this.Controls.Add(this.label5);
+            this.ClientSize = new System.Drawing.Size(722, 448);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtSolicitud);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dtFecha);
             this.Controls.Add(this.groupBox1);
-            this.Name = "frmEntradaCombustibles";
-            this.Text = "frmEntradaCombustibles";
-            this.Load += new System.EventHandler(this.frmEntradaCombustibles_Load);
+            this.Name = "frmDespachoTicketsDepto";
+            this.Text = "frmDespachoTicketsDepto";
+            this.Load += new System.EventHandler(this.frmDespachoTicketsDepto_Load);
             this.Controls.SetChildIndex(this.lblTituloForm, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
             this.Controls.SetChildIndex(this.dtFecha, 0);
             this.Controls.SetChildIndex(this.groupBox2, 0);
             this.Controls.SetChildIndex(this.groupBox4, 0);
-            this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.txtSolicitud, 0);
             this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.label5, 0);
-            this.Controls.SetChildIndex(this.txtEntrada, 0);
-            this.Controls.SetChildIndex(this.label4, 0);
-            this.Controls.SetChildIndex(this.txtNota, 0);
             this.groupBox4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgview)).EndInit();
@@ -430,11 +340,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.TextBox txtSolicitud;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnBuscar;
@@ -445,17 +351,14 @@
         private System.Windows.Forms.Button btnGrabar;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgview;
-        private System.Windows.Forms.Button btnAdiciona;
         private System.Windows.Forms.DateTimePicker dtFecha;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnAdiciona;
         private System.Windows.Forms.Label lblDescripcionCombustible;
         private System.Windows.Forms.ComboBox cmbCombustible;
         private System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label Combustible;
-        private System.Windows.Forms.TextBox txtEntrada;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RichTextBox txtNota;
-        private System.Windows.Forms.Label label4;
     }
 }
