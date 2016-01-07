@@ -28,7 +28,49 @@ namespace SisGesCom
 
         private void frmPrintDespachoCombustible_Load(object sender, EventArgs e)
         {
+            // LLENAR EL COMBO DE DEPENDENCIAS
+            this.fillCmbCombo();
 
+            // DESHABILITANDO COMBO
+            this.cmbCombustible.Enabled = false;
+        }
+
+        private void fillCmbCombo()
+        {
+            try
+            {
+                // Step 1 
+                MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
+
+                // Step 2
+                MyConexion.Open();
+
+                // Step 3
+                MySqlCommand MyCommand = new MySqlCommand("SELECT id, deptobeneficiario FROM deptobeneficiario ORDER BY deptobeneficiario ASC", MyConexion);
+
+                // Step 4
+                MySqlDataReader MyReader;
+                MyReader = MyCommand.ExecuteReader();
+
+                // Step 5
+                DataTable MyDataTable = new DataTable();
+                MyDataTable.Columns.Add("id", typeof(int));
+                MyDataTable.Columns.Add("deptobeneficiario", typeof(string));
+                MyDataTable.Load(MyReader);
+
+                // Step 6
+                cmbCombustible.ValueMember = "id";
+                cmbCombustible.DisplayMember = "deptobeneficiario";
+                cmbCombustible.DataSource = MyDataTable;
+
+                // Step 7
+                MyConexion.Close();
+            }
+            catch (Exception myEx)
+            {
+                MessageBox.Show(myEx.Message);
+                throw;
+            }
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
@@ -62,6 +104,10 @@ namespace SisGesCom
                 string fechahasta = dtHasta.Value.ToString("yyyy-MM-dd");
                 cWhere = cWhere + " AND combustible_salida.fecha >= " + "'" + fechadesde + "'" + " AND combustible_salida.fecha <= " + "'" + fechahasta + "'" + "";
                 cWhere = cWhere + " AND movimientocombustible.tipo_movimiento = 'S'";
+                if (chkDepartamentos.Checked == true)
+                {
+                    cWhere = cWhere + " AND combustible_salida.beneficiario_depto = "+ this.cmbCombustible.SelectedValue +"";
+                }
                 sbQuery.Clear();
                 sbQuery.Append(" SELECT combustible_salida.id, sum(movimientocombustible.cantidad) as cantidad,");
                 sbQuery.Append(" combustible_salida.beneficiario_depto,	combustible_salida.fecha, ");
@@ -71,9 +117,8 @@ namespace SisGesCom
                 sbQuery.Append(" INNER JOIN movimientocombustible ON movimientocombustible.id = combustible_salida.id");
                 sbQuery.Append(" INNER JOIN tipo_combustible ON tipo_combustible.id = movimientocombustible.tipo_combustible");
                 sbQuery.Append(" INNER JOIN departamento_autoriza ON departamento_autoriza.id = combustible_salida.autorizadopor");
-                sbQuery.Append(" INNER JOIN deptobeneficiario ON deptobeneficiario.id = combustible_salida.beneficiario_depto");
-                sbQuery.Append(cWhere);
-                
+                sbQuery.Append(" INNER JOIN deptobeneficiario ON deptobeneficiario.id = combustible_salida.beneficiario_depto");                
+                sbQuery.Append(cWhere);                
                 sbQuery.Append(" GROUP BY tipo_combustible, tipobeneficiario");
 
                 // Paso los valores de sbQuery al CommandText
@@ -170,6 +215,18 @@ namespace SisGesCom
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void chkDepartamentos_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkDepartamentos.Checked == true)
+            {
+                this.cmbCombustible.Enabled = true;
+            }
+            else
+            {
+                this.cmbCombustible.Enabled = false;
+            }
         }
     }
 }

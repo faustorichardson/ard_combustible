@@ -303,11 +303,11 @@
             // 
             this.Combustible.AutoSize = true;
             this.Combustible.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Combustible.Location = new System.Drawing.Point(35, 35);
+            this.Combustible.Location = new System.Drawing.Point(25, 36);
             this.Combustible.Name = "Combustible";
-            this.Combustible.Size = new System.Drawing.Size(44, 16);
+            this.Combustible.Size = new System.Drawing.Size(54, 16);
             this.Combustible.TabIndex = 7;
-            this.Combustible.Text = "Tipo:";
+            this.Combustible.Text = "Depto:";
             // 
             // frmDespachoTicketsDepto
             // 
