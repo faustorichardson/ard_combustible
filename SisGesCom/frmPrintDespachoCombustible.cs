@@ -104,10 +104,22 @@ namespace SisGesCom
                 string fechahasta = dtHasta.Value.ToString("yyyy-MM-dd");
                 cWhere = cWhere + " AND combustible_salida.fecha >= " + "'" + fechadesde + "'" + " AND combustible_salida.fecha <= " + "'" + fechahasta + "'" + "";
                 cWhere = cWhere + " AND movimientocombustible.tipo_movimiento = 'S'";
+                
+                // Filtros del tipo de Operaciones
+                if (rbTerrestres.Checked == true)
+                {
+                    cWhere = cWhere + " AND movimientocombustible.operaciones = 'T'";
+                }
+                else if (rbMaritimas.Checked == true)
+                {
+                    cWhere = cWhere + " AND movimientocombustible.operaciones = 'M'";
+                }
+
                 if (chkDepartamentos.Checked == true)
                 {
                     cWhere = cWhere + " AND combustible_salida.beneficiario_depto = "+ this.cmbCombustible.SelectedValue +"";
                 }
+
                 sbQuery.Clear();
                 sbQuery.Append(" SELECT combustible_salida.id, sum(movimientocombustible.cantidad) as cantidad,");
                 sbQuery.Append(" combustible_salida.beneficiario_depto,	combustible_salida.fecha, ");

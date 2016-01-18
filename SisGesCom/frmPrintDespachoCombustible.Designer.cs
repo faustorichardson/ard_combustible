@@ -38,6 +38,10 @@
             this.chkDepartamentos = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbCombustible = new System.Windows.Forms.ComboBox();
+            this.rbMaritimas = new System.Windows.Forms.RadioButton();
+            this.rbTerrestres = new System.Windows.Forms.RadioButton();
+            this.rbTodas = new System.Windows.Forms.RadioButton();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTituloForm
@@ -75,7 +79,7 @@
             // 
             // dtHasta
             // 
-            this.dtHasta.Location = new System.Drawing.Point(119, 146);
+            this.dtHasta.Location = new System.Drawing.Point(119, 187);
             this.dtHasta.Name = "dtHasta";
             this.dtHasta.Size = new System.Drawing.Size(215, 20);
             this.dtHasta.TabIndex = 18;
@@ -84,7 +88,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(60, 150);
+            this.label2.Location = new System.Drawing.Point(60, 191);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 19;
@@ -92,7 +96,7 @@
             // 
             // dtDesde
             // 
-            this.dtDesde.Location = new System.Drawing.Point(119, 110);
+            this.dtDesde.Location = new System.Drawing.Point(119, 151);
             this.dtDesde.Name = "dtDesde";
             this.dtDesde.Size = new System.Drawing.Size(215, 20);
             this.dtDesde.TabIndex = 16;
@@ -101,7 +105,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(60, 114);
+            this.label1.Location = new System.Drawing.Point(60, 155);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 17;
@@ -138,11 +142,62 @@
             this.cmbCombustible.Size = new System.Drawing.Size(283, 21);
             this.cmbCombustible.TabIndex = 26;
             // 
+            // rbMaritimas
+            // 
+            this.rbMaritimas.AutoSize = true;
+            this.rbMaritimas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbMaritimas.Location = new System.Drawing.Point(276, 113);
+            this.rbMaritimas.Name = "rbMaritimas";
+            this.rbMaritimas.Size = new System.Drawing.Size(78, 17);
+            this.rbMaritimas.TabIndex = 34;
+            this.rbMaritimas.TabStop = true;
+            this.rbMaritimas.Text = "Maritimas";
+            this.rbMaritimas.UseVisualStyleBackColor = true;
+            // 
+            // rbTerrestres
+            // 
+            this.rbTerrestres.AutoSize = true;
+            this.rbTerrestres.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbTerrestres.Location = new System.Drawing.Point(188, 113);
+            this.rbTerrestres.Name = "rbTerrestres";
+            this.rbTerrestres.Size = new System.Drawing.Size(82, 17);
+            this.rbTerrestres.TabIndex = 33;
+            this.rbTerrestres.TabStop = true;
+            this.rbTerrestres.Text = "Terrestres";
+            this.rbTerrestres.UseVisualStyleBackColor = true;
+            // 
+            // rbTodas
+            // 
+            this.rbTodas.AutoSize = true;
+            this.rbTodas.Checked = true;
+            this.rbTodas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbTodas.Location = new System.Drawing.Point(122, 113);
+            this.rbTodas.Name = "rbTodas";
+            this.rbTodas.Size = new System.Drawing.Size(60, 17);
+            this.rbTodas.TabIndex = 32;
+            this.rbTodas.TabStop = true;
+            this.rbTodas.Text = "Todas";
+            this.rbTodas.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(15, 115);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(99, 13);
+            this.label5.TabIndex = 36;
+            this.label5.Text = "OPERACIONES:";
+            // 
             // frmPrintDespachoCombustible
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 195);
+            this.ClientSize = new System.Drawing.Size(555, 234);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.rbMaritimas);
+            this.Controls.Add(this.rbTerrestres);
+            this.Controls.Add(this.rbTodas);
             this.Controls.Add(this.chkDepartamentos);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbCombustible);
@@ -165,6 +220,10 @@
             this.Controls.SetChildIndex(this.cmbCombustible, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.chkDepartamentos, 0);
+            this.Controls.SetChildIndex(this.rbTodas, 0);
+            this.Controls.SetChildIndex(this.rbTerrestres, 0);
+            this.Controls.SetChildIndex(this.rbMaritimas, 0);
+            this.Controls.SetChildIndex(this.label5, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,5 +240,9 @@
         private System.Windows.Forms.CheckBox chkDepartamentos;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbCombustible;
+        private System.Windows.Forms.RadioButton rbMaritimas;
+        private System.Windows.Forms.RadioButton rbTerrestres;
+        private System.Windows.Forms.RadioButton rbTodas;
+        private System.Windows.Forms.Label label5;
     }
 }

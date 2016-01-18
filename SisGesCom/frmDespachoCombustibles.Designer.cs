@@ -41,7 +41,6 @@
             this.dgview = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAdiciona = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.lblDescripcionCombustible = new System.Windows.Forms.Label();
             this.cmbCombustible = new System.Windows.Forms.ComboBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
@@ -52,14 +51,17 @@
             this.label8 = new System.Windows.Forms.Label();
             this.cmbRenglonBeneficiario = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtBeneficiario = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtFecha = new System.Windows.Forms.DateTimePicker();
             this.txtNota = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.rbMaritimas = new System.Windows.Forms.RadioButton();
+            this.rbTerrestres = new System.Windows.Forms.RadioButton();
+            this.label4 = new System.Windows.Forms.Label();
             this.cmbAutorizadoPor = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtBeneficiario = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgview)).BeginInit();
@@ -211,7 +213,6 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnAdiciona);
-            this.groupBox1.Controls.Add(this.btnUpdate);
             this.groupBox1.Controls.Add(this.lblDescripcionCombustible);
             this.groupBox1.Controls.Add(this.cmbCombustible);
             this.groupBox1.Controls.Add(this.txtCantidad);
@@ -219,9 +220,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.Combustible);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(115, 212);
+            this.groupBox1.Location = new System.Drawing.Point(115, 246);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(481, 160);
+            this.groupBox1.Size = new System.Drawing.Size(481, 122);
             this.groupBox1.TabIndex = 92;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Combustibles";
@@ -240,25 +241,11 @@
             this.btnAdiciona.UseVisualStyleBackColor = true;
             this.btnAdiciona.Click += new System.EventHandler(this.btnAdiciona_Click);
             // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
-            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(376, 113);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(95, 42);
-            this.btnUpdate.TabIndex = 24;
-            this.btnUpdate.Text = "Actualizar";
-            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
             // lblDescripcionCombustible
             // 
             this.lblDescripcionCombustible.AutoSize = true;
             this.lblDescripcionCombustible.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcionCombustible.Location = new System.Drawing.Point(188, 126);
+            this.lblDescripcionCombustible.Location = new System.Drawing.Point(204, 78);
             this.lblDescripcionCombustible.Name = "lblDescripcionCombustible";
             this.lblDescripcionCombustible.Size = new System.Drawing.Size(47, 15);
             this.lblDescripcionCombustible.TabIndex = 23;
@@ -339,37 +326,20 @@
             // cmbRenglonBeneficiario
             // 
             this.cmbRenglonBeneficiario.FormattingEnabled = true;
-            this.cmbRenglonBeneficiario.Location = new System.Drawing.Point(196, 99);
+            this.cmbRenglonBeneficiario.Location = new System.Drawing.Point(196, 106);
             this.cmbRenglonBeneficiario.Name = "cmbRenglonBeneficiario";
-            this.cmbRenglonBeneficiario.Size = new System.Drawing.Size(269, 21);
+            this.cmbRenglonBeneficiario.Size = new System.Drawing.Size(326, 21);
             this.cmbRenglonBeneficiario.TabIndex = 98;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(80, 102);
+            this.label7.Location = new System.Drawing.Point(85, 110);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 16);
+            this.label7.Size = new System.Drawing.Size(105, 16);
             this.label7.TabIndex = 97;
-            this.label7.Text = "Departamento:";
-            // 
-            // txtBeneficiario
-            // 
-            this.txtBeneficiario.Location = new System.Drawing.Point(196, 73);
-            this.txtBeneficiario.Name = "txtBeneficiario";
-            this.txtBeneficiario.Size = new System.Drawing.Size(326, 20);
-            this.txtBeneficiario.TabIndex = 96;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(85, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 16);
-            this.label2.TabIndex = 95;
-            this.label2.Text = "Dependencia:";
+            this.label7.Text = "Dependencia:";
             // 
             // label1
             // 
@@ -390,7 +360,7 @@
             // 
             // txtNota
             // 
-            this.txtNota.Location = new System.Drawing.Point(196, 126);
+            this.txtNota.Location = new System.Drawing.Point(195, 167);
             this.txtNota.Name = "txtNota";
             this.txtNota.Size = new System.Drawing.Size(400, 46);
             this.txtNota.TabIndex = 104;
@@ -400,37 +370,93 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(145, 126);
+            this.label5.Location = new System.Drawing.Point(145, 167);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 16);
             this.label5.TabIndex = 103;
             this.label5.Text = "Nota:";
             // 
+            // rbMaritimas
+            // 
+            this.rbMaritimas.AutoSize = true;
+            this.rbMaritimas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbMaritimas.Location = new System.Drawing.Point(278, 223);
+            this.rbMaritimas.Name = "rbMaritimas";
+            this.rbMaritimas.Size = new System.Drawing.Size(78, 17);
+            this.rbMaritimas.TabIndex = 109;
+            this.rbMaritimas.Text = "Maritimas";
+            this.rbMaritimas.UseVisualStyleBackColor = true;
+            // 
+            // rbTerrestres
+            // 
+            this.rbTerrestres.AutoSize = true;
+            this.rbTerrestres.Checked = true;
+            this.rbTerrestres.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbTerrestres.Location = new System.Drawing.Point(192, 222);
+            this.rbTerrestres.Name = "rbTerrestres";
+            this.rbTerrestres.Size = new System.Drawing.Size(82, 17);
+            this.rbTerrestres.TabIndex = 108;
+            this.rbTerrestres.TabStop = true;
+            this.rbTerrestres.Text = "Terrestres";
+            this.rbTerrestres.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(89, 222);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(101, 16);
+            this.label4.TabIndex = 107;
+            this.label4.Text = "Operaciones:";
+            // 
             // cmbAutorizadoPor
             // 
             this.cmbAutorizadoPor.FormattingEnabled = true;
-            this.cmbAutorizadoPor.Location = new System.Drawing.Point(196, 180);
+            this.cmbAutorizadoPor.Location = new System.Drawing.Point(196, 76);
             this.cmbAutorizadoPor.Name = "cmbAutorizadoPor";
-            this.cmbAutorizadoPor.Size = new System.Drawing.Size(190, 21);
-            this.cmbAutorizadoPor.TabIndex = 106;
+            this.cmbAutorizadoPor.Size = new System.Drawing.Size(269, 21);
+            this.cmbAutorizadoPor.TabIndex = 111;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(76, 183);
+            this.label6.Location = new System.Drawing.Point(76, 79);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(114, 16);
-            this.label6.TabIndex = 105;
+            this.label6.TabIndex = 110;
             this.label6.Text = "Autorizado Por:";
+            // 
+            // txtBeneficiario
+            // 
+            this.txtBeneficiario.Location = new System.Drawing.Point(196, 139);
+            this.txtBeneficiario.Name = "txtBeneficiario";
+            this.txtBeneficiario.Size = new System.Drawing.Size(326, 20);
+            this.txtBeneficiario.TabIndex = 113;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(87, 142);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(103, 16);
+            this.label2.TabIndex = 112;
+            this.label2.Text = "Recibido Por:";
             // 
             // frmDespachoCombustibles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(731, 625);
+            this.Controls.Add(this.txtBeneficiario);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbAutorizadoPor);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.rbMaritimas);
+            this.Controls.Add(this.rbTerrestres);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNota);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
@@ -438,22 +464,17 @@
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cmbRenglonBeneficiario);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtBeneficiario);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmDespachoCombustibles";
             this.Text = "frmDespachoCombustibles";
             this.Load += new System.EventHandler(this.frmDespachoCombustibles_Load);
-            this.Controls.SetChildIndex(this.lblTituloForm, 0);
             this.Controls.SetChildIndex(this.groupBox1, 0);
+            this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.groupBox2, 0);
             this.Controls.SetChildIndex(this.groupBox4, 0);
-            this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.txtBeneficiario, 0);
-            this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.cmbRenglonBeneficiario, 0);
             this.Controls.SetChildIndex(this.label8, 0);
             this.Controls.SetChildIndex(this.txtCodigo, 0);
@@ -461,8 +482,14 @@
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.txtNota, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.rbTerrestres, 0);
+            this.Controls.SetChildIndex(this.rbMaritimas, 0);
             this.Controls.SetChildIndex(this.label6, 0);
             this.Controls.SetChildIndex(this.cmbAutorizadoPor, 0);
+            this.Controls.SetChildIndex(this.label2, 0);
+            this.Controls.SetChildIndex(this.txtBeneficiario, 0);
+            this.Controls.SetChildIndex(this.lblTituloForm, 0);
             this.groupBox4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgview)).EndInit();
@@ -487,7 +514,6 @@
         private System.Windows.Forms.DataGridView dgview;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnAdiciona;
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label lblDescripcionCombustible;
         private System.Windows.Forms.ComboBox cmbCombustible;
         private System.Windows.Forms.TextBox txtCantidad;
@@ -498,13 +524,16 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cmbRenglonBeneficiario;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtBeneficiario;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dtFecha;
         private System.Windows.Forms.RichTextBox txtNota;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RadioButton rbMaritimas;
+        private System.Windows.Forms.RadioButton rbTerrestres;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbAutorizadoPor;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtBeneficiario;
+        private System.Windows.Forms.Label label2;
     }
 }

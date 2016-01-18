@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEntradaCombustibles));
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.txtSolicitud = new System.Windows.Forms.TextBox();
@@ -56,6 +55,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtNota = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.rbTerrestres = new System.Windows.Forms.RadioButton();
+            this.rbMaritimas = new System.Windows.Forms.RadioButton();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgview)).BeginInit();
@@ -66,20 +68,6 @@
             // 
             this.lblTituloForm.Size = new System.Drawing.Size(356, 22);
             this.lblTituloForm.Text = "Pantalla Registro Entrada de Combustibles";
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
-            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(376, 113);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(95, 42);
-            this.btnUpdate.TabIndex = 24;
-            this.btnUpdate.Text = "Actualizar";
-            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label2
             // 
@@ -285,7 +273,6 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnAdiciona);
-            this.groupBox1.Controls.Add(this.btnUpdate);
             this.groupBox1.Controls.Add(this.lblDescripcionCombustible);
             this.groupBox1.Controls.Add(this.cmbCombustible);
             this.groupBox1.Controls.Add(this.txtCantidad);
@@ -293,9 +280,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.Combustible);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(116, 170);
+            this.groupBox1.Location = new System.Drawing.Point(116, 211);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(481, 160);
+            this.groupBox1.Size = new System.Drawing.Size(481, 121);
             this.groupBox1.TabIndex = 88;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Combustibles";
@@ -304,7 +291,7 @@
             // 
             this.lblDescripcionCombustible.AutoSize = true;
             this.lblDescripcionCombustible.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcionCombustible.Location = new System.Drawing.Point(188, 126);
+            this.lblDescripcionCombustible.Location = new System.Drawing.Point(221, 76);
             this.lblDescripcionCombustible.Name = "lblDescripcionCombustible";
             this.lblDescripcionCombustible.Size = new System.Drawing.Size(47, 15);
             this.lblDescripcionCombustible.TabIndex = 23;
@@ -387,11 +374,48 @@
             this.label4.TabIndex = 96;
             this.label4.Text = "Nota:";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(108, 181);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(101, 16);
+            this.label6.TabIndex = 98;
+            this.label6.Text = "Operaciones:";
+            // 
+            // rbTerrestres
+            // 
+            this.rbTerrestres.AutoSize = true;
+            this.rbTerrestres.Checked = true;
+            this.rbTerrestres.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbTerrestres.Location = new System.Drawing.Point(211, 181);
+            this.rbTerrestres.Name = "rbTerrestres";
+            this.rbTerrestres.Size = new System.Drawing.Size(82, 17);
+            this.rbTerrestres.TabIndex = 99;
+            this.rbTerrestres.TabStop = true;
+            this.rbTerrestres.Text = "Terrestres";
+            this.rbTerrestres.UseVisualStyleBackColor = true;
+            // 
+            // rbMaritimas
+            // 
+            this.rbMaritimas.AutoSize = true;
+            this.rbMaritimas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbMaritimas.Location = new System.Drawing.Point(297, 182);
+            this.rbMaritimas.Name = "rbMaritimas";
+            this.rbMaritimas.Size = new System.Drawing.Size(78, 17);
+            this.rbMaritimas.TabIndex = 100;
+            this.rbMaritimas.Text = "Maritimas";
+            this.rbMaritimas.UseVisualStyleBackColor = true;
+            // 
             // frmEntradaCombustibles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(713, 590);
+            this.Controls.Add(this.rbMaritimas);
+            this.Controls.Add(this.rbTerrestres);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtNota);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtEntrada);
@@ -418,6 +442,9 @@
             this.Controls.SetChildIndex(this.txtEntrada, 0);
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.txtNota, 0);
+            this.Controls.SetChildIndex(this.label6, 0);
+            this.Controls.SetChildIndex(this.rbTerrestres, 0);
+            this.Controls.SetChildIndex(this.rbMaritimas, 0);
             this.groupBox4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgview)).EndInit();
@@ -430,7 +457,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.TextBox txtSolicitud;
@@ -457,5 +483,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RichTextBox txtNota;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.RadioButton rbTerrestres;
+        private System.Windows.Forms.RadioButton rbMaritimas;
     }
 }

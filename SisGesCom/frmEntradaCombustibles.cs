@@ -222,7 +222,7 @@ namespace SisGesCom
                     this.btnCancelar.Enabled = false;
                     this.btnSalir.Enabled = true;
                     this.btnAdiciona.Enabled = false;
-                    this.btnUpdate.Enabled = false;
+                    //this.btnUpdate.Enabled = false;
                     //
                     this.txtSolicitud.Enabled = false;
                     this.dtFecha.Enabled = false;
@@ -243,7 +243,7 @@ namespace SisGesCom
                     this.btnCancelar.Enabled = true;
                     this.btnSalir.Enabled = true;
                     this.btnAdiciona.Enabled = true;
-                    this.btnUpdate.Enabled = true;
+                    //this.btnUpdate.Enabled = true;
                     //
                     this.txtSolicitud.Enabled = true;
                     this.dtFecha.Enabled = true;
@@ -264,7 +264,7 @@ namespace SisGesCom
                     this.btnCancelar.Enabled = false;
                     this.btnSalir.Enabled = true;
                     this.btnAdiciona.Enabled = false;
-                    this.btnUpdate.Enabled = false;
+                    //this.btnUpdate.Enabled = false;
                     //
                     this.txtSolicitud.Enabled = true;
                     this.dtFecha.Enabled = false;
@@ -285,7 +285,7 @@ namespace SisGesCom
                     this.btnCancelar.Enabled = true;
                     this.btnSalir.Enabled = true;
                     this.btnAdiciona.Enabled = true;
-                    this.btnUpdate.Enabled = true;
+                    //this.btnUpdate.Enabled = true;
                     //
                     this.txtSolicitud.Enabled = false;
                     this.dtFecha.Enabled = true;
@@ -306,7 +306,7 @@ namespace SisGesCom
                     this.btnCancelar.Enabled = false;
                     this.btnSalir.Enabled = true;
                     this.btnAdiciona.Enabled = false;
-                    this.btnUpdate.Enabled = false;
+                    //this.btnUpdate.Enabled = false;
                     //
                     this.txtSolicitud.Enabled = true;
                     this.dtFecha.Enabled = false;
@@ -550,8 +550,8 @@ namespace SisGesCom
 
                             {
                                 using (MySqlCommand myCommand = new MySqlCommand("INSERT INTO movimientocombustible(id, fecha, "+
-                                    "tipo_combustible, descripcion_combustible, cantidad, tipo_movimiento) "+
-                                    "VALUES(@id, @fecha, @tipo_combustible, @descripcion_combustible, @cantidad, @tipo_movimiento)", myConexion))
+                                    "tipo_combustible, descripcion_combustible, cantidad, tipo_movimiento, operaciones) "+
+                                    "VALUES(@id, @fecha, @tipo_combustible, @descripcion_combustible, @cantidad, @tipo_movimiento, @operaciones)", myConexion))
                                 {
                                     myCommand.Parameters.AddWithValue("@id", txtEntrada.Text);
                                     myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd HH:mm:ss"));
@@ -559,6 +559,15 @@ namespace SisGesCom
                                     myCommand.Parameters.AddWithValue("@descripcion_combustible", row.Cells["Combustible"].Value);
                                     myCommand.Parameters.AddWithValue("@cantidad", row.Cells["Cantidad"].Value);
                                     myCommand.Parameters.AddWithValue("@tipo_movimiento", "E");
+                                    if (rbTerrestres.Checked == true)
+                                    {
+                                        myCommand.Parameters.AddWithValue("@operaciones", "T");
+                                    }
+                                    else
+                                    {
+                                        myCommand.Parameters.AddWithValue("@operaciones", "M");
+                                    }
+
                                     // Abro Conexion
                                     myConexion.Open();
                                     // Ejecuto Valores
