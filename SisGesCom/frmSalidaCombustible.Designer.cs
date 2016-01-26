@@ -72,7 +72,7 @@
             this.groupBox4.Controls.Add(this.btnEditar);
             this.groupBox4.Controls.Add(this.btnGrabar);
             this.groupBox4.Controls.Add(this.btnNuevo);
-            this.groupBox4.Location = new System.Drawing.Point(9, 313);
+            this.groupBox4.Location = new System.Drawing.Point(9, 353);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(795, 65);
             this.groupBox4.TabIndex = 51;
@@ -314,9 +314,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(75, 106);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(157, 16);
+            this.label7.Size = new System.Drawing.Size(105, 16);
             this.label7.TabIndex = 80;
-            this.label7.Text = "Renglon Beneficiario:";
+            this.label7.Text = "Dependencia:";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // txtCodigo
@@ -342,7 +342,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 387);
+            this.ClientSize = new System.Drawing.Size(812, 433);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cmbRenglonBeneficiario);

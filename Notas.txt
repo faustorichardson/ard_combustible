@@ -1,0 +1,2 @@
+verificar los movimientos de tickets para ponerlos en una sola tabla
+cuadrado por el tipo de dependencia "D" o "P".

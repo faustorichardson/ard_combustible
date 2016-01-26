@@ -62,8 +62,18 @@ namespace SisGesCom
                 sbQuery.Append(" FROM movimientocombustible ");
                 sbQuery.Append(" INNER JOIN tipo_combustible ON tipo_combustible.id = movimientocombustible.tipo_combustible");                
                 sbQuery.Append(cWhere);
-                sbQuery.Append(" AND tipo_movimiento = 'E'");
+                sbQuery.Append(" AND movimientocombustible.tipo_movimiento = 'E'");
                 
+                // Filtro del tipo de operacion
+                if (rbTerrestres.Checked == true)
+                {
+                    sbQuery.Append(" AND movimientocombustible.operaciones = 'T' ");
+                }
+                else if (rbMaritimas.Checked == true)
+                {
+                    sbQuery.Append(" AND movimientocombustible.operaciones = 'M' ");
+                }
+
                 // Paso los valores de sbQuery al CommandText
                 myCommand.CommandText = sbQuery.ToString();
                 // Creo el objeto Data Adapter y ejecuto el command en el
