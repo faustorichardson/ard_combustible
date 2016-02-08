@@ -363,7 +363,7 @@ namespace SisGesCom
                             " values(@tipo_movimiento, @cantidad, @fecha, @beneficiario)";
                         myCommand.Parameters.AddWithValue("@tipo_movimiento", 'S');
                         myCommand.Parameters.AddWithValue("@cantidad", txtCantidad.Text);
-                        myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd HH:mm:ss"));
+                        myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd"));
                         myCommand.Parameters.AddWithValue("@beneficiario", txtCedulaJefe.Text);
 
                         // Step 4 - Opening the connection

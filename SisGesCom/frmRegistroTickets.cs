@@ -305,7 +305,7 @@ namespace SisGesCom
                             " values(@tipo_movimiento, @cantidad, @fecha)";
                         myCommand.Parameters.AddWithValue("@tipo_movimiento", 'E');
                         myCommand.Parameters.AddWithValue("@cantidad", txtCantidad.Text);
-                        myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd HH:mm:ss"));
+                        myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd"));
                         //myCommand.Parameters.AddWithValue("@autorizadopor", cmbAutorizadoPor.SelectedValue);
 
                         // Step 4 - Opening the connection

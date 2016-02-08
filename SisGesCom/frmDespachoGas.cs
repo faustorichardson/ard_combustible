@@ -424,7 +424,7 @@ namespace SisGesCom
                         myCommand.CommandText = "INSERT INTO combustible_gas(suplidor, fecha, nota)"+
                             "values(@suplidor, @fecha, @nota)";
                         myCommand.Parameters.AddWithValue("@suplidor", txtSuplidor.Text);
-                        myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd HH:mm:ss"));
+                        myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd"));
                         myCommand.Parameters.AddWithValue("@nota", txtNota.Text);
                         
                         // Step 4 - Opening the connection
@@ -496,13 +496,13 @@ namespace SisGesCom
                     // Actualizo la data a la tabla entrada de combustible
                     //try
                     //{
-                    //    // Step 1 - Stablishing the connection
+                    //     Step 1 - Stablishing the connection
                     //    MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
 
-                    //    // Step 2 - Crear el comando de ejecucion
+                    //     Step 2 - Crear el comando de ejecucion
                     //    MySqlCommand myCommand = MyConexion.CreateCommand();
 
-                    //    // Step 3 - Comando a ejecutar                        
+                    //     Step 3 - Comando a ejecutar                        
                     //    myCommand.CommandText = "UPDATE combustible_salida SET fecha = @fecha, nota = @nota, " +
                     //        "beneficiario = @beneficiario, beneficiario_depto = @beneficiario_depto, autorizadopor = @autorizadopor " +
                     //        " WHERE id = " + txtCodigo.Text + "";
@@ -512,13 +512,13 @@ namespace SisGesCom
                     //    myCommand.Parameters.AddWithValue("@beneficiario_depto", cmbRenglonBeneficiario.SelectedValue);
                     //    myCommand.Parameters.AddWithValue("@autorizadopor", cmbAutorizadoPor.SelectedValue);
 
-                    //    // Step 4 - Opening the connection
+                    //     Step 4 - Opening the connection
                     //    MyConexion.Open();
 
-                    //    // Step 5 - Executing the query
+                    //     Step 5 - Executing the query
                     //    myCommand.ExecuteNonQuery();
 
-                    //    // Step 6 - Closing the connection
+                    //     Step 6 - Closing the connection
                     //    MyConexion.Close();
                     //}
                     //catch (Exception myEx)

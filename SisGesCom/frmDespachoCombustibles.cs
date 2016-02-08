@@ -534,7 +534,7 @@ namespace SisGesCom
                         // Step 3 - Comando a ejecutar                        
                         myCommand.CommandText = "INSERT INTO combustible_salida(fecha, nota, beneficiario, beneficiario_depto, "+
                         "autorizadopor) values(@fecha, @nota, @beneficiario, @beneficiario_depto, @autorizadopor)";
-                        myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd HH:mm:ss"));
+                        myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd"));
                         myCommand.Parameters.AddWithValue("@nota", txtNota.Text);
                         myCommand.Parameters.AddWithValue("@beneficiario", txtBeneficiario.Text);
                         myCommand.Parameters.AddWithValue("@beneficiario_depto", cmbRenglonBeneficiario.SelectedValue);
@@ -568,7 +568,7 @@ namespace SisGesCom
                                     "VALUES(@id, @fecha, @tipo_combustible, @descripcion_combustible, @cantidad, @tipo_movimiento, @operaciones)", myConexion))
                                 {
                                     myCommand.Parameters.AddWithValue("@id", txtCodigo.Text);
-                                    myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd HH:mm:ss"));
+                                    myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd"));
                                     myCommand.Parameters.AddWithValue("@tipo_combustible", row.Cells["Id"].Value);
                                     myCommand.Parameters.AddWithValue("@descripcion_combustible", row.Cells["Combustible"].Value);
                                     myCommand.Parameters.AddWithValue("@cantidad", row.Cells["Cantidad"].Value);

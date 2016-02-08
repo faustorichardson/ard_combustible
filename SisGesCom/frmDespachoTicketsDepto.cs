@@ -250,7 +250,7 @@ namespace SisGesCom
                 MyConexion.Open();
 
                 // Step 3
-                MySqlCommand MyCommand = new MySqlCommand("SELECT id, departamento FROM deptobeneficiariogas ORDER BY departamento ASC", MyConexion);
+                MySqlCommand MyCommand = new MySqlCommand("SELECT id, departamento FROM dependencias ORDER BY departamento ASC", MyConexion);
 
                 // Step 4
                 MySqlDataReader MyReader;
@@ -341,7 +341,7 @@ namespace SisGesCom
                                     myCommand.Parameters.AddWithValue("@id", row.Cells["Id"].Value);
                                     myCommand.Parameters.AddWithValue("@beneficiario", row.Cells["Dependencia"].Value);
                                     myCommand.Parameters.AddWithValue("@cantidad", row.Cells["Cantidad"].Value);
-                                    myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd HH:mm:ss"));
+                                    myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd"));
                                     // Abro Conexion
                                     myConexion.Open();
                                     // Ejecuto Valores
@@ -507,7 +507,7 @@ namespace SisGesCom
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

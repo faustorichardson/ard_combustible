@@ -59,14 +59,12 @@ namespace SisGesCom
                 cWhere = cWhere + " AND combustible_gas.fecha >= " + "'" + fechadesde + "'" + " AND combustible_gas.fecha <= " + "'" + fechahasta + "'" + "";
                 //cWhere = cWhere + " AND movimientocombustible.tipo_movimiento = 'S'";
                 sbQuery.Clear();
-                sbQuery.Append(" SELECT combustible_gas.id as id_despacho, combustible_gas.fecha, combustible_gas.suplidor, movimientogas.id,");
-                sbQuery.Append(" movimientogas.departamento_descripcion as descripciondepto, movimientogas.cantidad, deptobeneficiariogas.id,");
-                sbQuery.Append(" deptobeneficiariogas.tarjeta, deptobeneficiariogas.tipo, tipo_deptogas.id, tipo_deptogas.tipo as tipodescripcion");
-                //sbQuery.Append(" movimientogas.departamento_descripcion, movimientogas.cantidad");
-                sbQuery.Append(" FROM movimientogas");
-                sbQuery.Append(" INNER JOIN combustible_gas ON combustible_gas.id = movimientogas.id");
-                sbQuery.Append(" INNER JOIN tipo_deptogas ON tipo_deptogas.id = movimientogas.departamento");
-                sbQuery.Append(" INNER JOIN deptobeneficiariogas ON deptobeneficiariogas.id = movimientogas.departamento");
+                sbQuery.Append(" SELECT combustible_gas.id as id_despacho, combustible_gas.fecha, combustible_gas.suplidor, ");
+                sbQuery.Append("movimientogas.departamento_descripcion as descripciondepto,");
+                sbQuery.Append(" movimientogas.cantidad, deptobeneficiariogas.tarjeta");
+                sbQuery.Append(" FROM combustible_gas");
+                sbQuery.Append(" INNER JOIN movimientogas ON movimientogas.id = combustible_gas.id");
+                sbQuery.Append(" INNER JOIN deptobeneficiariogas ON deptobeneficiariogas.id = movimientogas.departamento");                
                 sbQuery.Append(cWhere);                
                 //sbQuery.Append(" GROUP BY tipo_deptogas.tipo");
 

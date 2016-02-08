@@ -346,7 +346,7 @@ namespace SisGesCom
 
                         // Step 3 - Comando a ejecutar                        
                         myCommand.CommandText = "INSERT INTO secuencia_solicitudcombustible(fecha, nota) values(@fecha, @nota)";
-                        myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd HH:mm:ss"));
+                        myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd"));
                         myCommand.Parameters.AddWithValue("@nota", txtNota.Text);
 
                         // Step 4 - Opening the connection
@@ -376,7 +376,7 @@ namespace SisGesCom
                                     "VALUES(@id, @fecha, @tipo_combustible, @descripcion_combustible, @cantidad)", myConexion))
                                 {
                                     myCommand.Parameters.AddWithValue("@id", txtSolicitud.Text);
-                                    myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd HH:mm:ss"));
+                                    myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd"));
                                     myCommand.Parameters.AddWithValue("@tipo_combustible", row.Cells["Id"].Value);
                                     myCommand.Parameters.AddWithValue("@descripcion_combustible", row.Cells["Combustible"].Value);
                                     myCommand.Parameters.AddWithValue("@cantidad", row.Cells["Cantidad"].Value);
