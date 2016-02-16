@@ -229,6 +229,12 @@
     <Compile Include="frmDespachoTicketsDepto.Designer.cs">
       <DependentUpon>frmDespachoTicketsDepto.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPrintDespachoCombUnidNaval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrintDespachoCombUnidNaval.Designer.cs">
+      <DependentUpon>frmPrintDespachoCombUnidNaval.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrintDespachoCombustibleDetallado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -368,6 +374,12 @@
       <DependentUpon>rptDespachoCombustibleResumido.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="rptDespachoCombustibleUnidadesNavales.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDespachoCombustibleUnidadesNavales.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="rptDespachoGasDetallado.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -500,6 +512,9 @@
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPrintDespachoCombUnidNaval.resx">
+      <DependentUpon>frmPrintDespachoCombUnidNaval.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrintDespachoCombustible.resx">
       <DependentUpon>frmPrintDespachoCombustible.cs</DependentUpon>
     </EmbeddedResource>
@@ -562,6 +577,10 @@
     <EmbeddedResource Include="rptDespachoCombustibleResumido.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptDespachoCombustibleResumido.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDespachoCombustibleUnidadesNavales.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDespachoCombustibleUnidadesNavales.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="rptDespachoGasDetallado.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

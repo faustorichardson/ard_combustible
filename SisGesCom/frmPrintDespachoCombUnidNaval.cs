@@ -17,12 +17,11 @@ using CrystalDecisions.Windows;
 using System.Drawing.Imaging;
 using System.IO;
 
-
 namespace SisGesCom
 {
-    public partial class frmPrintDespachoGas : frmBase
+    public partial class frmPrintDespachoCombUnidNaval : frmBase
     {
-        public frmPrintDespachoGas()
+        public frmPrintDespachoCombUnidNaval()
         {
             InitializeComponent();
         }
@@ -56,31 +55,30 @@ namespace SisGesCom
                 // Filtros de la busqueda                
                 string fechadesde = dtDesde.Value.ToString("yyyy-MM-dd");
                 string fechahasta = dtHasta.Value.ToString("yyyy-MM-dd");
-                cWhere = cWhere + " AND combustible_gas.fecha >= " + "'" + fechadesde + "'" + " AND combustible_gas.fecha <= " + "'" + fechahasta + "'" + "";
-                //cWhere = cWhere + " AND movimientocombustible.tipo_movimiento = 'S'";
+                cWhere = cWhere + " AND fecha >= " + "'" + fechadesde + "'" + " AND fecha <= " + "'" + fechahasta + "'" + "";
                 sbQuery.Clear();
-                sbQuery.Append(" SELECT combustible_gas.id as id_despacho, combustible_gas.fecha as fechadespacho, combustible_gas.suplidor, ");
-                sbQuery.Append("movimientogas.departamento_descripcion as descripciondepto,");
-                sbQuery.Append(" movimientogas.cantidad, deptobeneficiariogas.tarjeta");
-                sbQuery.Append(" FROM combustible_gas");
-                sbQuery.Append(" INNER JOIN movimientogas ON movimientogas.id = combustible_gas.id");
-                sbQuery.Append(" INNER JOIN deptobeneficiariogas ON deptobeneficiariogas.id = movimientogas.departamento");                
-                sbQuery.Append(cWhere);                
-                //sbQuery.Append(" GROUP BY tipo_deptogas.tipo");
+                sbQuery.Append("SELECT movimientocombustible.fecha, movimientocombustible.descripcion_combustible,");
+                sbQuery.Append(" movimientocombustible.cantidad,");
+                sbQuery.Append(" unidadesnavales.unidad as embarcacion");
+                sbQuery.Append(" FROM movimientocombustible");
+                sbQuery.Append(" INNER JOIN unidadesnavales ON unidadesnavales.id = movimientocombustible.embarcacion");                
+                sbQuery.Append(cWhere);
+                sbQuery.Append(" AND tipo_movimiento = 'S'");
+                //sbQuery.Append(" ORDER BY rangos.orden ASC");
 
                 // Paso los valores de sbQuery al CommandText
                 myCommand.CommandText = sbQuery.ToString();
                 // Creo el objeto Data Adapter y ejecuto el command en el
                 myAdapter = new MySqlDataAdapter(myCommand);
                 // Creo el objeto Data Table
-                DataTable dtGas = new DataTable();
+                DataTable dtMovimientoCombustible = new DataTable();
                 // Lleno el data adapter
-                myAdapter.Fill(dtGas);
+                myAdapter.Fill(dtMovimientoCombustible);
                 // Cierro el objeto conexion
                 myConexion.Close();
 
                 // Verifico cantidad de datos encontrados
-                int nRegistro = dtGas.Rows.Count;
+                int nRegistro = dtMovimientoCombustible.Rows.Count;
                 if (nRegistro == 0)
                 {
                     MessageBox.Show("No Hay Datos Para Mostrar, Favor Verificar", "Sistema de Gestion de Combustible", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -94,11 +92,12 @@ namespace SisGesCom
                     //Proporciona propiedades para la recuperacion y configuracion del tipo de los parametros
                     ParameterValues oParametrosValuesCR = new ParameterValues();
 
+
+
                     //2do.CREAMOS LOS PARAMETROS
                     ParameterField oUsuario = new ParameterField();
                     ParameterField oFechaInicial = new ParameterField();
                     ParameterField oFechaFinal = new ParameterField();
-
                     //parametervaluetype especifica el TIPO de valor de parametro
                     //ParameterValueKind especifica el tipo de valor de parametro en la PARAMETERVALUETYPE de la Clase PARAMETERFIELD
                     oUsuario.ParameterValueType = ParameterValueKind.StringParameter;
@@ -124,26 +123,27 @@ namespace SisGesCom
                     oParametrosCR.Add(oUsuario);
                     oParametrosCR.Add(oFechaInicial);
                     oParametrosCR.Add(oFechaFinal);
-
                     //nombre del parametro en CR (Crystal Reports)
                     oParametrosCR[0].Name = "cUsuario";
                     oParametrosCR[1].Name = "cFechaInicial";
                     oParametrosCR[2].Name = "cFechaFinal";
 
+
+
                     //nombre del TITULO DEL INFORME
-                    cTitulo = "Reporte de Despacho de Gas";
+                    cTitulo = "Listado de Despacho de Combustible a Unidades Navales";
 
                     //6to Instanciamos nuestro REPORTE
                     //Reportes.ListadoDoctores oListado = new Reportes.ListadoDoctores();
-                    rptDespachoGasDetallado orptDespachoGasDetallado = new rptDespachoGasDetallado();
+                    rptDespachoCombustibleUnidadesNavales orptDespachoCombustibleUnidadesNavales = new rptDespachoCombustibleUnidadesNavales();
 
                     //pasamos el nombre del TITULO del Listado
                     //SumaryInfo es un objeto que se utiliza para leer,crear y actualizar las propiedades del reporte
                     // oListado.SummaryInfo.ReportTitle = cTitulo;
-                    orptDespachoGasDetallado.SummaryInfo.ReportTitle = cTitulo;
+                    orptDespachoCombustibleUnidadesNavales.SummaryInfo.ReportTitle = cTitulo;
 
                     //7mo. instanciamos nuestro el FORMULARIO donde esta nuestro ReportViewer
-                    frmPrinter ofrmPrinter = new frmPrinter(dtGas, orptDespachoGasDetallado, cTitulo);
+                    frmPrinter ofrmPrinter = new frmPrinter(dtMovimientoCombustible, orptDespachoCombustibleUnidadesNavales, cTitulo);
 
                     //ParameterFieldInfo Obtiene o establece la colección de campos de parámetros.
                     ofrmPrinter.CrystalReportViewer1.ParameterFieldInfo = oParametrosCR;
@@ -162,11 +162,6 @@ namespace SisGesCom
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void frmPrintDespachoGas_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

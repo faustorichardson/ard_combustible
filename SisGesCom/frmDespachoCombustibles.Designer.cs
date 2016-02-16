@@ -62,6 +62,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtBeneficiario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.cmbEmbarcacion = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgview)).BeginInit();
@@ -82,7 +84,7 @@
             this.groupBox4.Controls.Add(this.btnCancelar);
             this.groupBox4.Controls.Add(this.btnEditar);
             this.groupBox4.Controls.Add(this.btnGrabar);
-            this.groupBox4.Location = new System.Drawing.Point(9, 547);
+            this.groupBox4.Location = new System.Drawing.Point(9, 580);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(694, 65);
             this.groupBox4.TabIndex = 94;
@@ -191,7 +193,7 @@
             // 
             this.groupBox2.Controls.Add(this.dgview);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(115, 378);
+            this.groupBox2.Location = new System.Drawing.Point(115, 412);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(481, 170);
             this.groupBox2.TabIndex = 93;
@@ -220,7 +222,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.Combustible);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(115, 246);
+            this.groupBox1.Location = new System.Drawing.Point(115, 280);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(481, 122);
             this.groupBox1.TabIndex = 92;
@@ -386,6 +388,7 @@
             this.rbMaritimas.TabIndex = 109;
             this.rbMaritimas.Text = "Maritimas";
             this.rbMaritimas.UseVisualStyleBackColor = true;
+            this.rbMaritimas.CheckedChanged += new System.EventHandler(this.rbMaritimas_CheckedChanged);
             // 
             // rbTerrestres
             // 
@@ -445,11 +448,31 @@
             this.label2.TabIndex = 112;
             this.label2.Text = "Recibido Por:";
             // 
+            // cmbEmbarcacion
+            // 
+            this.cmbEmbarcacion.FormattingEnabled = true;
+            this.cmbEmbarcacion.Location = new System.Drawing.Point(195, 253);
+            this.cmbEmbarcacion.Name = "cmbEmbarcacion";
+            this.cmbEmbarcacion.Size = new System.Drawing.Size(216, 21);
+            this.cmbEmbarcacion.TabIndex = 114;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(87, 256);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(103, 16);
+            this.label9.TabIndex = 115;
+            this.label9.Text = "Embarcacion:";
+            // 
             // frmDespachoCombustibles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(731, 625);
+            this.ClientSize = new System.Drawing.Size(731, 655);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.cmbEmbarcacion);
             this.Controls.Add(this.txtBeneficiario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbAutorizadoPor);
@@ -489,7 +512,9 @@
             this.Controls.SetChildIndex(this.cmbAutorizadoPor, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.txtBeneficiario, 0);
+            this.Controls.SetChildIndex(this.cmbEmbarcacion, 0);
             this.Controls.SetChildIndex(this.lblTituloForm, 0);
+            this.Controls.SetChildIndex(this.label9, 0);
             this.groupBox4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgview)).EndInit();
@@ -535,5 +560,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtBeneficiario;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cmbEmbarcacion;
+        private System.Windows.Forms.Label label9;
     }
 }

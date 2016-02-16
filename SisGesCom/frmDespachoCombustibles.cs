@@ -47,6 +47,10 @@ namespace SisGesCom
             // Llenando el combo del Departamento Autoriza
             this.fillCmbAutorizado();
 
+            // Llenando el combo de la embarcacion
+            this.fillCmbEmbarcacion();
+            this.cmbEmbarcacion.Enabled = false;
+
             // Modificando el valor del LblDescripcionCombustible
             this.updatelbl();
 
@@ -56,9 +60,49 @@ namespace SisGesCom
             // Funcion Limpia Combustibles
             this.LimpiaCampo();
 
+            // Inhabilita el combo embarcaciones
+
             // Funcion Botones
             this.cModo = "Inicio";
             this.Botones();
+        }
+
+        private void fillCmbEmbarcacion()
+        {
+            try
+            {
+                // Step 1 
+                MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
+
+                // Step 2
+                MyConexion.Open();
+
+                // Step 3
+                MySqlCommand MyCommand = new MySqlCommand("SELECT id, unidad FROM unidadesnavales ORDER BY unidad ASC", MyConexion);
+
+                // Step 4
+                MySqlDataReader MyReader;
+                MyReader = MyCommand.ExecuteReader();
+
+                // Step 5
+                DataTable MyDataTable = new DataTable();
+                MyDataTable.Columns.Add("id", typeof(int));
+                MyDataTable.Columns.Add("unidad", typeof(string));
+                MyDataTable.Load(MyReader);
+
+                // Step 6
+                cmbEmbarcacion.ValueMember = "id";
+                cmbEmbarcacion.DisplayMember = "unidad";
+                cmbEmbarcacion.DataSource = MyDataTable;
+
+                // Step 7
+                MyConexion.Close();
+            }
+            catch (Exception myEx)
+            {
+                MessageBox.Show(myEx.Message);
+                throw;
+            }
         }
 
         private void fillCmbAutorizado()
@@ -256,6 +300,8 @@ namespace SisGesCom
             //this.dtGenerating();
             this.cantComb = 0;
             this.idComb = 0;
+            this.cmbEmbarcacion.Enabled = false;
+            this.rbTerrestres.Checked = true;
         }
 
         private void ProximoCodigo()
@@ -540,6 +586,7 @@ namespace SisGesCom
                         myCommand.Parameters.AddWithValue("@beneficiario_depto", cmbRenglonBeneficiario.SelectedValue);
                         myCommand.Parameters.AddWithValue("@autorizadopor", cmbAutorizadoPor.SelectedValue);
 
+
                         // Step 4 - Opening the connection
                         MyConexion.Open();
 
@@ -564,8 +611,8 @@ namespace SisGesCom
 
                             {
                                 using (MySqlCommand myCommand = new MySqlCommand("INSERT INTO movimientocombustible(id, fecha, " +
-                                    "tipo_combustible, descripcion_combustible, cantidad, tipo_movimiento, operaciones) " +
-                                    "VALUES(@id, @fecha, @tipo_combustible, @descripcion_combustible, @cantidad, @tipo_movimiento, @operaciones)", myConexion))
+                                    "tipo_combustible, descripcion_combustible, cantidad, tipo_movimiento, operaciones, embarcacion) " +
+                                    "VALUES(@id, @fecha, @tipo_combustible, @descripcion_combustible, @cantidad, @tipo_movimiento, @operaciones, @embarcacion)", myConexion))
                                 {
                                     myCommand.Parameters.AddWithValue("@id", txtCodigo.Text);
                                     myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd"));
@@ -576,10 +623,12 @@ namespace SisGesCom
                                     if (rbTerrestres.Checked == true)
                                     {
                                         myCommand.Parameters.AddWithValue("@operaciones", "T");
+                                        myCommand.Parameters.AddWithValue("@embarcacion", 0);
                                     }
                                     else
                                     {
                                         myCommand.Parameters.AddWithValue("@operaciones", "M");
+                                        myCommand.Parameters.AddWithValue("@embarcacion", cmbEmbarcacion.SelectedValue);
                                     }
 
                                     // Abro Conexion
@@ -985,6 +1034,18 @@ namespace SisGesCom
         private void cmbCombustible_Leave(object sender, EventArgs e)
         {
             this.updatelbl();
+        }
+
+        private void rbMaritimas_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.rbMaritimas.Checked == true)
+            {
+                this.cmbEmbarcacion.Enabled = true;
+            }
+            else
+            {
+                this.cmbEmbarcacion.Enabled = false;
+            }
         }
 
     }

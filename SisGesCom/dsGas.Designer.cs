@@ -297,7 +297,7 @@ namespace SisGesCom {
             
             private global::System.Data.DataColumn columndescripciondepto;
             
-            private global::System.Data.DataColumn columnfecha;
+            private global::System.Data.DataColumn columnfechadespacho;
             
             private global::System.Data.DataColumn columnidtipo;
             
@@ -408,9 +408,9 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn fechaColumn {
+            public global::System.Data.DataColumn fechadespachoColumn {
                 get {
-                    return this.columnfecha;
+                    return this.columnfechadespacho;
                 }
             }
             
@@ -459,7 +459,7 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public dtGasRow AdddtGasRow(int id, string departamento, string tipodescripcion, string suplidor, string nota, string id_despacho, double cantidad, string tarjeta, string descripciondepto, System.DateTime fecha, int idtipo) {
+            public dtGasRow AdddtGasRow(int id, string departamento, string tipodescripcion, string suplidor, string nota, string id_despacho, double cantidad, string tarjeta, string descripciondepto, System.DateTime fechadespacho, int idtipo) {
                 dtGasRow rowdtGasRow = ((dtGasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
@@ -471,7 +471,7 @@ namespace SisGesCom {
                         cantidad,
                         tarjeta,
                         descripciondepto,
-                        fecha,
+                        fechadespacho,
                         idtipo};
                 rowdtGasRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowdtGasRow);
@@ -504,7 +504,7 @@ namespace SisGesCom {
                 this.columncantidad = base.Columns["cantidad"];
                 this.columntarjeta = base.Columns["tarjeta"];
                 this.columndescripciondepto = base.Columns["descripciondepto"];
-                this.columnfecha = base.Columns["fecha"];
+                this.columnfechadespacho = base.Columns["fechadespacho"];
                 this.columnidtipo = base.Columns["idtipo"];
             }
             
@@ -529,8 +529,8 @@ namespace SisGesCom {
                 base.Columns.Add(this.columntarjeta);
                 this.columndescripciondepto = new global::System.Data.DataColumn("descripciondepto", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndescripciondepto);
-                this.columnfecha = new global::System.Data.DataColumn("fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfecha);
+                this.columnfechadespacho = new global::System.Data.DataColumn("fechadespacho", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfechadespacho);
                 this.columnidtipo = new global::System.Data.DataColumn("idtipo", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidtipo);
             }
@@ -819,17 +819,17 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime fecha {
+            public System.DateTime fechadespacho {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tabledtGas.fechaColumn]));
+                        return ((global::System.DateTime)(this[this.tabledtGas.fechadespachoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'fecha\' in table \'dtGas\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'fechadespacho\' in table \'dtGas\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabledtGas.fechaColumn] = value;
+                    this[this.tabledtGas.fechadespachoColumn] = value;
                 }
             }
             
@@ -959,14 +959,14 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsfechaNull() {
-                return this.IsNull(this.tabledtGas.fechaColumn);
+            public bool IsfechadespachoNull() {
+                return this.IsNull(this.tabledtGas.fechadespachoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetfechaNull() {
-                this[this.tabledtGas.fechaColumn] = global::System.Convert.DBNull;
+            public void SetfechadespachoNull() {
+                this[this.tabledtGas.fechadespachoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

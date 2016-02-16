@@ -526,5 +526,11 @@ namespace SisGesCom
             frmDespachoTicketsDepto ofrmDespachoTicketsDepto = new frmDespachoTicketsDepto();
             ofrmDespachoTicketsDepto.Show();
         }
+
+        private void buttonItem31_Click(object sender, EventArgs e)
+        {
+            frmPrintDespachoCombUnidNaval ofrmPrintDespachoCombUnidNaval = new frmPrintDespachoCombUnidNaval();
+            ofrmPrintDespachoCombUnidNaval.Show();
+        }
     }
 }
