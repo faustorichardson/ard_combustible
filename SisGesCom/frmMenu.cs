@@ -529,8 +529,19 @@ namespace SisGesCom
 
         private void buttonItem31_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void buttonItem30_Click(object sender, EventArgs e)
+        {
             frmPrintDespachoCombUnidNaval ofrmPrintDespachoCombUnidNaval = new frmPrintDespachoCombUnidNaval();
             ofrmPrintDespachoCombUnidNaval.Show();
+        }
+
+        private void buttonItem32_Click(object sender, EventArgs e)
+        {
+            frmAnularSolicitud ofrmAnularSolicitudCombustible = new frmAnularSolicitud();
+            ofrmAnularSolicitudCombustible.ShowDialog();
         }
     }
 }

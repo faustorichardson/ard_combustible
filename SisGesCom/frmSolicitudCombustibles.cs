@@ -719,7 +719,6 @@ namespace SisGesCom
                     {
                         while (MyReader.Read())
                         {
-
                             dtFecha.Value = Convert.ToDateTime(MyReader["fecha"]);
                             txtNota.Text = MyReader["nota"].ToString();
                         }
@@ -768,7 +767,7 @@ namespace SisGesCom
                         // Filling the data adapter
                         myAdapter.Fill(myDs, "Solicitud");
 
-                        // Fill the Gridview
+                        // Fill the Gridview                        
                         dgview.DataSource = myDs.Tables[0];
 
                         //this.cModo = "Buscar";
