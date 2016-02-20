@@ -358,7 +358,7 @@ namespace SisGesCom
 
                 // Step 3 - creating the commandtext
                 MyCommand.CommandText = "SELECT id, tipo_combustible FROM solicitud " +
-                    "WHERE id = " + txtSolicitud.Text + " AND tipo_combustible = " + cmbCombustible.SelectedValue + "";
+                    "WHERE id = " + txtSolicitud.Text + " AND tipo_combustible = " + cmbCombustible.SelectedValue + " AND anulada = 0";
 
                 // Step 4 - connection open
                 MyConexion.Open();

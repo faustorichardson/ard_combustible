@@ -63,6 +63,14 @@ namespace SisGesCom
                 string fechahasta = dtHasta.Value.ToString("yyyy-MM-dd");
                 cWhere = cWhere + " AND fecha >= " + "'" + fechadesde + "'" + " AND fecha <= " + "'" + fechahasta + "'" + "";
                 //cWhere = cWhere + " AND movimientocombustible.tipo_movimiento = 'S'";
+                if (chkAnuladas.Checked == true)
+                {
+
+                }
+                else
+                {
+                }
+
                 sbQuery.Clear();
                 sbQuery.Append(" SELECT solicitud.id, solicitud.tipo_combustible, sum(solicitud.cantidad) as cantidad,");
                 sbQuery.Append(" solicitud.fecha, solicitud.descripcion_combustible as tipocombustible,");

@@ -74,6 +74,15 @@ namespace SisGesCom
                     sbQuery.Append(" AND movimientocombustible.operaciones = 'M' ");
                 }
 
+                if (chkAnuladas.Checked == true)
+                {
+                    sbQuery.Append(" AND movimientocombustible.anulada = 1 ");
+                }
+                else
+                {
+                    sbQuery.Append(" AND movimientocombustible.anulada = 0 ");
+                }
+
                 // Paso los valores de sbQuery al CommandText
                 myCommand.CommandText = sbQuery.ToString();
                 // Creo el objeto Data Adapter y ejecuto el command en el

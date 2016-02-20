@@ -42,6 +42,7 @@
             this.chkDepartamentos = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbCombustible = new System.Windows.Forms.ComboBox();
+            this.chkAnuladas = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // lblTituloForm
@@ -189,11 +190,23 @@
             this.cmbCombustible.Size = new System.Drawing.Size(283, 21);
             this.cmbCombustible.TabIndex = 37;
             // 
+            // chkAnuladas
+            // 
+            this.chkAnuladas.AutoSize = true;
+            this.chkAnuladas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkAnuladas.Location = new System.Drawing.Point(284, 54);
+            this.chkAnuladas.Name = "chkAnuladas";
+            this.chkAnuladas.Size = new System.Drawing.Size(78, 17);
+            this.chkAnuladas.TabIndex = 44;
+            this.chkAnuladas.Text = "Anuladas";
+            this.chkAnuladas.UseVisualStyleBackColor = true;
+            // 
             // frmPrintDespachoCombustibleDetallado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(530, 229);
+            this.Controls.Add(this.chkAnuladas);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.rbMaritimas);
             this.Controls.Add(this.rbTerrestres);
@@ -224,6 +237,7 @@
             this.Controls.SetChildIndex(this.rbTerrestres, 0);
             this.Controls.SetChildIndex(this.rbMaritimas, 0);
             this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.chkAnuladas, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,5 +258,6 @@
         private System.Windows.Forms.CheckBox chkDepartamentos;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbCombustible;
+        private System.Windows.Forms.CheckBox chkAnuladas;
     }
 }

@@ -22,6 +22,8 @@ namespace SisGesCom
     public partial class frmDespachoTickets : frmBase
     {
 
+        decimal cantExistTickets = 0;
+        decimal cantTickets = 0;
         string cModo = "Inicio";
         decimal cCombustible = 0;
 
@@ -77,6 +79,9 @@ namespace SisGesCom
             this.txtApellidoJefe.Clear();
             this.txtCantidad.Clear();
             this.dtFecha.Refresh();
+            this.cCombustible = 0;
+            this.cantExistTickets = 0;
+            this.cantTickets = 0;
         }
 
         private void ProximoCodigo()
@@ -328,6 +333,59 @@ namespace SisGesCom
                     MessageBox.Show(MyEx.Message);
                 }
             }
+            else
+            {
+                // ESTO ES CUANDO LA BUSQUEDA SE HACE PONIENDO LA CEDULA DESDE UN REGISTRO
+                // QUE YA HA SIDO GUARDADO ANTERIORMENTE
+                try
+                {
+                    // Step 1 - clsConexion
+                    MySqlConnection MyclsConexion = new MySqlConnection(clsConexion.ConectionString);
+
+                    // Step 2 - creating the command object
+                    MySqlCommand MyCommand = MyclsConexion.CreateCommand();
+
+                    // Step 3 - creating the commandtext
+                    //MyCommand.CommandText = "SELECT *  FROM paciente WHERE cedula = ' " + txtCedula.Text.Trim() + "'  " ;
+                    MyCommand.CommandText = "SELECT * from tickets WHERE cedula = '" + txtCedulaJefe.Text.Trim() + "'";
+
+                    // Step 4 - connection open
+                    MyclsConexion.Open();
+
+                    // Step 5 - Creating the DataReader                    
+                    MySqlDataReader MyReader = MyCommand.ExecuteReader();
+
+                    // Step 6 - Verifying if Reader has rows
+                    if (MyReader.HasRows)
+                    {
+                        while (MyReader.Read())
+                        {
+                            cmbRangoJefe.SelectedValue = MyReader["rango"].ToString();
+                            txtNombreJefe.Text = MyReader["nombre"].ToString();
+                            txtApellidoJefe.Text = MyReader["apellido"].ToString();
+                        }
+                        //this.cModo = "Buscar";
+                        //this.Botones();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontraron registros con esta cedula...", "SisGesCom", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //this.txtCedula.Focus();
+                        this.cModo = "Inicio";
+                        this.Botones();
+                        //this.Limpiar();
+                        //this.txtID.Focus();
+                    }
+                    // Step 6 - Closing all
+                    MyReader.Close();
+                    MyCommand.Dispose();
+                    MyclsConexion.Close();
+                }
+                catch (Exception MyEx)
+                {
+                    MessageBox.Show(MyEx.Message);
+                }
+            }
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -417,38 +475,29 @@ namespace SisGesCom
                 }
                 else
                 {
-                    //try
-                    //{
-                    //    // Step 1 - Stablishing the connection
-                    //    MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
+                    try
+                    {
+                        // BUSCO LA ENTRADA
+                        this.BuscarEntrada();
 
-                    //    // Step 2 - Crear el comando de ejecucion
-                    //    MySqlCommand myCommand = MyConexion.CreateCommand();
+                        // BUSCO INVENTARIO
+                        this.BuscarExistencia();
 
-                    //    // Step 3 - Comando a ejecutar                        
-                    //    myCommand.CommandText = "UPDATE movimientotickets SET tipo_movimiento = @tipo_movimiento, cantidad = @cantidad, " +
-                    //        " fecha = @fecha, autorizadopor = @autorizadopor) WHERE id =" + txtCodigo.Text + "";                            
-                    //    myCommand.Parameters.AddWithValue("@tipo_movimiento", 'E');
-                    //    myCommand.Parameters.AddWithValue("@cantidad", txtCantidad.Text);
-                    //    myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd HH:mm:ss"));
-                    //    myCommand.Parameters.AddWithValue("@autorizadopor", cmbAutorizadoPor.SelectedValue);
+                        // SUMO CANTIDAD AL INVENTARIO
+                        this.SumarInventario();
 
-                    //    // Step 4 - Opening the connection
-                    //    MyConexion.Open();
+                        // APLICO ACTUALIZACION AL MOVIMIENTO
+                        this.ActualizaMovimiento();
 
-                    //    // Step 5 - Executing the query
-                    //    myCommand.ExecuteNonQuery();
-
-                    //    // Step 6 - Closing the connection
-                    //    MyConexion.Close();
-
-                    //    MessageBox.Show("Informacion guardada satisfactoriamente...");
-                    //}
-                    //catch (Exception myEx)
-                    //{
-                    //    MessageBox.Show(myEx.Message);
-                    //    throw;
-                    //}
+                        // ACTUALIZO NUEVAMENTE EL INVENTARIO
+                        this.ActualizaInventario();
+                    }
+                    catch (Exception myEx)
+                    {
+                        MessageBox.Show(myEx.Message);
+                        throw;
+                    }
+                    
                 }
 
                 // IMPRIMIENDO EL REGISTRO
@@ -458,6 +507,196 @@ namespace SisGesCom
                 this.cModo = "Inicio";
                 this.Limpiar();
                 this.Botones();
+            }
+        }
+
+        private void BuscarEntrada()
+        {
+            try
+            {
+                // Step 1 - Conexion
+                MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
+
+                // Step 2 - creating the command object
+                MySqlCommand MyCommand = MyConexion.CreateCommand();
+
+                // Step 3 - creating the commandtext
+                MyCommand.CommandText = "SELECT id, cantidad FROM movimientotickets WHERE id = " + txtCodigo.Text + " AND tipo_movimiento = 'S'";
+
+                // Step 4 - connection open
+                MyConexion.Open();
+
+                // Step 5 - Creating the DataReader                    
+                MySqlDataReader MyReader = MyCommand.ExecuteReader();
+
+                // Step 6 - Verifying if Reader has rows
+                if (MyReader.HasRows)
+                {
+                    while (MyReader.Read())
+                    {
+                        this.cantTickets = Convert.ToDecimal(MyReader["cantidad"].ToString());
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No se encontraron registros anteriores...");
+                }
+
+                // Step 6 - Closing all
+                MyReader.Close();
+                MyCommand.Dispose();
+                MyConexion.Close();
+            }
+            catch (Exception myEx)
+            {
+                MessageBox.Show(myEx.Message);
+                throw;
+            }
+        }
+
+        private void BuscarExistencia()
+        {
+            try
+            {
+                // Step 1 - Conexion
+                MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
+
+                // Step 2 - creating the command object
+                MySqlCommand MyCommand = MyConexion.CreateCommand();
+
+                // Step 3 - creating the commandtext
+                MyCommand.CommandText = "SELECT tipocombustible, cantidad FROM existencia WHERE tipocombustible = 1000";
+
+                // Step 4 - connection open
+                MyConexion.Open();
+
+                // Step 5 - Creating the DataReader                    
+                MySqlDataReader MyReader = MyCommand.ExecuteReader();
+
+                // Step 6 - Verifying if Reader has rows
+                if (MyReader.HasRows)
+                {
+                    while (MyReader.Read())
+                    {
+                        this.cantExistTickets = Convert.ToDecimal(MyReader["cantidad"].ToString());
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No se encontraron registros de existencia...");
+                }
+
+                // Step 6 - Closing all
+                MyReader.Close();
+                MyCommand.Dispose();
+                MyConexion.Close();
+            }
+            catch (Exception myEx)
+            {
+                MessageBox.Show(myEx.Message);
+                throw;
+            }
+        }
+
+        private void SumarInventario()
+        {
+            try
+            {
+                // PROCESO DE SUMAR VARIABLES
+                this.cantExistTickets = this.cantExistTickets + this.cantTickets;
+
+                // Step 1 - Conexion
+                MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
+
+                // Step 2 - creating the command object
+                MySqlCommand MyCommand = MyConexion.CreateCommand();
+
+                // Step 3 - creating the commandtext
+                MyCommand.CommandText = "UPDATE existencia SET cantidad = " + this.cantExistTickets + " WHERE tipocombustible = 1000";
+
+                // Step 4 - connection open
+                MyConexion.Open();
+
+                // Step 5 - Creating the DataReader                    
+                MyCommand.ExecuteNonQuery();
+
+                // Step 6 - Closing all
+                //MyReader.Close();
+                MyCommand.Dispose();
+                MyConexion.Close();
+            }
+            catch (Exception myEx)
+            {
+                MessageBox.Show(myEx.Message);
+                throw;
+            }
+        }
+
+        private void ActualizaMovimiento()
+        {
+            try
+            {
+                // PROCESO DE SUMAR VARIABLES
+                //this.cantExistTickets = this.cantExistTickets + this.cantTickets;
+
+                // Step 1 - Conexion
+                MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
+
+                // Step 2 - creating the command object
+                MySqlCommand MyCommand = MyConexion.CreateCommand();
+
+                // Step 3 - creating the commandtext
+                MyCommand.CommandText = "UPDATE movimientotickets SET cantidad = " + txtCantidad.Text + " WHERE id = " + txtCodigo.Text + "";
+
+                // Step 4 - connection open
+                MyConexion.Open();
+
+                //// Step 5 - Creating the DataReader                    
+                //MySqlDataReader MyReader = MyCommand.ExecuteReader();
+                MyCommand.ExecuteNonQuery();
+
+                // Step 6 - Closing all                
+                MyCommand.Dispose();
+                MyConexion.Close();
+            }
+            catch (Exception myEx)
+            {
+                MessageBox.Show(myEx.Message);
+                throw;
+            }
+        }
+
+        private void ActualizaInventario()
+        {
+            // ACTUALIZANDO INVENTARIO DE COMBUSTIBLE
+            try
+            {
+                // Step 1 - Stablishing the connection
+                MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
+
+                // Step 2 - Crear el comando de ejecucion
+                MySqlCommand myCommand = MyConexion.CreateCommand();
+
+                // Step 3 - Comando a ejecutar
+                buscarCombustible();
+                cCombustible = cCombustible - Convert.ToInt32(txtCantidad.Text);
+                //
+                myCommand.CommandText = "UPDATE existencia SET cantidad = @cCombustible WHERE tipocombustible = 1000";
+                myCommand.Parameters.AddWithValue("@cCombustible", cCombustible);
+
+                // Step 4 - Opening the connection
+                MyConexion.Open();
+
+                // Step 5 - Executing the query
+                myCommand.ExecuteNonQuery();
+
+                // Step 6 - Closing the connection
+                MyConexion.Close();
+            }
+            catch (Exception myEx)
+            {
+                MessageBox.Show(myEx.Message);
+                throw;
             }
         }
 

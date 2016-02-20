@@ -116,6 +116,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAnularDespachoCombustible.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnularDespachoCombustible.Designer.cs">
+      <DependentUpon>frmAnularDespachoCombustible.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnularEntradaCombustible.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnularEntradaCombustible.Designer.cs">
+      <DependentUpon>frmAnularEntradaCombustible.cs</DependentUpon>
+    </Compile>
     <Compile Include="clsConexion.cs" />
     <Compile Include="clsExceptionLog.cs" />
     <Compile Include="clsProcesos.cs" />
@@ -476,6 +488,12 @@
       <DependentUpon>rptTiposCombustibles.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="frmAnularDespachoCombustible.resx">
+      <DependentUpon>frmAnularDespachoCombustible.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnularEntradaCombustible.resx">
+      <DependentUpon>frmAnularEntradaCombustible.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAbout.resx">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </EmbeddedResource>

@@ -543,5 +543,17 @@ namespace SisGesCom
             frmAnularSolicitud ofrmAnularSolicitudCombustible = new frmAnularSolicitud();
             ofrmAnularSolicitudCombustible.ShowDialog();
         }
+
+        private void buttonItem33_Click(object sender, EventArgs e)
+        {
+            frmAnularEntradaCombustible ofrmAnularEntradaCombustible = new frmAnularEntradaCombustible();
+            ofrmAnularEntradaCombustible.ShowDialog();
+        }
+
+        private void buttonItem34_Click(object sender, EventArgs e)
+        {
+            frmAnularDespachoCombustible ofrmAnularDespachoCombustible = new frmAnularDespachoCombustible();
+            ofrmAnularDespachoCombustible.ShowDialog();
+        }
     }
 }

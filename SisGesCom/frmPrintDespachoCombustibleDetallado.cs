@@ -119,6 +119,15 @@ namespace SisGesCom
                 {
                     cWhere = cWhere + " AND combustible_salida.beneficiario_depto = " + this.cmbCombustible.SelectedValue + "";
                 }
+
+                if (chkAnuladas.Checked == true)
+                {
+                    cWhere = cWhere + " AND movimientocombustible.anulada = 1";
+                }
+                else
+                {
+                    cWhere = cWhere + " AND movimientocombustible.anulada = 0";
+                }
                 
                 sbQuery.Clear();                                
                 sbQuery.Append(" SELECT combustible_salida.id, movimientocombustible.descripcion_combustible, combustible_salida.nota,");

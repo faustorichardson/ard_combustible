@@ -120,6 +120,15 @@ namespace SisGesCom
                     cWhere = cWhere + " AND combustible_salida.beneficiario_depto = "+ this.cmbCombustible.SelectedValue +"";
                 }
 
+                if (chkAnuladas.Checked == true)
+                {
+                    cWhere = cWhere + " AND movimientocombustible.anulada = '1'";
+                }
+                else
+                {
+                    cWhere = cWhere + " AND movimientocombustible.anulada = '0'";
+                }
+
                 sbQuery.Clear();
                 sbQuery.Append(" SELECT combustible_salida.id, sum(movimientocombustible.cantidad) as cantidad,");
                 sbQuery.Append(" combustible_salida.beneficiario_depto,	combustible_salida.fecha, ");

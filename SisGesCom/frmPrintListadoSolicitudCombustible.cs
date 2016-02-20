@@ -67,6 +67,15 @@ namespace SisGesCom
                     string fechadesde = dtDesde.Value.ToString("yyyy-MM-dd");
                     string fechahasta = dtHasta.Value.ToString("yyyy-MM-dd");
                     cWhere = cWhere + " AND secuencia_solicitudcombustible.fecha >= " + "'" + fechadesde + "'" + " AND secuencia_solicitudcombustible.fecha <= " + "'" + fechahasta + "'" + "";
+                    if (chkAnuladas.Checked == true)
+                    {
+                        cWhere = cWhere + " AND secuencia_solicitudcombustible.anulada = 1";
+                    }
+                    else
+                    {
+                        cWhere = cWhere + " AND secuencia_solicitudcombustible.anulada = 0";
+                    }
+                
                     sbQuery.Clear();
                     sbQuery.Append("SELECT secuencia_solicitudcombustible.id, solicitud.descripcion_combustible as tipocombustible, solicitud.cantidad, ");
                     sbQuery.Append(" secuencia_solicitudcombustible.fecha, secuencia_solicitudcombustible.nota");

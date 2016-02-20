@@ -63,7 +63,7 @@ namespace SisGesCom
                 sbQuery.Append(" FROM movimientocombustible");
                 sbQuery.Append(" INNER JOIN unidadesnavales ON unidadesnavales.id = movimientocombustible.embarcacion");                
                 sbQuery.Append(cWhere);
-                sbQuery.Append(" AND tipo_movimiento = 'S'");
+                sbQuery.Append(" AND tipo_movimiento = 'S' AND anulada = 0");
                 //sbQuery.Append(" ORDER BY rangos.orden ASC");
 
                 // Paso los valores de sbQuery al CommandText

@@ -42,6 +42,7 @@
             this.rbTerrestres = new System.Windows.Forms.RadioButton();
             this.rbTodas = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
+            this.chkAnuladas = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // lblTituloForm
@@ -189,11 +190,23 @@
             this.label5.TabIndex = 36;
             this.label5.Text = "OPERACIONES:";
             // 
+            // chkAnuladas
+            // 
+            this.chkAnuladas.AutoSize = true;
+            this.chkAnuladas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkAnuladas.Location = new System.Drawing.Point(286, 50);
+            this.chkAnuladas.Name = "chkAnuladas";
+            this.chkAnuladas.Size = new System.Drawing.Size(78, 17);
+            this.chkAnuladas.TabIndex = 37;
+            this.chkAnuladas.Text = "Anuladas";
+            this.chkAnuladas.UseVisualStyleBackColor = true;
+            // 
             // frmPrintDespachoCombustible
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(555, 234);
+            this.Controls.Add(this.chkAnuladas);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.rbMaritimas);
             this.Controls.Add(this.rbTerrestres);
@@ -224,6 +237,7 @@
             this.Controls.SetChildIndex(this.rbTerrestres, 0);
             this.Controls.SetChildIndex(this.rbMaritimas, 0);
             this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.chkAnuladas, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,5 +258,6 @@
         private System.Windows.Forms.RadioButton rbTerrestres;
         private System.Windows.Forms.RadioButton rbTodas;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox chkAnuladas;
     }
 }
