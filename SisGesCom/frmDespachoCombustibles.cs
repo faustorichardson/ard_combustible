@@ -663,7 +663,7 @@ namespace SisGesCom
                 }
                 else
                 {
-                    // Actualizo la data a la tabla entrada de combustible
+                    // Actualizo la data a la tabla salida de combustible
                     try
                     {
                         // Step 1 - Stablishing the connection
@@ -676,7 +676,7 @@ namespace SisGesCom
                         myCommand.CommandText = "UPDATE combustible_salida SET fecha = @fecha, nota = @nota, "+
                             "beneficiario = @beneficiario, beneficiario_depto = @beneficiario_depto, autorizadopor = @autorizadopor "+
                             " WHERE id = "+ txtCodigo.Text +"";
-                        myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd HH:mm:ss"));
+                        myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd"));
                         myCommand.Parameters.AddWithValue("@nota", txtNota.Text);
                         myCommand.Parameters.AddWithValue("@beneficiario", txtBeneficiario.Text);
                         myCommand.Parameters.AddWithValue("@beneficiario_depto", cmbRenglonBeneficiario.SelectedValue);
@@ -697,69 +697,44 @@ namespace SisGesCom
                         throw;
                     }
 
-                    // Borro los datos de la tabla solicitud que tienen que ver con este ID
-                    //try
-                    //{
-                    //    // Step 1 - Stablishing the connection
-                    //    MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
+                    // Actualizo la data a la tabla movimientocombustible
+                    try
+                    {
+                        // Step 1 - Stablishing the connection
+                        MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
 
-                    //    // Step 2 - Crear el comando de ejecucion
-                    //    MySqlCommand myCommand = MyConexion.CreateCommand();
+                        // Step 2 - Crear el comando de ejecucion
+                        MySqlCommand myCommand = MyConexion.CreateCommand();
 
-                    //    // Step 3 - Comando a ejecutar                        
-                    //    myCommand.CommandText = "DELETE FROM solicitud WHERE id = @id";
-                    //    myCommand.Parameters.AddWithValue("@id", txtSolicitud.Text);
+                        // Step 3 - Comando a ejecutar                        
+                        myCommand.CommandText = "UPDATE movimientocombustible SET fecha = @fecha, operaciones = @operaciones, " +
+                            " embarcacion = @embarcacion WHERE id = " + txtCodigo.Text + "";
+                        myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd"));
+                        if (rbTerrestres.Checked == true)
+                        {
+                            myCommand.Parameters.AddWithValue("@operaciones", "T");
+                            myCommand.Parameters.AddWithValue("@embarcacion", 0);
+                        }
+                        else
+                        {
+                            myCommand.Parameters.AddWithValue("@operaciones", "M");
+                            myCommand.Parameters.AddWithValue("@embarcacion", cmbEmbarcacion.SelectedValue);
+                        }                        
 
-                    //    // Step 4 - Opening the connection
-                    //    MyConexion.Open();
+                        // Step 4 - Opening the connection
+                        MyConexion.Open();
 
-                    //    // Step 5 - Executing the query
-                    //    myCommand.ExecuteNonQuery();
+                        // Step 5 - Executing the query
+                        myCommand.ExecuteNonQuery();
 
-                    //    // Step 6 - Closing the connection
-                    //    MyConexion.Close();
-                    //}
-                    //catch (Exception myEx)
-                    //{
-                    //    MessageBox.Show(myEx.Message);
-                    //    throw;
-                    //}
-
-
-
-                    // Agrego la data nuevamente a la tabla Solicitud
-                    //try
-                    //{
-                    //    foreach (DataGridViewRow row in dgview.Rows)
-                    //    {
-                    //        MySqlConnection myConexion = new MySqlConnection(clsConexion.ConectionString);
-
-                    //        {
-                    //            using (MySqlCommand myCommand = new MySqlCommand("INSERT INTO solicitud(id, fecha, tipo_combustible, descripcion_combustible, cantidad)" +
-                    //                "VALUES(@id, @fecha, @tipo_combustible, @descripcion_combustible, @cantidad)", myConexion))
-                    //            {
-                    //                myCommand.Parameters.AddWithValue("@id", txtSolicitud.Text);
-                    //                myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd HH:mm:ss"));
-                    //                myCommand.Parameters.AddWithValue("@tipo_combustible", row.Cells["Id"].Value);
-                    //                myCommand.Parameters.AddWithValue("@descripcion_combustible", row.Cells["Combustible"].Value);
-                    //                myCommand.Parameters.AddWithValue("@cantidad", row.Cells["Cantidad"].Value);
-                    //                // Abro Conexion
-                    //                myConexion.Open();
-                    //                // Ejecuto Valores
-                    //                myCommand.ExecuteNonQuery();
-                    //                // Cierro Conexion
-                    //                myConexion.Close();
-
-                    //            }
-                    //        }
-                    //    }
-                    //    //MessageBox.Show("Records inserted.");
-                    //}
-                    //catch (Exception myEx)
-                    //{
-                    //    MessageBox.Show(myEx.Message);
-                    //    throw;
-                    //}
+                        // Step 6 - Closing the connection
+                        MyConexion.Close();
+                    }
+                    catch (Exception myEx)
+                    {
+                        MessageBox.Show(myEx.Message);
+                        throw;
+                    }                    
 
 
                 }
@@ -816,6 +791,68 @@ namespace SisGesCom
                             txtBeneficiario.Text = MyReader["beneficiario"].ToString();
                             cmbRenglonBeneficiario.SelectedValue = MyReader["beneficiario_depto"].ToString();
                             cmbAutorizadoPor.SelectedValue = MyReader["autorizadopor"].ToString();
+                        }
+
+                        this.cModo = "Buscar";
+                        this.Botones();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontraron registros...");
+                        this.cModo = "Inicio";
+                        this.Botones();
+                        this.Limpiar();
+                        this.txtCodigo.Focus();
+                    }
+
+                    // Step 6 - Closing all
+                    MyReader.Close();
+                    MyCommand.Dispose();
+                    MyConexion.Close();
+                }
+                catch (Exception myEx)
+                {
+                    MessageBox.Show(myEx.Message);
+                    throw;
+                }
+
+
+                // BUSCANDO EN LA TABLA COMBUSTIBLE_SALIDA
+                try
+                {
+                    // Step 1 - Conexion
+                    MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
+
+                    // Step 2 - creating the command object
+                    MySqlCommand MyCommand = MyConexion.CreateCommand();
+
+                    // Step 3 - creating the commandtext
+                    MyCommand.CommandText = "SELECT operaciones, embarcacion FROM combustible_salida WHERE id = " + txtCodigo.Text + "";
+
+                    // Step 4 - connection open
+                    MyConexion.Open();
+
+                    // Step 5 - Creating the DataReader                    
+                    MySqlDataReader MyReader = MyCommand.ExecuteReader();
+
+                    // Step 6 - Verifying if Reader has rows
+                    if (MyReader.HasRows)
+                    {
+                        //string operaciones = MyReader["operaciones"].ToString();
+
+                        while (MyReader.Read())
+                        {
+                            if (MyReader["operaciones"].ToString() == "M")
+                            {
+                                cmbEmbarcacion.Enabled = true;                                
+                                cmbEmbarcacion.SelectedValue = MyReader["operaciones"].ToString();
+                                rbMaritimas.Checked = true;
+                            }
+                            else
+                            {
+                                rbTerrestres.Checked = true;
+                            }
+                            
                         }
 
                         this.cModo = "Buscar";

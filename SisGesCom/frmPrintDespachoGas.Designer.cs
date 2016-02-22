@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dtDesde = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
+            this.chkAnuladas = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // lblTituloForm
@@ -72,7 +73,7 @@
             // 
             // dtHasta
             // 
-            this.dtHasta.Location = new System.Drawing.Point(73, 86);
+            this.dtHasta.Location = new System.Drawing.Point(73, 112);
             this.dtHasta.Name = "dtHasta";
             this.dtHasta.Size = new System.Drawing.Size(215, 20);
             this.dtHasta.TabIndex = 30;
@@ -81,7 +82,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(14, 90);
+            this.label2.Location = new System.Drawing.Point(14, 116);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 31;
@@ -89,7 +90,7 @@
             // 
             // dtDesde
             // 
-            this.dtDesde.Location = new System.Drawing.Point(73, 50);
+            this.dtDesde.Location = new System.Drawing.Point(73, 76);
             this.dtDesde.Name = "dtDesde";
             this.dtDesde.Size = new System.Drawing.Size(215, 20);
             this.dtDesde.TabIndex = 28;
@@ -98,17 +99,29 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 54);
+            this.label1.Location = new System.Drawing.Point(14, 80);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 29;
             this.label1.Text = "DESDE:";
+            // 
+            // chkAnuladas
+            // 
+            this.chkAnuladas.AutoSize = true;
+            this.chkAnuladas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkAnuladas.Location = new System.Drawing.Point(73, 43);
+            this.chkAnuladas.Name = "chkAnuladas";
+            this.chkAnuladas.Size = new System.Drawing.Size(78, 17);
+            this.chkAnuladas.TabIndex = 34;
+            this.chkAnuladas.Text = "Anuladas";
+            this.chkAnuladas.UseVisualStyleBackColor = true;
             // 
             // frmPrintDespachoGas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(452, 161);
+            this.Controls.Add(this.chkAnuladas);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.dtHasta);
@@ -125,6 +138,7 @@
             this.Controls.SetChildIndex(this.dtHasta, 0);
             this.Controls.SetChildIndex(this.btnImprimir, 0);
             this.Controls.SetChildIndex(this.btnSalir, 0);
+            this.Controls.SetChildIndex(this.chkAnuladas, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,5 +152,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtDesde;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox chkAnuladas;
     }
 }

@@ -37,37 +37,37 @@ namespace SisGesCom
         private void buttonItem15_Click(object sender, EventArgs e)
         {
             frmTipoCombustible ofrmTipoCombustible = new frmTipoCombustible();
-            ofrmTipoCombustible.Show();
+            ofrmTipoCombustible.ShowDialog();
         }
 
         private void buttonItem16_Click(object sender, EventArgs e)
         {
             frmDeptoAutoriza ofrmDeptoAutoriza = new frmDeptoAutoriza();
-            ofrmDeptoAutoriza.Show();
+            ofrmDeptoAutoriza.ShowDialog();
         }
 
         private void buttonItem3_Click(object sender, EventArgs e)
         {
             frmTipoBeneficiario ofrmTipoBeneficiario = new frmTipoBeneficiario();
-            ofrmTipoBeneficiario.Show();
+            ofrmTipoBeneficiario.ShowDialog();
         }
 
         private void buttonItem1_Click(object sender, EventArgs e)
         {
             frmSolicitudCombustibles ofrmSolicitudCombustible = new frmSolicitudCombustibles();
-            ofrmSolicitudCombustible.Show();
+            ofrmSolicitudCombustible.ShowDialog();
         }
 
         private void buttonItem11_Click(object sender, EventArgs e)
         {
             frmEntradaCombustibles ofrmEntradaCombustible = new frmEntradaCombustibles();
-            ofrmEntradaCombustible.Show();
+            ofrmEntradaCombustible.ShowDialog();
         }
 
         private void buttonItem14_Click(object sender, EventArgs e)
         {
             frmDespachoCombustibles ofrmDespachoCombustible = new frmDespachoCombustibles();
-            ofrmDespachoCombustible.Show();            
+            ofrmDespachoCombustible.ShowDialog();       
         }
 
         private void buttonItem10_Click(object sender, EventArgs e)
@@ -78,19 +78,19 @@ namespace SisGesCom
         private void buttonItem9_Click(object sender, EventArgs e)
         {
             frmAbout ofrmAbout = new frmAbout();
-            ofrmAbout.Show();
+            ofrmAbout.ShowDialog();
         }
 
         private void buttonItem2_Click(object sender, EventArgs e)
         {
             frmInformaciones ofrmInformaciones = new frmInformaciones();
-            ofrmInformaciones.Show();
+            ofrmInformaciones.ShowDialog();
         }
 
         private void buttonItem6_Click(object sender, EventArgs e)
         {
             frmPrintListadoSolicitudCombustible ofrmPrintListadoSolicitudCombustible = new frmPrintListadoSolicitudCombustible();
-            ofrmPrintListadoSolicitudCombustible.Show();
+            ofrmPrintListadoSolicitudCombustible.ShowDialog();
         }
 
         private void buttonItem25_Click(object sender, EventArgs e)
@@ -209,7 +209,7 @@ namespace SisGesCom
         private void buttonItem17_Click(object sender, EventArgs e)
         {
             frmBeneficiariosTickets ofrmBeneficiarioTickets = new frmBeneficiariosTickets();
-            ofrmBeneficiarioTickets.Show();
+            ofrmBeneficiarioTickets.ShowDialog();
         }
 
         private void ribbonTabItem2_Click(object sender, EventArgs e)
@@ -334,61 +334,61 @@ namespace SisGesCom
         private void buttonItem19_Click(object sender, EventArgs e)
         {
             frmRegistroTickets ofrmRegistroTickets = new frmRegistroTickets();
-            ofrmRegistroTickets.Show();
+            ofrmRegistroTickets.ShowDialog();
         }
 
         private void buttonItem13_Click(object sender, EventArgs e)
         {
             frmPrintEntradaCombustible ofrmPrintEntradaCombustible = new frmPrintEntradaCombustible();
-            ofrmPrintEntradaCombustible.Show();
+            ofrmPrintEntradaCombustible.ShowDialog();
         }
 
         private void buttonItem5_Click(object sender, EventArgs e)
         {
             frmPrintDespachoCombustible ofrmPrintDespachoCombustible = new frmPrintDespachoCombustible();
-            ofrmPrintDespachoCombustible.Show();
+            ofrmPrintDespachoCombustible.ShowDialog();
         }
 
         private void buttonItem4_Click(object sender, EventArgs e)
         {
             frmPrintDespachoCombustibleDetallado ofrmPrintDespachoCombustibleDetallado = new frmPrintDespachoCombustibleDetallado();
-            ofrmPrintDespachoCombustibleDetallado.Show();
+            ofrmPrintDespachoCombustibleDetallado.ShowDialog();
         }
 
         private void buttonItem12_Click(object sender, EventArgs e)
         {
             frmPrintResumenCombustibleSolicitado ofrmPrintResumenCombustibleSolicitado = new frmPrintResumenCombustibleSolicitado();
-            ofrmPrintResumenCombustibleSolicitado.Show();
+            ofrmPrintResumenCombustibleSolicitado.ShowDialog();
         }
 
         private void buttonItem18_Click(object sender, EventArgs e)
         {
             frmDespachoTickets ofrmDespachoTickets = new frmDespachoTickets();
-            ofrmDespachoTickets.Show();
+            ofrmDespachoTickets.ShowDialog();
         }
 
         private void buttonItem26_Click(object sender, EventArgs e)
         {
             frmPrintTicketsEntregados ofrmPrintTicketsEntregados = new frmPrintTicketsEntregados();
-            ofrmPrintTicketsEntregados.Show();
+            ofrmPrintTicketsEntregados.ShowDialog();
         }
 
         private void buttonItem27_Click(object sender, EventArgs e)
         {
             frmPrintTicketsRecibidos ofrmPrintTicketsRecibidos = new frmPrintTicketsRecibidos();
-            ofrmPrintTicketsRecibidos.Show();
+            ofrmPrintTicketsRecibidos.ShowDialog();
         }
 
         private void buttonItem28_Click(object sender, EventArgs e)
         {
             frmPrintTicketsResumenDespacho ofrmPrintTicketsResumenDespacho = new frmPrintTicketsResumenDespacho();
-            ofrmPrintTicketsResumenDespacho.Show();
+            ofrmPrintTicketsResumenDespacho.ShowDialog();
         }
 
         private void buttonItem22_Click(object sender, EventArgs e)
         {
             frmBeneficiarioGas ofrmBeneficiarioGas = new frmBeneficiarioGas();
-            ofrmBeneficiarioGas.Show();
+            ofrmBeneficiarioGas.ShowDialog();
         }
 
         private void buttonItem23_Click(object sender, EventArgs e)
@@ -512,19 +512,19 @@ namespace SisGesCom
         private void buttonItem20_Click(object sender, EventArgs e)
         {
             frmDespachoGas ofrmDespachoGas = new frmDespachoGas();
-            ofrmDespachoGas.Show();
+            ofrmDespachoGas.ShowDialog();
         }
 
         private void buttonItem2_Click_1(object sender, EventArgs e)
         {
             frmPrintDespachoGas ofrmPrintDespachoGas = new frmPrintDespachoGas();
-            ofrmPrintDespachoGas.Show();
+            ofrmPrintDespachoGas.ShowDialog();
         }
 
         private void buttonItem29_Click(object sender, EventArgs e)
         {
             frmDespachoTicketsDepto ofrmDespachoTicketsDepto = new frmDespachoTicketsDepto();
-            ofrmDespachoTicketsDepto.Show();
+            ofrmDespachoTicketsDepto.ShowDialog();
         }
 
         private void buttonItem31_Click(object sender, EventArgs e)
@@ -535,7 +535,7 @@ namespace SisGesCom
         private void buttonItem30_Click(object sender, EventArgs e)
         {
             frmPrintDespachoCombUnidNaval ofrmPrintDespachoCombUnidNaval = new frmPrintDespachoCombUnidNaval();
-            ofrmPrintDespachoCombUnidNaval.Show();
+            ofrmPrintDespachoCombUnidNaval.ShowDialog();
         }
 
         private void buttonItem32_Click(object sender, EventArgs e)
@@ -554,6 +554,17 @@ namespace SisGesCom
         {
             frmAnularDespachoCombustible ofrmAnularDespachoCombustible = new frmAnularDespachoCombustible();
             ofrmAnularDespachoCombustible.ShowDialog();
+        }
+
+        private void ribbonTabItem5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonItem35_Click(object sender, EventArgs e)
+        {
+            frmAnularDespachoGas ofrmAnularDepachoGas = new frmAnularDespachoGas();
+            ofrmAnularDepachoGas.ShowDialog();
         }
     }
 }

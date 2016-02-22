@@ -94,6 +94,7 @@
             this.styleManager2 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonItem35 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
             this.ribbonPanel5.SuspendLayout();
@@ -116,8 +117,8 @@
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.CaptionVisible = true;
             this.ribbonControl1.Controls.Add(this.ribbonPanel2);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel5);
             this.ribbonControl1.Controls.Add(this.ribbonPanel3);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel5);
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -387,10 +388,11 @@
             this.ribbonBar8.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonItem32,
             this.buttonItem33,
-            this.buttonItem34});
+            this.buttonItem34,
+            this.buttonItem35});
             this.ribbonBar8.Location = new System.Drawing.Point(523, 0);
             this.ribbonBar8.Name = "ribbonBar8";
-            this.ribbonBar8.Size = new System.Drawing.Size(231, 96);
+            this.ribbonBar8.Size = new System.Drawing.Size(289, 96);
             this.ribbonBar8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar8.TabIndex = 3;
             this.ribbonBar8.Text = "ANULACIONES";
@@ -678,6 +680,7 @@
             this.buttonItem31.Name = "buttonItem31";
             this.buttonItem31.SubItemsExpandWidth = 14;
             this.buttonItem31.Text = "Despacho a Unidades Navales";
+            this.buttonItem31.Visible = false;
             this.buttonItem31.Click += new System.EventHandler(this.buttonItem31_Click);
             // 
             // buttonItem5
@@ -1021,6 +1024,7 @@
             this.ribbonTabItem5.Name = "ribbonTabItem5";
             this.ribbonTabItem5.Panel = this.ribbonPanel5;
             this.ribbonTabItem5.Text = "MANTENIMIENTOS";
+            this.ribbonTabItem5.Click += new System.EventHandler(this.ribbonTabItem5_Click);
             // 
             // ribbonTabItem2
             // 
@@ -1065,6 +1069,15 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // buttonItem35
+            // 
+            this.buttonItem35.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem35.Image")));
+            this.buttonItem35.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem35.Name = "buttonItem35";
+            this.buttonItem35.SubItemsExpandWidth = 14;
+            this.buttonItem35.Text = "Despacho de Gas";
+            this.buttonItem35.Click += new System.EventHandler(this.buttonItem35_Click);
             // 
             // frmMenu
             // 
@@ -1158,5 +1171,6 @@
         private DevComponents.DotNetBar.ButtonItem buttonItem32;
         private DevComponents.DotNetBar.ButtonItem buttonItem33;
         private DevComponents.DotNetBar.ButtonItem buttonItem34;
+        private DevComponents.DotNetBar.ButtonItem buttonItem35;
     }
 }

@@ -58,6 +58,14 @@ namespace SisGesCom
                 string fechahasta = dtHasta.Value.ToString("yyyy-MM-dd");
                 cWhere = cWhere + " AND combustible_gas.fecha >= " + "'" + fechadesde + "'" + " AND combustible_gas.fecha <= " + "'" + fechahasta + "'" + "";
                 //cWhere = cWhere + " AND movimientocombustible.tipo_movimiento = 'S'";
+                if (chkAnuladas.Checked == true)
+                {
+                    cWhere = cWhere + " AND combustible_gas.anulada = 1";
+                }
+                else
+                {
+                    cWhere = cWhere + " AND combustible_gas.anulada = 0";
+                }
                 sbQuery.Clear();
                 sbQuery.Append(" SELECT combustible_gas.id as id_despacho, combustible_gas.fecha as fechadespacho, combustible_gas.suplidor, ");
                 sbQuery.Append("movimientogas.departamento_descripcion as descripciondepto,");

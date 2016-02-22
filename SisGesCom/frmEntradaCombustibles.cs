@@ -299,7 +299,7 @@ namespace SisGesCom
                 case "Buscar":
                     this.btnNuevo.Enabled = true;
                     this.btnGrabar.Enabled = false;
-                    this.btnEditar.Enabled = false;
+                    this.btnEditar.Enabled = true;
                     this.btnBuscar.Enabled = true;
                     this.btnImprimir.Enabled = true;
                     this.btnEliminar.Enabled = false;

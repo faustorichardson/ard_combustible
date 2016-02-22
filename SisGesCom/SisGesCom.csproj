@@ -122,6 +122,12 @@
     <Compile Include="frmAnularDespachoCombustible.Designer.cs">
       <DependentUpon>frmAnularDespachoCombustible.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAnularDespachoGas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnularDespachoGas.Designer.cs">
+      <DependentUpon>frmAnularDespachoGas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAnularEntradaCombustible.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -490,6 +496,9 @@
     </Compile>
     <EmbeddedResource Include="frmAnularDespachoCombustible.resx">
       <DependentUpon>frmAnularDespachoCombustible.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnularDespachoGas.resx">
+      <DependentUpon>frmAnularDespachoGas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAnularEntradaCombustible.resx">
       <DependentUpon>frmAnularEntradaCombustible.cs</DependentUpon>
