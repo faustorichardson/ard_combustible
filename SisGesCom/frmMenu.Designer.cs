@@ -57,6 +57,7 @@
             this.buttonItem4 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem27 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem26 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem36 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem30 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel5 = new DevComponents.DotNetBar.RibbonPanel();
@@ -95,7 +96,7 @@
             this.styleManager2 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.buttonItem36 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem37 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
             this.ribbonPanel3.SuspendLayout();
@@ -118,8 +119,8 @@
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.CaptionVisible = true;
             this.ribbonControl1.Controls.Add(this.ribbonPanel2);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel5);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -550,6 +551,15 @@
             this.buttonItem26.Text = "Tickets Entregados";
             this.buttonItem26.Click += new System.EventHandler(this.buttonItem26_Click);
             // 
+            // buttonItem36
+            // 
+            this.buttonItem36.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem36.Image")));
+            this.buttonItem36.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem36.Name = "buttonItem36";
+            this.buttonItem36.SubItemsExpandWidth = 14;
+            this.buttonItem36.Text = "Tickets Entregados por Departamento";
+            this.buttonItem36.Click += new System.EventHandler(this.buttonItem36_Click);
+            // 
             // buttonItem2
             // 
             this.buttonItem2.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem2.Image")));
@@ -618,10 +628,11 @@
             this.buttonItem32,
             this.buttonItem33,
             this.buttonItem34,
-            this.buttonItem35});
+            this.buttonItem35,
+            this.buttonItem37});
             this.ribbonBar8.Location = new System.Drawing.Point(523, 0);
             this.ribbonBar8.Name = "ribbonBar8";
-            this.ribbonBar8.Size = new System.Drawing.Size(289, 96);
+            this.ribbonBar8.Size = new System.Drawing.Size(390, 96);
             this.ribbonBar8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar8.TabIndex = 3;
             this.ribbonBar8.Text = "ANULACIONES";
@@ -1081,14 +1092,14 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // buttonItem36
+            // buttonItem37
             // 
-            this.buttonItem36.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem36.Image")));
-            this.buttonItem36.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem36.Name = "buttonItem36";
-            this.buttonItem36.SubItemsExpandWidth = 14;
-            this.buttonItem36.Text = "Tickets Entregados por Departamento";
-            this.buttonItem36.Click += new System.EventHandler(this.buttonItem36_Click);
+            this.buttonItem37.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem37.Image")));
+            this.buttonItem37.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem37.Name = "buttonItem37";
+            this.buttonItem37.SubItemsExpandWidth = 14;
+            this.buttonItem37.Text = "Despacho Tickets por Departamento";
+            this.buttonItem37.Click += new System.EventHandler(this.buttonItem37_Click);
             // 
             // frmMenu
             // 
@@ -1184,5 +1195,6 @@
         private DevComponents.DotNetBar.ButtonItem buttonItem34;
         private DevComponents.DotNetBar.ButtonItem buttonItem35;
         private DevComponents.DotNetBar.ButtonItem buttonItem36;
+        private DevComponents.DotNetBar.ButtonItem buttonItem37;
     }
 }

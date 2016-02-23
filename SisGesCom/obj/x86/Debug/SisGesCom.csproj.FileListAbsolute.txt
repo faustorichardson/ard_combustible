@@ -62,3 +62,4 @@ C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\obj\x86\Debug\SisGesCom.frm
 C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\obj\x86\Debug\SisGesCom.frmAnularDespachoCombustible.resources
 C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\obj\x86\Debug\SisGesCom.frmAnularDespachoGas.resources
 C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\obj\x86\Debug\SisGesCom.frmTicketsEntregadosDepto.resources
+C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\obj\x86\Debug\SisGesCom.frmAnularDespachoTicketsDepto.resources

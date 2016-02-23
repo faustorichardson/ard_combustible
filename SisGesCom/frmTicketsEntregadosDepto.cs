@@ -60,6 +60,15 @@ namespace SisGesCom
                 fechadesde = dtDesde.Value.ToString("yyyy-MM-dd");
                 fechahasta = dtHasta.Value.ToString("yyyy-MM-dd");
                 cWhere = cWhere + " AND fecha >= " + "'" + fechadesde + "'" + " AND fecha <= " + "'" + fechahasta + "'" + "";
+                // filtrando la busqueda por la anuladas o no
+                if (chkAnuladas.Checked == true)
+                {
+                    cWhere = cWhere + " AND movimientoticketsdepto.anulada = 1";
+                }
+                else
+                {
+                    cWhere = cWhere + " AND movimientoticketsdepto.anulada = 0";
+                }
                 sbQuery.Clear();
                 sbQuery.Append("SELECT movimientoticketsdepto.id, movimientoticketsdepto.beneficiario, movimientoticketsdepto.fecha,");
                 sbQuery.Append(" movimientoticketsdepto.cantidad, movimientoticketsdepto.movimiento");
