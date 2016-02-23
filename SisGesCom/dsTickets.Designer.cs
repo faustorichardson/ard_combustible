@@ -295,6 +295,10 @@ namespace SisGesCom {
             
             private global::System.Data.DataColumn columncantidad;
             
+            private global::System.Data.DataColumn columnmovimiento;
+            
+            private global::System.Data.DataColumn columnbeneficiario;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public dtTicketsDataTable() {
@@ -394,6 +398,22 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn movimientoColumn {
+                get {
+                    return this.columnmovimiento;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn beneficiarioColumn {
+                get {
+                    return this.columnbeneficiario;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -429,7 +449,7 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public dtTicketsRow AdddtTicketsRow(string cedula, string rango, string nombre, string apellido, int id, string rangoabrev, System.DateTime fecha, decimal cantidad) {
+            public dtTicketsRow AdddtTicketsRow(string cedula, string rango, string nombre, string apellido, int id, string rangoabrev, System.DateTime fecha, decimal cantidad, int movimiento, string beneficiario) {
                 dtTicketsRow rowdtTicketsRow = ((dtTicketsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         cedula,
@@ -439,7 +459,9 @@ namespace SisGesCom {
                         id,
                         rangoabrev,
                         fecha,
-                        cantidad};
+                        cantidad,
+                        movimiento,
+                        beneficiario};
                 rowdtTicketsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowdtTicketsRow);
                 return rowdtTicketsRow;
@@ -470,6 +492,8 @@ namespace SisGesCom {
                 this.columnrangoabrev = base.Columns["rangoabrev"];
                 this.columnfecha = base.Columns["fecha"];
                 this.columncantidad = base.Columns["cantidad"];
+                this.columnmovimiento = base.Columns["movimiento"];
+                this.columnbeneficiario = base.Columns["beneficiario"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -491,6 +515,10 @@ namespace SisGesCom {
                 base.Columns.Add(this.columnfecha);
                 this.columncantidad = new global::System.Data.DataColumn("cantidad", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncantidad);
+                this.columnmovimiento = new global::System.Data.DataColumn("movimiento", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmovimiento);
+                this.columnbeneficiario = new global::System.Data.DataColumn("beneficiario", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnbeneficiario);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -761,6 +789,38 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int movimiento {
+                get {
+                    try {
+                        return ((int)(this[this.tabledtTickets.movimientoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'movimiento\' in table \'dtTickets\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtTickets.movimientoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string beneficiario {
+                get {
+                    try {
+                        return ((string)(this[this.tabledtTickets.beneficiarioColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'beneficiario\' in table \'dtTickets\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtTickets.beneficiarioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IscedulaNull() {
                 return this.IsNull(this.tabledtTickets.cedulaColumn);
             }
@@ -853,6 +913,30 @@ namespace SisGesCom {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetcantidadNull() {
                 this[this.tabledtTickets.cantidadColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsmovimientoNull() {
+                return this.IsNull(this.tabledtTickets.movimientoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetmovimientoNull() {
+                this[this.tabledtTickets.movimientoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsbeneficiarioNull() {
+                return this.IsNull(this.tabledtTickets.beneficiarioColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetbeneficiarioNull() {
+                this[this.tabledtTickets.beneficiarioColumn] = global::System.Convert.DBNull;
             }
         }
         

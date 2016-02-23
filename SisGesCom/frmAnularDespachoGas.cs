@@ -92,13 +92,16 @@ namespace SisGesCom
                     else
                     {
                         // Funcion que actualiza la tabla combustible_salida
-                        this.AnulaDespacho();                        
+                        this.AnulaDespacho();
+                        this.AnulaMovimiento();
                     }
 
                     // Step 6 - Closing all
                     MyReader.Close();
                     MyCommand.Dispose();
                     MyConexion.Close();
+
+                    this.Limpiar();
                 }
                 catch (Exception myEx)
                 {
@@ -112,7 +115,7 @@ namespace SisGesCom
 
         private void AnulaDespacho()
         {
-            //ACTUALIZANDO LA TABLA COMBUSTIBLE_SALIDA CON LA ANULACION EN EL CAMPO ANULADA
+            //ACTUALIZANDO LA TABLA COMBUSTIBLE_GAS CON LA ANULACION EN EL CAMPO ANULADA
             //ESTO LE PONDRA UN 1 AL CAMPO ANULADO.
             try
             {
@@ -143,7 +146,40 @@ namespace SisGesCom
             }
 
             // Limpio los valores
-            this.Limpiar();
+            //this.Limpiar();
+        }
+
+        private void AnulaMovimiento()
+        {
+            //ACTUALIZANDO LA TABLA MOVIMIENTOGAS CON LA ANULACION EN EL CAMPO ANULADA
+            //ESTO LE PONDRA UN 1 AL CAMPO ANULADO.
+            try
+            {
+                // Step 1 - Stablishing the connection
+                MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
+
+                // Step 2 - Crear el comando de ejecucion
+                MySqlCommand myCommand = MyConexion.CreateCommand();
+
+                // Step 3 - Comando a ejecutar
+                myCommand.CommandText = "UPDATE movimientogas SET anulada = @anulada WHERE id = " + txtSolicitud.Text + "";
+                myCommand.Parameters.AddWithValue("@anulada", 1);
+
+                // Step 4 - Opening the connection
+                MyConexion.Open();
+
+                // Step 5 - Executing the query
+                myCommand.ExecuteNonQuery();
+
+                // Step 6 - Closing the connection
+                MyConexion.Close();
+
+                MessageBox.Show("Despacho de Gas anulado satisfactoriamente...");
+            }
+            catch (Exception MyEx)
+            {
+                MessageBox.Show(MyEx.Message);
+            }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

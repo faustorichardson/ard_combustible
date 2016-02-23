@@ -566,5 +566,11 @@ namespace SisGesCom
             frmAnularDespachoGas ofrmAnularDepachoGas = new frmAnularDespachoGas();
             ofrmAnularDepachoGas.ShowDialog();
         }
+
+        private void buttonItem36_Click(object sender, EventArgs e)
+        {
+            frmTicketsEntregadosDepto ofrmTicketsEntregadosDepto = new frmTicketsEntregadosDepto();
+            ofrmTicketsEntregadosDepto.ShowDialog();
+        }
     }
 }

@@ -45,7 +45,7 @@
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(223, 119);
+            this.btnSalir.Location = new System.Drawing.Point(243, 119);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(92, 45);
             this.btnSalir.TabIndex = 41;
@@ -59,7 +59,7 @@
             this.btnGrabar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGrabar.Image = ((System.Drawing.Image)(resources.GetObject("btnGrabar.Image")));
             this.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGrabar.Location = new System.Drawing.Point(223, 57);
+            this.btnGrabar.Location = new System.Drawing.Point(243, 57);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(92, 45);
             this.btnGrabar.TabIndex = 40;
@@ -71,7 +71,7 @@
             // txtSolicitud
             // 
             this.txtSolicitud.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSolicitud.Location = new System.Drawing.Point(105, 68);
+            this.txtSolicitud.Location = new System.Drawing.Point(131, 68);
             this.txtSolicitud.Name = "txtSolicitud";
             this.txtSolicitud.Size = new System.Drawing.Size(72, 22);
             this.txtSolicitud.TabIndex = 39;
@@ -82,15 +82,15 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(17, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 16);
+            this.label1.Size = new System.Drawing.Size(111, 16);
             this.label1.TabIndex = 38;
-            this.label1.Text = "No. Salida:";
+            this.label1.Text = "No. Despacho:";
             // 
             // frmAnularDespachoGas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(331, 179);
+            this.ClientSize = new System.Drawing.Size(352, 179);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.txtSolicitud);

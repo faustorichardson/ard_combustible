@@ -19,19 +19,15 @@ using System.IO;
 
 namespace SisGesCom
 {
-    public partial class frmPrintTicketsEntregados : frmBase
+    public partial class frmTicketsEntregadosDepto : frmBase
     {
+
         string fechadesde;
         string fechahasta;
-        
-        public frmPrintTicketsEntregados()
+
+        public frmTicketsEntregadosDepto()
         {
             InitializeComponent();
-        }
-
-        private void frmPrintTicketsEntregados_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
@@ -60,22 +56,17 @@ namespace SisGesCom
                 // Adhiero el comando a la conexion
                 myCommand.Connection = myConexion;
 
-               
                 // Filtros de la busqueda                
                 fechadesde = dtDesde.Value.ToString("yyyy-MM-dd");
                 fechahasta = dtHasta.Value.ToString("yyyy-MM-dd");
                 cWhere = cWhere + " AND fecha >= " + "'" + fechadesde + "'" + " AND fecha <= " + "'" + fechahasta + "'" + "";
                 sbQuery.Clear();
-                sbQuery.Append("SELECT movimientotickets.id, movimientotickets.beneficiario, movimientotickets.fecha,");
-                sbQuery.Append(" movimientotickets.cantidad, rangos.rango_descripcion as rango, rangos.rangoabrev,");
-                sbQuery.Append(" militar.cedula, militar.nombre, militar.apellido, rangos.orden");
-                sbQuery.Append(" FROM movimientotickets");
-                sbQuery.Append(" INNER JOIN militar ON militar.cedula = movimientotickets.beneficiario");
-                sbQuery.Append(" INNER JOIN rangos ON rangos.rango_id = militar.rango");
-                sbQuery.Append(cWhere);
-                sbQuery.Append(" AND tipo_movimiento = 'S'");
-                sbQuery.Append(" ORDER BY rangos.orden ASC");
-                
+                sbQuery.Append("SELECT movimientoticketsdepto.id, movimientoticketsdepto.beneficiario, movimientoticketsdepto.fecha,");
+                sbQuery.Append(" movimientoticketsdepto.cantidad, movimientoticketsdepto.movimiento");
+                sbQuery.Append(" FROM movimientoticketsdepto");
+                sbQuery.Append(cWhere);                
+                sbQuery.Append(" ORDER BY beneficiario ASC");                
+
                 // Paso los valores de sbQuery al CommandText
                 myCommand.CommandText = sbQuery.ToString();
                 // Creo el objeto Data Adapter y ejecuto el command en el
@@ -101,8 +92,6 @@ namespace SisGesCom
                     ParameterFields oParametrosCR = new ParameterFields();
                     //Proporciona propiedades para la recuperacion y configuracion del tipo de los parametros
                     ParameterValues oParametrosValuesCR = new ParameterValues();
-
-
 
                     //2do.CREAMOS LOS PARAMETROS
                     ParameterField oUsuario = new ParameterField();
@@ -141,19 +130,19 @@ namespace SisGesCom
 
 
                     //nombre del TITULO DEL INFORME
-                    cTitulo = "Listado de Entrega de Tickets";
+                    cTitulo = "Listado de Entrega de Tickets por Departamento";
 
                     //6to Instanciamos nuestro REPORTE
                     //Reportes.ListadoDoctores oListado = new Reportes.ListadoDoctores();
-                    rptPrintListadoTicketsEntregados orptListadoTicketsEntregados = new rptPrintListadoTicketsEntregados();
+                    rptTicketsEntregadosPorDepto orptTicketsEntregadosPorDepto = new rptTicketsEntregadosPorDepto();
 
                     //pasamos el nombre del TITULO del Listado
                     //SumaryInfo es un objeto que se utiliza para leer,crear y actualizar las propiedades del reporte
                     // oListado.SummaryInfo.ReportTitle = cTitulo;
-                    orptListadoTicketsEntregados.SummaryInfo.ReportTitle = cTitulo;
+                    orptTicketsEntregadosPorDepto.SummaryInfo.ReportTitle = cTitulo;
 
                     //7mo. instanciamos nuestro el FORMULARIO donde esta nuestro ReportViewer
-                    frmPrinter ofrmPrinter = new frmPrinter(dtTickets, orptListadoTicketsEntregados, cTitulo);
+                    frmPrinter ofrmPrinter = new frmPrinter(dtTickets, orptTicketsEntregadosPorDepto, cTitulo);
 
                     //ParameterFieldInfo Obtiene o establece la colección de campos de parámetros.
                     ofrmPrinter.CrystalReportViewer1.ParameterFieldInfo = oParametrosCR;

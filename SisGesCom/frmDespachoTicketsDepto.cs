@@ -165,7 +165,7 @@ namespace SisGesCom
 
         private void LimpiaCampo()
         {
-            this.txtCantidad.Clear();
+            this.txtCantidad.Clear();            
             this.cmbCombustible.Focus();
         }
 
@@ -189,7 +189,7 @@ namespace SisGesCom
                 MySqlCommand MyCommand = MyConexion.CreateCommand();
 
                 // Step 3 - creating the commandtext
-                MyCommand.CommandText = "SELECT id, departamento FROM deptobeneficiariogas WHERE id = " + cmbCombustible.SelectedValue + "";
+                MyCommand.CommandText = "SELECT id, departamento FROM dependencias WHERE id = " + cmbCombustible.SelectedValue + "";
 
                 // Step 4 - connection open
                 MyConexion.Open();

@@ -367,6 +367,12 @@
     <Compile Include="frmSolicitudCombustibles.Designer.cs">
       <DependentUpon>frmSolicitudCombustibles.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTicketsEntregadosDepto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTicketsEntregadosDepto.Designer.cs">
+      <DependentUpon>frmTicketsEntregadosDepto.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTipoBeneficiario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -482,6 +488,12 @@
       <DependentUpon>rptSolicitudDespachoGas.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="rptTicketsEntregadosPorDepto.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTicketsEntregadosPorDepto.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="rptTicketsEntregadosResumen.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -590,6 +602,9 @@
     <EmbeddedResource Include="frmSolicitudCombustibles.resx">
       <DependentUpon>frmSolicitudCombustibles.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTicketsEntregadosDepto.resx">
+      <DependentUpon>frmTicketsEntregadosDepto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTipoBeneficiario.resx">
       <DependentUpon>frmTipoBeneficiario.cs</DependentUpon>
     </EmbeddedResource>
@@ -669,6 +684,10 @@
     <EmbeddedResource Include="rptSolicitudDespachoGas.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptSolicitudDespachoGas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptTicketsEntregadosPorDepto.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTicketsEntregadosPorDepto.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="rptTicketsEntregadosResumen.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

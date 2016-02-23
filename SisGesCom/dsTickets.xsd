@@ -23,6 +23,8 @@
               <xs:element name="rangoabrev" msprop:Generator_ColumnVarNameInTable="columnrangoabrev" msprop:Generator_ColumnPropNameInRow="rangoabrev" msprop:Generator_ColumnPropNameInTable="rangoabrevColumn" msprop:Generator_UserColumnName="rangoabrev" type="xs:string" minOccurs="0" />
               <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha" type="xs:dateTime" minOccurs="0" />
               <xs:element name="cantidad" msprop:Generator_ColumnVarNameInTable="columncantidad" msprop:Generator_ColumnPropNameInRow="cantidad" msprop:Generator_ColumnPropNameInTable="cantidadColumn" msprop:Generator_UserColumnName="cantidad" type="xs:decimal" minOccurs="0" />
+              <xs:element name="movimiento" msprop:Generator_ColumnVarNameInTable="columnmovimiento" msprop:Generator_ColumnPropNameInRow="movimiento" msprop:Generator_ColumnPropNameInTable="movimientoColumn" msprop:Generator_UserColumnName="movimiento" type="xs:int" minOccurs="0" />
+              <xs:element name="beneficiario" msprop:Generator_ColumnVarNameInTable="columnbeneficiario" msprop:Generator_ColumnPropNameInRow="beneficiario" msprop:Generator_ColumnPropNameInTable="beneficiarioColumn" msprop:Generator_UserColumnName="beneficiario" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
