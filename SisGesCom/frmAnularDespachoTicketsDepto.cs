@@ -116,8 +116,9 @@ namespace SisGesCom
                 MySqlCommand myCommand = MyConexion.CreateCommand();
 
                 // Step 3 - Comando a ejecutar
-                myCommand.CommandText = "UPDATE movimientoticketsdepto SET anulada = @anulada WHERE movimiento = " + txtSolicitud.Text + "";
+                myCommand.CommandText = "UPDATE movimientoticketsdepto SET anulada = @anulada, anulada_comentario = @causa WHERE movimiento = " + txtSolicitud.Text + "";
                 myCommand.Parameters.AddWithValue("@anulada", 1);
+                myCommand.Parameters.AddWithValue("@causa", txtCausa.Text);
 
                 // Step 4 - Opening the connection
                 MyConexion.Open();
@@ -225,6 +226,7 @@ namespace SisGesCom
         private void Limpiar()
         {
             this.txtSolicitud.Clear();
+            this.txtCausa.Clear();
             this.cantidad = 0;
         }
 

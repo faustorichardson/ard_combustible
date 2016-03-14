@@ -35,6 +35,7 @@ namespace SisGesCom
         private void Limpiar()
         {
             this.txtSolicitud.Clear();
+            this.txtCausa.Clear();
             this.txtSolicitud.Focus();
         }
 
@@ -121,8 +122,9 @@ namespace SisGesCom
                 MySqlCommand myCommand = MyConexion.CreateCommand();
 
                 // Step 3 - Comando a ejecutar
-                myCommand.CommandText = "UPDATE secuencia_solicitudcombustible SET anulada = @status WHERE id = " + txtSolicitud.Text + "";
+                myCommand.CommandText = "UPDATE secuencia_solicitudcombustible SET anulada = @status, anulada_comentario = @causa WHERE id = " + txtSolicitud.Text + "";
                 myCommand.Parameters.AddWithValue("@status", 1);
+                myCommand.Parameters.AddWithValue("@causa", txtCausa.Text);
 
                 // Step 4 - Opening the connection
                 MyConexion.Open();
