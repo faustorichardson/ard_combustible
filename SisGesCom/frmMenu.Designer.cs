@@ -32,42 +32,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.ribbonControl1 = new DevComponents.DotNetBar.RibbonControl();
-            this.ribbonPanel5 = new DevComponents.DotNetBar.RibbonPanel();
-            this.ribbonBar8 = new DevComponents.DotNetBar.RibbonBar();
-            this.buttonItem32 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem33 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem34 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem35 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem37 = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonBar7 = new DevComponents.DotNetBar.RibbonBar();
-            this.buttonItem22 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem23 = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonBar4 = new DevComponents.DotNetBar.RibbonBar();
-            this.buttonItem17 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem24 = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonBar3 = new DevComponents.DotNetBar.RibbonBar();
-            this.buttonItem15 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem16 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem3 = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonPanel2 = new DevComponents.DotNetBar.RibbonPanel();
-            this.ribbonBar6 = new DevComponents.DotNetBar.RibbonBar();
-            this.buttonItem20 = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonBar5 = new DevComponents.DotNetBar.RibbonBar();
-            this.buttonItem19 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem18 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem29 = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonBar2 = new DevComponents.DotNetBar.RibbonBar();
-            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem11 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem14 = new DevComponents.DotNetBar.ButtonItem();
+            this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
+            this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
+            this.buttonItem8 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem9 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem10 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel3 = new DevComponents.DotNetBar.RibbonPanel();
-            this.ribbonBar10 = new DevComponents.DotNetBar.RibbonBar();
+            this.reportes_estadisticas = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem31 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem5 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem12 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem28 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem21 = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonBar9 = new DevComponents.DotNetBar.RibbonBar();
+            this.reportes_listados = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem25 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem6 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem13 = new DevComponents.DotNetBar.ButtonItem();
@@ -77,11 +54,34 @@
             this.buttonItem36 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem30 = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
-            this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
-            this.buttonItem8 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem9 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem10 = new DevComponents.DotNetBar.ButtonItem();
+            this.ribbonPanel2 = new DevComponents.DotNetBar.RibbonPanel();
+            this.procesos_gesgas = new DevComponents.DotNetBar.RibbonBar();
+            this.buttonItem20 = new DevComponents.DotNetBar.ButtonItem();
+            this.procesos_gestickets = new DevComponents.DotNetBar.RibbonBar();
+            this.buttonItem19 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem18 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem29 = new DevComponents.DotNetBar.ButtonItem();
+            this.procesos_gescombustible = new DevComponents.DotNetBar.RibbonBar();
+            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem11 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem14 = new DevComponents.DotNetBar.ButtonItem();
+            this.ribbonPanel5 = new DevComponents.DotNetBar.RibbonPanel();
+            this.mantenimientos_anulaciones = new DevComponents.DotNetBar.RibbonBar();
+            this.buttonItem32 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem33 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem34 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem35 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem37 = new DevComponents.DotNetBar.ButtonItem();
+            this.mantenimientos_gas = new DevComponents.DotNetBar.RibbonBar();
+            this.buttonItem22 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem23 = new DevComponents.DotNetBar.ButtonItem();
+            this.mantenimientos_tickets = new DevComponents.DotNetBar.RibbonBar();
+            this.buttonItem17 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem24 = new DevComponents.DotNetBar.ButtonItem();
+            this.mantenimientos_combustible = new DevComponents.DotNetBar.RibbonBar();
+            this.buttonItem15 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem16 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem3 = new DevComponents.DotNetBar.ButtonItem();
             this.office2007StartButton1 = new DevComponents.DotNetBar.Office2007StartButton();
             this.itemContainer1 = new DevComponents.DotNetBar.ItemContainer();
             this.itemContainer2 = new DevComponents.DotNetBar.ItemContainer();
@@ -98,10 +98,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ribbonControl1.SuspendLayout();
-            this.ribbonPanel5.SuspendLayout();
-            this.ribbonPanel2.SuspendLayout();
-            this.ribbonPanel3.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
+            this.ribbonPanel3.SuspendLayout();
+            this.ribbonPanel2.SuspendLayout();
+            this.ribbonPanel5.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -141,730 +141,6 @@
             this.ribbonControl1.TabIndex = 0;
             this.ribbonControl1.Text = "ribbonControl1";
             this.ribbonControl1.Click += new System.EventHandler(this.ribbonControl1_Click);
-            // 
-            // ribbonPanel5
-            // 
-            this.ribbonPanel5.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel5.Controls.Add(this.ribbonBar8);
-            this.ribbonPanel5.Controls.Add(this.ribbonBar7);
-            this.ribbonPanel5.Controls.Add(this.ribbonBar4);
-            this.ribbonPanel5.Controls.Add(this.ribbonBar3);
-            this.ribbonPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel5.Location = new System.Drawing.Point(0, 53);
-            this.ribbonPanel5.Name = "ribbonPanel5";
-            this.ribbonPanel5.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel5.Size = new System.Drawing.Size(1027, 99);
-            // 
-            // 
-            // 
-            this.ribbonPanel5.Style.Class = "";
-            this.ribbonPanel5.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel5.StyleMouseDown.Class = "";
-            this.ribbonPanel5.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel5.StyleMouseOver.Class = "";
-            this.ribbonPanel5.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel5.TabIndex = 5;
-            this.ribbonPanel5.Visible = false;
-            // 
-            // ribbonBar8
-            // 
-            this.ribbonBar8.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.ribbonBar8.BackgroundMouseOverStyle.Class = "";
-            this.ribbonBar8.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar8.BackgroundStyle.Class = "";
-            this.ribbonBar8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar8.ContainerControlProcessDialogKey = true;
-            this.ribbonBar8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBar8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ribbonBar8.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem32,
-            this.buttonItem33,
-            this.buttonItem34,
-            this.buttonItem35,
-            this.buttonItem37});
-            this.ribbonBar8.Location = new System.Drawing.Point(523, 0);
-            this.ribbonBar8.Name = "ribbonBar8";
-            this.ribbonBar8.Size = new System.Drawing.Size(390, 96);
-            this.ribbonBar8.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonBar8.TabIndex = 3;
-            this.ribbonBar8.Text = "ANULACIONES";
-            // 
-            // 
-            // 
-            this.ribbonBar8.TitleStyle.Class = "";
-            this.ribbonBar8.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar8.TitleStyleMouseOver.Class = "";
-            this.ribbonBar8.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // buttonItem32
-            // 
-            this.buttonItem32.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem32.Image")));
-            this.buttonItem32.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem32.Name = "buttonItem32";
-            this.buttonItem32.SubItemsExpandWidth = 14;
-            this.buttonItem32.Text = "Solicitud Combustible";
-            this.buttonItem32.Click += new System.EventHandler(this.buttonItem32_Click);
-            // 
-            // buttonItem33
-            // 
-            this.buttonItem33.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem33.Image")));
-            this.buttonItem33.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem33.Name = "buttonItem33";
-            this.buttonItem33.SubItemsExpandWidth = 14;
-            this.buttonItem33.Text = "Entrada Combustible";
-            this.buttonItem33.Click += new System.EventHandler(this.buttonItem33_Click);
-            // 
-            // buttonItem34
-            // 
-            this.buttonItem34.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem34.Image")));
-            this.buttonItem34.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem34.Name = "buttonItem34";
-            this.buttonItem34.SubItemsExpandWidth = 14;
-            this.buttonItem34.Text = "Despacho Combustible";
-            this.buttonItem34.Click += new System.EventHandler(this.buttonItem34_Click);
-            // 
-            // buttonItem35
-            // 
-            this.buttonItem35.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem35.Image")));
-            this.buttonItem35.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem35.Name = "buttonItem35";
-            this.buttonItem35.SubItemsExpandWidth = 14;
-            this.buttonItem35.Text = "Despacho de Gas";
-            this.buttonItem35.Click += new System.EventHandler(this.buttonItem35_Click);
-            // 
-            // buttonItem37
-            // 
-            this.buttonItem37.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem37.Image")));
-            this.buttonItem37.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem37.Name = "buttonItem37";
-            this.buttonItem37.SubItemsExpandWidth = 14;
-            this.buttonItem37.Text = "Despacho Tickets por Departamento";
-            this.buttonItem37.Click += new System.EventHandler(this.buttonItem37_Click);
-            // 
-            // ribbonBar7
-            // 
-            this.ribbonBar7.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.ribbonBar7.BackgroundMouseOverStyle.Class = "";
-            this.ribbonBar7.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar7.BackgroundStyle.Class = "";
-            this.ribbonBar7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar7.ContainerControlProcessDialogKey = true;
-            this.ribbonBar7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBar7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ribbonBar7.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem22,
-            this.buttonItem23});
-            this.ribbonBar7.Location = new System.Drawing.Point(384, 0);
-            this.ribbonBar7.Name = "ribbonBar7";
-            this.ribbonBar7.Size = new System.Drawing.Size(139, 96);
-            this.ribbonBar7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonBar7.TabIndex = 2;
-            this.ribbonBar7.Text = "GAS";
-            // 
-            // 
-            // 
-            this.ribbonBar7.TitleStyle.Class = "";
-            this.ribbonBar7.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar7.TitleStyleMouseOver.Class = "";
-            this.ribbonBar7.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // buttonItem22
-            // 
-            this.buttonItem22.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem22.Image")));
-            this.buttonItem22.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem22.Name = "buttonItem22";
-            this.buttonItem22.SubItemsExpandWidth = 14;
-            this.buttonItem22.Text = "Beneficiarios";
-            this.buttonItem22.Click += new System.EventHandler(this.buttonItem22_Click);
-            // 
-            // buttonItem23
-            // 
-            this.buttonItem23.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem23.Image")));
-            this.buttonItem23.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem23.Name = "buttonItem23";
-            this.buttonItem23.SubItemsExpandWidth = 14;
-            this.buttonItem23.Text = "Listado Gas";
-            this.buttonItem23.Click += new System.EventHandler(this.buttonItem23_Click);
-            // 
-            // ribbonBar4
-            // 
-            this.ribbonBar4.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.ribbonBar4.BackgroundMouseOverStyle.Class = "";
-            this.ribbonBar4.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar4.BackgroundStyle.Class = "";
-            this.ribbonBar4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar4.ContainerControlProcessDialogKey = true;
-            this.ribbonBar4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBar4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ribbonBar4.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem17,
-            this.buttonItem24});
-            this.ribbonBar4.Location = new System.Drawing.Point(247, 0);
-            this.ribbonBar4.Name = "ribbonBar4";
-            this.ribbonBar4.Size = new System.Drawing.Size(137, 96);
-            this.ribbonBar4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonBar4.TabIndex = 1;
-            this.ribbonBar4.Text = "TICKETS";
-            // 
-            // 
-            // 
-            this.ribbonBar4.TitleStyle.Class = "";
-            this.ribbonBar4.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar4.TitleStyleMouseOver.Class = "";
-            this.ribbonBar4.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // buttonItem17
-            // 
-            this.buttonItem17.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem17.Image")));
-            this.buttonItem17.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem17.Name = "buttonItem17";
-            this.buttonItem17.SubItemsExpandWidth = 14;
-            this.buttonItem17.Text = "Beneficiarios";
-            this.buttonItem17.Click += new System.EventHandler(this.buttonItem17_Click);
-            // 
-            // buttonItem24
-            // 
-            this.buttonItem24.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem24.Image")));
-            this.buttonItem24.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem24.Name = "buttonItem24";
-            this.buttonItem24.SubItemsExpandWidth = 14;
-            this.buttonItem24.Text = "Listado Tickets";
-            this.buttonItem24.Click += new System.EventHandler(this.buttonItem24_Click);
-            // 
-            // ribbonBar3
-            // 
-            this.ribbonBar3.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.ribbonBar3.BackgroundMouseOverStyle.Class = "";
-            this.ribbonBar3.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar3.BackgroundStyle.Class = "";
-            this.ribbonBar3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar3.ContainerControlProcessDialogKey = true;
-            this.ribbonBar3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBar3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ribbonBar3.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem15,
-            this.buttonItem16,
-            this.buttonItem3});
-            this.ribbonBar3.Location = new System.Drawing.Point(3, 0);
-            this.ribbonBar3.Name = "ribbonBar3";
-            this.ribbonBar3.Size = new System.Drawing.Size(244, 96);
-            this.ribbonBar3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonBar3.TabIndex = 0;
-            this.ribbonBar3.Text = "COMBUSTIBLE";
-            // 
-            // 
-            // 
-            this.ribbonBar3.TitleStyle.Class = "";
-            this.ribbonBar3.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar3.TitleStyleMouseOver.Class = "";
-            this.ribbonBar3.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // buttonItem15
-            // 
-            this.buttonItem15.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem15.Image")));
-            this.buttonItem15.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem15.Name = "buttonItem15";
-            this.buttonItem15.SubItemsExpandWidth = 14;
-            this.buttonItem15.Text = "Tipo Combustible";
-            this.buttonItem15.Click += new System.EventHandler(this.buttonItem15_Click);
-            // 
-            // buttonItem16
-            // 
-            this.buttonItem16.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem16.Image")));
-            this.buttonItem16.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem16.Name = "buttonItem16";
-            this.buttonItem16.SubItemsExpandWidth = 14;
-            this.buttonItem16.Text = "Departamentos Autorizaciones";
-            this.buttonItem16.Click += new System.EventHandler(this.buttonItem16_Click);
-            // 
-            // buttonItem3
-            // 
-            this.buttonItem3.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem3.Image")));
-            this.buttonItem3.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem3.Name = "buttonItem3";
-            this.buttonItem3.SubItemsExpandWidth = 14;
-            this.buttonItem3.Text = "Tipo Beneficiarios";
-            this.buttonItem3.Click += new System.EventHandler(this.buttonItem3_Click);
-            // 
-            // ribbonPanel2
-            // 
-            this.ribbonPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel2.Controls.Add(this.ribbonBar6);
-            this.ribbonPanel2.Controls.Add(this.ribbonBar5);
-            this.ribbonPanel2.Controls.Add(this.ribbonBar2);
-            this.ribbonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel2.Location = new System.Drawing.Point(0, 53);
-            this.ribbonPanel2.Name = "ribbonPanel2";
-            this.ribbonPanel2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel2.Size = new System.Drawing.Size(1027, 99);
-            // 
-            // 
-            // 
-            this.ribbonPanel2.Style.Class = "";
-            this.ribbonPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel2.StyleMouseDown.Class = "";
-            this.ribbonPanel2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel2.StyleMouseOver.Class = "";
-            this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel2.TabIndex = 2;
-            this.ribbonPanel2.Visible = false;
-            // 
-            // ribbonBar6
-            // 
-            this.ribbonBar6.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.ribbonBar6.BackgroundMouseOverStyle.Class = "";
-            this.ribbonBar6.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar6.BackgroundStyle.Class = "";
-            this.ribbonBar6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar6.ContainerControlProcessDialogKey = true;
-            this.ribbonBar6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBar6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ribbonBar6.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem20});
-            this.ribbonBar6.Location = new System.Drawing.Point(428, 0);
-            this.ribbonBar6.Name = "ribbonBar6";
-            this.ribbonBar6.Size = new System.Drawing.Size(139, 96);
-            this.ribbonBar6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonBar6.TabIndex = 2;
-            this.ribbonBar6.Text = "GESTION DE GAS";
-            // 
-            // 
-            // 
-            this.ribbonBar6.TitleStyle.Class = "";
-            this.ribbonBar6.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar6.TitleStyleMouseOver.Class = "";
-            this.ribbonBar6.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // buttonItem20
-            // 
-            this.buttonItem20.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem20.Image")));
-            this.buttonItem20.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem20.Name = "buttonItem20";
-            this.buttonItem20.SubItemsExpandWidth = 14;
-            this.buttonItem20.Text = "Despacho Gas";
-            this.buttonItem20.Click += new System.EventHandler(this.buttonItem20_Click);
-            // 
-            // ribbonBar5
-            // 
-            this.ribbonBar5.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.ribbonBar5.BackgroundMouseOverStyle.Class = "";
-            this.ribbonBar5.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar5.BackgroundStyle.Class = "";
-            this.ribbonBar5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar5.ContainerControlProcessDialogKey = true;
-            this.ribbonBar5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBar5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ribbonBar5.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem19,
-            this.buttonItem18,
-            this.buttonItem29});
-            this.ribbonBar5.Location = new System.Drawing.Point(199, 0);
-            this.ribbonBar5.Name = "ribbonBar5";
-            this.ribbonBar5.Size = new System.Drawing.Size(229, 96);
-            this.ribbonBar5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonBar5.TabIndex = 1;
-            this.ribbonBar5.Text = "GESTION DE TICKETS";
-            // 
-            // 
-            // 
-            this.ribbonBar5.TitleStyle.Class = "";
-            this.ribbonBar5.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar5.TitleStyleMouseOver.Class = "";
-            this.ribbonBar5.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // buttonItem19
-            // 
-            this.buttonItem19.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem19.Image")));
-            this.buttonItem19.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem19.Name = "buttonItem19";
-            this.buttonItem19.SubItemsExpandWidth = 14;
-            this.buttonItem19.Text = "Registro Entrada";
-            this.buttonItem19.Click += new System.EventHandler(this.buttonItem19_Click);
-            // 
-            // buttonItem18
-            // 
-            this.buttonItem18.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem18.Image")));
-            this.buttonItem18.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem18.Name = "buttonItem18";
-            this.buttonItem18.SubItemsExpandWidth = 14;
-            this.buttonItem18.Text = "Despacho Ticket";
-            this.buttonItem18.Click += new System.EventHandler(this.buttonItem18_Click);
-            // 
-            // buttonItem29
-            // 
-            this.buttonItem29.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem29.Image")));
-            this.buttonItem29.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem29.Name = "buttonItem29";
-            this.buttonItem29.SubItemsExpandWidth = 14;
-            this.buttonItem29.Text = "Despacho Ticket x Departamentos";
-            this.buttonItem29.Click += new System.EventHandler(this.buttonItem29_Click);
-            // 
-            // ribbonBar2
-            // 
-            this.ribbonBar2.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.ribbonBar2.BackgroundMouseOverStyle.Class = "";
-            this.ribbonBar2.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar2.BackgroundStyle.Class = "";
-            this.ribbonBar2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar2.ContainerControlProcessDialogKey = true;
-            this.ribbonBar2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ribbonBar2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem1,
-            this.buttonItem11,
-            this.buttonItem14});
-            this.ribbonBar2.Location = new System.Drawing.Point(3, 0);
-            this.ribbonBar2.Name = "ribbonBar2";
-            this.ribbonBar2.Size = new System.Drawing.Size(196, 96);
-            this.ribbonBar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonBar2.TabIndex = 0;
-            this.ribbonBar2.Text = "GESTION DE COMBUSTIBLE";
-            // 
-            // 
-            // 
-            this.ribbonBar2.TitleStyle.Class = "";
-            this.ribbonBar2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar2.TitleStyleMouseOver.Class = "";
-            this.ribbonBar2.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // buttonItem1
-            // 
-            this.buttonItem1.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem1.Image")));
-            this.buttonItem1.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem1.Name = "buttonItem1";
-            this.buttonItem1.SubItemsExpandWidth = 14;
-            this.buttonItem1.Text = "Solicitud";
-            this.buttonItem1.Click += new System.EventHandler(this.buttonItem1_Click);
-            // 
-            // buttonItem11
-            // 
-            this.buttonItem11.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem11.Image")));
-            this.buttonItem11.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem11.Name = "buttonItem11";
-            this.buttonItem11.SubItemsExpandWidth = 14;
-            this.buttonItem11.Text = "Entrada";
-            this.buttonItem11.Click += new System.EventHandler(this.buttonItem11_Click);
-            // 
-            // buttonItem14
-            // 
-            this.buttonItem14.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem14.Image")));
-            this.buttonItem14.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem14.Name = "buttonItem14";
-            this.buttonItem14.SubItemsExpandWidth = 14;
-            this.buttonItem14.Text = "Despacho";
-            this.buttonItem14.Click += new System.EventHandler(this.buttonItem14_Click);
-            // 
-            // ribbonPanel3
-            // 
-            this.ribbonPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel3.Controls.Add(this.ribbonBar10);
-            this.ribbonPanel3.Controls.Add(this.ribbonBar9);
-            this.ribbonPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel3.Location = new System.Drawing.Point(0, 53);
-            this.ribbonPanel3.Name = "ribbonPanel3";
-            this.ribbonPanel3.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel3.Size = new System.Drawing.Size(1027, 99);
-            // 
-            // 
-            // 
-            this.ribbonPanel3.Style.Class = "";
-            this.ribbonPanel3.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel3.StyleMouseDown.Class = "";
-            this.ribbonPanel3.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel3.StyleMouseOver.Class = "";
-            this.ribbonPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel3.TabIndex = 3;
-            this.ribbonPanel3.Visible = false;
-            // 
-            // ribbonBar10
-            // 
-            this.ribbonBar10.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.ribbonBar10.BackgroundMouseOverStyle.Class = "";
-            this.ribbonBar10.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar10.BackgroundStyle.Class = "";
-            this.ribbonBar10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar10.ContainerControlProcessDialogKey = true;
-            this.ribbonBar10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBar10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ribbonBar10.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem31,
-            this.buttonItem5,
-            this.buttonItem12,
-            this.buttonItem28,
-            this.buttonItem21});
-            this.ribbonBar10.Location = new System.Drawing.Point(700, 0);
-            this.ribbonBar10.Name = "ribbonBar10";
-            this.ribbonBar10.Size = new System.Drawing.Size(521, 96);
-            this.ribbonBar10.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonBar10.TabIndex = 1;
-            this.ribbonBar10.Text = "ESTADISTICAS";
-            // 
-            // 
-            // 
-            this.ribbonBar10.TitleStyle.Class = "";
-            this.ribbonBar10.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar10.TitleStyleMouseOver.Class = "";
-            this.ribbonBar10.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // buttonItem31
-            // 
-            this.buttonItem31.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem31.Image")));
-            this.buttonItem31.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem31.Name = "buttonItem31";
-            this.buttonItem31.SubItemsExpandWidth = 14;
-            this.buttonItem31.Text = "Despacho a Unidades Navales";
-            this.buttonItem31.Visible = false;
-            this.buttonItem31.Click += new System.EventHandler(this.buttonItem31_Click);
-            // 
-            // buttonItem5
-            // 
-            this.buttonItem5.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem5.Image")));
-            this.buttonItem5.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem5.Name = "buttonItem5";
-            this.buttonItem5.SubItemsExpandWidth = 14;
-            this.buttonItem5.Text = "Resumen Consumo Combustible";
-            this.buttonItem5.Click += new System.EventHandler(this.buttonItem5_Click);
-            // 
-            // buttonItem12
-            // 
-            this.buttonItem12.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem12.Image")));
-            this.buttonItem12.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem12.Name = "buttonItem12";
-            this.buttonItem12.SubItemsExpandWidth = 14;
-            this.buttonItem12.Text = "Resumen Combustible Solicitado";
-            this.buttonItem12.Click += new System.EventHandler(this.buttonItem12_Click);
-            // 
-            // buttonItem28
-            // 
-            this.buttonItem28.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem28.Image")));
-            this.buttonItem28.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem28.Name = "buttonItem28";
-            this.buttonItem28.SubItemsExpandWidth = 14;
-            this.buttonItem28.Text = "Resumen Tickets Entregados";
-            this.buttonItem28.Click += new System.EventHandler(this.buttonItem28_Click);
-            // 
-            // buttonItem21
-            // 
-            this.buttonItem21.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem21.Image")));
-            this.buttonItem21.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem21.Name = "buttonItem21";
-            this.buttonItem21.SubItemsExpandWidth = 14;
-            this.buttonItem21.Text = "Resumen Gas Despachado";
-            this.buttonItem21.Visible = false;
-            // 
-            // ribbonBar9
-            // 
-            this.ribbonBar9.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.ribbonBar9.BackgroundMouseOverStyle.Class = "";
-            this.ribbonBar9.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar9.BackgroundStyle.Class = "";
-            this.ribbonBar9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar9.ContainerControlProcessDialogKey = true;
-            this.ribbonBar9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBar9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ribbonBar9.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem25,
-            this.buttonItem6,
-            this.buttonItem13,
-            this.buttonItem4,
-            this.buttonItem27,
-            this.buttonItem26,
-            this.buttonItem36,
-            this.buttonItem2,
-            this.buttonItem30});
-            this.ribbonBar9.Location = new System.Drawing.Point(3, 0);
-            this.ribbonBar9.Name = "ribbonBar9";
-            this.ribbonBar9.Size = new System.Drawing.Size(697, 96);
-            this.ribbonBar9.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonBar9.TabIndex = 0;
-            this.ribbonBar9.Text = "LISTADOS";
-            // 
-            // 
-            // 
-            this.ribbonBar9.TitleStyle.Class = "";
-            this.ribbonBar9.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar9.TitleStyleMouseOver.Class = "";
-            this.ribbonBar9.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // buttonItem25
-            // 
-            this.buttonItem25.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem25.Image")));
-            this.buttonItem25.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem25.Name = "buttonItem25";
-            this.buttonItem25.SubItemsExpandWidth = 14;
-            this.buttonItem25.Text = "Existencia Combustible";
-            this.buttonItem25.Click += new System.EventHandler(this.buttonItem25_Click);
-            // 
-            // buttonItem6
-            // 
-            this.buttonItem6.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem6.Image")));
-            this.buttonItem6.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem6.Name = "buttonItem6";
-            this.buttonItem6.SubItemsExpandWidth = 14;
-            this.buttonItem6.Text = "Combustible Solicitado";
-            this.buttonItem6.Click += new System.EventHandler(this.buttonItem6_Click);
-            // 
-            // buttonItem13
-            // 
-            this.buttonItem13.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem13.Image")));
-            this.buttonItem13.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem13.Name = "buttonItem13";
-            this.buttonItem13.SubItemsExpandWidth = 14;
-            this.buttonItem13.Text = "Entrada Combustible";
-            this.buttonItem13.Click += new System.EventHandler(this.buttonItem13_Click);
-            // 
-            // buttonItem4
-            // 
-            this.buttonItem4.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem4.Image")));
-            this.buttonItem4.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem4.Name = "buttonItem4";
-            this.buttonItem4.SubItemsExpandWidth = 14;
-            this.buttonItem4.Text = "Combustible Despachado";
-            this.buttonItem4.Click += new System.EventHandler(this.buttonItem4_Click);
-            // 
-            // buttonItem27
-            // 
-            this.buttonItem27.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem27.Image")));
-            this.buttonItem27.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem27.Name = "buttonItem27";
-            this.buttonItem27.SubItemsExpandWidth = 14;
-            this.buttonItem27.Text = "Tickets Recibidos";
-            this.buttonItem27.Click += new System.EventHandler(this.buttonItem27_Click);
-            // 
-            // buttonItem26
-            // 
-            this.buttonItem26.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem26.Image")));
-            this.buttonItem26.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem26.Name = "buttonItem26";
-            this.buttonItem26.SubItemsExpandWidth = 14;
-            this.buttonItem26.Text = "Tickets Entregados";
-            this.buttonItem26.Click += new System.EventHandler(this.buttonItem26_Click);
-            // 
-            // buttonItem36
-            // 
-            this.buttonItem36.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem36.Image")));
-            this.buttonItem36.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem36.Name = "buttonItem36";
-            this.buttonItem36.SubItemsExpandWidth = 14;
-            this.buttonItem36.Text = "Tickets Entregados por Departamento";
-            this.buttonItem36.Click += new System.EventHandler(this.buttonItem36_Click);
-            // 
-            // buttonItem2
-            // 
-            this.buttonItem2.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem2.Image")));
-            this.buttonItem2.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem2.Name = "buttonItem2";
-            this.buttonItem2.SubItemsExpandWidth = 14;
-            this.buttonItem2.Text = "Despacho Gas";
-            this.buttonItem2.Click += new System.EventHandler(this.buttonItem2_Click_1);
-            // 
-            // buttonItem30
-            // 
-            this.buttonItem30.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem30.Image")));
-            this.buttonItem30.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem30.Name = "buttonItem30";
-            this.buttonItem30.SubItemsExpandWidth = 14;
-            this.buttonItem30.Text = "Despacho a Unidades Navales";
-            this.buttonItem30.Click += new System.EventHandler(this.buttonItem30_Click);
             // 
             // ribbonPanel1
             // 
@@ -954,6 +230,730 @@
             this.buttonItem10.SubItemsExpandWidth = 14;
             this.buttonItem10.Text = "Salir del Sistema";
             this.buttonItem10.Click += new System.EventHandler(this.buttonItem10_Click);
+            // 
+            // ribbonPanel3
+            // 
+            this.ribbonPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel3.Controls.Add(this.reportes_estadisticas);
+            this.ribbonPanel3.Controls.Add(this.reportes_listados);
+            this.ribbonPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel3.Location = new System.Drawing.Point(0, 53);
+            this.ribbonPanel3.Name = "ribbonPanel3";
+            this.ribbonPanel3.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel3.Size = new System.Drawing.Size(1027, 99);
+            // 
+            // 
+            // 
+            this.ribbonPanel3.Style.Class = "";
+            this.ribbonPanel3.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel3.StyleMouseDown.Class = "";
+            this.ribbonPanel3.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel3.StyleMouseOver.Class = "";
+            this.ribbonPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel3.TabIndex = 3;
+            this.ribbonPanel3.Visible = false;
+            // 
+            // reportes_estadisticas
+            // 
+            this.reportes_estadisticas.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.reportes_estadisticas.BackgroundMouseOverStyle.Class = "";
+            this.reportes_estadisticas.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.reportes_estadisticas.BackgroundStyle.Class = "";
+            this.reportes_estadisticas.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.reportes_estadisticas.ContainerControlProcessDialogKey = true;
+            this.reportes_estadisticas.Dock = System.Windows.Forms.DockStyle.Left;
+            this.reportes_estadisticas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportes_estadisticas.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem31,
+            this.buttonItem5,
+            this.buttonItem12,
+            this.buttonItem28,
+            this.buttonItem21});
+            this.reportes_estadisticas.Location = new System.Drawing.Point(700, 0);
+            this.reportes_estadisticas.Name = "reportes_estadisticas";
+            this.reportes_estadisticas.Size = new System.Drawing.Size(521, 96);
+            this.reportes_estadisticas.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.reportes_estadisticas.TabIndex = 1;
+            this.reportes_estadisticas.Text = "ESTADISTICAS";
+            // 
+            // 
+            // 
+            this.reportes_estadisticas.TitleStyle.Class = "";
+            this.reportes_estadisticas.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.reportes_estadisticas.TitleStyleMouseOver.Class = "";
+            this.reportes_estadisticas.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // buttonItem31
+            // 
+            this.buttonItem31.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem31.Image")));
+            this.buttonItem31.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem31.Name = "buttonItem31";
+            this.buttonItem31.SubItemsExpandWidth = 14;
+            this.buttonItem31.Text = "Despacho a Unidades Navales";
+            this.buttonItem31.Visible = false;
+            this.buttonItem31.Click += new System.EventHandler(this.buttonItem31_Click);
+            // 
+            // buttonItem5
+            // 
+            this.buttonItem5.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem5.Image")));
+            this.buttonItem5.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem5.Name = "buttonItem5";
+            this.buttonItem5.SubItemsExpandWidth = 14;
+            this.buttonItem5.Text = "Resumen Consumo Combustible";
+            this.buttonItem5.Click += new System.EventHandler(this.buttonItem5_Click);
+            // 
+            // buttonItem12
+            // 
+            this.buttonItem12.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem12.Image")));
+            this.buttonItem12.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem12.Name = "buttonItem12";
+            this.buttonItem12.SubItemsExpandWidth = 14;
+            this.buttonItem12.Text = "Resumen Combustible Solicitado";
+            this.buttonItem12.Click += new System.EventHandler(this.buttonItem12_Click);
+            // 
+            // buttonItem28
+            // 
+            this.buttonItem28.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem28.Image")));
+            this.buttonItem28.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem28.Name = "buttonItem28";
+            this.buttonItem28.SubItemsExpandWidth = 14;
+            this.buttonItem28.Text = "Resumen Tickets Entregados";
+            this.buttonItem28.Click += new System.EventHandler(this.buttonItem28_Click);
+            // 
+            // buttonItem21
+            // 
+            this.buttonItem21.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem21.Image")));
+            this.buttonItem21.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem21.Name = "buttonItem21";
+            this.buttonItem21.SubItemsExpandWidth = 14;
+            this.buttonItem21.Text = "Resumen Gas Despachado";
+            this.buttonItem21.Visible = false;
+            // 
+            // reportes_listados
+            // 
+            this.reportes_listados.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.reportes_listados.BackgroundMouseOverStyle.Class = "";
+            this.reportes_listados.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.reportes_listados.BackgroundStyle.Class = "";
+            this.reportes_listados.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.reportes_listados.ContainerControlProcessDialogKey = true;
+            this.reportes_listados.Dock = System.Windows.Forms.DockStyle.Left;
+            this.reportes_listados.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reportes_listados.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem25,
+            this.buttonItem6,
+            this.buttonItem13,
+            this.buttonItem4,
+            this.buttonItem27,
+            this.buttonItem26,
+            this.buttonItem36,
+            this.buttonItem2,
+            this.buttonItem30});
+            this.reportes_listados.Location = new System.Drawing.Point(3, 0);
+            this.reportes_listados.Name = "reportes_listados";
+            this.reportes_listados.Size = new System.Drawing.Size(697, 96);
+            this.reportes_listados.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.reportes_listados.TabIndex = 0;
+            this.reportes_listados.Text = "LISTADOS";
+            // 
+            // 
+            // 
+            this.reportes_listados.TitleStyle.Class = "";
+            this.reportes_listados.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.reportes_listados.TitleStyleMouseOver.Class = "";
+            this.reportes_listados.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // buttonItem25
+            // 
+            this.buttonItem25.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem25.Image")));
+            this.buttonItem25.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem25.Name = "buttonItem25";
+            this.buttonItem25.SubItemsExpandWidth = 14;
+            this.buttonItem25.Text = "Existencia Combustible";
+            this.buttonItem25.Click += new System.EventHandler(this.buttonItem25_Click);
+            // 
+            // buttonItem6
+            // 
+            this.buttonItem6.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem6.Image")));
+            this.buttonItem6.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem6.Name = "buttonItem6";
+            this.buttonItem6.SubItemsExpandWidth = 14;
+            this.buttonItem6.Text = "Combustible Solicitado";
+            this.buttonItem6.Click += new System.EventHandler(this.buttonItem6_Click);
+            // 
+            // buttonItem13
+            // 
+            this.buttonItem13.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem13.Image")));
+            this.buttonItem13.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem13.Name = "buttonItem13";
+            this.buttonItem13.SubItemsExpandWidth = 14;
+            this.buttonItem13.Text = "Entrada Combustible";
+            this.buttonItem13.Click += new System.EventHandler(this.buttonItem13_Click);
+            // 
+            // buttonItem4
+            // 
+            this.buttonItem4.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem4.Image")));
+            this.buttonItem4.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem4.Name = "buttonItem4";
+            this.buttonItem4.SubItemsExpandWidth = 14;
+            this.buttonItem4.Text = "Combustible Despachado";
+            this.buttonItem4.Click += new System.EventHandler(this.buttonItem4_Click);
+            // 
+            // buttonItem27
+            // 
+            this.buttonItem27.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem27.Image")));
+            this.buttonItem27.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem27.Name = "buttonItem27";
+            this.buttonItem27.SubItemsExpandWidth = 14;
+            this.buttonItem27.Text = "Tickets Recibidos";
+            this.buttonItem27.Click += new System.EventHandler(this.buttonItem27_Click);
+            // 
+            // buttonItem26
+            // 
+            this.buttonItem26.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem26.Image")));
+            this.buttonItem26.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem26.Name = "buttonItem26";
+            this.buttonItem26.SubItemsExpandWidth = 14;
+            this.buttonItem26.Text = "Tickets Entregados";
+            this.buttonItem26.Click += new System.EventHandler(this.buttonItem26_Click);
+            // 
+            // buttonItem36
+            // 
+            this.buttonItem36.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem36.Image")));
+            this.buttonItem36.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem36.Name = "buttonItem36";
+            this.buttonItem36.SubItemsExpandWidth = 14;
+            this.buttonItem36.Text = "Tickets Entregados por Departamento";
+            this.buttonItem36.Click += new System.EventHandler(this.buttonItem36_Click);
+            // 
+            // buttonItem2
+            // 
+            this.buttonItem2.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem2.Image")));
+            this.buttonItem2.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem2.Name = "buttonItem2";
+            this.buttonItem2.SubItemsExpandWidth = 14;
+            this.buttonItem2.Text = "Despacho Gas";
+            this.buttonItem2.Click += new System.EventHandler(this.buttonItem2_Click_1);
+            // 
+            // buttonItem30
+            // 
+            this.buttonItem30.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem30.Image")));
+            this.buttonItem30.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem30.Name = "buttonItem30";
+            this.buttonItem30.SubItemsExpandWidth = 14;
+            this.buttonItem30.Text = "Despacho a Unidades Navales";
+            this.buttonItem30.Click += new System.EventHandler(this.buttonItem30_Click);
+            // 
+            // ribbonPanel2
+            // 
+            this.ribbonPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel2.Controls.Add(this.procesos_gesgas);
+            this.ribbonPanel2.Controls.Add(this.procesos_gestickets);
+            this.ribbonPanel2.Controls.Add(this.procesos_gescombustible);
+            this.ribbonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel2.Location = new System.Drawing.Point(0, 53);
+            this.ribbonPanel2.Name = "ribbonPanel2";
+            this.ribbonPanel2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel2.Size = new System.Drawing.Size(1027, 99);
+            // 
+            // 
+            // 
+            this.ribbonPanel2.Style.Class = "";
+            this.ribbonPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel2.StyleMouseDown.Class = "";
+            this.ribbonPanel2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel2.StyleMouseOver.Class = "";
+            this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel2.TabIndex = 2;
+            this.ribbonPanel2.Visible = false;
+            // 
+            // procesos_gesgas
+            // 
+            this.procesos_gesgas.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.procesos_gesgas.BackgroundMouseOverStyle.Class = "";
+            this.procesos_gesgas.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.procesos_gesgas.BackgroundStyle.Class = "";
+            this.procesos_gesgas.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.procesos_gesgas.ContainerControlProcessDialogKey = true;
+            this.procesos_gesgas.Dock = System.Windows.Forms.DockStyle.Left;
+            this.procesos_gesgas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.procesos_gesgas.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem20});
+            this.procesos_gesgas.Location = new System.Drawing.Point(428, 0);
+            this.procesos_gesgas.Name = "procesos_gesgas";
+            this.procesos_gesgas.Size = new System.Drawing.Size(139, 96);
+            this.procesos_gesgas.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.procesos_gesgas.TabIndex = 2;
+            this.procesos_gesgas.Text = "GESTION DE GAS";
+            // 
+            // 
+            // 
+            this.procesos_gesgas.TitleStyle.Class = "";
+            this.procesos_gesgas.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.procesos_gesgas.TitleStyleMouseOver.Class = "";
+            this.procesos_gesgas.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // buttonItem20
+            // 
+            this.buttonItem20.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem20.Image")));
+            this.buttonItem20.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem20.Name = "buttonItem20";
+            this.buttonItem20.SubItemsExpandWidth = 14;
+            this.buttonItem20.Text = "Despacho Gas";
+            this.buttonItem20.Click += new System.EventHandler(this.buttonItem20_Click);
+            // 
+            // procesos_gestickets
+            // 
+            this.procesos_gestickets.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.procesos_gestickets.BackgroundMouseOverStyle.Class = "";
+            this.procesos_gestickets.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.procesos_gestickets.BackgroundStyle.Class = "";
+            this.procesos_gestickets.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.procesos_gestickets.ContainerControlProcessDialogKey = true;
+            this.procesos_gestickets.Dock = System.Windows.Forms.DockStyle.Left;
+            this.procesos_gestickets.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.procesos_gestickets.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem19,
+            this.buttonItem18,
+            this.buttonItem29});
+            this.procesos_gestickets.Location = new System.Drawing.Point(199, 0);
+            this.procesos_gestickets.Name = "procesos_gestickets";
+            this.procesos_gestickets.Size = new System.Drawing.Size(229, 96);
+            this.procesos_gestickets.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.procesos_gestickets.TabIndex = 1;
+            this.procesos_gestickets.Text = "GESTION DE TICKETS";
+            // 
+            // 
+            // 
+            this.procesos_gestickets.TitleStyle.Class = "";
+            this.procesos_gestickets.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.procesos_gestickets.TitleStyleMouseOver.Class = "";
+            this.procesos_gestickets.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // buttonItem19
+            // 
+            this.buttonItem19.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem19.Image")));
+            this.buttonItem19.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem19.Name = "buttonItem19";
+            this.buttonItem19.SubItemsExpandWidth = 14;
+            this.buttonItem19.Text = "Registro Entrada";
+            this.buttonItem19.Click += new System.EventHandler(this.buttonItem19_Click);
+            // 
+            // buttonItem18
+            // 
+            this.buttonItem18.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem18.Image")));
+            this.buttonItem18.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem18.Name = "buttonItem18";
+            this.buttonItem18.SubItemsExpandWidth = 14;
+            this.buttonItem18.Text = "Despacho Ticket";
+            this.buttonItem18.Click += new System.EventHandler(this.buttonItem18_Click);
+            // 
+            // buttonItem29
+            // 
+            this.buttonItem29.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem29.Image")));
+            this.buttonItem29.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem29.Name = "buttonItem29";
+            this.buttonItem29.SubItemsExpandWidth = 14;
+            this.buttonItem29.Text = "Despacho Ticket x Departamentos";
+            this.buttonItem29.Click += new System.EventHandler(this.buttonItem29_Click);
+            // 
+            // procesos_gescombustible
+            // 
+            this.procesos_gescombustible.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.procesos_gescombustible.BackgroundMouseOverStyle.Class = "";
+            this.procesos_gescombustible.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.procesos_gescombustible.BackgroundStyle.Class = "";
+            this.procesos_gescombustible.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.procesos_gescombustible.ContainerControlProcessDialogKey = true;
+            this.procesos_gescombustible.Dock = System.Windows.Forms.DockStyle.Left;
+            this.procesos_gescombustible.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.procesos_gescombustible.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem1,
+            this.buttonItem11,
+            this.buttonItem14});
+            this.procesos_gescombustible.Location = new System.Drawing.Point(3, 0);
+            this.procesos_gescombustible.Name = "procesos_gescombustible";
+            this.procesos_gescombustible.Size = new System.Drawing.Size(196, 96);
+            this.procesos_gescombustible.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.procesos_gescombustible.TabIndex = 0;
+            this.procesos_gescombustible.Text = "GESTION DE COMBUSTIBLE";
+            // 
+            // 
+            // 
+            this.procesos_gescombustible.TitleStyle.Class = "";
+            this.procesos_gescombustible.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.procesos_gescombustible.TitleStyleMouseOver.Class = "";
+            this.procesos_gescombustible.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // buttonItem1
+            // 
+            this.buttonItem1.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem1.Image")));
+            this.buttonItem1.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem1.Name = "buttonItem1";
+            this.buttonItem1.SubItemsExpandWidth = 14;
+            this.buttonItem1.Text = "Solicitud";
+            this.buttonItem1.Click += new System.EventHandler(this.buttonItem1_Click);
+            // 
+            // buttonItem11
+            // 
+            this.buttonItem11.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem11.Image")));
+            this.buttonItem11.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem11.Name = "buttonItem11";
+            this.buttonItem11.SubItemsExpandWidth = 14;
+            this.buttonItem11.Text = "Entrada";
+            this.buttonItem11.Click += new System.EventHandler(this.buttonItem11_Click);
+            // 
+            // buttonItem14
+            // 
+            this.buttonItem14.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem14.Image")));
+            this.buttonItem14.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem14.Name = "buttonItem14";
+            this.buttonItem14.SubItemsExpandWidth = 14;
+            this.buttonItem14.Text = "Despacho";
+            this.buttonItem14.Click += new System.EventHandler(this.buttonItem14_Click);
+            // 
+            // ribbonPanel5
+            // 
+            this.ribbonPanel5.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel5.Controls.Add(this.mantenimientos_anulaciones);
+            this.ribbonPanel5.Controls.Add(this.mantenimientos_gas);
+            this.ribbonPanel5.Controls.Add(this.mantenimientos_tickets);
+            this.ribbonPanel5.Controls.Add(this.mantenimientos_combustible);
+            this.ribbonPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel5.Location = new System.Drawing.Point(0, 53);
+            this.ribbonPanel5.Name = "ribbonPanel5";
+            this.ribbonPanel5.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel5.Size = new System.Drawing.Size(1027, 99);
+            // 
+            // 
+            // 
+            this.ribbonPanel5.Style.Class = "";
+            this.ribbonPanel5.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel5.StyleMouseDown.Class = "";
+            this.ribbonPanel5.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel5.StyleMouseOver.Class = "";
+            this.ribbonPanel5.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel5.TabIndex = 5;
+            this.ribbonPanel5.Visible = false;
+            // 
+            // mantenimientos_anulaciones
+            // 
+            this.mantenimientos_anulaciones.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.mantenimientos_anulaciones.BackgroundMouseOverStyle.Class = "";
+            this.mantenimientos_anulaciones.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.mantenimientos_anulaciones.BackgroundStyle.Class = "";
+            this.mantenimientos_anulaciones.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.mantenimientos_anulaciones.ContainerControlProcessDialogKey = true;
+            this.mantenimientos_anulaciones.Dock = System.Windows.Forms.DockStyle.Left;
+            this.mantenimientos_anulaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mantenimientos_anulaciones.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem32,
+            this.buttonItem33,
+            this.buttonItem34,
+            this.buttonItem35,
+            this.buttonItem37});
+            this.mantenimientos_anulaciones.Location = new System.Drawing.Point(523, 0);
+            this.mantenimientos_anulaciones.Name = "mantenimientos_anulaciones";
+            this.mantenimientos_anulaciones.Size = new System.Drawing.Size(390, 96);
+            this.mantenimientos_anulaciones.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.mantenimientos_anulaciones.TabIndex = 3;
+            this.mantenimientos_anulaciones.Text = "ANULACIONES";
+            // 
+            // 
+            // 
+            this.mantenimientos_anulaciones.TitleStyle.Class = "";
+            this.mantenimientos_anulaciones.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.mantenimientos_anulaciones.TitleStyleMouseOver.Class = "";
+            this.mantenimientos_anulaciones.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // buttonItem32
+            // 
+            this.buttonItem32.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem32.Image")));
+            this.buttonItem32.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem32.Name = "buttonItem32";
+            this.buttonItem32.SubItemsExpandWidth = 14;
+            this.buttonItem32.Text = "Solicitud Combustible";
+            this.buttonItem32.Click += new System.EventHandler(this.buttonItem32_Click);
+            // 
+            // buttonItem33
+            // 
+            this.buttonItem33.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem33.Image")));
+            this.buttonItem33.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem33.Name = "buttonItem33";
+            this.buttonItem33.SubItemsExpandWidth = 14;
+            this.buttonItem33.Text = "Entrada Combustible";
+            this.buttonItem33.Click += new System.EventHandler(this.buttonItem33_Click);
+            // 
+            // buttonItem34
+            // 
+            this.buttonItem34.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem34.Image")));
+            this.buttonItem34.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem34.Name = "buttonItem34";
+            this.buttonItem34.SubItemsExpandWidth = 14;
+            this.buttonItem34.Text = "Despacho Combustible";
+            this.buttonItem34.Click += new System.EventHandler(this.buttonItem34_Click);
+            // 
+            // buttonItem35
+            // 
+            this.buttonItem35.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem35.Image")));
+            this.buttonItem35.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem35.Name = "buttonItem35";
+            this.buttonItem35.SubItemsExpandWidth = 14;
+            this.buttonItem35.Text = "Despacho de Gas";
+            this.buttonItem35.Click += new System.EventHandler(this.buttonItem35_Click);
+            // 
+            // buttonItem37
+            // 
+            this.buttonItem37.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem37.Image")));
+            this.buttonItem37.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem37.Name = "buttonItem37";
+            this.buttonItem37.SubItemsExpandWidth = 14;
+            this.buttonItem37.Text = "Despacho Tickets por Departamento";
+            this.buttonItem37.Click += new System.EventHandler(this.buttonItem37_Click);
+            // 
+            // mantenimientos_gas
+            // 
+            this.mantenimientos_gas.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.mantenimientos_gas.BackgroundMouseOverStyle.Class = "";
+            this.mantenimientos_gas.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.mantenimientos_gas.BackgroundStyle.Class = "";
+            this.mantenimientos_gas.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.mantenimientos_gas.ContainerControlProcessDialogKey = true;
+            this.mantenimientos_gas.Dock = System.Windows.Forms.DockStyle.Left;
+            this.mantenimientos_gas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mantenimientos_gas.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem22,
+            this.buttonItem23});
+            this.mantenimientos_gas.Location = new System.Drawing.Point(384, 0);
+            this.mantenimientos_gas.Name = "mantenimientos_gas";
+            this.mantenimientos_gas.Size = new System.Drawing.Size(139, 96);
+            this.mantenimientos_gas.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.mantenimientos_gas.TabIndex = 2;
+            this.mantenimientos_gas.Text = "GAS";
+            // 
+            // 
+            // 
+            this.mantenimientos_gas.TitleStyle.Class = "";
+            this.mantenimientos_gas.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.mantenimientos_gas.TitleStyleMouseOver.Class = "";
+            this.mantenimientos_gas.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // buttonItem22
+            // 
+            this.buttonItem22.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem22.Image")));
+            this.buttonItem22.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem22.Name = "buttonItem22";
+            this.buttonItem22.SubItemsExpandWidth = 14;
+            this.buttonItem22.Text = "Beneficiarios";
+            this.buttonItem22.Click += new System.EventHandler(this.buttonItem22_Click);
+            // 
+            // buttonItem23
+            // 
+            this.buttonItem23.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem23.Image")));
+            this.buttonItem23.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem23.Name = "buttonItem23";
+            this.buttonItem23.SubItemsExpandWidth = 14;
+            this.buttonItem23.Text = "Listado Gas";
+            this.buttonItem23.Click += new System.EventHandler(this.buttonItem23_Click);
+            // 
+            // mantenimientos_tickets
+            // 
+            this.mantenimientos_tickets.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.mantenimientos_tickets.BackgroundMouseOverStyle.Class = "";
+            this.mantenimientos_tickets.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.mantenimientos_tickets.BackgroundStyle.Class = "";
+            this.mantenimientos_tickets.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.mantenimientos_tickets.ContainerControlProcessDialogKey = true;
+            this.mantenimientos_tickets.Dock = System.Windows.Forms.DockStyle.Left;
+            this.mantenimientos_tickets.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mantenimientos_tickets.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem17,
+            this.buttonItem24});
+            this.mantenimientos_tickets.Location = new System.Drawing.Point(247, 0);
+            this.mantenimientos_tickets.Name = "mantenimientos_tickets";
+            this.mantenimientos_tickets.Size = new System.Drawing.Size(137, 96);
+            this.mantenimientos_tickets.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.mantenimientos_tickets.TabIndex = 1;
+            this.mantenimientos_tickets.Text = "TICKETS";
+            // 
+            // 
+            // 
+            this.mantenimientos_tickets.TitleStyle.Class = "";
+            this.mantenimientos_tickets.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.mantenimientos_tickets.TitleStyleMouseOver.Class = "";
+            this.mantenimientos_tickets.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // buttonItem17
+            // 
+            this.buttonItem17.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem17.Image")));
+            this.buttonItem17.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem17.Name = "buttonItem17";
+            this.buttonItem17.SubItemsExpandWidth = 14;
+            this.buttonItem17.Text = "Beneficiarios";
+            this.buttonItem17.Click += new System.EventHandler(this.buttonItem17_Click);
+            // 
+            // buttonItem24
+            // 
+            this.buttonItem24.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem24.Image")));
+            this.buttonItem24.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem24.Name = "buttonItem24";
+            this.buttonItem24.SubItemsExpandWidth = 14;
+            this.buttonItem24.Text = "Listado Tickets";
+            this.buttonItem24.Click += new System.EventHandler(this.buttonItem24_Click);
+            // 
+            // mantenimientos_combustible
+            // 
+            this.mantenimientos_combustible.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.mantenimientos_combustible.BackgroundMouseOverStyle.Class = "";
+            this.mantenimientos_combustible.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.mantenimientos_combustible.BackgroundStyle.Class = "";
+            this.mantenimientos_combustible.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.mantenimientos_combustible.ContainerControlProcessDialogKey = true;
+            this.mantenimientos_combustible.Dock = System.Windows.Forms.DockStyle.Left;
+            this.mantenimientos_combustible.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mantenimientos_combustible.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem15,
+            this.buttonItem16,
+            this.buttonItem3});
+            this.mantenimientos_combustible.Location = new System.Drawing.Point(3, 0);
+            this.mantenimientos_combustible.Name = "mantenimientos_combustible";
+            this.mantenimientos_combustible.Size = new System.Drawing.Size(244, 96);
+            this.mantenimientos_combustible.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.mantenimientos_combustible.TabIndex = 0;
+            this.mantenimientos_combustible.Text = "COMBUSTIBLE";
+            // 
+            // 
+            // 
+            this.mantenimientos_combustible.TitleStyle.Class = "";
+            this.mantenimientos_combustible.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.mantenimientos_combustible.TitleStyleMouseOver.Class = "";
+            this.mantenimientos_combustible.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // buttonItem15
+            // 
+            this.buttonItem15.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem15.Image")));
+            this.buttonItem15.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem15.Name = "buttonItem15";
+            this.buttonItem15.SubItemsExpandWidth = 14;
+            this.buttonItem15.Text = "Tipo Combustible";
+            this.buttonItem15.Click += new System.EventHandler(this.buttonItem15_Click);
+            // 
+            // buttonItem16
+            // 
+            this.buttonItem16.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem16.Image")));
+            this.buttonItem16.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem16.Name = "buttonItem16";
+            this.buttonItem16.SubItemsExpandWidth = 14;
+            this.buttonItem16.Text = "Departamentos Autorizaciones";
+            this.buttonItem16.Click += new System.EventHandler(this.buttonItem16_Click);
+            // 
+            // buttonItem3
+            // 
+            this.buttonItem3.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem3.Image")));
+            this.buttonItem3.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem3.Name = "buttonItem3";
+            this.buttonItem3.SubItemsExpandWidth = 14;
+            this.buttonItem3.Text = "Tipo Beneficiarios";
+            this.buttonItem3.Click += new System.EventHandler(this.buttonItem3_Click);
             // 
             // office2007StartButton1
             // 
@@ -1120,10 +1120,10 @@
             this.Load += new System.EventHandler(this.frmMenu_Load);
             this.ribbonControl1.ResumeLayout(false);
             this.ribbonControl1.PerformLayout();
-            this.ribbonPanel5.ResumeLayout(false);
-            this.ribbonPanel2.ResumeLayout(false);
-            this.ribbonPanel3.ResumeLayout(false);
             this.ribbonPanel1.ResumeLayout(false);
+            this.ribbonPanel3.ResumeLayout(false);
+            this.ribbonPanel2.ResumeLayout(false);
+            this.ribbonPanel5.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -1154,31 +1154,31 @@
         private DevComponents.DotNetBar.ButtonItem buttonItem9;
         private DevComponents.DotNetBar.ButtonItem buttonItem10;
         private DevComponents.DotNetBar.RibbonPanel ribbonPanel3;
-        private DevComponents.DotNetBar.RibbonBar ribbonBar2;
+        private DevComponents.DotNetBar.RibbonBar procesos_gescombustible;
         private DevComponents.DotNetBar.RibbonTabItem menu_reportes;
         private DevComponents.DotNetBar.ButtonItem buttonItem1;
         private DevComponents.DotNetBar.ButtonItem buttonItem11;
         private DevComponents.DotNetBar.ButtonItem buttonItem14;
         private DevComponents.DotNetBar.RibbonPanel ribbonPanel5;
         private DevComponents.DotNetBar.RibbonTabItem menu_mantenimientos;
-        private DevComponents.DotNetBar.RibbonBar ribbonBar3;
+        private DevComponents.DotNetBar.RibbonBar mantenimientos_combustible;
         private DevComponents.DotNetBar.ButtonItem buttonItem15;
         private DevComponents.DotNetBar.ButtonItem buttonItem16;
-        private DevComponents.DotNetBar.RibbonBar ribbonBar4;
+        private DevComponents.DotNetBar.RibbonBar mantenimientos_tickets;
         private DevComponents.DotNetBar.ButtonItem buttonItem17;
-        private DevComponents.DotNetBar.RibbonBar ribbonBar5;
+        private DevComponents.DotNetBar.RibbonBar procesos_gestickets;
         private DevComponents.DotNetBar.ButtonItem buttonItem18;
         private DevComponents.DotNetBar.ButtonItem buttonItem19;
-        private DevComponents.DotNetBar.RibbonBar ribbonBar6;
+        private DevComponents.DotNetBar.RibbonBar procesos_gesgas;
         private DevComponents.DotNetBar.ButtonItem buttonItem20;
-        private DevComponents.DotNetBar.RibbonBar ribbonBar7;
+        private DevComponents.DotNetBar.RibbonBar mantenimientos_gas;
         private DevComponents.DotNetBar.ButtonItem buttonItem22;
         private DevComponents.DotNetBar.ButtonItem buttonItem23;
         private DevComponents.DotNetBar.ButtonItem buttonItem24;
         private DevComponents.DotNetBar.ButtonItem buttonItem3;
-        private DevComponents.DotNetBar.RibbonBar ribbonBar10;
+        private DevComponents.DotNetBar.RibbonBar reportes_estadisticas;
         private DevComponents.DotNetBar.ButtonItem buttonItem5;
-        private DevComponents.DotNetBar.RibbonBar ribbonBar9;
+        private DevComponents.DotNetBar.RibbonBar reportes_listados;
         private DevComponents.DotNetBar.ButtonItem buttonItem4;
         private DevComponents.DotNetBar.ButtonItem buttonItem6;
         private DevComponents.DotNetBar.ButtonItem buttonItem12;
@@ -1192,7 +1192,7 @@
         private DevComponents.DotNetBar.ButtonItem buttonItem29;
         private DevComponents.DotNetBar.ButtonItem buttonItem31;
         private DevComponents.DotNetBar.ButtonItem buttonItem30;
-        private DevComponents.DotNetBar.RibbonBar ribbonBar8;
+        private DevComponents.DotNetBar.RibbonBar mantenimientos_anulaciones;
         private DevComponents.DotNetBar.ButtonItem buttonItem32;
         private DevComponents.DotNetBar.ButtonItem buttonItem33;
         private DevComponents.DotNetBar.ButtonItem buttonItem34;

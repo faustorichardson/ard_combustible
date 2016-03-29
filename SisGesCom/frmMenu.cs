@@ -62,11 +62,7 @@ namespace SisGesCom
                 if (MyReader.HasRows)
                 {
                     while (MyReader.Read())
-                    {
-                        //if (MyReader["permiso_mantenimiento"].ToString() == "1")
-                        //{
-
-                        //}                        
+                    {                                            
                         nivel = Convert.ToInt32(MyReader["nivelpermiso"]);
                     }
                 }
@@ -99,8 +95,24 @@ namespace SisGesCom
             switch (nivel)
             {
                 case 1:
-                    this.menu_mantenimientos.Enabled = false;
-
+                    
+                    // Mantenimientos
+                    this.menu_mantenimientos.Enabled = true;
+                    this.mantenimientos_anulaciones.Enabled = true;
+                    this.mantenimientos_combustible.Enabled = true;
+                    this.mantenimientos_gas.Enabled = true;
+                    this.mantenimientos_tickets.Enabled = true;
+                    
+                    // Procesos
+                    this.menu_procesos.Enabled = true;
+                    this.procesos_gescombustible.Enabled = true;
+                    this.procesos_gesgas.Enabled = true;
+                    this.procesos_gestickets.Enabled = true;
+                    
+                    // Reportes
+                    this.menu_reportes.Enabled = true;
+                    this.reportes_estadisticas.Enabled = true;
+                    this.reportes_listados.Enabled = true;
                     break;
 
                 case 2:
