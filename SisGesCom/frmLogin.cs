@@ -76,15 +76,20 @@ namespace SisGesCom
                     this.Cursor = Cursors.Default;
                     this.UseWaitCursor = false;
                     Application.UseWaitCursor = false;
-
-                    frmMenu ofrmMenu = new frmMenu();
-                    ofrmMenu.Show();
-                    this.Hide(); //esto sirve para ocultar el formulario de login
+                    
+                    // llamo el form menu
                     myreader.Read();
+
+                    cUsuarioActual = myreader["usuario"].ToString();
+                    frmMenu ofrmMenu = new frmMenu(cUsuarioActual);
+                    ofrmMenu.Show();
+
+                    this.Hide(); //esto sirve para ocultar el formulario de login
+                    
                     //ofrmMenu.nNivel = myreader.GetInt32(4);
-                    ofrmMenu.cUsuarioActual = txtUsuario.Text.Trim();
+                    //ofrmMenu.cUsuarioActual = txtUsuario.Text.Trim();
                     //nNivel = myreader.GetInt32(4);
-                    cUsuarioActual = txtUsuario.Text.Trim();
+                    //cUsuarioActual = txtUsuario.Text.Trim();
                 }
             }
             catch (MySqlException myEx)

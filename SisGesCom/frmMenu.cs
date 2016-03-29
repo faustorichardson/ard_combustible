@@ -21,13 +21,107 @@ namespace SisGesCom
 {
     public partial class frmMenu : Form
     {
-
-        public string cUsuarioActual = frmLogin.cUsuarioActual;
+        public string UsuarioActual;        
+        //public string cUsuarioActual = frmLogin.cUsuarioActual;        
+        int nivel;
         
-        public frmMenu()
+        public frmMenu(string cUsuarioActual)
         {
+            UsuarioActual = frmLogin.cUsuarioActual;
             InitializeComponent();
         }
+
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+            //MessageBox.Show(UsuarioActual);
+            verificapermisos(); 
+        }
+
+        private void verificapermisos()
+        {
+            try
+            {
+                // Step 1 - Conexion
+                MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
+
+                // Step 2 - creating the command object
+                MySqlCommand MyCommand = MyConexion.CreateCommand();
+
+                // Step 3 - creating the commandtext
+                MyCommand.CommandText = "SELECT usuario, nivelpermiso " +
+                    "FROM usuarios WHERE usuario = '" + UsuarioActual + "'";
+
+                // Step 4 - connection open
+                MyConexion.Open();
+
+                // Step 5 - Creating the DataReader                    
+                MySqlDataReader MyReader = MyCommand.ExecuteReader();
+
+                // Step 6 - Verifying if Reader has rows
+                if (MyReader.HasRows)
+                {
+                    while (MyReader.Read())
+                    {
+                        //if (MyReader["permiso_mantenimiento"].ToString() == "1")
+                        //{
+
+                        //}                        
+                        nivel = Convert.ToInt32(MyReader["nivelpermiso"]);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No tiene permisos asignados...");
+                    nivel = 0;
+                }
+
+                // Step 6 - Closing all
+                MyReader.Close();
+                MyCommand.Dispose();
+                MyConexion.Close();
+
+                // Llama la funcion que habilita permisos
+                this.aplicapermisos();
+
+            }
+            catch (Exception MyEx)
+            {
+                MessageBox.Show(MyEx.Message);
+             //   nivel = 0;
+            }
+
+            
+        }
+
+        private void aplicapermisos()
+        {
+            switch (nivel)
+            {
+                case 1:
+                    this.menu_mantenimientos.Enabled = false;
+
+                    break;
+
+                case 2:
+
+                    break;
+
+                case 3:
+
+                    break;
+
+
+
+                default:
+                    this.menu_mantenimientos.Enabled = false;
+                    this.menu_procesos.Enabled = false;
+                    this.menu_reportes.Enabled = false;
+                    break;
+            }
+
+        }
+
 
         private void buttonItem7_Click(object sender, EventArgs e)
         {
@@ -578,5 +672,12 @@ namespace SisGesCom
             frmAnularDespachoTicketsDepto ofrmAnularDespachoTicketsDepto = new frmAnularDespachoTicketsDepto();
             ofrmAnularDespachoTicketsDepto.ShowDialog();
         }
+
+        private void ribbonControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
