@@ -116,6 +116,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAgregarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarUsuario.Designer.cs">
+      <DependentUpon>frmAgregarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAnularDespachoCombustible.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -361,6 +367,12 @@
     <Compile Include="frmRegistroTickets.Designer.cs">
       <DependentUpon>frmRegistroTickets.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmResetPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmResetPass.Designer.cs">
+      <DependentUpon>frmResetPass.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSalidaCombustible.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -512,6 +524,9 @@
       <DependentUpon>rptTiposCombustibles.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="frmAgregarUsuario.resx">
+      <DependentUpon>frmAgregarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAnularDespachoCombustible.resx">
       <DependentUpon>frmAnularDespachoCombustible.cs</DependentUpon>
     </EmbeddedResource>
@@ -604,6 +619,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistroTickets.resx">
       <DependentUpon>frmRegistroTickets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmResetPass.resx">
+      <DependentUpon>frmResetPass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSalidaCombustible.resx">
       <DependentUpon>frmSalidaCombustible.cs</DependentUpon>
