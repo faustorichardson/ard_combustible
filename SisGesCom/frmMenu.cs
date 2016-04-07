@@ -690,6 +690,12 @@ namespace SisGesCom
 
         }
 
+        private void buttonItem39_Click(object sender, EventArgs e)
+        {
+            frmAgregarUsuario ofrmAgregarUsuario = new frmAgregarUsuario();
+            ofrmAgregarUsuario.ShowDialog();
+        }
+
         
     }
 }

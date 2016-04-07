@@ -44,12 +44,18 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.statusA = new System.Windows.Forms.RadioButton();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.statusB = new System.Windows.Forms.RadioButton();
-            this.npAdmin = new System.Windows.Forms.RadioButton();
-            this.npDigitador = new System.Windows.Forms.RadioButton();
+            this.statusA = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.npAyudante = new System.Windows.Forms.RadioButton();
+            this.npDigitador = new System.Windows.Forms.RadioButton();
+            this.npAdmin = new System.Windows.Forms.RadioButton();
             this.groupBox4.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTituloForm
@@ -67,7 +73,7 @@
             this.groupBox4.Controls.Add(this.btnEditar);
             this.groupBox4.Controls.Add(this.btnGrabar);
             this.groupBox4.Controls.Add(this.btnNuevo);
-            this.groupBox4.Location = new System.Drawing.Point(8, 215);
+            this.groupBox4.Location = new System.Drawing.Point(8, 248);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(795, 65);
             this.groupBox4.TabIndex = 63;
@@ -85,6 +91,7 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnImprimir
             // 
@@ -98,6 +105,7 @@
             this.btnImprimir.Text = "Listar";
             this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnSalir
             // 
@@ -111,6 +119,7 @@
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnCancelar
             // 
@@ -124,6 +133,7 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnEliminar
             // 
@@ -137,6 +147,7 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -150,6 +161,7 @@
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnGrabar
             // 
@@ -163,6 +175,7 @@
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // btnNuevo
             // 
@@ -176,12 +189,13 @@
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(215, 53);
+            this.label1.Location = new System.Drawing.Point(230, 82);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 15);
             this.label1.TabIndex = 64;
@@ -189,7 +203,7 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(282, 50);
+            this.txtUsuario.Location = new System.Drawing.Point(297, 79);
             this.txtUsuario.MaxLength = 25;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(181, 20);
@@ -199,7 +213,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(230, 93);
+            this.label2.Location = new System.Drawing.Point(245, 113);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 15);
             this.label2.TabIndex = 65;
@@ -207,7 +221,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(282, 90);
+            this.txtPassword.Location = new System.Drawing.Point(297, 110);
             this.txtPassword.MaxLength = 25;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -218,7 +232,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(218, 136);
+            this.label3.Location = new System.Drawing.Point(233, 157);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 15);
             this.label3.TabIndex = 67;
@@ -228,82 +242,117 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(176, 176);
+            this.label4.Location = new System.Drawing.Point(191, 212);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 15);
             this.label4.TabIndex = 68;
             this.label4.Text = "Nivel Permiso:";
             // 
-            // statusA
+            // txtID
             // 
-            this.statusA.AutoSize = true;
-            this.statusA.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusA.Location = new System.Drawing.Point(283, 136);
-            this.statusA.Name = "statusA";
-            this.statusA.Size = new System.Drawing.Size(61, 17);
-            this.statusA.TabIndex = 69;
-            this.statusA.TabStop = true;
-            this.statusA.Text = "Activo";
-            this.statusA.UseVisualStyleBackColor = true;
+            this.txtID.Location = new System.Drawing.Point(297, 50);
+            this.txtID.MaxLength = 25;
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(42, 20);
+            this.txtID.TabIndex = 74;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(264, 51);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(25, 15);
+            this.label5.TabIndex = 75;
+            this.label5.Text = "ID:";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.statusB);
+            this.groupBox1.Controls.Add(this.statusA);
+            this.groupBox1.Location = new System.Drawing.Point(298, 136);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(160, 53);
+            this.groupBox1.TabIndex = 76;
+            this.groupBox1.TabStop = false;
             // 
             // statusB
             // 
             this.statusB.AutoSize = true;
             this.statusB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusB.Location = new System.Drawing.Point(350, 136);
+            this.statusB.Location = new System.Drawing.Point(78, 19);
             this.statusB.Name = "statusB";
             this.statusB.Size = new System.Drawing.Size(71, 17);
-            this.statusB.TabIndex = 70;
-            this.statusB.TabStop = true;
+            this.statusB.TabIndex = 72;
             this.statusB.Text = "Inactivo";
             this.statusB.UseVisualStyleBackColor = true;
             // 
-            // npAdmin
+            // statusA
             // 
-            this.npAdmin.AutoSize = true;
-            this.npAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.npAdmin.Location = new System.Drawing.Point(283, 176);
-            this.npAdmin.Name = "npAdmin";
-            this.npAdmin.Size = new System.Drawing.Size(101, 17);
-            this.npAdmin.TabIndex = 71;
-            this.npAdmin.TabStop = true;
-            this.npAdmin.Text = "Administrador";
-            this.npAdmin.UseVisualStyleBackColor = true;
+            this.statusA.AutoSize = true;
+            this.statusA.Checked = true;
+            this.statusA.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusA.Location = new System.Drawing.Point(11, 19);
+            this.statusA.Name = "statusA";
+            this.statusA.Size = new System.Drawing.Size(61, 17);
+            this.statusA.TabIndex = 71;
+            this.statusA.TabStop = true;
+            this.statusA.Text = "Activo";
+            this.statusA.UseVisualStyleBackColor = true;
             // 
-            // npDigitador
+            // groupBox2
             // 
-            this.npDigitador.AutoSize = true;
-            this.npDigitador.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.npDigitador.Location = new System.Drawing.Point(474, 176);
-            this.npDigitador.Name = "npDigitador";
-            this.npDigitador.Size = new System.Drawing.Size(76, 17);
-            this.npDigitador.TabIndex = 72;
-            this.npDigitador.TabStop = true;
-            this.npDigitador.Text = "Digitador";
-            this.npDigitador.UseVisualStyleBackColor = true;
+            this.groupBox2.Controls.Add(this.npAyudante);
+            this.groupBox2.Controls.Add(this.npDigitador);
+            this.groupBox2.Controls.Add(this.npAdmin);
+            this.groupBox2.Location = new System.Drawing.Point(297, 191);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(283, 51);
+            this.groupBox2.TabIndex = 77;
+            this.groupBox2.TabStop = false;
             // 
             // npAyudante
             // 
             this.npAyudante.AutoSize = true;
             this.npAyudante.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.npAyudante.Location = new System.Drawing.Point(390, 176);
+            this.npAyudante.Location = new System.Drawing.Point(119, 21);
             this.npAyudante.Name = "npAyudante";
             this.npAyudante.Size = new System.Drawing.Size(78, 17);
-            this.npAyudante.TabIndex = 73;
-            this.npAyudante.TabStop = true;
+            this.npAyudante.TabIndex = 76;
             this.npAyudante.Text = "Ayudante";
             this.npAyudante.UseVisualStyleBackColor = true;
+            // 
+            // npDigitador
+            // 
+            this.npDigitador.AutoSize = true;
+            this.npDigitador.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.npDigitador.Location = new System.Drawing.Point(203, 21);
+            this.npDigitador.Name = "npDigitador";
+            this.npDigitador.Size = new System.Drawing.Size(76, 17);
+            this.npDigitador.TabIndex = 75;
+            this.npDigitador.Text = "Digitador";
+            this.npDigitador.UseVisualStyleBackColor = true;
+            // 
+            // npAdmin
+            // 
+            this.npAdmin.AutoSize = true;
+            this.npAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.npAdmin.Location = new System.Drawing.Point(12, 21);
+            this.npAdmin.Name = "npAdmin";
+            this.npAdmin.Size = new System.Drawing.Size(101, 17);
+            this.npAdmin.TabIndex = 74;
+            this.npAdmin.Text = "Administrador";
+            this.npAdmin.UseVisualStyleBackColor = true;
             // 
             // frmAgregarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(809, 300);
-            this.Controls.Add(this.npAyudante);
-            this.Controls.Add(this.npDigitador);
-            this.Controls.Add(this.npAdmin);
-            this.Controls.Add(this.statusB);
-            this.Controls.Add(this.statusA);
+            this.ClientSize = new System.Drawing.Size(809, 347);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtPassword);
@@ -313,6 +362,7 @@
             this.Controls.Add(this.groupBox4);
             this.Name = "frmAgregarUsuario";
             this.Text = "frmAgregarUsuario";
+            this.Load += new System.EventHandler(this.frmAgregarUsuario_Load);
             this.Controls.SetChildIndex(this.groupBox4, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.txtUsuario, 0);
@@ -321,12 +371,15 @@
             this.Controls.SetChildIndex(this.txtPassword, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.label4, 0);
-            this.Controls.SetChildIndex(this.statusA, 0);
-            this.Controls.SetChildIndex(this.statusB, 0);
-            this.Controls.SetChildIndex(this.npAdmin, 0);
-            this.Controls.SetChildIndex(this.npDigitador, 0);
-            this.Controls.SetChildIndex(this.npAyudante, 0);
+            this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.txtID, 0);
+            this.Controls.SetChildIndex(this.groupBox1, 0);
+            this.Controls.SetChildIndex(this.groupBox2, 0);
             this.groupBox4.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -349,10 +402,14 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RadioButton statusA;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton statusB;
-        private System.Windows.Forms.RadioButton npAdmin;
-        private System.Windows.Forms.RadioButton npDigitador;
+        private System.Windows.Forms.RadioButton statusA;
+        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton npAyudante;
+        private System.Windows.Forms.RadioButton npDigitador;
+        private System.Windows.Forms.RadioButton npAdmin;
     }
 }

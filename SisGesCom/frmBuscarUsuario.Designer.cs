@@ -1,6 +1,6 @@
 ﻿namespace SisGesCom
 {
-    partial class frmBuscarMilitar
+    partial class frmBuscarUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBuscarMilitar));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBuscarUsuario));
             this.grdCatalogo = new System.Windows.Forms.DataGridView();
             this.Cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,8 +43,8 @@
             // 
             // lblTituloForm
             // 
-            this.lblTituloForm.Size = new System.Drawing.Size(254, 22);
-            this.lblTituloForm.Text = "Busqueda Avanzada de Militar";
+            this.lblTituloForm.Size = new System.Drawing.Size(277, 22);
+            this.lblTituloForm.Text = "Busqueda Avanzada de Usuarios";
             // 
             // grdCatalogo
             // 
@@ -53,12 +53,12 @@
             this.Cedula,
             this.Nombres,
             this.Rango});
-            this.grdCatalogo.Location = new System.Drawing.Point(72, 76);
+            this.grdCatalogo.Location = new System.Drawing.Point(73, 75);
             this.grdCatalogo.Name = "grdCatalogo";
             this.grdCatalogo.ReadOnly = true;
             this.grdCatalogo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdCatalogo.Size = new System.Drawing.Size(627, 268);
-            this.grdCatalogo.TabIndex = 31;
+            this.grdCatalogo.TabIndex = 46;
             this.grdCatalogo.DoubleClick += new System.EventHandler(this.grdCatalogo_DoubleClick);
             // 
             // Cedula
@@ -92,10 +92,10 @@
             this.cmdAceptar.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.cmdAceptar.Image = ((System.Drawing.Image)(resources.GetObject("cmdAceptar.Image")));
             this.cmdAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdAceptar.Location = new System.Drawing.Point(511, 349);
+            this.cmdAceptar.Location = new System.Drawing.Point(511, 346);
             this.cmdAceptar.Name = "cmdAceptar";
             this.cmdAceptar.Size = new System.Drawing.Size(95, 42);
-            this.cmdAceptar.TabIndex = 29;
+            this.cmdAceptar.TabIndex = 44;
             this.cmdAceptar.Text = "&Aceptar";
             this.cmdAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdAceptar.UseVisualStyleBackColor = true;
@@ -109,10 +109,10 @@
             this.cmdSalir.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.cmdSalir.Image = ((System.Drawing.Image)(resources.GetObject("cmdSalir.Image")));
             this.cmdSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdSalir.Location = new System.Drawing.Point(606, 349);
+            this.cmdSalir.Location = new System.Drawing.Point(606, 346);
             this.cmdSalir.Name = "cmdSalir";
             this.cmdSalir.Size = new System.Drawing.Size(95, 42);
-            this.cmdSalir.TabIndex = 30;
+            this.cmdSalir.TabIndex = 45;
             this.cmdSalir.Text = "&Cancelar";
             this.cmdSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cmdSalir.UseVisualStyleBackColor = true;
@@ -122,10 +122,10 @@
             // 
             this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtBuscar.Location = new System.Drawing.Point(135, 53);
+            this.txtBuscar.Location = new System.Drawing.Point(135, 50);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(383, 20);
-            this.txtBuscar.TabIndex = 27;
+            this.txtBuscar.TabIndex = 42;
             this.txtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscar_KeyPress);
             this.txtBuscar.Validating += new System.ComponentModel.CancelEventHandler(this.txtBuscar_Validating);
             // 
@@ -135,25 +135,25 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(72, 55);
+            this.label1.Location = new System.Drawing.Point(72, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 17);
-            this.label1.TabIndex = 28;
+            this.label1.TabIndex = 43;
             this.label1.Text = "Buscar:";
             // 
-            // frmBuscarMilitar
+            // frmBuscarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 436);
+            this.ClientSize = new System.Drawing.Size(772, 419);
             this.Controls.Add(this.grdCatalogo);
             this.Controls.Add(this.cmdAceptar);
             this.Controls.Add(this.cmdSalir);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label1);
-            this.Name = "frmBuscarMilitar";
-            this.Text = "frmBuscarMilitar";
-            this.Load += new System.EventHandler(this.frmBuscarMilitar_Load);
+            this.Name = "frmBuscarUsuario";
+            this.Text = "frmBuscarUsuario";
+            this.Load += new System.EventHandler(this.frmBuscarUsuario_Load);
             this.Controls.SetChildIndex(this.lblTituloForm, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.txtBuscar, 0);
@@ -176,5 +176,6 @@
         private System.Windows.Forms.Button cmdSalir;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label1;
+
     }
 }

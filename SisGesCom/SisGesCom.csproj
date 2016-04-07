@@ -241,6 +241,12 @@
     <Compile Include="frmBuscarMilitar.Designer.cs">
       <DependentUpon>frmBuscarMilitar.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBuscarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarUsuario.Designer.cs">
+      <DependentUpon>frmBuscarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDeptoAutoriza.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -556,6 +562,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarMilitar.resx">
       <DependentUpon>frmBuscarMilitar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarUsuario.resx">
+      <DependentUpon>frmBuscarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDeptoAutoriza.resx">
       <DependentUpon>frmDeptoAutoriza.cs</DependentUpon>
