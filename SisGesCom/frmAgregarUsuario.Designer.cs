@@ -207,7 +207,7 @@
             this.txtUsuario.MaxLength = 25;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(181, 20);
-            this.txtUsuario.TabIndex = 1;
+            this.txtUsuario.TabIndex = 2;
             // 
             // label2
             // 
@@ -226,7 +226,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(181, 20);
-            this.txtPassword.TabIndex = 66;
+            this.txtPassword.TabIndex = 3;
             // 
             // label3
             // 
@@ -254,7 +254,7 @@
             this.txtID.MaxLength = 25;
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(42, 20);
-            this.txtID.TabIndex = 74;
+            this.txtID.TabIndex = 1;
             // 
             // label5
             // 
@@ -273,7 +273,7 @@
             this.groupBox1.Location = new System.Drawing.Point(298, 136);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(160, 53);
-            this.groupBox1.TabIndex = 76;
+            this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
             // statusB
@@ -308,7 +308,7 @@
             this.groupBox2.Location = new System.Drawing.Point(297, 191);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(283, 51);
-            this.groupBox2.TabIndex = 77;
+            this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             // 
             // npAyudante

@@ -116,6 +116,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dsUsuarios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsUsuarios.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmAgregarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -530,6 +535,12 @@
       <DependentUpon>rptTiposCombustibles.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="rptUsuarios.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptUsuarios.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="frmAgregarUsuario.resx">
       <DependentUpon>frmAgregarUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -733,6 +744,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptTiposCombustibles.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="rptUsuarios.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptUsuarios.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="dsDeptoAutoriza.xsc">
       <DependentUpon>dsDeptoAutoriza.xsd</DependentUpon>
@@ -821,6 +836,17 @@
     </None>
     <None Include="dsTiposCombustibles.xss">
       <DependentUpon>dsTiposCombustibles.xsd</DependentUpon>
+    </None>
+    <None Include="dsUsuarios.xsc">
+      <DependentUpon>dsUsuarios.xsd</DependentUpon>
+    </None>
+    <None Include="dsUsuarios.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsUsuarios.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsUsuarios.xss">
+      <DependentUpon>dsUsuarios.xsd</DependentUpon>
     </None>
     <None Include="mdeg_combustibleDataSet.xsc">
       <DependentUpon>mdeg_combustibleDataSet.xsd</DependentUpon>

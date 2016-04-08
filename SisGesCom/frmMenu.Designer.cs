@@ -38,6 +38,8 @@
             this.buttonItem9 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem10 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel5 = new DevComponents.DotNetBar.RibbonPanel();
+            this.mantenimientos_usuarios = new DevComponents.DotNetBar.RibbonBar();
+            this.buttonItem39 = new DevComponents.DotNetBar.ButtonItem();
             this.mantenimientos_anulaciones = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem32 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem33 = new DevComponents.DotNetBar.ButtonItem();
@@ -97,8 +99,6 @@
             this.styleManager2 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ribbonBar2 = new DevComponents.DotNetBar.RibbonBar();
-            this.buttonItem39 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
             this.ribbonPanel5.SuspendLayout();
@@ -122,8 +122,8 @@
             this.ribbonControl1.CaptionVisible = true;
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
             this.ribbonControl1.Controls.Add(this.ribbonPanel5);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel2);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.office2007StartButton1,
@@ -236,7 +236,7 @@
             // ribbonPanel5
             // 
             this.ribbonPanel5.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel5.Controls.Add(this.ribbonBar2);
+            this.ribbonPanel5.Controls.Add(this.mantenimientos_usuarios);
             this.ribbonPanel5.Controls.Add(this.mantenimientos_anulaciones);
             this.ribbonPanel5.Controls.Add(this.mantenimientos_gas);
             this.ribbonPanel5.Controls.Add(this.mantenimientos_tickets);
@@ -263,6 +263,50 @@
             this.ribbonPanel5.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel5.TabIndex = 5;
             this.ribbonPanel5.Visible = false;
+            // 
+            // mantenimientos_usuarios
+            // 
+            this.mantenimientos_usuarios.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.mantenimientos_usuarios.BackgroundMouseOverStyle.Class = "";
+            this.mantenimientos_usuarios.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.mantenimientos_usuarios.BackgroundStyle.Class = "";
+            this.mantenimientos_usuarios.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.mantenimientos_usuarios.ContainerControlProcessDialogKey = true;
+            this.mantenimientos_usuarios.Dock = System.Windows.Forms.DockStyle.Left;
+            this.mantenimientos_usuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mantenimientos_usuarios.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem39});
+            this.mantenimientos_usuarios.Location = new System.Drawing.Point(913, 0);
+            this.mantenimientos_usuarios.Name = "mantenimientos_usuarios";
+            this.mantenimientos_usuarios.Size = new System.Drawing.Size(100, 96);
+            this.mantenimientos_usuarios.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.mantenimientos_usuarios.TabIndex = 4;
+            this.mantenimientos_usuarios.Text = "USUARIOS";
+            // 
+            // 
+            // 
+            this.mantenimientos_usuarios.TitleStyle.Class = "";
+            this.mantenimientos_usuarios.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.mantenimientos_usuarios.TitleStyleMouseOver.Class = "";
+            this.mantenimientos_usuarios.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // buttonItem39
+            // 
+            this.buttonItem39.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem39.Image")));
+            this.buttonItem39.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem39.Name = "buttonItem39";
+            this.buttonItem39.SubItemsExpandWidth = 14;
+            this.buttonItem39.Text = "Agregar Usuario";
+            this.buttonItem39.Click += new System.EventHandler(this.buttonItem39_Click);
             // 
             // mantenimientos_anulaciones
             // 
@@ -1106,50 +1150,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // ribbonBar2
-            // 
-            this.ribbonBar2.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.ribbonBar2.BackgroundMouseOverStyle.Class = "";
-            this.ribbonBar2.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar2.BackgroundStyle.Class = "";
-            this.ribbonBar2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar2.ContainerControlProcessDialogKey = true;
-            this.ribbonBar2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ribbonBar2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem39});
-            this.ribbonBar2.Location = new System.Drawing.Point(913, 0);
-            this.ribbonBar2.Name = "ribbonBar2";
-            this.ribbonBar2.Size = new System.Drawing.Size(100, 96);
-            this.ribbonBar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonBar2.TabIndex = 4;
-            this.ribbonBar2.Text = "USUARIOS";
-            // 
-            // 
-            // 
-            this.ribbonBar2.TitleStyle.Class = "";
-            this.ribbonBar2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar2.TitleStyleMouseOver.Class = "";
-            this.ribbonBar2.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // buttonItem39
-            // 
-            this.buttonItem39.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem39.Image")));
-            this.buttonItem39.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem39.Name = "buttonItem39";
-            this.buttonItem39.SubItemsExpandWidth = 14;
-            this.buttonItem39.Text = "Agregar Usuario";
-            this.buttonItem39.Click += new System.EventHandler(this.buttonItem39_Click);
-            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1246,7 +1246,7 @@
         private DevComponents.DotNetBar.ButtonItem buttonItem35;
         private DevComponents.DotNetBar.ButtonItem buttonItem36;
         private DevComponents.DotNetBar.ButtonItem buttonItem37;
-        private DevComponents.DotNetBar.RibbonBar ribbonBar2;
+        private DevComponents.DotNetBar.RibbonBar mantenimientos_usuarios;
         private DevComponents.DotNetBar.ButtonItem buttonItem39;
     }
 }

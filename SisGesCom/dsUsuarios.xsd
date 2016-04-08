@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsUsuarios" targetNamespace="http://tempuri.org/dsUsuarios.xsd" xmlns:mstns="http://tempuri.org/dsUsuarios.xsd" xmlns="http://tempuri.org/dsUsuarios.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsUsuarios" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsUsuarios" msprop:Generator_UserDSName="dsUsuarios">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtUsuarios" msprop:Generator_TableClassName="dtUsuariosDataTable" msprop:Generator_TableVarName="tabledtUsuarios" msprop:Generator_TablePropName="dtUsuarios" msprop:Generator_RowDeletingName="dtUsuariosRowDeleting" msprop:Generator_UserTableName="dtUsuarios" msprop:Generator_RowChangingName="dtUsuariosRowChanging" msprop:Generator_RowEvHandlerName="dtUsuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="dtUsuariosRowDeleted" msprop:Generator_RowEvArgName="dtUsuariosRowChangeEvent" msprop:Generator_RowChangedName="dtUsuariosRowChanged" msprop:Generator_RowClassName="dtUsuariosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idusuarios" msprop:Generator_ColumnVarNameInTable="columnidusuarios" msprop:Generator_ColumnPropNameInRow="idusuarios" msprop:Generator_ColumnPropNameInTable="idusuariosColumn" msprop:Generator_UserColumnName="idusuarios" type="xs:int" minOccurs="0" />
+              <xs:element name="usuario" msprop:Generator_ColumnVarNameInTable="columnusuario" msprop:Generator_ColumnPropNameInRow="usuario" msprop:Generator_ColumnPropNameInTable="usuarioColumn" msprop:Generator_UserColumnName="usuario" type="xs:string" minOccurs="0" />
+              <xs:element name="clave" msprop:Generator_ColumnVarNameInTable="columnclave" msprop:Generator_ColumnPropNameInRow="clave" msprop:Generator_ColumnPropNameInTable="claveColumn" msprop:Generator_UserColumnName="clave" type="xs:string" minOccurs="0" />
+              <xs:element name="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_UserColumnName="status" type="xs:int" minOccurs="0" />
+              <xs:element name="nivelpermiso" msprop:Generator_ColumnVarNameInTable="columnnivelpermiso" msprop:Generator_ColumnPropNameInRow="nivelpermiso" msprop:Generator_ColumnPropNameInTable="nivelpermisoColumn" msprop:Generator_UserColumnName="nivelpermiso" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
