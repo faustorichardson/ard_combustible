@@ -90,7 +90,7 @@ namespace SisGesCom
                     }
                     else
                     {
-                        MessageBox.Show("No se encontraron registros del numero de solicitud digitado...");
+                        MessageBox.Show("No se encontraron registros o ya fue anulada este numero de solicitud...");
                         this.txtSolicitud.Focus();
                     }
                     

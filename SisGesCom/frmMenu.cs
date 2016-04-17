@@ -122,21 +122,22 @@ namespace SisGesCom
                     // Mantenimientos
                     this.menu_mantenimientos.Enabled = true;
                     this.mantenimientos_anulaciones.Enabled = true;
-                    this.mantenimientos_combustible.Enabled = true;
-                    this.mantenimientos_gas.Enabled = true;
-                    this.mantenimientos_tickets.Enabled = true;
+                    this.mantenimientos_combustible.Enabled = false;
+                    this.mantenimientos_gas.Enabled = false;
+                    this.mantenimientos_tickets.Enabled = false;
                     this.mantenimientos_usuarios.Enabled = false;
 
                     // Procesos
                     this.menu_procesos.Enabled = true;
+                    this.btnEntradaCmb.Enabled = false;
+                    this.btnRegistroEntradaTicket.Enabled = false;
+                    this.btnSolicitudCmb.Enabled = false;
                     this.procesos_gescombustible.Enabled = true;
                     this.procesos_gesgas.Enabled = true;
                     this.procesos_gestickets.Enabled = true;
 
                     // Reportes
                     this.menu_reportes.Enabled = false;
-                    this.reportes_estadisticas.Enabled = false;
-                    this.reportes_listados.Enabled = false;
                     //
                     break;
 
@@ -153,13 +154,18 @@ namespace SisGesCom
                     // Procesos
                     this.menu_procesos.Enabled = true;
                     this.procesos_gescombustible.Enabled = true;
+                    this.btnEntradaCmb.Enabled = false;
+                    this.btnRegistroEntradaTicket.Enabled = false;
+                    //
                     this.procesos_gesgas.Enabled = false;
+                    //
                     this.procesos_gestickets.Enabled = false;
+                    this.btnRegistroEntradaTicket.Enabled = false;
 
                     // Reportes
                     this.menu_reportes.Enabled = false;
-                    this.reportes_estadisticas.Enabled = false;
-                    this.reportes_listados.Enabled = false;
+                    //this.reportes_estadisticas.Enabled = false;
+                    //this.reportes_listados.Enabled = false;
                     //
                     break;
 
