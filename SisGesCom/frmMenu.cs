@@ -131,13 +131,13 @@ namespace SisGesCom
                     this.menu_procesos.Enabled = true;
                     this.btnEntradaCmb.Enabled = false;
                     this.btnRegistroEntradaTicket.Enabled = false;
-                    this.btnSolicitudCmb.Enabled = false;
+                    this.btnSolicitudCmb.Enabled = true;
                     this.procesos_gescombustible.Enabled = true;
                     this.procesos_gesgas.Enabled = true;
                     this.procesos_gestickets.Enabled = true;
 
                     // Reportes
-                    this.menu_reportes.Enabled = false;
+                    this.menu_reportes.Enabled = true;
                     //
                     break;
 

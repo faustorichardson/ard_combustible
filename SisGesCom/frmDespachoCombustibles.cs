@@ -302,6 +302,8 @@ namespace SisGesCom
             this.idComb = 0;
             this.cmbEmbarcacion.Enabled = false;
             this.rbTerrestres.Checked = true;
+            //this.dgview.Rows.Clear();
+            //this.dgview.Refresh();
         }
 
         private void ProximoCodigo()
@@ -432,7 +434,7 @@ namespace SisGesCom
                 case "Buscar":
                     this.btnNuevo.Enabled = true;
                     this.btnGrabar.Enabled = false;
-                    this.btnEditar.Enabled = false;
+                    this.btnEditar.Enabled = true;
                     this.btnBuscar.Enabled = true;
                     this.btnImprimir.Enabled = true;
                     this.btnEliminar.Enabled = false;

@@ -83,6 +83,8 @@ namespace SisGesCom
                     sbQuery.Append(" AND movimientocombustible.anulada = 0 ");
                 }
 
+               // sbQuery.Append(" GROUP BY tipo_combustible ");
+
                 // Paso los valores de sbQuery al CommandText
                 myCommand.CommandText = sbQuery.ToString();
                 // Creo el objeto Data Adapter y ejecuto el command en el
