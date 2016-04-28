@@ -258,6 +258,12 @@
     <Compile Include="frmDeptoAutoriza.Designer.cs">
       <DependentUpon>frmDeptoAutoriza.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDespachoEmbarcacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDespachoEmbarcacion.Designer.cs">
+      <DependentUpon>frmDespachoEmbarcacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDespachoGas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -582,6 +588,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDespachoCombustibles.resx">
       <DependentUpon>frmDespachoCombustibles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDespachoEmbarcacion.resx">
+      <DependentUpon>frmDespachoEmbarcacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDespachoGas.resx">
       <DependentUpon>frmDespachoGas.cs</DependentUpon>

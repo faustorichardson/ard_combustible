@@ -742,6 +742,12 @@ namespace SisGesCom
             ofrmAgregarUsuario.ShowDialog();
         }
 
+        private void btnDespachoEmbarcacion_Click(object sender, EventArgs e)
+        {
+            frmDespachoEmbarcacion ofrmDespachoEmbarcacion = new frmDespachoEmbarcacion();
+            ofrmDespachoEmbarcacion.ShowDialog();
+        }
+
         
     }
 }

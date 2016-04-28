@@ -331,4 +331,783 @@
    at MySql.Data.MySqlClient.MySqlConnection.Open()
    at SisGesCom.frmLogin.btnLogin_Click(Object sender, EventArgs e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\frmLogin.cs:line 44</StackTrace>
   </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:02:43 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.frmLogin.btnLogin_Click(Object sender, EventArgs e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\frmLogin.cs:line 44</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:02:45 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:02:46 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:02:47 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:02:47 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:02:47 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:02:47 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:02:48 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:02:48 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:02:48 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:02:48 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:02:48 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:02:49 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:02:49 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:02:50 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:02:50 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:03:19 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:03:30 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:03:39 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:03:39 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:03:39 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:03:39 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:03:40 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:03:40 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:03:40 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:03:40 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:03:41 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:03:41 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:03:41 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:03:46 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:03:47 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:03:47 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:03:47 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:03:48 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:03:48 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:03:48 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:03:49 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:03:49 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:03:49 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:04:15 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>4/24/2016 1:05:51 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Authentication to host '192.168.0.26' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'mdeg_combustible'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>Void AuthenticationFailed(System.Exception)</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at SisGesCom.clsExceptionLog.AgregarError(Exception e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\clsExceptionLog.cs:line 226</StackTrace>
+  </Exception>
 </EventLog>

@@ -411,6 +411,9 @@ namespace SisGesCom
             {
                 if (cModo == "Nuevo")
                 {
+                    // Verifico nuevamente el numero de codigo antes de guardar
+                    this.ProximoCodigo();
+
                     // PASO 1 - Agrego la data a la tabla combustible_gas
                     try
                     {

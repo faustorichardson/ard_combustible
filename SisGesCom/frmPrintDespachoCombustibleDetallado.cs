@@ -114,12 +114,14 @@ namespace SisGesCom
                 {
                     cWhere = cWhere + " AND movimientocombustible.operaciones = 'M'";
                 }
-
+               
+                // Filtros por departamentos
                 if (chkDepartamentos.Checked == true)
                 {
                     cWhere = cWhere + " AND combustible_salida.beneficiario_depto = " + this.cmbCombustible.SelectedValue + "";
                 }
 
+                // Filtros por anuladas o no
                 if (chkAnuladas.Checked == true)
                 {
                     cWhere = cWhere + " AND movimientocombustible.anulada = 1";
@@ -143,7 +145,7 @@ namespace SisGesCom
                 sbQuery.Append(cWhere);
                 //sbQuery.Append(" GROUP BY tipo_combustible");
                 //sbQuery.Append(" GROUP BY tipo_combustible, tipobeneficiario");
-                //sbQuery.Append(" ORDER BY movimientocombustible.id");
+                sbQuery.Append(" ORDER BY combustible_salida.id");
 
                 // Paso los valores de sbQuery al CommandText
                 myCommand.CommandText = sbQuery.ToString();

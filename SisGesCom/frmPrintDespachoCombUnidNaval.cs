@@ -58,7 +58,7 @@ namespace SisGesCom
                 cWhere = cWhere + " AND fecha >= " + "'" + fechadesde + "'" + " AND fecha <= " + "'" + fechahasta + "'" + "";
                 sbQuery.Clear();
                 sbQuery.Append("SELECT movimientocombustible.fecha, movimientocombustible.descripcion_combustible,");
-                sbQuery.Append(" movimientocombustible.cantidad,");
+                sbQuery.Append(" movimientocombustible.cantidad, movimientocombustible.id, movimientocombustible.fecha,");
                 sbQuery.Append(" unidadesnavales.unidad as embarcacion");
                 sbQuery.Append(" FROM movimientocombustible");
                 sbQuery.Append(" INNER JOIN unidadesnavales ON unidadesnavales.id = movimientocombustible.embarcacion");                

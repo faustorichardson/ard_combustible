@@ -335,6 +335,9 @@ namespace SisGesCom
             {
                 if (cModo == "Nuevo")
                 {
+                    // verifico el codigo nuevamente
+                    this.ProximoCodigo();
+
                     // Agrego la data a la tabla secuencia_solicitudcombustible
                     try
                     {

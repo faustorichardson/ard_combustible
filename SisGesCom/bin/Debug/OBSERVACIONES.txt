@@ -1,6 +1,0 @@
-Cambiar orden en los reportes:
-
-Dependencia: por el de Recibido Por
-
-1) Departamento 
-2) Recibido Por

@@ -487,6 +487,7 @@ namespace SisGesCom
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
+            
             if (txtEntrada.Text == "")
             {
                 MessageBox.Show("No se puede grabar sin un numero de solicitud ...");
@@ -511,6 +512,9 @@ namespace SisGesCom
             {
                 if (cModo == "Nuevo")
                 {
+                    // verifico el codigo nuevamente
+                    this.ProximoCodigo();
+            
                     // PASO 1 - Agrego la data a la tabla combustible_entrada
                     try
                     {

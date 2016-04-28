@@ -19,7 +19,7 @@ using System.IO;
 
 namespace SisGesCom
 {
-    public partial class frmDespachoCombustibles : frmBase
+    public partial class frmDespachoEmbarcacion : frmBase
     {
 
         string cModo = "Inicio";
@@ -28,12 +28,12 @@ namespace SisGesCom
         int idComb = 0;
         int cantComb = 0;
 
-        public frmDespachoCombustibles()
+        public frmDespachoEmbarcacion()
         {
             InitializeComponent();
         }
 
-        private void frmDespachoCombustibles_Load(object sender, EventArgs e)
+        private void frmDespachoEmbarcacion_Load(object sender, EventArgs e)
         {
             // Creando el Datatable
             this.dtGenerating();
@@ -60,11 +60,351 @@ namespace SisGesCom
             // Funcion Limpia Combustibles
             this.LimpiaCampo();
 
-            // Inhabilita el combo embarcaciones
+            // habilita el combo embarcaciones
+            // this.rbMaritimas.Checked = true;
 
             // Funcion Botones
             this.cModo = "Inicio";
             this.Botones();
+        }
+
+        private void Botones()
+        {
+            switch (cModo)
+            {
+                case "Inicio":
+                    this.btnNuevo.Enabled = true;
+                    this.btnGrabar.Enabled = false;
+                    this.btnEditar.Enabled = false;
+                    this.btnBuscar.Enabled = true;
+                    this.btnImprimir.Enabled = false;
+                    this.btnEliminar.Enabled = false;
+                    this.btnCancelar.Enabled = false;
+                    this.btnSalir.Enabled = true;
+                    this.btnAdiciona.Enabled = false;
+                    //this.btnUpdate.Enabled = false;
+                    //
+                    this.txtCodigo.Enabled = true;
+                    this.txtBeneficiario.Enabled = false;
+                    this.cmbRenglonBeneficiario.Enabled = false;
+                    this.txtCantidad.Enabled = false;
+                    this.txtNota.Enabled = false;
+                    this.cmbAutorizadoPor.Enabled = false;
+                    this.dtFecha.Enabled = false;
+                    this.cmbCombustible.Enabled = false;
+                    this.rbMaritimas.Enabled = false;
+                    this.rbMaritimas.Checked = false;
+                    break;
+
+                case "Nuevo":
+                    this.btnNuevo.Enabled = false;
+                    this.btnGrabar.Enabled = true;
+                    this.btnEditar.Enabled = false;
+                    this.btnBuscar.Enabled = false;
+                    this.btnImprimir.Enabled = false;
+                    this.btnEliminar.Enabled = true;
+                    this.btnCancelar.Enabled = true;
+                    this.btnSalir.Enabled = true;
+                    this.btnAdiciona.Enabled = true;
+                    //this.btnUpdate.Enabled = true;
+                    //
+                    this.txtCodigo.Enabled = false;
+                    this.txtBeneficiario.Enabled = true;
+                    this.cmbRenglonBeneficiario.Enabled = true;
+                    this.txtCantidad.Enabled = true;
+                    this.txtNota.Enabled = true;
+                    this.cmbAutorizadoPor.Enabled = true;
+                    this.dtFecha.Enabled = true;
+                    this.cmbCombustible.Enabled = true;
+                    this.rbMaritimas.Enabled = true;
+                    this.rbMaritimas.Checked = true;
+                    break;
+
+                case "Grabar":
+                    this.btnNuevo.Enabled = true;
+                    this.btnGrabar.Enabled = false;
+                    this.btnEditar.Enabled = false;
+                    this.btnBuscar.Enabled = true;
+                    this.btnImprimir.Enabled = false;
+                    this.btnEliminar.Enabled = false;
+                    this.btnCancelar.Enabled = false;
+                    this.btnSalir.Enabled = true;
+                    this.btnAdiciona.Enabled = false;
+                    //this.btnUpdate.Enabled = false;
+                    //
+                    this.txtCodigo.Enabled = true;
+                    this.txtBeneficiario.Enabled = false;
+                    this.cmbRenglonBeneficiario.Enabled = false;
+                    this.txtCantidad.Enabled = false;
+                    this.txtNota.Enabled = false;
+                    this.cmbAutorizadoPor.Enabled = false;
+                    this.dtFecha.Enabled = false;
+                    this.cmbCombustible.Enabled = false;
+                    this.rbMaritimas.Enabled = false;
+                    this.rbMaritimas.Checked = false;
+                    break;
+
+                case "Editar":
+                    this.btnNuevo.Enabled = false;
+                    this.btnGrabar.Enabled = true;
+                    this.btnEditar.Enabled = false;
+                    this.btnBuscar.Enabled = false;
+                    this.btnImprimir.Enabled = false;
+                    this.btnEliminar.Enabled = true;
+                    this.btnCancelar.Enabled = true;
+                    this.btnSalir.Enabled = true;
+                    this.btnAdiciona.Enabled = true;
+                    //this.btnUpdate.Enabled = true;
+                    //
+                    this.txtCodigo.Enabled = false;
+                    this.txtBeneficiario.Enabled = true;
+                    this.cmbRenglonBeneficiario.Enabled = true;
+                    this.txtCantidad.Enabled = true;
+                    this.txtNota.Enabled = true;
+                    this.cmbAutorizadoPor.Enabled = true;
+                    this.dtFecha.Enabled = true;
+                    this.cmbCombustible.Enabled = true;
+                    this.rbMaritimas.Enabled = true;
+                    this.rbMaritimas.Checked = true;
+                    break;
+
+                case "Buscar":
+                    this.btnNuevo.Enabled = true;
+                    this.btnGrabar.Enabled = false;
+                    this.btnEditar.Enabled = true;
+                    this.btnBuscar.Enabled = true;
+                    this.btnImprimir.Enabled = true;
+                    this.btnEliminar.Enabled = false;
+                    this.btnCancelar.Enabled = false;
+                    this.btnSalir.Enabled = true;
+                    this.btnAdiciona.Enabled = false;
+                    //this.btnUpdate.Enabled = false;
+                    //
+                    this.txtCodigo.Enabled = true;
+                    this.txtBeneficiario.Enabled = false;
+                    this.cmbRenglonBeneficiario.Enabled = false;
+                    this.txtCantidad.Enabled = false;
+                    this.txtNota.Enabled = false;
+                    this.cmbAutorizadoPor.Enabled = false;
+                    this.dtFecha.Enabled = false;
+                    this.cmbCombustible.Enabled = false;
+                    this.rbMaritimas.Enabled = false;
+                    this.rbMaritimas.Checked = false;
+                    break;
+
+                case "Eliminar":
+                    break;
+
+                case "Cancelar":
+                    this.btnNuevo.Enabled = true;
+                    this.btnGrabar.Enabled = false;
+                    this.btnEditar.Enabled = false;
+                    this.btnBuscar.Enabled = true;
+                    this.btnImprimir.Enabled = false;
+                    this.btnEliminar.Enabled = false;
+                    this.btnCancelar.Enabled = false;
+                    this.btnSalir.Enabled = true;
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
+        private void ProximoCodigo()
+        {
+            try
+            {
+                // Step 1 - Connection stablished
+                MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
+
+                // Step 2 - Create command
+                MySqlCommand MyCommand = MyConexion.CreateCommand();
+
+                // Step 3 - Set the commanndtext property
+                MyCommand.CommandText = "SELECT count(*) FROM combustible_salida";
+
+                // Step 4 - Open connection
+                MyConexion.Open();
+
+                // Step 5 - Execute the SQL Statement y Asigno el valor resultante a la variable "codigo"
+                int codigo;
+                codigo = Convert.ToInt32(MyCommand.ExecuteScalar());
+                codigo = codigo + 1;
+                txtCodigo.Text = Convert.ToString(codigo);
+                cmbCombustible.Focus();
+
+                // Step 5 - Close the connection
+                MyConexion.Close();
+            }
+            catch (Exception myEx)
+            {
+                MessageBox.Show(myEx.Message);
+                throw;
+            }
+        }
+
+        private void Limpiar()
+        {
+            this.txtBeneficiario.Clear();
+            this.txtCantidad.Clear();
+            this.txtNota.Clear();
+            this.txtCantidad.Clear();
+            this.txtCodigo.Clear();
+            //this.dgview.Rows.Clear();
+            //this.dgview.Refresh();
+            //this.dgview.Rows.Clear();
+            this.dt.Clear();
+            //this.dtGenerating();
+            this.cantComb = 0;
+            this.idComb = 0;
+            this.cmbEmbarcacion.Enabled = false;
+            this.rbTerrestres.Checked = true;
+            //this.dgview.Rows.Clear();
+            //this.dgview.Refresh();
+        }
+
+        private void LimpiaCampo()
+        {
+            this.txtCantidad.Clear();
+            this.cmbCombustible.Focus();
+        }
+
+        private void updatelbl()
+        {
+            try
+            {
+                // Step 1 - Conexion
+                MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
+
+                // Step 2 - creating the command object
+                MySqlCommand MyCommand = MyConexion.CreateCommand();
+
+                // Step 3 - creating the commandtext
+                MyCommand.CommandText = "SELECT id, combustible FROM tipo_combustible WHERE id = " + cmbCombustible.SelectedValue + "";
+
+                // Step 4 - connection open
+                MyConexion.Open();
+
+                // Step 5 - Creating the DataReader                    
+                MySqlDataReader MyReader = MyCommand.ExecuteReader();
+
+                // Step 6 - Verifying if Reader has rows
+                if (MyReader.HasRows)
+                {
+                    while (MyReader.Read())
+                    {
+                        lblDescripcionCombustible.Text = MyReader["combustible"].ToString();
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("No se encontraron registros para cambiar el LABEL...");
+                }
+
+                // Step 6 - Closing all
+                MyReader.Close();
+                MyCommand.Dispose();
+                MyConexion.Close();
+            }
+            catch (Exception myEx)
+            {
+                MessageBox.Show(myEx.Message);
+                throw;
+            }
+        }
+
+        private void fillCmbComb()
+        {
+            try
+            {
+                // Step 1 
+                MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
+
+                // Step 2
+                MyConexion.Open();
+
+                // Step 3
+                MySqlCommand MyCommand = new MySqlCommand("SELECT id, combustible FROM tipo_combustible ORDER BY combustible ASC", MyConexion);
+
+                // Step 4
+                MySqlDataReader MyReader;
+                MyReader = MyCommand.ExecuteReader();
+
+                // Step 5
+                DataTable MyDataTable = new DataTable();
+                MyDataTable.Columns.Add("id", typeof(int));
+                MyDataTable.Columns.Add("combustible", typeof(string));
+                MyDataTable.Load(MyReader);
+
+                // Step 6
+                cmbCombustible.ValueMember = "id";
+                cmbCombustible.DisplayMember = "combustible";
+                cmbCombustible.DataSource = MyDataTable;
+
+                // Step 7
+                MyConexion.Close();
+            }
+            catch (Exception myEx)
+            {
+                MessageBox.Show(myEx.Message);
+                throw;
+            }
+        }
+
+        private void fillCmbDepartamento()
+        {
+            try
+            {
+                // Step 1 
+                MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
+
+                // Step 2
+                MyConexion.Open();
+
+                // Step 3
+                MySqlCommand MyCommand = new MySqlCommand("SELECT id, deptobeneficiario FROM deptobeneficiario WHERE id = 5", MyConexion);
+
+                // Step 4
+                MySqlDataReader MyReader;
+                MyReader = MyCommand.ExecuteReader();
+
+                // Step 5
+                DataTable MyDataTable = new DataTable();
+                MyDataTable.Columns.Add("id", typeof(int));
+                MyDataTable.Columns.Add("deptobeneficiario", typeof(string));
+                MyDataTable.Load(MyReader);
+
+                // Step 6
+                cmbRenglonBeneficiario.ValueMember = "id";
+                cmbRenglonBeneficiario.DisplayMember = "deptobeneficiario";
+                cmbRenglonBeneficiario.DataSource = MyDataTable;
+
+                // Step 7
+                MyConexion.Close();
+            }
+            catch (Exception myEx)
+            {
+                MessageBox.Show(myEx.Message);
+                throw;
+            }
+        }
+
+        private void dtGenerating()
+        {
+            try
+            {
+                // Creando el Datatable
+                dt.Columns.Add("Id", typeof(int));
+                dt.Columns.Add("Combustible", typeof(string));
+                dt.Columns.Add("Cantidad", typeof(Int32));
+            }
+            catch (Exception myEx)
+            {
+                MessageBox.Show(myEx.Message);
+                throw;
+            }
         }
 
         private void fillCmbEmbarcacion()
@@ -143,343 +483,6 @@ namespace SisGesCom
             }
         }
 
-        private void dtGenerating()
-        {
-            try
-            {
-                // Creando el Datatable
-                dt.Columns.Add("Id", typeof(int));
-                dt.Columns.Add("Combustible", typeof(string));
-                dt.Columns.Add("Cantidad", typeof(Int32));
-            }
-            catch (Exception myEx)
-            {
-                MessageBox.Show(myEx.Message);
-                throw;
-            }
-        }
-
-        private void fillCmbDepartamento()
-        {
-            try
-            {
-                // Step 1 
-                MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
-
-                // Step 2
-                MyConexion.Open();
-
-                // Step 3
-                MySqlCommand MyCommand = new MySqlCommand("SELECT id, deptobeneficiario FROM deptobeneficiario ORDER BY deptobeneficiario ASC", MyConexion);
-
-                // Step 4
-                MySqlDataReader MyReader;
-                MyReader = MyCommand.ExecuteReader();
-
-                // Step 5
-                DataTable MyDataTable = new DataTable();
-                MyDataTable.Columns.Add("id", typeof(int));
-                MyDataTable.Columns.Add("deptobeneficiario", typeof(string));
-                MyDataTable.Load(MyReader);
-
-                // Step 6
-                cmbRenglonBeneficiario.ValueMember = "id";
-                cmbRenglonBeneficiario.DisplayMember = "deptobeneficiario";
-                cmbRenglonBeneficiario.DataSource = MyDataTable;
-
-                // Step 7
-                MyConexion.Close();
-            }
-            catch (Exception myEx)
-            {
-                MessageBox.Show(myEx.Message);
-                throw;
-            }
-        }
-
-        private void fillCmbComb()
-        {
-            try
-            {
-                // Step 1 
-                MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
-
-                // Step 2
-                MyConexion.Open();
-
-                // Step 3
-                MySqlCommand MyCommand = new MySqlCommand("SELECT id, combustible FROM tipo_combustible ORDER BY combustible ASC", MyConexion);
-
-                // Step 4
-                MySqlDataReader MyReader;
-                MyReader = MyCommand.ExecuteReader();
-
-                // Step 5
-                DataTable MyDataTable = new DataTable();
-                MyDataTable.Columns.Add("id", typeof(int));
-                MyDataTable.Columns.Add("combustible", typeof(string));
-                MyDataTable.Load(MyReader);
-
-                // Step 6
-                cmbCombustible.ValueMember = "id";
-                cmbCombustible.DisplayMember = "combustible";
-                cmbCombustible.DataSource = MyDataTable;
-
-                // Step 7
-                MyConexion.Close();
-            }
-            catch (Exception myEx)
-            {
-                MessageBox.Show(myEx.Message);
-                throw;
-            }
-        }        
-
-        private void updatelbl()
-        {
-            try
-            {
-                // Step 1 - Conexion
-                MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
-
-                // Step 2 - creating the command object
-                MySqlCommand MyCommand = MyConexion.CreateCommand();
-
-                // Step 3 - creating the commandtext
-                MyCommand.CommandText = "SELECT id, combustible FROM tipo_combustible WHERE id = " + cmbCombustible.SelectedValue + "";
-
-                // Step 4 - connection open
-                MyConexion.Open();
-
-                // Step 5 - Creating the DataReader                    
-                MySqlDataReader MyReader = MyCommand.ExecuteReader();
-
-                // Step 6 - Verifying if Reader has rows
-                if (MyReader.HasRows)
-                {
-                    while (MyReader.Read())
-                    {
-                        lblDescripcionCombustible.Text = MyReader["combustible"].ToString();
-                    }
-
-                }
-                else
-                {
-                    MessageBox.Show("No se encontraron registros para cambiar el LABEL...");
-                }
-
-                // Step 6 - Closing all
-                MyReader.Close();
-                MyCommand.Dispose();
-                MyConexion.Close();
-            }
-            catch (Exception myEx)
-            {
-                MessageBox.Show(myEx.Message);
-                throw;
-            }
-        }
-
-        private void LimpiaCampo()
-        {
-            this.txtCantidad.Clear();
-            this.cmbCombustible.Focus();
-        }
-
-        private void Limpiar()
-        {
-            this.txtBeneficiario.Clear();
-            this.txtCantidad.Clear();            
-            this.txtNota.Clear();
-            this.txtCantidad.Clear();
-            this.txtCodigo.Clear();            
-            //this.dgview.Rows.Clear();
-            //this.dgview.Refresh();
-            //this.dgview.Rows.Clear();
-            this.dt.Clear();
-            //this.dtGenerating();
-            this.cantComb = 0;
-            this.idComb = 0;
-            this.cmbEmbarcacion.Enabled = false;
-            this.rbTerrestres.Checked = true;
-            //this.dgview.Rows.Clear();
-            //this.dgview.Refresh();
-        }
-
-        private void ProximoCodigo()
-        {
-            try
-            {
-                // Step 1 - Connection stablished
-                MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
-
-                // Step 2 - Create command
-                MySqlCommand MyCommand = MyConexion.CreateCommand();
-
-                // Step 3 - Set the commanndtext property
-                MyCommand.CommandText = "SELECT count(*) FROM combustible_salida";
-
-                // Step 4 - Open connection
-                MyConexion.Open();
-
-                // Step 5 - Execute the SQL Statement y Asigno el valor resultante a la variable "codigo"
-                int codigo;
-                codigo = Convert.ToInt32(MyCommand.ExecuteScalar());
-                codigo = codigo + 1;
-                txtCodigo.Text = Convert.ToString(codigo);
-                cmbCombustible.Focus();
-
-                // Step 5 - Close the connection
-                MyConexion.Close();
-            }
-            catch (Exception myEx)
-            {
-                MessageBox.Show(myEx.Message);
-                throw;
-            }
-        }
-
-        private void Botones()
-        {
-            switch (cModo)
-            {
-                case "Inicio":
-                    this.btnNuevo.Enabled = true;
-                    this.btnGrabar.Enabled = false;
-                    this.btnEditar.Enabled = false;
-                    this.btnBuscar.Enabled = true;
-                    this.btnImprimir.Enabled = false;
-                    this.btnEliminar.Enabled = false;
-                    this.btnCancelar.Enabled = false;
-                    this.btnSalir.Enabled = true;
-                    this.btnAdiciona.Enabled = false;
-                    //this.btnUpdate.Enabled = false;
-                    //
-                    this.txtCodigo.Enabled = true;
-                    this.txtBeneficiario.Enabled = false;
-                    this.cmbRenglonBeneficiario.Enabled = false;
-                    this.txtCantidad.Enabled = false;
-                    this.txtNota.Enabled = false;
-                    this.cmbAutorizadoPor.Enabled = false;
-                    this.dtFecha.Enabled = false;
-                    this.cmbCombustible.Enabled = false;
-                    break;
-
-                case "Nuevo":
-                    this.btnNuevo.Enabled = false;
-                    this.btnGrabar.Enabled = true;
-                    this.btnEditar.Enabled = false;
-                    this.btnBuscar.Enabled = false;
-                    this.btnImprimir.Enabled = false;
-                    this.btnEliminar.Enabled = true;
-                    this.btnCancelar.Enabled = true;
-                    this.btnSalir.Enabled = true;
-                    this.btnAdiciona.Enabled = true;
-                    //this.btnUpdate.Enabled = true;
-                    //
-                    this.txtCodigo.Enabled = false;
-                    this.txtBeneficiario.Enabled = true;
-                    this.cmbRenglonBeneficiario.Enabled = true;
-                    this.txtCantidad.Enabled = true;
-                    this.txtNota.Enabled = true;
-                    this.cmbAutorizadoPor.Enabled = true;
-                    this.dtFecha.Enabled = true;
-                    this.cmbCombustible.Enabled = true;
-                    break;
-
-                case "Grabar":
-                    this.btnNuevo.Enabled = true;
-                    this.btnGrabar.Enabled = false;
-                    this.btnEditar.Enabled = false;
-                    this.btnBuscar.Enabled = true;
-                    this.btnImprimir.Enabled = false;
-                    this.btnEliminar.Enabled = false;
-                    this.btnCancelar.Enabled = false;
-                    this.btnSalir.Enabled = true;
-                    this.btnAdiciona.Enabled = false;
-                    //this.btnUpdate.Enabled = false;
-                    //
-                    this.txtCodigo.Enabled = true;
-                    this.txtBeneficiario.Enabled = false;
-                    this.cmbRenglonBeneficiario.Enabled = false;
-                    this.txtCantidad.Enabled = false;
-                    this.txtNota.Enabled = false;
-                    this.cmbAutorizadoPor.Enabled = false;
-                    this.dtFecha.Enabled = false;
-                    this.cmbCombustible.Enabled = false;
-                    break;
-
-                case "Editar":
-                    this.btnNuevo.Enabled = false;
-                    this.btnGrabar.Enabled = true;
-                    this.btnEditar.Enabled = false;
-                    this.btnBuscar.Enabled = false;
-                    this.btnImprimir.Enabled = false;
-                    this.btnEliminar.Enabled = true;
-                    this.btnCancelar.Enabled = true;
-                    this.btnSalir.Enabled = true;
-                    this.btnAdiciona.Enabled = true;
-                    //this.btnUpdate.Enabled = true;
-                    //
-                    this.txtCodigo.Enabled = false;
-                    this.txtBeneficiario.Enabled = true;
-                    this.cmbRenglonBeneficiario.Enabled = true;
-                    this.txtCantidad.Enabled = true;
-                    this.txtNota.Enabled = true;
-                    this.cmbAutorizadoPor.Enabled = true;
-                    this.dtFecha.Enabled = true;
-                    this.cmbCombustible.Enabled = true;                    
-                    break;
-
-                case "Buscar":
-                    this.btnNuevo.Enabled = true;
-                    this.btnGrabar.Enabled = false;
-                    this.btnEditar.Enabled = true;
-                    this.btnBuscar.Enabled = true;
-                    this.btnImprimir.Enabled = true;
-                    this.btnEliminar.Enabled = false;
-                    this.btnCancelar.Enabled = false;
-                    this.btnSalir.Enabled = true;
-                    this.btnAdiciona.Enabled = false;
-                    //this.btnUpdate.Enabled = false;
-                    //
-                    this.txtCodigo.Enabled = true;
-                    this.txtBeneficiario.Enabled = false;
-                    this.cmbRenglonBeneficiario.Enabled = false;
-                    this.txtCantidad.Enabled = false;
-                    this.txtNota.Enabled = false;
-                    this.cmbAutorizadoPor.Enabled = false;
-                    this.dtFecha.Enabled = false;
-                    this.cmbCombustible.Enabled = false;
-                    break;
-
-                case "Eliminar":
-                    break;
-
-                case "Cancelar":
-                    this.btnNuevo.Enabled = true;
-                    this.btnGrabar.Enabled = false;
-                    this.btnEditar.Enabled = false;
-                    this.btnBuscar.Enabled = true;
-                    this.btnImprimir.Enabled = false;
-                    this.btnEliminar.Enabled = false;
-                    this.btnCancelar.Enabled = false;
-                    this.btnSalir.Enabled = true;
-                    break;
-
-                default:
-                    break;
-            }
-        }
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            cModo = "Nuevo";
-            this.Limpiar();
-            this.Botones();
-            this.ProximoCodigo(); 
-        }
-
         private void updateExistencia()
         {
             // PASO 1 - Busco la cantidad actual
@@ -544,6 +547,14 @@ namespace SisGesCom
             }
         }
 
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            cModo = "Nuevo";
+            this.Limpiar();
+            this.Botones();
+            this.ProximoCodigo(); 
+        }
+
         private void btnGrabar_Click(object sender, EventArgs e)
         {
             if (txtCodigo.Text == "")
@@ -567,14 +578,10 @@ namespace SisGesCom
                 this.txtBeneficiario.Focus();
             }
             else
-            {                
-                // Si el modo esta en "nuevo"
+            {
                 if (cModo == "Nuevo")
                 {
-                    // verifico el codigo nuevamente
-                    this.ProximoCodigo();
-
-                    // Verifico el codigo antes de agregarlo
+                    // Verifica el ultimo codigo registrado
                     this.ProximoCodigo();
 
                     // PASO 1 - Agrego la data a la tabla combustible_salida
@@ -587,7 +594,7 @@ namespace SisGesCom
                         MySqlCommand myCommand = MyConexion.CreateCommand();
 
                         // Step 3 - Comando a ejecutar                        
-                        myCommand.CommandText = "INSERT INTO combustible_salida(fecha, nota, beneficiario, beneficiario_depto, "+
+                        myCommand.CommandText = "INSERT INTO combustible_salida(fecha, nota, beneficiario, beneficiario_depto, " +
                         "autorizadopor) values(@fecha, @nota, @beneficiario, @beneficiario_depto, @autorizadopor)";
                         myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd"));
                         myCommand.Parameters.AddWithValue("@nota", txtNota.Text);
@@ -629,7 +636,7 @@ namespace SisGesCom
                                     myCommand.Parameters.AddWithValue("@descripcion_combustible", row.Cells["Combustible"].Value);
                                     myCommand.Parameters.AddWithValue("@cantidad", row.Cells["Cantidad"].Value);
                                     myCommand.Parameters.AddWithValue("@tipo_movimiento", "S");
-                                    if (rbTerrestres.Checked == true)
+                                    /*if (rbTerrestres.Checked == true)
                                     {
                                         myCommand.Parameters.AddWithValue("@operaciones", "T");
                                         myCommand.Parameters.AddWithValue("@embarcacion", 0);
@@ -639,6 +646,9 @@ namespace SisGesCom
                                         myCommand.Parameters.AddWithValue("@operaciones", "M");
                                         myCommand.Parameters.AddWithValue("@embarcacion", cmbEmbarcacion.SelectedValue);
                                     }
+                                    */
+                                    myCommand.Parameters.AddWithValue("@operaciones", "M");
+                                    myCommand.Parameters.AddWithValue("@embarcacion", cmbEmbarcacion.SelectedValue);
 
                                     // Abro Conexion
                                     myConexion.Open();
@@ -682,9 +692,9 @@ namespace SisGesCom
                         MySqlCommand myCommand = MyConexion.CreateCommand();
 
                         // Step 3 - Comando a ejecutar                        
-                        myCommand.CommandText = "UPDATE combustible_salida SET fecha = @fecha, nota = @nota, "+
-                            "beneficiario = @beneficiario, beneficiario_depto = @beneficiario_depto, autorizadopor = @autorizadopor "+
-                            " WHERE id = "+ txtCodigo.Text +"";
+                        myCommand.CommandText = "UPDATE combustible_salida SET fecha = @fecha, nota = @nota, " +
+                            "beneficiario = @beneficiario, beneficiario_depto = @beneficiario_depto, autorizadopor = @autorizadopor " +
+                            " WHERE id = " + txtCodigo.Text + "";
                         myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd"));
                         myCommand.Parameters.AddWithValue("@nota", txtNota.Text);
                         myCommand.Parameters.AddWithValue("@beneficiario", txtBeneficiario.Text);
@@ -719,6 +729,7 @@ namespace SisGesCom
                         myCommand.CommandText = "UPDATE movimientocombustible SET fecha = @fecha, operaciones = @operaciones, " +
                             " embarcacion = @embarcacion WHERE id = " + txtCodigo.Text + "";
                         myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd"));
+                        /*
                         if (rbTerrestres.Checked == true)
                         {
                             myCommand.Parameters.AddWithValue("@operaciones", "T");
@@ -728,7 +739,10 @@ namespace SisGesCom
                         {
                             myCommand.Parameters.AddWithValue("@operaciones", "M");
                             myCommand.Parameters.AddWithValue("@embarcacion", cmbEmbarcacion.SelectedValue);
-                        }                        
+                        }
+                        */
+                        myCommand.Parameters.AddWithValue("@operaciones", "M");
+                        myCommand.Parameters.AddWithValue("@embarcacion", cmbEmbarcacion.SelectedValue);
 
                         // Step 4 - Opening the connection
                         MyConexion.Open();
@@ -743,7 +757,7 @@ namespace SisGesCom
                     {
                         MessageBox.Show(myEx.Message);
                         throw;
-                    }                    
+                    }
 
 
                 }
@@ -780,7 +794,7 @@ namespace SisGesCom
                     MySqlCommand MyCommand = MyConexion.CreateCommand();
 
                     // Step 3 - creating the commandtext
-                    MyCommand.CommandText = "SELECT id, fecha, nota, beneficiario, beneficiario_depto, autorizadopor "+
+                    MyCommand.CommandText = "SELECT id, fecha, nota, beneficiario, beneficiario_depto, autorizadopor " +
                         "FROM combustible_salida WHERE id = " + txtCodigo.Text + "";
 
                     // Step 4 - connection open
@@ -794,7 +808,7 @@ namespace SisGesCom
                     {
                         while (MyReader.Read())
                         {
-                            txtCodigo.Text = MyReader["id"].ToString();                            
+                            txtCodigo.Text = MyReader["id"].ToString();
                             dtFecha.Value = Convert.ToDateTime(MyReader["fecha"]);
                             txtNota.Text = MyReader["nota"].ToString();
                             txtBeneficiario.Text = MyReader["beneficiario"].ToString();
@@ -853,7 +867,7 @@ namespace SisGesCom
                         {
                             if (MyReader["operaciones"].ToString() == "M")
                             {
-                                cmbEmbarcacion.Enabled = true;                                
+                                cmbEmbarcacion.Enabled = true;
                                 cmbEmbarcacion.SelectedValue = MyReader["operaciones"].ToString();
                                 rbMaritimas.Checked = true;
                             }
@@ -861,7 +875,7 @@ namespace SisGesCom
                             {
                                 rbTerrestres.Checked = true;
                             }
-                            
+
                         }
 
                         this.cModo = "Buscar";
@@ -1009,7 +1023,7 @@ namespace SisGesCom
                                 MessageBox.Show("Este combustible no tiene existencia...");
                                 this.LimpiaCampo();
                             }
-                        }                        
+                        }
                     }
                     else
                     {
@@ -1027,7 +1041,7 @@ namespace SisGesCom
                 {
                     MessageBox.Show(MyEx.Message);
                 }
-                
+
             }
         }
 
@@ -1043,14 +1057,6 @@ namespace SisGesCom
                 MessageBox.Show(myEx.Message);
                 throw;
             }
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            DataGridViewRow row = dgview.Rows[i];
-            row.Cells[0].Value = cmbCombustible.SelectedValue;
-            row.Cells[1].Value = lblDescripcionCombustible.Text;
-            row.Cells[2].Value = txtCantidad.Text;
         }
 
         private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
@@ -1093,6 +1099,7 @@ namespace SisGesCom
                 this.cmbEmbarcacion.Enabled = false;
             }
         }
+
 
     }
 }
