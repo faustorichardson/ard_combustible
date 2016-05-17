@@ -39,7 +39,7 @@ namespace SisGesCom
             // Otras variables del entorno
             string cWhere = " WHERE 1 = 1";
             string cUsuario = "";
-            string cTitulo = "";
+            string cTitulo = "";            
 
             try
             {
@@ -56,6 +56,10 @@ namespace SisGesCom
                 string fechadesde = dtDesde.Value.ToString("yyyy-MM-dd");
                 string fechahasta = dtHasta.Value.ToString("yyyy-MM-dd");
                 cWhere = cWhere + " AND fecha >= " + "'" + fechadesde + "'" + " AND fecha <= " + "'" + fechahasta + "'" + "";
+                if (chkUnidadNaval.Checked == true)
+                {
+                    cWhere = cWhere + " AND unidadesnavales.id = " + cmbUnidadNaval.SelectedValue + "";
+                }
                 sbQuery.Clear();
                 sbQuery.Append("SELECT movimientocombustible.fecha, movimientocombustible.descripcion_combustible,");
                 sbQuery.Append(" movimientocombustible.cantidad, movimientocombustible.id, movimientocombustible.fecha,");
@@ -92,8 +96,6 @@ namespace SisGesCom
                     //Proporciona propiedades para la recuperacion y configuracion del tipo de los parametros
                     ParameterValues oParametrosValuesCR = new ParameterValues();
 
-
-
                     //2do.CREAMOS LOS PARAMETROS
                     ParameterField oUsuario = new ParameterField();
                     ParameterField oFechaInicial = new ParameterField();
@@ -128,8 +130,6 @@ namespace SisGesCom
                     oParametrosCR[1].Name = "cFechaInicial";
                     oParametrosCR[2].Name = "cFechaFinal";
 
-
-
                     //nombre del TITULO DEL INFORME
                     cTitulo = "Listado de Despacho de Combustible a Unidades Navales";
 
@@ -162,6 +162,41 @@ namespace SisGesCom
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmPrintDespachoCombUnidNaval_Load(object sender, EventArgs e)
+        {
+            this.fillCmbUnidadesNavales();
+        }
+
+        private void fillCmbUnidadesNavales()
+        {
+            // Step 1 
+            MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
+
+            // Step 2
+            MyConexion.Open();
+
+            // Step 3
+            MySqlCommand MyCommand = new MySqlCommand("SELECT id, unidad FROM unidadesnavales ORDER BY unidad ASC", MyConexion);
+
+            // Step 4
+            MySqlDataReader MyReader;
+            MyReader = MyCommand.ExecuteReader();
+
+            // Step 5
+            DataTable MyDataTable = new DataTable();
+            MyDataTable.Columns.Add("id", typeof(int));
+            MyDataTable.Columns.Add("unidad", typeof(string));
+            MyDataTable.Load(MyReader);
+
+            // Step 6
+            cmbUnidadNaval.ValueMember = "id";
+            cmbUnidadNaval.DisplayMember = "unidad";
+            cmbUnidadNaval.DataSource = MyDataTable;
+
+            // Step 7
+            MyConexion.Close();
         }
     }
 }

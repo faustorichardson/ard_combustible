@@ -260,6 +260,7 @@ namespace SisGesCom
             StringBuilder sbQuery = new StringBuilder();
             // Otras variables del entorno
             string cWhere = " WHERE 1 = 1";
+            cWhere = cWhere + " AND tipo_combustible.status = " + "'A'";
             string cUsuario = "";
             string cTitulo = "";
 
@@ -276,8 +277,8 @@ namespace SisGesCom
                 //string fechahasta = dtHasta.Value.ToString("yyyy-MM-dd");
                 //cWhere = cWhere + " AND fecha >= " + "'" + fechadesde + "'" + " AND fecha <= " + "'" + fechahasta + "'" + "";
                 sbQuery.Clear();
-                sbQuery.Append("SELECT tipo_combustible.combustible as tipocombustible, existencia.cantidad, tipo_combustible.medida ");                
-                sbQuery.Append(" FROM existencia ");
+                sbQuery.Append("SELECT tipo_combustible.combustible as tipocombustible, existencia.cantidad, tipo_combustible.medida, ");                
+                sbQuery.Append(" tipo_combustible.status FROM existencia ");
                 sbQuery.Append(" INNER JOIN tipo_combustible ON tipo_combustible.id = existencia.tipocombustible");
                 sbQuery.Append(cWhere);
                 

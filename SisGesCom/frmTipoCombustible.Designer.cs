@@ -44,6 +44,7 @@
             this.txtTipo = new System.Windows.Forms.TextBox();
             this.txtMedida = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.chkActivo = new System.Windows.Forms.CheckBox();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,7 +63,7 @@
             this.groupBox4.Controls.Add(this.btnEditar);
             this.groupBox4.Controls.Add(this.btnGrabar);
             this.groupBox4.Controls.Add(this.btnNuevo);
-            this.groupBox4.Location = new System.Drawing.Point(5, 172);
+            this.groupBox4.Location = new System.Drawing.Point(5, 151);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(795, 65);
             this.groupBox4.TabIndex = 48;
@@ -184,7 +185,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(205, 64);
+            this.label1.Location = new System.Drawing.Point(205, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 16);
             this.label1.TabIndex = 49;
@@ -194,7 +195,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(223, 99);
+            this.label2.Location = new System.Drawing.Point(223, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 16);
             this.label2.TabIndex = 50;
@@ -202,14 +203,14 @@
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(273, 64);
+            this.txtCodigo.Location = new System.Drawing.Point(273, 48);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(66, 20);
             this.txtCodigo.TabIndex = 51;
             // 
             // txtTipo
             // 
-            this.txtTipo.Location = new System.Drawing.Point(273, 99);
+            this.txtTipo.Location = new System.Drawing.Point(273, 83);
             this.txtTipo.MaxLength = 75;
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(223, 20);
@@ -217,7 +218,7 @@
             // 
             // txtMedida
             // 
-            this.txtMedida.Location = new System.Drawing.Point(273, 132);
+            this.txtMedida.Location = new System.Drawing.Point(273, 116);
             this.txtMedida.MaxLength = 25;
             this.txtMedida.Name = "txtMedida";
             this.txtMedida.Size = new System.Drawing.Size(81, 20);
@@ -227,17 +228,31 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(121, 134);
+            this.label3.Location = new System.Drawing.Point(121, 118);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(146, 16);
             this.label3.TabIndex = 53;
             this.label3.Text = "Medida(Abreviada):";
             // 
+            // chkActivo
+            // 
+            this.chkActivo.AutoSize = true;
+            this.chkActivo.Checked = true;
+            this.chkActivo.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkActivo.Location = new System.Drawing.Point(514, 50);
+            this.chkActivo.Name = "chkActivo";
+            this.chkActivo.Size = new System.Drawing.Size(62, 17);
+            this.chkActivo.TabIndex = 55;
+            this.chkActivo.Text = "Activo";
+            this.chkActivo.UseVisualStyleBackColor = true;
+            // 
             // frmTipoCombustible
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(807, 249);
+            this.ClientSize = new System.Drawing.Size(807, 232);
+            this.Controls.Add(this.chkActivo);
             this.Controls.Add(this.txtMedida);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtTipo);
@@ -256,6 +271,7 @@
             this.Controls.SetChildIndex(this.txtTipo, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.txtMedida, 0);
+            this.Controls.SetChildIndex(this.chkActivo, 0);
             this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -279,5 +295,6 @@
         private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.TextBox txtMedida;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox chkActivo;
     }
 }

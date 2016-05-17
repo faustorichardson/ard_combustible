@@ -222,9 +222,17 @@ namespace SisGesCom
                         MySqlCommand myCommand = MyConexion.CreateCommand();
 
                         // Step 3 - Comando a ejecutar                        
-                        myCommand.CommandText = "INSERT INTO tipo_combustible(combustible, medida) values(@combustible, @medida)";
+                        myCommand.CommandText = "INSERT INTO tipo_combustible(combustible, medida, status) values(@combustible, @medida, @status)";
                         myCommand.Parameters.AddWithValue("@combustible", txtTipo.Text);
                         myCommand.Parameters.AddWithValue("@medida", txtMedida.Text);
+                        if (chkActivo.Checked == true)
+                        {
+                            myCommand.Parameters.AddWithValue("@status", "A");
+                        }
+                        else
+                        {
+                            myCommand.Parameters.AddWithValue("@status", "I");
+                        }
 
                         // Step 4 - Opening the connection
                         MyConexion.Open();
@@ -300,10 +308,18 @@ namespace SisGesCom
                         MySqlCommand myCommand = MyConexion.CreateCommand();
 
                         // Step 3 - Comando a ejecutar
-                        myCommand.CommandText = "UPDATE tipo_combustible SET combustible = @combustible, medida = @medida" +
+                        myCommand.CommandText = "UPDATE tipo_combustible SET combustible = @combustible, medida = @medida, status = @status" +
                             " WHERE id = " + txtCodigo.Text + "";
                         myCommand.Parameters.AddWithValue("@combustible", txtTipo.Text);
                         myCommand.Parameters.AddWithValue("@medida", txtMedida.Text);
+                        if (chkActivo.Checked == true)
+                        {
+                            myCommand.Parameters.AddWithValue("@status", "A");
+                        }
+                        else
+                        {
+                            myCommand.Parameters.AddWithValue("@status", "I");
+                        }
 
                         // Step 4 - Opening the connection
                         MyConexion.Open();
@@ -360,7 +376,7 @@ namespace SisGesCom
                     MySqlCommand MyCommand = MyConexion.CreateCommand();
 
                     // Step 3 - creating the commandtext
-                    MyCommand.CommandText = "SELECT combustible, medida FROM tipo_combustible WHERE id = " + txtCodigo.Text + "";
+                    MyCommand.CommandText = "SELECT combustible, medida, status FROM tipo_combustible WHERE id = " + txtCodigo.Text + "";
 
                     // Step 4 - connection open
                     MyConexion.Open();
@@ -375,6 +391,15 @@ namespace SisGesCom
                         {
                             txtTipo.Text = MyReader["combustible"].ToString();
                             txtMedida.Text = MyReader["medida"].ToString();
+                            string varStatus = MyReader["status"].ToString();
+                            if (varStatus == "A")
+                            {
+                                chkActivo.Checked = true;
+                            }
+                            else
+                            {
+                                chkActivo.Checked = false;
+                            }
                         }
 
                         this.cModo = "Buscar";
