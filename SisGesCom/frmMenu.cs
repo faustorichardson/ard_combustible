@@ -682,7 +682,8 @@ namespace SisGesCom
 
         private void buttonItem31_Click(object sender, EventArgs e)
         {
-            
+            frmPrintDespachoCombUnidNaval ofrDespachoCombUnidNaval = new frmPrintDespachoCombUnidNaval();
+            ofrDespachoCombUnidNaval.ShowDialog();
         }
 
         private void buttonItem30_Click(object sender, EventArgs e)

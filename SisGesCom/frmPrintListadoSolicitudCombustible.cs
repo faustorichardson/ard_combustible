@@ -50,7 +50,7 @@ namespace SisGesCom
             StringBuilder sbQuery = new StringBuilder();
             // Otras variables del entorno
             string cWhere = " WHERE 1 = 1";
-            string cUsuario = "";
+            string cUsuario = frmLogin.cUsuarioActual;
             string cTitulo = "";
 
             try

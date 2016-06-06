@@ -141,6 +141,7 @@ namespace SisGesCom
                 sbQuery.Append(" INNER JOIN deptobeneficiario ON deptobeneficiario.id = combustible_salida.beneficiario_depto");                
                 sbQuery.Append(cWhere);                
                 sbQuery.Append(" GROUP BY tipo_combustible, tipobeneficiario");
+                sbQuery.Append(" ORDER BY deptobeneficiario.id");
 
                 // Paso los valores de sbQuery al CommandText
                 myCommand.CommandText = sbQuery.ToString();

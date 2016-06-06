@@ -81,11 +81,11 @@ namespace SisGesCom
             MySqlCommand myCommand = new MySqlCommand();
             // Creando el Data Adapter
             MySqlDataAdapter myAdapter = new MySqlDataAdapter();
-            // Creando el String Builder
+            // Creando el String Builde
             StringBuilder sbQuery = new StringBuilder();
             // Otras variables del entorno
             string cWhere = " WHERE 1 = 1";
-            string cUsuario = "";
+            string cUsuario =  frmLogin.cUsuarioActual;
             string cTitulo = "";
 
             try
