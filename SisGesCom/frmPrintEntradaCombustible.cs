@@ -55,14 +55,16 @@ namespace SisGesCom
                 // Filtros de la busqueda                
                 string fechadesde = dtDesde.Value.ToString("yyyy-MM-dd");
                 string fechahasta = dtHasta.Value.ToString("yyyy-MM-dd");
-                cWhere = cWhere + " AND fecha >= " + "'" + fechadesde + "'" + " AND fecha <= " + "'" + fechahasta + "'" + "";
+                cWhere = cWhere + " AND movimientocombustible.fecha >= " + "'" + fechadesde + "'" + " AND movimientocombustible.fecha <= " + "'" + fechahasta + "'" + "";
+                cWhere = cWhere + " AND movimientocombustible.tipo_movimiento = 'E'";
                 sbQuery.Clear();
                 sbQuery.Append("SELECT tipo_combustible.combustible as tipo_combustible, movimientocombustible.cantidad, ");
-                sbQuery.Append(" movimientocombustible.fecha, movimientocombustible.id, tipo_combustible.medida");
+                sbQuery.Append(" movimientocombustible.fecha, movimientocombustible.id, tipo_combustible.medida, combustible_entrada.nota");
                 sbQuery.Append(" FROM movimientocombustible ");
-                sbQuery.Append(" INNER JOIN tipo_combustible ON tipo_combustible.id = movimientocombustible.tipo_combustible");                
+                sbQuery.Append(" INNER JOIN tipo_combustible ON tipo_combustible.id = movimientocombustible.tipo_combustible");
+                sbQuery.Append(" INNER JOIN combustible_entrada ON combustible_entrada.id = movimientocombustible.id");
                 sbQuery.Append(cWhere);
-                sbQuery.Append(" AND movimientocombustible.tipo_movimiento = 'E'");
+                
                 
                 // Filtro del tipo de operacion
                 if (rbTerrestres.Checked == true)
