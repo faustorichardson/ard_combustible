@@ -41,6 +41,9 @@ namespace SisGesCom
             // Llenando el combo de tipo de combustibles
             this.fillCmbComb();
 
+            // Llenando el combo de suplidores
+            this.fillCmbSuplidor();
+
             // Modificando el valor del LblDescripcionCombustible
             this.updatelbl();
 
@@ -53,6 +56,45 @@ namespace SisGesCom
             // Funcion Botones
             this.cModo = "Inicio";
             this.Botones();
+        }
+
+        private void fillCmbSuplidor()
+        {
+            try
+            {
+                // Step 1 
+                MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
+
+                // Step 2
+                MyConexion.Open();
+
+                // Step 3
+                MySqlCommand MyCommand = new MySqlCommand("SELECT id_suplidor, suplidor FROM suplidores ORDER BY suplidor ASC", MyConexion);
+
+                // Step 4
+                MySqlDataReader MyReader;
+                MyReader = MyCommand.ExecuteReader();
+
+                // Step 5
+                DataTable MyDataTable = new DataTable();
+                MyDataTable.Columns.Add("id_suplidor", typeof(int));
+                MyDataTable.Columns.Add("suplidor", typeof(string));
+                MyDataTable.Load(MyReader);
+
+                // Step 6
+                cmbSuplidor.ValueMember = "id_suplidor";
+                cmbSuplidor.DisplayMember = "suplidor";
+                cmbSuplidor.DataSource = MyDataTable;
+
+                // Step 7
+                MyConexion.Close();
+
+            }
+            catch (Exception myEx)
+            {
+                MessageBox.Show(myEx.Message);
+                throw;
+            }
         }
 
         private void dtGenerating()
@@ -173,7 +215,7 @@ namespace SisGesCom
             this.dt.Clear();
             //this.dtGenerating();
             this.cantComb = 0;
-            this.idComb = 0;
+            this.idComb = 0;            
         }
 
         private void ProximoCodigo()
@@ -231,6 +273,7 @@ namespace SisGesCom
                     this.dgview.Enabled = false;
                     this.cmbCombustible.Enabled = false;
                     this.txtEntrada.Enabled = true;
+                    this.cmbSuplidor.Enabled = false;
                     break;
 
                 case "Nuevo":
@@ -252,6 +295,7 @@ namespace SisGesCom
                     this.dgview.Enabled = true;
                     this.cmbCombustible.Enabled = true;
                     this.txtEntrada.Enabled = false;
+                    this.cmbSuplidor.Enabled = true;
                     break;
 
                 case "Grabar":
@@ -273,6 +317,7 @@ namespace SisGesCom
                     this.dgview.Enabled = false;
                     this.cmbCombustible.Enabled = false;
                     this.txtEntrada.Enabled = false;
+                    this.cmbSuplidor.Enabled = false;
                     break;
 
                 case "Editar":
@@ -294,6 +339,7 @@ namespace SisGesCom
                     this.dgview.Enabled = true;
                     this.cmbCombustible.Enabled = true;
                     this.txtEntrada.Enabled = false;
+                    this.cmbSuplidor.Enabled = true;
                     break;
 
                 case "Buscar":
@@ -315,6 +361,7 @@ namespace SisGesCom
                     this.dgview.Enabled = false;
                     this.cmbCombustible.Enabled = false;
                     this.txtEntrada.Enabled = true;
+                    this.cmbSuplidor.Enabled = false;
                     break;
 
                 case "Eliminar":
@@ -525,10 +572,11 @@ namespace SisGesCom
                         MySqlCommand myCommand = MyConexion.CreateCommand();
 
                         // Step 3 - Comando a ejecutar                        
-                        myCommand.CommandText = "INSERT INTO combustible_entrada(fecha, nota, id_solicitud) values(@fecha, @nota, @solicitud)";
+                        myCommand.CommandText = "INSERT INTO combustible_entrada(fecha, nota, id_solicitud, suplidor) values(@fecha, @nota, @solicitud, @suplidor)";
                         myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd"));
                         myCommand.Parameters.AddWithValue("@nota", txtNota.Text);
                         myCommand.Parameters.AddWithValue("@solicitud", txtSolicitud.Text);
+                        myCommand.Parameters.AddWithValue("@suplidor", cmbSuplidor.SelectedValue);
 
                         // Step 4 - Opening the connection
                         MyConexion.Open();
@@ -567,9 +615,13 @@ namespace SisGesCom
                                     {
                                         myCommand.Parameters.AddWithValue("@operaciones", "T");
                                     }
-                                    else
+                                    else if (rbMaritimas.Checked == true)
                                     {
                                         myCommand.Parameters.AddWithValue("@operaciones", "M");
+                                    }
+                                    else
+                                    {
+                                        myCommand.Parameters.AddWithValue("@operaciones", "G");
                                     }
 
                                     // Abro Conexion
@@ -614,11 +666,12 @@ namespace SisGesCom
                         MySqlCommand myCommand = MyConexion.CreateCommand();
 
                         // Step 3 - Comando a ejecutar                        
-                        myCommand.CommandText = "UPDATE combustible_entrada SET fecha = @fecha, nota = @nota, id_solicitud = @solicitud" +
-                            " WHERE id = " + txtSolicitud.Text + "";
+                        myCommand.CommandText = "UPDATE combustible_entrada SET fecha = @fecha, nota = @nota, id_solicitud = @solicitud," +
+                            " suplidor = @suplidor WHERE id = " + txtSolicitud.Text + "";
                         myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd HH:mm:ss"));
                         myCommand.Parameters.AddWithValue("@nota", txtNota.Text);
                         myCommand.Parameters.AddWithValue("@solicitud", txtSolicitud.Text);
+                        myCommand.Parameters.AddWithValue("@suplidor", cmbSuplidor.SelectedValue);
 
                         // Step 4 - Opening the connection
                         MyConexion.Open();
@@ -702,7 +755,10 @@ namespace SisGesCom
 
                 }
 
-
+                // LIMPIO LOS CAMPOS Y CAMBIO EL MODO LUEGO DE HABER REGISTRADO O ACTUALIZADO EL RECORD
+                this.cModo = "Inicio";
+                this.Botones();
+                this.Limpiar();
             }
 
             // Pregunto si deseo imprimir
@@ -736,7 +792,7 @@ namespace SisGesCom
                     MySqlCommand MyCommand = MyConexion.CreateCommand();
 
                     // Step 3 - creating the commandtext
-                    MyCommand.CommandText = "SELECT id, fecha, nota, id_solicitud FROM combustible_entrada WHERE id = " + txtEntrada.Text + "";
+                    MyCommand.CommandText = "SELECT id, fecha, nota, id_solicitud, suplidor FROM combustible_entrada WHERE id = " + txtEntrada.Text + "";
 
                     // Step 4 - connection open
                     MyConexion.Open();
@@ -752,6 +808,7 @@ namespace SisGesCom
                             txtSolicitud.Text = MyReader["id_solicitud"].ToString();
                             dtFecha.Value = Convert.ToDateTime(MyReader["fecha"]);
                             txtNota.Text = MyReader["nota"].ToString();
+                            cmbSuplidor.SelectedValue = MyReader["suplidor"].ToString();
                         }
 
                         this.cModo = "Buscar";

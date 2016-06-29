@@ -59,10 +59,12 @@ namespace SisGesCom
                 cWhere = cWhere + " AND movimientocombustible.tipo_movimiento = 'E'";
                 sbQuery.Clear();
                 sbQuery.Append("SELECT tipo_combustible.combustible as tipo_combustible, movimientocombustible.cantidad, ");
-                sbQuery.Append(" movimientocombustible.fecha, movimientocombustible.id, tipo_combustible.medida, combustible_entrada.nota");
+                sbQuery.Append(" movimientocombustible.fecha, movimientocombustible.id, tipo_combustible.medida, combustible_entrada.nota, ");
+                sbQuery.Append(" suplidores.suplidor");
                 sbQuery.Append(" FROM movimientocombustible ");
                 sbQuery.Append(" INNER JOIN tipo_combustible ON tipo_combustible.id = movimientocombustible.tipo_combustible");
                 sbQuery.Append(" INNER JOIN combustible_entrada ON combustible_entrada.id = movimientocombustible.id");
+                sbQuery.Append(" INNER JOIN suplidores ON combustible_entrada.suplidor = suplidores.id_suplidor");
                 sbQuery.Append(cWhere);
                 
                 

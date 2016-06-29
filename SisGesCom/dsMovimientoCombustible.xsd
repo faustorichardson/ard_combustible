@@ -29,6 +29,7 @@
               <xs:element name="fechahasta" msprop:Generator_ColumnVarNameInTable="columnfechahasta" msprop:Generator_ColumnPropNameInRow="fechahasta" msprop:Generator_ColumnPropNameInTable="fechahastaColumn" msprop:Generator_UserColumnName="fechahasta" type="xs:dateTime" minOccurs="0" />
               <xs:element name="embarcacion" msprop:Generator_ColumnVarNameInTable="columnembarcacion" msprop:Generator_ColumnPropNameInRow="embarcacion" msprop:Generator_ColumnPropNameInTable="embarcacionColumn" msprop:Generator_UserColumnName="embarcacion" type="xs:int" minOccurs="0" />
               <xs:element name="descripcion_combustible" msprop:Generator_ColumnVarNameInTable="columndescripcion_combustible" msprop:Generator_ColumnPropNameInRow="descripcion_combustible" msprop:Generator_ColumnPropNameInTable="descripcion_combustibleColumn" msprop:Generator_UserColumnName="descripcion_combustible" type="xs:string" minOccurs="0" />
+              <xs:element name="suplidor" msprop:Generator_ColumnVarNameInTable="columnsuplidor" msprop:Generator_ColumnPropNameInRow="suplidor" msprop:Generator_ColumnPropNameInTable="suplidorColumn" msprop:Generator_UserColumnName="suplidor" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -58,6 +58,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.rbTerrestres = new System.Windows.Forms.RadioButton();
             this.rbMaritimas = new System.Windows.Forms.RadioButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmbSuplidor = new System.Windows.Forms.ComboBox();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgview)).BeginInit();
@@ -121,7 +123,7 @@
             this.groupBox4.Controls.Add(this.btnCancelar);
             this.groupBox4.Controls.Add(this.btnEditar);
             this.groupBox4.Controls.Add(this.btnGrabar);
-            this.groupBox4.Location = new System.Drawing.Point(8, 511);
+            this.groupBox4.Location = new System.Drawing.Point(8, 534);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(694, 65);
             this.groupBox4.TabIndex = 91;
@@ -230,7 +232,7 @@
             // 
             this.groupBox2.Controls.Add(this.dgview);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(116, 336);
+            this.groupBox2.Location = new System.Drawing.Point(116, 359);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(481, 174);
             this.groupBox2.TabIndex = 90;
@@ -280,7 +282,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.Combustible);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(116, 211);
+            this.groupBox1.Location = new System.Drawing.Point(116, 234);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(481, 121);
             this.groupBox1.TabIndex = 88;
@@ -358,7 +360,7 @@
             // 
             // txtNota
             // 
-            this.txtNota.Location = new System.Drawing.Point(165, 99);
+            this.txtNota.Location = new System.Drawing.Point(165, 122);
             this.txtNota.Name = "txtNota";
             this.txtNota.Size = new System.Drawing.Size(422, 65);
             this.txtNota.TabIndex = 97;
@@ -368,7 +370,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(115, 100);
+            this.label4.Location = new System.Drawing.Point(115, 123);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 16);
             this.label4.TabIndex = 96;
@@ -378,7 +380,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(108, 181);
+            this.label6.Location = new System.Drawing.Point(108, 204);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(101, 16);
             this.label6.TabIndex = 98;
@@ -389,7 +391,7 @@
             this.rbTerrestres.AutoSize = true;
             this.rbTerrestres.Checked = true;
             this.rbTerrestres.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbTerrestres.Location = new System.Drawing.Point(211, 181);
+            this.rbTerrestres.Location = new System.Drawing.Point(211, 204);
             this.rbTerrestres.Name = "rbTerrestres";
             this.rbTerrestres.Size = new System.Drawing.Size(82, 17);
             this.rbTerrestres.TabIndex = 99;
@@ -401,18 +403,38 @@
             // 
             this.rbMaritimas.AutoSize = true;
             this.rbMaritimas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbMaritimas.Location = new System.Drawing.Point(297, 182);
+            this.rbMaritimas.Location = new System.Drawing.Point(297, 205);
             this.rbMaritimas.Name = "rbMaritimas";
             this.rbMaritimas.Size = new System.Drawing.Size(78, 17);
             this.rbMaritimas.TabIndex = 100;
             this.rbMaritimas.Text = "Maritimas";
             this.rbMaritimas.UseVisualStyleBackColor = true;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(90, 95);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 16);
+            this.label7.TabIndex = 101;
+            this.label7.Text = "Suplidor:";
+            // 
+            // cmbSuplidor
+            // 
+            this.cmbSuplidor.FormattingEnabled = true;
+            this.cmbSuplidor.Location = new System.Drawing.Point(169, 93);
+            this.cmbSuplidor.Name = "cmbSuplidor";
+            this.cmbSuplidor.Size = new System.Drawing.Size(260, 21);
+            this.cmbSuplidor.TabIndex = 102;
+            // 
             // frmEntradaCombustibles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(713, 590);
+            this.ClientSize = new System.Drawing.Size(713, 608);
+            this.Controls.Add(this.cmbSuplidor);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.rbMaritimas);
             this.Controls.Add(this.rbTerrestres);
             this.Controls.Add(this.label6);
@@ -445,6 +467,8 @@
             this.Controls.SetChildIndex(this.label6, 0);
             this.Controls.SetChildIndex(this.rbTerrestres, 0);
             this.Controls.SetChildIndex(this.rbMaritimas, 0);
+            this.Controls.SetChildIndex(this.label7, 0);
+            this.Controls.SetChildIndex(this.cmbSuplidor, 0);
             this.groupBox4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgview)).EndInit();
@@ -486,5 +510,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RadioButton rbTerrestres;
         private System.Windows.Forms.RadioButton rbMaritimas;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cmbSuplidor;
     }
 }

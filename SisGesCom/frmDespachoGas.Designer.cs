@@ -35,7 +35,6 @@
             this.dtFecha = new System.Windows.Forms.DateTimePicker();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtSuplidor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnNuevo = new System.Windows.Forms.Button();
@@ -56,6 +55,7 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.Combustible = new System.Windows.Forms.Label();
+            this.cmbSuplidor = new System.Windows.Forms.ComboBox();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgview)).BeginInit();
@@ -69,7 +69,7 @@
             // 
             // txtNota
             // 
-            this.txtNota.Location = new System.Drawing.Point(181, 102);
+            this.txtNota.Location = new System.Drawing.Point(181, 105);
             this.txtNota.Name = "txtNota";
             this.txtNota.Size = new System.Drawing.Size(400, 46);
             this.txtNota.TabIndex = 115;
@@ -79,7 +79,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(130, 102);
+            this.label5.Location = new System.Drawing.Point(130, 105);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 16);
             this.label5.TabIndex = 114;
@@ -120,18 +120,11 @@
             this.label8.TabIndex = 110;
             this.label8.Text = "No. Despacho:";
             // 
-            // txtSuplidor
-            // 
-            this.txtSuplidor.Location = new System.Drawing.Point(181, 74);
-            this.txtSuplidor.Name = "txtSuplidor";
-            this.txtSuplidor.Size = new System.Drawing.Size(326, 20);
-            this.txtSuplidor.TabIndex = 109;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(105, 77);
+            this.label2.Location = new System.Drawing.Point(105, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 16);
             this.label2.TabIndex = 108;
@@ -386,18 +379,26 @@
             this.Combustible.TabIndex = 7;
             this.Combustible.Text = "Departamento:";
             // 
+            // cmbSuplidor
+            // 
+            this.cmbSuplidor.FormattingEnabled = true;
+            this.cmbSuplidor.Location = new System.Drawing.Point(182, 75);
+            this.cmbSuplidor.Name = "cmbSuplidor";
+            this.cmbSuplidor.Size = new System.Drawing.Size(286, 21);
+            this.cmbSuplidor.TabIndex = 116;
+            // 
             // frmDespachoGas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(712, 580);
+            this.Controls.Add(this.cmbSuplidor);
             this.Controls.Add(this.txtNota);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtFecha);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtSuplidor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
@@ -410,13 +411,13 @@
             this.Controls.SetChildIndex(this.groupBox2, 0);
             this.Controls.SetChildIndex(this.groupBox4, 0);
             this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.txtSuplidor, 0);
             this.Controls.SetChildIndex(this.label8, 0);
             this.Controls.SetChildIndex(this.txtCodigo, 0);
             this.Controls.SetChildIndex(this.dtFecha, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.txtNota, 0);
+            this.Controls.SetChildIndex(this.cmbSuplidor, 0);
             this.groupBox4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgview)).EndInit();
@@ -435,7 +436,6 @@
         private System.Windows.Forms.DateTimePicker dtFecha;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtSuplidor;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnNuevo;
@@ -456,5 +456,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label Combustible;
+        private System.Windows.Forms.ComboBox cmbSuplidor;
     }
 }

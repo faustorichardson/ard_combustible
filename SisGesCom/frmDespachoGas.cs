@@ -20,13 +20,13 @@ using System.IO;
 namespace SisGesCom
 {
     public partial class frmDespachoGas : frmBase
-    {
-
+    {        
         string cModo = "Inicio";
         int i;
         DataTable dt = new DataTable();
-        int idComb = 0;
+        int idComb = 2000;
         int cantComb = 0;
+        int combTemp = 0;
 
         public frmDespachoGas()
         {
@@ -44,6 +44,9 @@ namespace SisGesCom
             // Llenando el combo del departamento beneficiario
             this.fillCmbDepartamento();
 
+            // Llenando el combo del suplidor
+            this.fillCmbSuplidor();
+
             // Llenando el combo del Departamento Autoriza
             // this.fillCmbAutorizado();
 
@@ -59,6 +62,45 @@ namespace SisGesCom
             // Funcion Botones
             this.cModo = "Inicio";
             this.Botones();
+        }
+
+        private void fillCmbSuplidor()
+        {
+            try
+            {
+                // Step 1 
+                MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
+
+                // Step 2
+                MyConexion.Open();
+
+                // Step 3
+                MySqlCommand MyCommand = new MySqlCommand("SELECT id_suplidor, suplidor FROM suplidores ORDER BY suplidor ASC", MyConexion);
+
+                // Step 4
+                MySqlDataReader MyReader;
+                MyReader = MyCommand.ExecuteReader();
+
+                // Step 5
+                DataTable MyDataTable = new DataTable();
+                MyDataTable.Columns.Add("id_suplidor", typeof(int));
+                MyDataTable.Columns.Add("suplidor", typeof(string));
+                MyDataTable.Load(MyReader);
+
+                // Step 6
+                cmbSuplidor.ValueMember = "id_suplidor";
+                cmbSuplidor.DisplayMember = "suplidor";
+                cmbSuplidor.DataSource = MyDataTable;
+
+                // Step 7
+                MyConexion.Close();
+
+            }
+            catch (Exception myEx)
+            {
+                MessageBox.Show(myEx.Message);
+                throw;
+            }
         }
 
 
@@ -104,7 +146,7 @@ namespace SisGesCom
                 codigo = Convert.ToInt32(MyCommand.ExecuteScalar());
                 codigo = codigo + 1;
                 txtCodigo.Text = Convert.ToString(codigo);
-                txtSuplidor.Focus();
+                // txtSuplidor.Focus();
 
                 // Step 5 - Close the connection
                 MyConexion.Close();
@@ -202,12 +244,12 @@ namespace SisGesCom
         private void Limpiar()
         {
             this.txtCodigo.Clear();
-            this.txtSuplidor.Clear();
+            // this.txtSuplidor.Clear();
             this.txtNota.Clear();
             this.txtCantidad.Clear();
             this.dt.Clear();
             this.cantComb = 0;
-            this.idComb = 0;
+            this.idComb = 2000;
         }
 
         private void LimpiaCampo()
@@ -233,7 +275,7 @@ namespace SisGesCom
                     this.btnUpdate.Enabled = false;
                     //
                     this.txtCodigo.Enabled = true;
-                    this.txtSuplidor.Enabled = false;                    
+                    this.cmbSuplidor.Enabled = false;
                     this.txtCantidad.Enabled = false;
                     this.txtNota.Enabled = false;
                     this.cmbDepartamento.Enabled = false;
@@ -253,7 +295,7 @@ namespace SisGesCom
                     this.btnUpdate.Enabled = true;
                     //
                     this.txtCodigo.Enabled = false;
-                    this.txtSuplidor.Enabled = true;                    
+                    this.cmbSuplidor.Enabled = true;
                     this.txtCantidad.Enabled = true;
                     this.txtNota.Enabled = true;
                     this.cmbDepartamento.Enabled = true;
@@ -273,7 +315,7 @@ namespace SisGesCom
                     this.btnUpdate.Enabled = false;
                     //
                     this.txtCodigo.Enabled = true;
-                    this.txtSuplidor.Enabled = false;                    
+                    this.cmbSuplidor.Enabled = false;
                     this.txtCantidad.Enabled = false;
                     this.txtNota.Enabled = false;
                     this.cmbDepartamento.Enabled = false;
@@ -293,7 +335,7 @@ namespace SisGesCom
                     this.btnUpdate.Enabled = true;
                     //
                     this.txtCodigo.Enabled = false;
-                    this.txtSuplidor.Enabled = true;                    
+                    this.cmbSuplidor.Enabled = true;                    
                     this.txtCantidad.Enabled = true;
                     this.txtNota.Enabled = true;
                     this.cmbDepartamento.Enabled = true;
@@ -313,7 +355,7 @@ namespace SisGesCom
                     this.btnUpdate.Enabled = false;
                     //
                     this.txtCodigo.Enabled = true;
-                    this.txtSuplidor.Enabled = false;                    
+                    this.cmbSuplidor.Enabled = false;
                     this.txtCantidad.Enabled = false;
                     this.txtNota.Enabled = false;
                     this.cmbDepartamento.Enabled = false;
@@ -348,6 +390,9 @@ namespace SisGesCom
             }
             else
             {
+                // Agrego gas despachado
+                cantComb = cantComb + Convert.ToInt32(txtCantidad.Text);
+
                 // Agrego la informacion al Grid
                 dt.Rows.Add(cmbDepartamento.SelectedValue, lblDescripcionCombustible.Text, Convert.ToInt32(txtCantidad.Text));
                 dgview.DataSource = dt;
@@ -401,18 +446,13 @@ namespace SisGesCom
             {
                 MessageBox.Show("Debe de agregar una nota a esta solicitud...");
                 txtNota.Focus();
-            }
-            else if (txtSuplidor.Text == "")
-            {
-                MessageBox.Show("Debe de agregar un beneficiario...");
-                this.txtSuplidor.Focus();
-            }
+            }            
             else
             {
                 if (cModo == "Nuevo")
                 {
                     // Verifico nuevamente el numero de codigo antes de guardar
-                    this.ProximoCodigo();
+                    this.ProximoCodigo();                    
 
                     // PASO 1 - Agrego la data a la tabla combustible_gas
                     try
@@ -426,7 +466,7 @@ namespace SisGesCom
                         // Step 3 - Comando a ejecutar                        
                         myCommand.CommandText = "INSERT INTO combustible_gas(suplidor, fecha, nota)"+
                             "values(@suplidor, @fecha, @nota)";
-                        myCommand.Parameters.AddWithValue("@suplidor", txtSuplidor.Text);
+                        myCommand.Parameters.AddWithValue("@suplidor", cmbSuplidor.SelectedValue);
                         myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd"));
                         myCommand.Parameters.AddWithValue("@nota", txtNota.Text);
                         
@@ -485,6 +525,14 @@ namespace SisGesCom
                         throw;
                     }
 
+                    // PASO 3 - Actualizo inventario reduciendo el despacho
+                    
+                    // Busco cantidad en existencia
+                    this.buscaInventario();
+
+                    // Actualizo Inventario
+                    this.actualizaInventario();
+
                     // Pregunto si deseo imprimir
                     this.ImprimeSolicitud();
 
@@ -496,113 +544,99 @@ namespace SisGesCom
                 }
                 else
                 {
-                    // Actualizo la data a la tabla entrada de combustible
-                    //try
-                    //{
-                    //     Step 1 - Stablishing the connection
-                    //    MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
-
-                    //     Step 2 - Crear el comando de ejecucion
-                    //    MySqlCommand myCommand = MyConexion.CreateCommand();
-
-                    //     Step 3 - Comando a ejecutar                        
-                    //    myCommand.CommandText = "UPDATE combustible_salida SET fecha = @fecha, nota = @nota, " +
-                    //        "beneficiario = @beneficiario, beneficiario_depto = @beneficiario_depto, autorizadopor = @autorizadopor " +
-                    //        " WHERE id = " + txtCodigo.Text + "";
-                    //    myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd HH:mm:ss"));
-                    //    myCommand.Parameters.AddWithValue("@nota", txtNota.Text);
-                    //    myCommand.Parameters.AddWithValue("@beneficiario", txtBeneficiario.Text);
-                    //    myCommand.Parameters.AddWithValue("@beneficiario_depto", cmbRenglonBeneficiario.SelectedValue);
-                    //    myCommand.Parameters.AddWithValue("@autorizadopor", cmbAutorizadoPor.SelectedValue);
-
-                    //     Step 4 - Opening the connection
-                    //    MyConexion.Open();
-
-                    //     Step 5 - Executing the query
-                    //    myCommand.ExecuteNonQuery();
-
-                    //     Step 6 - Closing the connection
-                    //    MyConexion.Close();
-                    //}
-                    //catch (Exception myEx)
-                    //{
-                    //    MessageBox.Show(myEx.Message);
-                    //    throw;
-                    //}
-
-                    // Borro los datos de la tabla solicitud que tienen que ver con este ID
-                    //try
-                    //{
-                    //    // Step 1 - Stablishing the connection
-                    //    MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
-
-                    //    // Step 2 - Crear el comando de ejecucion
-                    //    MySqlCommand myCommand = MyConexion.CreateCommand();
-
-                    //    // Step 3 - Comando a ejecutar                        
-                    //    myCommand.CommandText = "DELETE FROM solicitud WHERE id = @id";
-                    //    myCommand.Parameters.AddWithValue("@id", txtSolicitud.Text);
-
-                    //    // Step 4 - Opening the connection
-                    //    MyConexion.Open();
-
-                    //    // Step 5 - Executing the query
-                    //    myCommand.ExecuteNonQuery();
-
-                    //    // Step 6 - Closing the connection
-                    //    MyConexion.Close();
-                    //}
-                    //catch (Exception myEx)
-                    //{
-                    //    MessageBox.Show(myEx.Message);
-                    //    throw;
-                    //}
-
-
-
-                    // Agrego la data nuevamente a la tabla Solicitud
-                    //try
-                    //{
-                    //    foreach (DataGridViewRow row in dgview.Rows)
-                    //    {
-                    //        MySqlConnection myConexion = new MySqlConnection(clsConexion.ConectionString);
-
-                    //        {
-                    //            using (MySqlCommand myCommand = new MySqlCommand("INSERT INTO solicitud(id, fecha, tipo_combustible, descripcion_combustible, cantidad)" +
-                    //                "VALUES(@id, @fecha, @tipo_combustible, @descripcion_combustible, @cantidad)", myConexion))
-                    //            {
-                    //                myCommand.Parameters.AddWithValue("@id", txtSolicitud.Text);
-                    //                myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd HH:mm:ss"));
-                    //                myCommand.Parameters.AddWithValue("@tipo_combustible", row.Cells["Id"].Value);
-                    //                myCommand.Parameters.AddWithValue("@descripcion_combustible", row.Cells["Combustible"].Value);
-                    //                myCommand.Parameters.AddWithValue("@cantidad", row.Cells["Cantidad"].Value);
-                    //                // Abro Conexion
-                    //                myConexion.Open();
-                    //                // Ejecuto Valores
-                    //                myCommand.ExecuteNonQuery();
-                    //                // Cierro Conexion
-                    //                myConexion.Close();
-
-                    //            }
-                    //        }
-                    //    }
-                    //    //MessageBox.Show("Records inserted.");
-                    //}
-                    //catch (Exception myEx)
-                    //{
-                    //    MessageBox.Show(myEx.Message);
-                    //    throw;
-                    //}
-
+                    
 
                 }
-
-                // HAGO IMPRESION DEL DOCUMENTO
-                //this.ImprimeSolicitud();
-
+                
             }
 
             
+        }
+
+
+        private void buscaInventario()
+        {
+            // BUSCANDO EN LA TABLA EXISTENCIA
+            try
+            {
+                // Step 1 - Conexion
+                MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
+
+                // Step 2 - creating the command object
+                MySqlCommand MyCommand = MyConexion.CreateCommand();
+
+                // Step 3 - creating the commandtext
+                MyCommand.CommandText = "SELECT cantidad from existencia WHERE tipocombustible =" + idComb + "";
+
+                // Step 4 - connection open
+                MyConexion.Open();
+
+                // Step 5 - Creating the DataReader                    
+                MySqlDataReader MyReader = MyCommand.ExecuteReader();
+
+                // Step 6 - Verifying if Reader has rows
+                if (MyReader.HasRows)
+                {
+                    while (MyReader.Read())
+                    {
+                        combTemp = Convert.ToInt32(MyReader["cantidad"].ToString());
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No hay existencia de este tipo de combustible...");
+                }
+
+                // Step 6 - Closing all
+                MyReader.Close();
+                MyCommand.Dispose();
+                MyConexion.Close();
+            }
+            catch (Exception myEx)
+            {
+                MessageBox.Show(myEx.Message);
+                throw;
+            }         
+        }
+
+        private void actualizaInventario()
+        {
+            if (combTemp > cantComb)
+            {
+                try
+                {
+                    // actualizo existencia combustible
+                    combTemp = combTemp - cantComb;
+
+                    // Step 1 - Conexion
+                    MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
+
+                    // Step 2 - creating the command object
+                    MySqlCommand MyCommand = MyConexion.CreateCommand();
+
+                    // Step 3 - creating the commandtext
+                    MyCommand.CommandText = "UPDATE existencia SET cantidad = "+ combTemp +" WHERE tipocombustible = "+ idComb +"";
+
+                    // Step 4 - connection open
+                    MyConexion.Open();
+
+                    // Step 5 - Creating the DataReader                    
+                    MyCommand.ExecuteNonQuery();
+
+                    // cierro variables
+                    MyCommand.Dispose();
+                    MyConexion.Close();
+                }
+                catch (Exception myEx)
+                {
+                    MessageBox.Show(myEx.Message);
+                    throw;
+                }
+            }
+            else
+            {
+                MessageBox.Show("La cantidad de gas a despachar es mayor que existencia...");
+            }            
         }
 
         private void ImprimeSolicitud()
@@ -654,12 +688,12 @@ namespace SisGesCom
                     //int cCodigoImprimir = Convert.ToInt32(txtIdLicencia.Text);
                     cWhere = cWhere + " AND combustible_gas.id =" + cCodigo + "";
                     sbQuery.Clear();
-                    sbQuery.Append("SELECT combustible_gas.id as id_despacho, combustible_gas.fecha, combustible_gas.suplidor, combustible_gas.nota,");
+                    sbQuery.Append("SELECT combustible_gas.id as id_despacho, combustible_gas.fecha, suplidores.suplidor as suplidor, combustible_gas.nota,");
                     sbQuery.Append(" movimientogas.id, movimientogas.cantidad, movimientogas.departamento_descripcion as departamento,");
                     sbQuery.Append(" deptobeneficiariogas.tarjeta");                    
                     sbQuery.Append(" FROM movimientogas");
-                    sbQuery.Append(" INNER JOIN combustible_gas ON combustible_gas.id = movimientogas.id");
-                    // sbQuery.Append(" INNER JOIN tipo_deptogas ON tipo_deptogas.id = movimientogas.departamento");
+                    sbQuery.Append(" INNER JOIN combustible_gas ON combustible_gas.id = movimientogas.id");                    
+                    sbQuery.Append(" INNER JOIN suplidores ON suplidores.id_suplidor = combustible_gas.suplidor");
                     sbQuery.Append(" INNER JOIN deptobeneficiariogas ON deptobeneficiariogas.id = movimientogas.departamento");
                     sbQuery.Append(cWhere);
                     //sbQuery.Append(" ORDER BY tipo_deptogas.id ASC");
@@ -783,7 +817,7 @@ namespace SisGesCom
                             txtCodigo.Text = MyReader["id"].ToString();
                             dtFecha.Value = Convert.ToDateTime(MyReader["fecha"]);
                             txtNota.Text = MyReader["nota"].ToString();
-                            txtSuplidor.Text = MyReader["suplidor"].ToString();                            
+                            cmbSuplidor.SelectedValue = MyReader["suplidor"].ToString();                            
                         }
 
                         this.cModo = "Buscar";

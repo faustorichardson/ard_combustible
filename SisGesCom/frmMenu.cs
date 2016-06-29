@@ -112,7 +112,7 @@ namespace SisGesCom
                     
                     // Reportes
                     this.menu_reportes.Enabled = true;
-                    this.reportes_estadisticas.Enabled = true;
+                    this.menu_estadisticas.Enabled = true;
                     this.reportes_listados.Enabled = true;
                     //
                     break;
@@ -895,6 +895,17 @@ namespace SisGesCom
                 //ExceptionLog.LogError(myEx, false);
                 return;
             }
+        }
+
+        private void buttonItem1_Click_1(object sender, EventArgs e)
+        {
+            frmSuplidor ofrmSuplidor = new frmSuplidor();
+            ofrmSuplidor.ShowDialog();
+        }
+
+        private void buttonItem47_Click(object sender, EventArgs e)
+        {
+
         }
 
         

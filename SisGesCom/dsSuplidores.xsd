@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsSuplidores" targetNamespace="http://tempuri.org/dsSuplidores.xsd" xmlns:mstns="http://tempuri.org/dsSuplidores.xsd" xmlns="http://tempuri.org/dsSuplidores.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsSuplidores" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsSuplidores" msprop:Generator_UserDSName="dsSuplidores">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtSuplidores" msprop:Generator_TableClassName="dtSuplidoresDataTable" msprop:Generator_TableVarName="tabledtSuplidores" msprop:Generator_TablePropName="dtSuplidores" msprop:Generator_RowDeletingName="dtSuplidoresRowDeleting" msprop:Generator_UserTableName="dtSuplidores" msprop:Generator_RowChangingName="dtSuplidoresRowChanging" msprop:Generator_RowEvHandlerName="dtSuplidoresRowChangeEventHandler" msprop:Generator_RowDeletedName="dtSuplidoresRowDeleted" msprop:Generator_RowEvArgName="dtSuplidoresRowChangeEvent" msprop:Generator_RowChangedName="dtSuplidoresRowChanged" msprop:Generator_RowClassName="dtSuplidoresRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_suplidor" msprop:Generator_ColumnVarNameInTable="columnid_suplidor" msprop:Generator_ColumnPropNameInRow="id_suplidor" msprop:Generator_ColumnPropNameInTable="id_suplidorColumn" msprop:Generator_UserColumnName="id_suplidor" type="xs:int" minOccurs="0" />
+              <xs:element name="suplidor" msprop:Generator_ColumnVarNameInTable="columnsuplidor" msprop:Generator_ColumnPropNameInRow="suplidor" msprop:Generator_ColumnPropNameInTable="suplidorColumn" msprop:Generator_UserColumnName="suplidor" type="xs:string" minOccurs="0" />
+              <xs:element name="rnc" msprop:Generator_ColumnVarNameInTable="columnrnc" msprop:Generator_ColumnPropNameInRow="rnc" msprop:Generator_ColumnPropNameInTable="rncColumn" msprop:Generator_UserColumnName="rnc" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -307,6 +307,8 @@ namespace SisGesCom {
             
             private global::System.Data.DataColumn columndescripcion_combustible;
             
+            private global::System.Data.DataColumn columnsuplidor;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public dtMovimientoCombustibleDataTable() {
@@ -454,6 +456,14 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn suplidorColumn {
+                get {
+                    return this.columnsuplidor;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -489,7 +499,7 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public dtMovimientoCombustibleRow AdddtMovimientoCombustibleRow(int id, string tipo_movimiento, string tipo_combustible, decimal cantidad, string nota, string beneficiario, string autorizadopor, string tipobeneficiario, System.DateTime fecha, string medida, System.DateTime fechadesde, System.DateTime fechahasta, int embarcacion, string descripcion_combustible) {
+            public dtMovimientoCombustibleRow AdddtMovimientoCombustibleRow(int id, string tipo_movimiento, string tipo_combustible, decimal cantidad, string nota, string beneficiario, string autorizadopor, string tipobeneficiario, System.DateTime fecha, string medida, System.DateTime fechadesde, System.DateTime fechahasta, int embarcacion, string descripcion_combustible, string suplidor) {
                 dtMovimientoCombustibleRow rowdtMovimientoCombustibleRow = ((dtMovimientoCombustibleRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
@@ -505,7 +515,8 @@ namespace SisGesCom {
                         fechadesde,
                         fechahasta,
                         embarcacion,
-                        descripcion_combustible};
+                        descripcion_combustible,
+                        suplidor};
                 rowdtMovimientoCombustibleRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowdtMovimientoCombustibleRow);
                 return rowdtMovimientoCombustibleRow;
@@ -542,6 +553,7 @@ namespace SisGesCom {
                 this.columnfechahasta = base.Columns["fechahasta"];
                 this.columnembarcacion = base.Columns["embarcacion"];
                 this.columndescripcion_combustible = base.Columns["descripcion_combustible"];
+                this.columnsuplidor = base.Columns["suplidor"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -575,6 +587,8 @@ namespace SisGesCom {
                 base.Columns.Add(this.columnembarcacion);
                 this.columndescripcion_combustible = new global::System.Data.DataColumn("descripcion_combustible", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndescripcion_combustible);
+                this.columnsuplidor = new global::System.Data.DataColumn("suplidor", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsuplidor);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -947,6 +961,22 @@ namespace SisGesCom {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string suplidor {
+                get {
+                    try {
+                        return ((string)(this[this.tabledtMovimientoCombustible.suplidorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'suplidor\' in table \'dtMovimientoCombustible\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledtMovimientoCombustible.suplidorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsidNull() {
                 return this.IsNull(this.tabledtMovimientoCombustible.idColumn);
             }
@@ -1111,6 +1141,18 @@ namespace SisGesCom {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setdescripcion_combustibleNull() {
                 this[this.tabledtMovimientoCombustible.descripcion_combustibleColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IssuplidorNull() {
+                return this.IsNull(this.tabledtMovimientoCombustible.suplidorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetsuplidorNull() {
+                this[this.tabledtMovimientoCombustible.suplidorColumn] = global::System.Convert.DBNull;
             }
         }
         

@@ -116,6 +116,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dsSuplidores.cs">
+      <DependentUpon>dsSuplidores.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dsSuplidores.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSuplidores.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsUsuarios.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -402,6 +411,12 @@
     <Compile Include="frmSolicitudCombustibles.Designer.cs">
       <DependentUpon>frmSolicitudCombustibles.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSuplidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSuplidor.Designer.cs">
+      <DependentUpon>frmSuplidor.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTicketsEntregadosDepto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -521,6 +536,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptSolicitudDespachoGas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptSuplidores.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSuplidores.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="rptTicketsEntregadosPorDepto.cs">
@@ -658,6 +679,9 @@
     <EmbeddedResource Include="frmSolicitudCombustibles.resx">
       <DependentUpon>frmSolicitudCombustibles.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSuplidor.resx">
+      <DependentUpon>frmSuplidor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTicketsEntregadosDepto.resx">
       <DependentUpon>frmTicketsEntregadosDepto.cs</DependentUpon>
     </EmbeddedResource>
@@ -740,6 +764,10 @@
     <EmbeddedResource Include="rptSolicitudDespachoGas.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptSolicitudDespachoGas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptSuplidores.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSuplidores.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="rptTicketsEntregadosPorDepto.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -825,6 +853,17 @@
     </None>
     <None Include="dsSolicitudCombustible.xss">
       <DependentUpon>dsSolicitudCombustible.xsd</DependentUpon>
+    </None>
+    <None Include="dsSuplidores.xsc">
+      <DependentUpon>dsSuplidores.xsd</DependentUpon>
+    </None>
+    <None Include="dsSuplidores.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSuplidores.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsSuplidores.xss">
+      <DependentUpon>dsSuplidores.xsd</DependentUpon>
     </None>
     <None Include="dsTickets.xsc">
       <DependentUpon>dsTickets.xsd</DependentUpon>
