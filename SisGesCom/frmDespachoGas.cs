@@ -494,12 +494,13 @@ namespace SisGesCom
 
                             {
                                 using (MySqlCommand myCommand = new MySqlCommand("INSERT INTO movimientogas(id, departamento, " +
-                                    "departamento_descripcion, cantidad) VALUES(@id, @departamento, @departamento_descripcion, @cantidad)", myConexion))
+                                    "departamento_descripcion, cantidad, fecha) VALUES(@id, @departamento, @departamento_descripcion, @cantidad, @fecha)", myConexion))
                                 {
                                     myCommand.Parameters.AddWithValue("@id", txtCodigo.Text);                                    
                                     myCommand.Parameters.AddWithValue("@departamento", row.Cells["Id"].Value);
                                     myCommand.Parameters.AddWithValue("@departamento_descripcion", row.Cells["Departamento"].Value);
                                     myCommand.Parameters.AddWithValue("@cantidad", row.Cells["Cantidad"].Value);
+                                    myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd"));
                                     
                                     // Abro Conexion
                                     myConexion.Open();

@@ -762,9 +762,151 @@ namespace SisGesCom
             }
 
             // Pregunto si deseo imprimir
-            //this.ImprimeSolicitud();
+            this.ImprimeSolicitud();
 
             
+        }
+
+        private void ImprimeSolicitud()
+        {
+            DialogResult Result =
+            MessageBox.Show("Imprima la Solicitud de Combustible" + System.Environment.NewLine + "Desea Imprimir la Solicitud de Combustible", "Sistema de Gestion de Combustibles", MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question);
+                switch (Result)
+                {
+                    case DialogResult.Yes:
+                        GenerarReporte();
+                        break;
+                }
+        }
+
+        private void GenerarReporte()
+        {
+            if (txtEntrada.Text == "")
+            {
+                MessageBox.Show("No se permite imprimir certificacion sin su debida numeracion...");
+                txtCantidad.Focus();
+            }
+            else
+            {
+
+                //clsConexion a la base de datos
+                MySqlConnection myclsConexion = new MySqlConnection(clsConexion.ConectionString);
+                // Creando el command que ejecutare
+                MySqlCommand myCommand = new MySqlCommand();
+                // Creando el Data Adapter
+                MySqlDataAdapter myAdapter = new MySqlDataAdapter();
+                // Creando el String Builder
+                StringBuilder sbQuery = new StringBuilder();
+                // Otras variables del entorno
+                string cWhere = " WHERE 1 = 1";
+                string cUsuario = frmLogin.cUsuarioActual;
+                string cTitulo = "";
+                int cCodigo = Convert.ToInt32(txtEntrada.Text);
+
+                try
+                {
+                    // Abro clsConexion
+                    myclsConexion.Open();
+                    // Creo comando
+                    myCommand = myclsConexion.CreateCommand();
+                    // Adhiero el comando a la clsConexion
+                    myCommand.Connection = myclsConexion;
+                    // Filtros de la busqueda
+                    //int cCodigoImprimir = Convert.ToInt32(txtIdLicencia.Text);
+                    cWhere = cWhere + " AND combustible_entrada.id =" + cCodigo + "";
+                    sbQuery.Clear();
+                    sbQuery.Append("SELECT combustible_entrada.id, combustible_entrada.fecha, combustible_entrada.nota, suplidores.suplidor");
+                    // sbQuery.Append(" solicitud.cantidad, secuencia_solicitudcombustible.nota as nota, tipo_combustible.medida as medida");
+                    //sbQuery.Append(" licenciasmedicas.razonlicencia, dependencias.nomdepart, seccionaval.nomsec,");
+                    //sbQuery.Append(" concat(rtrim(doctores.doctores_nombre),' ', ltrim(doctores.doctores_apellido)) as nombredoctor,");
+                    //sbQuery.Append(" rangos.rangoabrev as rangodoctor, especialidades.especialidades_descripcion as doctorespecialidad,");
+                    //sbQuery.Append(" licenciasmedicas.idlicencia ");
+                    sbQuery.Append(" FROM combustible_entrada");
+                    sbQuery.Append(" INNER JOIN suplidores ON suplidores.id_suplidor = combustible_entrada.suplidor");
+                    // sbQuery.Append(" INNER JOIN secuencia_solicitudcombustible ON secuencia_solicitudcombustible.id = solicitud.id");
+                    //sbQuery.Append(" INNER JOIN seccionaval ON seccionaval.codsec = licenciasmedicas.seccionaval");
+                    //sbQuery.Append(" INNER JOIN doctores ON doctores.doctores_cedula = licenciasmedicas.ceduladoctor");
+                    //sbQuery.Append(" INNER JOIN rangos ON rangos.rango_id = doctores.doctores_rango");
+                    //sbQuery.Append(" INNER JOIN especialidades ON especialidades.especialidades_id = doctores.doctores_especialidad");
+                    sbQuery.Append(cWhere);
+
+                    // Paso los valores de sbQuery al CommandText
+                    myCommand.CommandText = sbQuery.ToString();
+                    // Creo el objeto Data Adapter y ejecuto el command en el
+                    myAdapter = new MySqlDataAdapter(myCommand);
+                    // Creo el objeto Data Table
+                    DataTable dtMovimientoCombustible = new DataTable();
+                    // Lleno el data adapter
+                    myAdapter.Fill(dtMovimientoCombustible);
+                    // Cierro el objeto clsConexion
+                    myclsConexion.Close();
+
+                    // Verifico cantidad de datos encontrados
+                    int nRegistro = dtMovimientoCombustible.Rows.Count;
+                    if (nRegistro == 0)
+                    {
+                        MessageBox.Show("No Hay Datos Para Mostrar, Favor Verificar", "Sistema de Gestion de Combustible", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                    else
+                    {
+                        //1ero.HACEMOS LA COLECCION DE PARAMETROS
+                        //los campos de parametros contiene un objeto para cada campo de parametro en el informe
+                        ParameterFields oParametrosCR = new ParameterFields();
+                        //Proporciona propiedades para la recuperacion y configuracion del tipo de los parametros
+                        ParameterValues oParametrosValuesCR = new ParameterValues();
+
+                        //2do.CREAMOS LOS PARAMETROS
+                        ParameterField oUsuario = new ParameterField();
+                        //parametervaluetype especifica el TIPO de valor de parametro
+                        //ParameterValueKind especifica el tipo de valor de parametro en la PARAMETERVALUETYPE de la Clase PARAMETERFIELD
+                        oUsuario.ParameterValueType = ParameterValueKind.StringParameter;
+
+                        //3ero.VALORES PARA LOS PARAMETROS
+                        //ParameterDiscreteValue proporciona propiedades para la recuperacion y configuracion de 
+                        //parametros de valores discretos
+                        ParameterDiscreteValue oUsuarioDValue = new ParameterDiscreteValue();
+                        oUsuarioDValue.Value = cUsuario;
+
+                        //4to. AGREGAMOS LOS VALORES A LOS PARAMETROS
+                        oUsuario.CurrentValues.Add(oUsuarioDValue);
+
+
+                        //5to. AGREGAMOS LOS PARAMETROS A LA COLECCION 
+                        oParametrosCR.Add(oUsuario);
+
+                        //nombre del parametro en CR (Crystal Reports)
+                        oParametrosCR[0].Name = "cUsuario";
+
+                        //nombre del TITULO DEL INFORME
+                        cTitulo = "CERTIFICACIÓN";
+
+                        //6to Instanciamos nuestro REPORTE
+                        //Reportes.ListadoDoctores oListado = new Reportes.ListadoDoctores();
+                        rptCertificacionEntradaCombustible orptCertificacionEntradaCombustible = new rptCertificacionEntradaCombustible();                        
+
+                        //pasamos el nombre del TITULO del Listado
+                        //SumaryInfo es un objeto que se utiliza para leer,crear y actualizar las propiedades del reporte
+                        // oListado.SummaryInfo.ReportTitle = cTitulo;
+                        orptCertificacionEntradaCombustible.SummaryInfo.ReportTitle = cTitulo;
+
+                        //7mo. instanciamos nuestro el FORMULARIO donde esta nuestro ReportViewer
+                        frmPrinter ofrmPrinter = new frmPrinter(dtMovimientoCombustible, orptCertificacionEntradaCombustible, cTitulo);
+
+                        //ParameterFieldInfo Obtiene o establece la colección de campos de parámetros.
+                        ofrmPrinter.CrystalReportViewer1.ParameterFieldInfo = oParametrosCR;
+                        ofrmPrinter.ShowDialog();
+                    }
+                }
+                catch (Exception myEx)
+                {
+                    MessageBox.Show("Error : " + myEx.Message, "Mostrando Reporte", MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
+                    clsExceptionLog.LogError(myEx, false);
+                    return;
+                }
+            }
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -874,8 +1016,7 @@ namespace SisGesCom
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            frmPrintEntradaCombustible ofrmPrintEntradaCombustible = new frmPrintEntradaCombustible();
-            ofrmPrintEntradaCombustible.ShowDialog();
+            this.GenerarReporte();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

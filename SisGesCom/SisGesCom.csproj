@@ -345,6 +345,12 @@
     <Compile Include="frmPrintDespachoGas.Designer.cs">
       <DependentUpon>frmPrintDespachoGas.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPrintDespachoGasEst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrintDespachoGasEst.Designer.cs">
+      <DependentUpon>frmPrintDespachoGasEst.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrintEntradaCombustible.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -442,6 +448,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rptCertificacionEntradaCombustible.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCertificacionEntradaCombustible.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="rptDespachoCombustibleDetallado.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -518,6 +530,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptResumenCombustibleSolicitado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptResumenDespachoGas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptResumenDespachoGas.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="rptSolicitudCombustible.cs">
@@ -646,6 +664,9 @@
     <EmbeddedResource Include="frmPrintDespachoGas.resx">
       <DependentUpon>frmPrintDespachoGas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPrintDespachoGasEst.resx">
+      <DependentUpon>frmPrintDespachoGasEst.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrintEntradaCombustible.resx">
       <DependentUpon>frmPrintEntradaCombustible.cs</DependentUpon>
     </EmbeddedResource>
@@ -701,6 +722,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="rptCertificacionEntradaCombustible.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificacionEntradaCombustible.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="rptDespachoCombustibleDetallado.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptDespachoCombustibleDetallado.cs</LastGenOutput>
@@ -752,6 +777,10 @@
     <EmbeddedResource Include="rptResumenCombustibleSolicitado.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptResumenCombustibleSolicitado.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptResumenDespachoGas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptResumenDespachoGas.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="rptSolicitudCombustible.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

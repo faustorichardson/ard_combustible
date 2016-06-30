@@ -905,7 +905,8 @@ namespace SisGesCom
 
         private void buttonItem47_Click(object sender, EventArgs e)
         {
-
+            frmPrintDespachoGasEst ofrmPrintDespachoGasEst = new frmPrintDespachoGasEst();
+            ofrmPrintDespachoGasEst.ShowDialog();
         }
 
         

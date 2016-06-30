@@ -1243,4 +1243,61 @@
    at MySql.Data.MySqlClient.MySqlConnection.Open()
    at SisGesCom.frmLogin.btnLogin_Click(Object sender, EventArgs e) in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\frmLogin.cs:line 44</StackTrace>
   </Exception>
+  <Exception>
+    <DateTime>6/30/2016 12:41:27 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Unknown column 'suplidores.id' in 'on clause'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>MySql.Data.MySqlClient.MySqlPacket ReadPacket()</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32&amp; affectedRow, Int64&amp; insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32&amp; affectedRows, Int64&amp; insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at SisGesCom.frmEntradaCombustibles.GenerarReporte() in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\frmEntradaCombustibles.cs:line 841</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>6/30/2016 12:42:23 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Unknown column 'suplidores.id' in 'on clause'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>MySql.Data.MySqlClient.MySqlPacket ReadPacket()</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32&amp; affectedRow, Int64&amp; insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32&amp; affectedRows, Int64&amp; insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at SisGesCom.frmEntradaCombustibles.GenerarReporte() in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\frmEntradaCombustibles.cs:line 841</StackTrace>
+  </Exception>
+  <Exception>
+    <DateTime>6/30/2016 1:44:04 PM</DateTime>
+    <Application>Sistema SysHospitalARD v1.0</Application>
+    <Message>Unknown column 'combustible_gas.id_suplidor' in 'field list'</Message>
+    <Source>MySql.Data</Source>
+    <TargetSite>MySql.Data.MySqlClient.MySqlPacket ReadPacket()</TargetSite>
+    <StackTrace>   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32&amp; affectedRow, Int64&amp; insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32&amp; affectedRows, Int64&amp; insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at SisGesCom.frmEntradaCombustibles.GenerarReporte() in C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\frmEntradaCombustibles.cs:line 841</StackTrace>
+  </Exception>
 </EventLog>
