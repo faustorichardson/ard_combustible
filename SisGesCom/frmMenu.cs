@@ -909,6 +909,12 @@ namespace SisGesCom
             ofrmPrintDespachoGasEst.ShowDialog();
         }
 
+        private void buttonItem5_Click_1(object sender, EventArgs e)
+        {
+            frmEstacionCombustible ofrmEstacionesCombustible = new frmEstacionCombustible();
+            ofrmEstacionesCombustible.ShowDialog();
+        }
+
         
     }
 }

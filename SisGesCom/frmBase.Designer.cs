@@ -56,6 +56,7 @@
             this.Name = "frmBase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBase";
+            this.Load += new System.EventHandler(this.frmBase_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

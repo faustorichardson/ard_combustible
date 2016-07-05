@@ -648,6 +648,9 @@ namespace SisGesCom
                         throw;
                     }
 
+                    // Pregunto si deseo imprimir
+                    this.ImprimeSolicitud();
+
                     // LIMPIO LOS CAMPOS Y CAMBIO EL MODO LUEGO DE HABER REGISTRADO O ACTUALIZADO EL RECORD
                     this.cModo = "Inicio";
                     this.Botones();
@@ -667,7 +670,7 @@ namespace SisGesCom
 
                         // Step 3 - Comando a ejecutar                        
                         myCommand.CommandText = "UPDATE combustible_entrada SET fecha = @fecha, nota = @nota, id_solicitud = @solicitud," +
-                            " suplidor = @suplidor WHERE id = " + txtSolicitud.Text + "";
+                            " suplidor = @suplidor WHERE id = " + txtEntrada.Text + "";
                         myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd HH:mm:ss"));
                         myCommand.Parameters.AddWithValue("@nota", txtNota.Text);
                         myCommand.Parameters.AddWithValue("@solicitud", txtSolicitud.Text);
@@ -686,83 +689,19 @@ namespace SisGesCom
                     {
                         MessageBox.Show(myEx.Message);
                         throw;
-                    }
-
-                    // Borro los datos de la tabla solicitud que tienen que ver con este ID
-                    //try
-                    //{
-                    //    // Step 1 - Stablishing the connection
-                    //    MySqlConnection MyConexion = new MySqlConnection(clsConexion.ConectionString);
-
-                    //    // Step 2 - Crear el comando de ejecucion
-                    //    MySqlCommand myCommand = MyConexion.CreateCommand();
-
-                    //    // Step 3 - Comando a ejecutar                        
-                    //    myCommand.CommandText = "DELETE FROM solicitud WHERE id = @id";
-                    //    myCommand.Parameters.AddWithValue("@id", txtSolicitud.Text);
-
-                    //    // Step 4 - Opening the connection
-                    //    MyConexion.Open();
-
-                    //    // Step 5 - Executing the query
-                    //    myCommand.ExecuteNonQuery();
-
-                    //    // Step 6 - Closing the connection
-                    //    MyConexion.Close();
-                    //}
-                    //catch (Exception myEx)
-                    //{
-                    //    MessageBox.Show(myEx.Message);
-                    //    throw;
-                    //}
-
-                    
-
-                    // Agrego la data nuevamente a la tabla Solicitud
-                    //try
-                    //{
-                    //    foreach (DataGridViewRow row in dgview.Rows)
-                    //    {
-                    //        MySqlConnection myConexion = new MySqlConnection(clsConexion.ConectionString);
-
-                    //        {
-                    //            using (MySqlCommand myCommand = new MySqlCommand("INSERT INTO solicitud(id, fecha, tipo_combustible, descripcion_combustible, cantidad)" +
-                    //                "VALUES(@id, @fecha, @tipo_combustible, @descripcion_combustible, @cantidad)", myConexion))
-                    //            {
-                    //                myCommand.Parameters.AddWithValue("@id", txtSolicitud.Text);
-                    //                myCommand.Parameters.AddWithValue("@fecha", dtFecha.Value.ToString("yyyy-MM-dd HH:mm:ss"));
-                    //                myCommand.Parameters.AddWithValue("@tipo_combustible", row.Cells["Id"].Value);
-                    //                myCommand.Parameters.AddWithValue("@descripcion_combustible", row.Cells["Combustible"].Value);
-                    //                myCommand.Parameters.AddWithValue("@cantidad", row.Cells["Cantidad"].Value);
-                    //                // Abro Conexion
-                    //                myConexion.Open();
-                    //                // Ejecuto Valores
-                    //                myCommand.ExecuteNonQuery();
-                    //                // Cierro Conexion
-                    //                myConexion.Close();
-
-                    //            }
-                    //        }
-                    //    }
-                    //    //MessageBox.Show("Records inserted.");
-                    //}
-                    //catch (Exception myEx)
-                    //{
-                    //    MessageBox.Show(myEx.Message);
-                    //    throw;
-                    //}
+                    }                    
 
 
                 }
+
+                // Pregunto si deseo imprimir
+                this.ImprimeSolicitud();
 
                 // LIMPIO LOS CAMPOS Y CAMBIO EL MODO LUEGO DE HABER REGISTRADO O ACTUALIZADO EL RECORD
                 this.cModo = "Inicio";
                 this.Botones();
                 this.Limpiar();
-            }
-
-            // Pregunto si deseo imprimir
-            this.ImprimeSolicitud();
+            }            
 
             
         }

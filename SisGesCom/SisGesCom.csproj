@@ -116,6 +116,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dsEstaciones.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsEstaciones.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsSuplidores.cs">
       <DependentUpon>dsSuplidores.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -290,6 +295,12 @@
     </Compile>
     <Compile Include="frmDespachoTicketsDepto.Designer.cs">
       <DependentUpon>frmDespachoTicketsDepto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEstacionCombustible.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEstacionCombustible.Designer.cs">
+      <DependentUpon>frmEstacionCombustible.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrintDespachoCombUnidNaval.cs">
       <SubType>Form</SubType>
@@ -484,6 +495,12 @@
       <DependentUpon>rptEntradaCombustible.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="rptEstaciones.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptEstaciones.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="rptExistencia.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -643,6 +660,9 @@
     <EmbeddedResource Include="frmEntradaCombustibles.resx">
       <DependentUpon>frmEntradaCombustibles.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEstacionCombustible.resx">
+      <DependentUpon>frmEstacionCombustible.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInformaciones.resx">
       <DependentUpon>frmInformaciones.cs</DependentUpon>
     </EmbeddedResource>
@@ -746,6 +766,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptEntradaCombustible.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="rptEstaciones.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptEstaciones.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="rptExistencia.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptExistencia.cs</LastGenOutput>
@@ -838,6 +862,17 @@
     </None>
     <None Include="dsDeptoBeneficiario.xss">
       <DependentUpon>dsDeptoBeneficiario.xsd</DependentUpon>
+    </None>
+    <None Include="dsEstaciones.xsc">
+      <DependentUpon>dsEstaciones.xsd</DependentUpon>
+    </None>
+    <None Include="dsEstaciones.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsEstaciones.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsEstaciones.xss">
+      <DependentUpon>dsEstaciones.xsd</DependentUpon>
     </None>
     <None Include="dsExistencia.xsc">
       <DependentUpon>dsExistencia.xsd</DependentUpon>
