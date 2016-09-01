@@ -643,7 +643,7 @@ namespace SisGesCom
         private void ImprimeSolicitud()
         {
             DialogResult Result =
-            MessageBox.Show("Imprima la Solicitud de Combustible" + System.Environment.NewLine + "Desea Imprimir la Solicitud de Combustible", "Sistema de Gestion de Combustibles", MessageBoxButtons.YesNo,
+            MessageBox.Show("Imprima la Solicitud de Combustible" + System.Environment.NewLine + "Desea Imprimir la Solicitud de Despacho de Gas", "Sistema de Gestion de Combustibles", MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question);
             switch (Result)
             {

@@ -572,10 +572,7 @@ namespace SisGesCom
                 if (cModo == "Nuevo")
                 {
                     // verifico el codigo nuevamente
-                    this.ProximoCodigo();
-
-                    // Verifico el codigo antes de agregarlo
-                    this.ProximoCodigo();
+                    this.ProximoCodigo();                   
 
                     // PASO 1 - Agrego la data a la tabla combustible_salida
                     try

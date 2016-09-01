@@ -915,6 +915,12 @@ namespace SisGesCom
             ofrmEstacionesCombustible.ShowDialog();
         }
 
+        private void buttonItem11_Click_2(object sender, EventArgs e)
+        {
+            frmDespachoEstaciones ofrmDespachoEstaciones = new frmDespachoEstaciones();
+            ofrmDespachoEstaciones.ShowDialog();
+        }
+
         
     }
 }

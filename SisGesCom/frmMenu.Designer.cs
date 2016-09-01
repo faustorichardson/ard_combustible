@@ -32,6 +32,24 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.ribbonControl1 = new DevComponents.DotNetBar.RibbonControl();
+            this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
+            this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
+            this.buttonItem8 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem9 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem10 = new DevComponents.DotNetBar.ButtonItem();
+            this.ribbonPanel2 = new DevComponents.DotNetBar.RibbonPanel();
+            this.procesos_gesgas = new DevComponents.DotNetBar.RibbonBar();
+            this.buttonItem20 = new DevComponents.DotNetBar.ButtonItem();
+            this.procesos_gestickets = new DevComponents.DotNetBar.RibbonBar();
+            this.btnRegistroEntradaTicket = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem18 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem29 = new DevComponents.DotNetBar.ButtonItem();
+            this.procesos_gescombustible = new DevComponents.DotNetBar.RibbonBar();
+            this.btnSolicitudCmb = new DevComponents.DotNetBar.ButtonItem();
+            this.btnEntradaCmb = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem14 = new DevComponents.DotNetBar.ButtonItem();
+            this.btnDespachoEmbarcacion = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem11 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel5 = new DevComponents.DotNetBar.RibbonPanel();
             this.mantenimientos_usuarios = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem39 = new DevComponents.DotNetBar.ButtonItem();
@@ -53,11 +71,6 @@
             this.buttonItem3 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem5 = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
-            this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
-            this.buttonItem8 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem9 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem10 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonPanel3 = new DevComponents.DotNetBar.RibbonPanel();
             this.reportes_listados = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem6 = new DevComponents.DotNetBar.ButtonItem();
@@ -75,18 +88,6 @@
             this.buttonItem43 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem45 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem47 = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonPanel2 = new DevComponents.DotNetBar.RibbonPanel();
-            this.procesos_gesgas = new DevComponents.DotNetBar.RibbonBar();
-            this.buttonItem20 = new DevComponents.DotNetBar.ButtonItem();
-            this.procesos_gestickets = new DevComponents.DotNetBar.RibbonBar();
-            this.btnRegistroEntradaTicket = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem18 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem29 = new DevComponents.DotNetBar.ButtonItem();
-            this.procesos_gescombustible = new DevComponents.DotNetBar.RibbonBar();
-            this.btnSolicitudCmb = new DevComponents.DotNetBar.ButtonItem();
-            this.btnEntradaCmb = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem14 = new DevComponents.DotNetBar.ButtonItem();
-            this.btnDespachoEmbarcacion = new DevComponents.DotNetBar.ButtonItem();
             this.office2007StartButton1 = new DevComponents.DotNetBar.Office2007StartButton();
             this.itemContainer1 = new DevComponents.DotNetBar.ItemContainer();
             this.itemContainer2 = new DevComponents.DotNetBar.ItemContainer();
@@ -110,11 +111,11 @@
             this.buttonItem40 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem41 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonControl1.SuspendLayout();
-            this.ribbonPanel5.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
+            this.ribbonPanel2.SuspendLayout();
+            this.ribbonPanel5.SuspendLayout();
             this.ribbonPanel3.SuspendLayout();
             this.ribbonPanel4.SuspendLayout();
-            this.ribbonPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -133,9 +134,9 @@
             this.ribbonControl1.CaptionVisible = true;
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
             this.ribbonControl1.Controls.Add(this.ribbonPanel5);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             this.ribbonControl1.Controls.Add(this.ribbonPanel2);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel4);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.office2007StartButton1,
@@ -156,6 +157,317 @@
             this.ribbonControl1.TabIndex = 0;
             this.ribbonControl1.Text = "ribbonControl1";
             this.ribbonControl1.Click += new System.EventHandler(this.ribbonControl1_Click);
+            // 
+            // ribbonPanel1
+            // 
+            this.ribbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel1.Controls.Add(this.ribbonBar1);
+            this.ribbonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel1.Location = new System.Drawing.Point(0, 53);
+            this.ribbonPanel1.Name = "ribbonPanel1";
+            this.ribbonPanel1.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel1.Size = new System.Drawing.Size(1027, 99);
+            // 
+            // 
+            // 
+            this.ribbonPanel1.Style.Class = "";
+            this.ribbonPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel1.StyleMouseDown.Class = "";
+            this.ribbonPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel1.StyleMouseOver.Class = "";
+            this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel1.TabIndex = 1;
+            // 
+            // ribbonBar1
+            // 
+            this.ribbonBar1.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.ribbonBar1.BackgroundMouseOverStyle.Class = "";
+            this.ribbonBar1.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar1.BackgroundStyle.Class = "";
+            this.ribbonBar1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar1.ContainerControlProcessDialogKey = true;
+            this.ribbonBar1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ribbonBar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ribbonBar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem8,
+            this.buttonItem9,
+            this.buttonItem10});
+            this.ribbonBar1.Location = new System.Drawing.Point(3, 0);
+            this.ribbonBar1.Name = "ribbonBar1";
+            this.ribbonBar1.Size = new System.Drawing.Size(187, 96);
+            this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonBar1.TabIndex = 0;
+            this.ribbonBar1.Text = "INFORMACION DEL SISTEMA";
+            // 
+            // 
+            // 
+            this.ribbonBar1.TitleStyle.Class = "";
+            this.ribbonBar1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar1.TitleStyleMouseOver.Class = "";
+            this.ribbonBar1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // buttonItem8
+            // 
+            this.buttonItem8.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem8.Image")));
+            this.buttonItem8.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem8.Name = "buttonItem8";
+            this.buttonItem8.SubItemsExpandWidth = 14;
+            this.buttonItem8.Text = "Ayuda";
+            // 
+            // buttonItem9
+            // 
+            this.buttonItem9.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem9.Image")));
+            this.buttonItem9.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem9.Name = "buttonItem9";
+            this.buttonItem9.SubItemsExpandWidth = 14;
+            this.buttonItem9.Text = "Info";
+            this.buttonItem9.Click += new System.EventHandler(this.buttonItem9_Click);
+            // 
+            // buttonItem10
+            // 
+            this.buttonItem10.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem10.Image")));
+            this.buttonItem10.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem10.Name = "buttonItem10";
+            this.buttonItem10.SubItemsExpandWidth = 14;
+            this.buttonItem10.Text = "Salir del Sistema";
+            this.buttonItem10.Click += new System.EventHandler(this.buttonItem10_Click);
+            // 
+            // ribbonPanel2
+            // 
+            this.ribbonPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel2.Controls.Add(this.procesos_gesgas);
+            this.ribbonPanel2.Controls.Add(this.procesos_gestickets);
+            this.ribbonPanel2.Controls.Add(this.procesos_gescombustible);
+            this.ribbonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel2.Location = new System.Drawing.Point(0, 53);
+            this.ribbonPanel2.Name = "ribbonPanel2";
+            this.ribbonPanel2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel2.Size = new System.Drawing.Size(1027, 99);
+            // 
+            // 
+            // 
+            this.ribbonPanel2.Style.Class = "";
+            this.ribbonPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel2.StyleMouseDown.Class = "";
+            this.ribbonPanel2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel2.StyleMouseOver.Class = "";
+            this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel2.TabIndex = 2;
+            this.ribbonPanel2.Visible = false;
+            // 
+            // procesos_gesgas
+            // 
+            this.procesos_gesgas.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.procesos_gesgas.BackgroundMouseOverStyle.Class = "";
+            this.procesos_gesgas.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.procesos_gesgas.BackgroundStyle.Class = "";
+            this.procesos_gesgas.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.procesos_gesgas.ContainerControlProcessDialogKey = true;
+            this.procesos_gesgas.Dock = System.Windows.Forms.DockStyle.Left;
+            this.procesos_gesgas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.procesos_gesgas.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem20});
+            this.procesos_gesgas.Location = new System.Drawing.Point(557, 0);
+            this.procesos_gesgas.Name = "procesos_gesgas";
+            this.procesos_gesgas.Size = new System.Drawing.Size(139, 96);
+            this.procesos_gesgas.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.procesos_gesgas.TabIndex = 2;
+            this.procesos_gesgas.Text = "GESTION DE GAS";
+            // 
+            // 
+            // 
+            this.procesos_gesgas.TitleStyle.Class = "";
+            this.procesos_gesgas.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.procesos_gesgas.TitleStyleMouseOver.Class = "";
+            this.procesos_gesgas.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // buttonItem20
+            // 
+            this.buttonItem20.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem20.Image")));
+            this.buttonItem20.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem20.Name = "buttonItem20";
+            this.buttonItem20.SubItemsExpandWidth = 14;
+            this.buttonItem20.Text = "Despacho Gas";
+            this.buttonItem20.Click += new System.EventHandler(this.buttonItem20_Click);
+            // 
+            // procesos_gestickets
+            // 
+            this.procesos_gestickets.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.procesos_gestickets.BackgroundMouseOverStyle.Class = "";
+            this.procesos_gestickets.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.procesos_gestickets.BackgroundStyle.Class = "";
+            this.procesos_gestickets.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.procesos_gestickets.ContainerControlProcessDialogKey = true;
+            this.procesos_gestickets.Dock = System.Windows.Forms.DockStyle.Left;
+            this.procesos_gestickets.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.procesos_gestickets.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnRegistroEntradaTicket,
+            this.buttonItem18,
+            this.buttonItem29});
+            this.procesos_gestickets.Location = new System.Drawing.Point(328, 0);
+            this.procesos_gestickets.Name = "procesos_gestickets";
+            this.procesos_gestickets.Size = new System.Drawing.Size(229, 96);
+            this.procesos_gestickets.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.procesos_gestickets.TabIndex = 1;
+            this.procesos_gestickets.Text = "GESTION DE TICKETS";
+            // 
+            // 
+            // 
+            this.procesos_gestickets.TitleStyle.Class = "";
+            this.procesos_gestickets.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.procesos_gestickets.TitleStyleMouseOver.Class = "";
+            this.procesos_gestickets.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // btnRegistroEntradaTicket
+            // 
+            this.btnRegistroEntradaTicket.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistroEntradaTicket.Image")));
+            this.btnRegistroEntradaTicket.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnRegistroEntradaTicket.Name = "btnRegistroEntradaTicket";
+            this.btnRegistroEntradaTicket.SubItemsExpandWidth = 14;
+            this.btnRegistroEntradaTicket.Text = "Registro Entrada";
+            this.btnRegistroEntradaTicket.Click += new System.EventHandler(this.buttonItem19_Click);
+            // 
+            // buttonItem18
+            // 
+            this.buttonItem18.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem18.Image")));
+            this.buttonItem18.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem18.Name = "buttonItem18";
+            this.buttonItem18.SubItemsExpandWidth = 14;
+            this.buttonItem18.Text = "Despacho Ticket";
+            this.buttonItem18.Click += new System.EventHandler(this.buttonItem18_Click);
+            // 
+            // buttonItem29
+            // 
+            this.buttonItem29.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem29.Image")));
+            this.buttonItem29.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem29.Name = "buttonItem29";
+            this.buttonItem29.SubItemsExpandWidth = 14;
+            this.buttonItem29.Text = "Despacho Ticket x Departamentos";
+            this.buttonItem29.Click += new System.EventHandler(this.buttonItem29_Click);
+            // 
+            // procesos_gescombustible
+            // 
+            this.procesos_gescombustible.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.procesos_gescombustible.BackgroundMouseOverStyle.Class = "";
+            this.procesos_gescombustible.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.procesos_gescombustible.BackgroundStyle.Class = "";
+            this.procesos_gescombustible.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.procesos_gescombustible.ContainerControlProcessDialogKey = true;
+            this.procesos_gescombustible.Dock = System.Windows.Forms.DockStyle.Left;
+            this.procesos_gescombustible.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.procesos_gescombustible.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnSolicitudCmb,
+            this.btnEntradaCmb,
+            this.buttonItem14,
+            this.btnDespachoEmbarcacion,
+            this.buttonItem11});
+            this.procesos_gescombustible.Location = new System.Drawing.Point(3, 0);
+            this.procesos_gescombustible.Name = "procesos_gescombustible";
+            this.procesos_gescombustible.Size = new System.Drawing.Size(325, 96);
+            this.procesos_gescombustible.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.procesos_gescombustible.TabIndex = 0;
+            this.procesos_gescombustible.Text = "GESTION DE COMBUSTIBLE";
+            // 
+            // 
+            // 
+            this.procesos_gescombustible.TitleStyle.Class = "";
+            this.procesos_gescombustible.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.procesos_gescombustible.TitleStyleMouseOver.Class = "";
+            this.procesos_gescombustible.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // btnSolicitudCmb
+            // 
+            this.btnSolicitudCmb.Image = ((System.Drawing.Image)(resources.GetObject("btnSolicitudCmb.Image")));
+            this.btnSolicitudCmb.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnSolicitudCmb.Name = "btnSolicitudCmb";
+            this.btnSolicitudCmb.SubItemsExpandWidth = 14;
+            this.btnSolicitudCmb.Text = "Solicitud";
+            this.btnSolicitudCmb.Click += new System.EventHandler(this.buttonItem1_Click);
+            // 
+            // btnEntradaCmb
+            // 
+            this.btnEntradaCmb.Image = ((System.Drawing.Image)(resources.GetObject("btnEntradaCmb.Image")));
+            this.btnEntradaCmb.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnEntradaCmb.Name = "btnEntradaCmb";
+            this.btnEntradaCmb.SubItemsExpandWidth = 14;
+            this.btnEntradaCmb.Text = "Entrada";
+            this.btnEntradaCmb.Click += new System.EventHandler(this.buttonItem11_Click);
+            // 
+            // buttonItem14
+            // 
+            this.buttonItem14.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem14.Image")));
+            this.buttonItem14.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem14.Name = "buttonItem14";
+            this.buttonItem14.SubItemsExpandWidth = 14;
+            this.buttonItem14.Text = "Despacho Terrestre";
+            this.buttonItem14.Click += new System.EventHandler(this.buttonItem14_Click);
+            // 
+            // btnDespachoEmbarcacion
+            // 
+            this.btnDespachoEmbarcacion.Image = ((System.Drawing.Image)(resources.GetObject("btnDespachoEmbarcacion.Image")));
+            this.btnDespachoEmbarcacion.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnDespachoEmbarcacion.Name = "btnDespachoEmbarcacion";
+            this.btnDespachoEmbarcacion.SubItemsExpandWidth = 14;
+            this.btnDespachoEmbarcacion.Text = "Despacho Embarcacion";
+            this.btnDespachoEmbarcacion.Click += new System.EventHandler(this.btnDespachoEmbarcacion_Click);
+            // 
+            // buttonItem11
+            // 
+            this.buttonItem11.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem11.Image")));
+            this.buttonItem11.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem11.Name = "buttonItem11";
+            this.buttonItem11.SubItemsExpandWidth = 14;
+            this.buttonItem11.Text = "Despacho Estaciones";
+            this.buttonItem11.Visible = false;
+            this.buttonItem11.Click += new System.EventHandler(this.buttonItem11_Click_2);
             // 
             // ribbonPanel5
             // 
@@ -506,96 +818,8 @@
             this.buttonItem5.Name = "buttonItem5";
             this.buttonItem5.SubItemsExpandWidth = 14;
             this.buttonItem5.Text = "Estaciones Combustible";
+            this.buttonItem5.Visible = false;
             this.buttonItem5.Click += new System.EventHandler(this.buttonItem5_Click_1);
-            // 
-            // ribbonPanel1
-            // 
-            this.ribbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel1.Controls.Add(this.ribbonBar1);
-            this.ribbonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel1.Location = new System.Drawing.Point(0, 53);
-            this.ribbonPanel1.Name = "ribbonPanel1";
-            this.ribbonPanel1.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel1.Size = new System.Drawing.Size(1027, 99);
-            // 
-            // 
-            // 
-            this.ribbonPanel1.Style.Class = "";
-            this.ribbonPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel1.StyleMouseDown.Class = "";
-            this.ribbonPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel1.StyleMouseOver.Class = "";
-            this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel1.TabIndex = 1;
-            // 
-            // ribbonBar1
-            // 
-            this.ribbonBar1.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.ribbonBar1.BackgroundMouseOverStyle.Class = "";
-            this.ribbonBar1.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar1.BackgroundStyle.Class = "";
-            this.ribbonBar1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar1.ContainerControlProcessDialogKey = true;
-            this.ribbonBar1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.ribbonBar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ribbonBar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem8,
-            this.buttonItem9,
-            this.buttonItem10});
-            this.ribbonBar1.Location = new System.Drawing.Point(3, 0);
-            this.ribbonBar1.Name = "ribbonBar1";
-            this.ribbonBar1.Size = new System.Drawing.Size(187, 96);
-            this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonBar1.TabIndex = 0;
-            this.ribbonBar1.Text = "INFORMACION DEL SISTEMA";
-            // 
-            // 
-            // 
-            this.ribbonBar1.TitleStyle.Class = "";
-            this.ribbonBar1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonBar1.TitleStyleMouseOver.Class = "";
-            this.ribbonBar1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // buttonItem8
-            // 
-            this.buttonItem8.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem8.Image")));
-            this.buttonItem8.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem8.Name = "buttonItem8";
-            this.buttonItem8.SubItemsExpandWidth = 14;
-            this.buttonItem8.Text = "Ayuda";
-            // 
-            // buttonItem9
-            // 
-            this.buttonItem9.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem9.Image")));
-            this.buttonItem9.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem9.Name = "buttonItem9";
-            this.buttonItem9.SubItemsExpandWidth = 14;
-            this.buttonItem9.Text = "Info";
-            this.buttonItem9.Click += new System.EventHandler(this.buttonItem9_Click);
-            // 
-            // buttonItem10
-            // 
-            this.buttonItem10.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem10.Image")));
-            this.buttonItem10.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem10.Name = "buttonItem10";
-            this.buttonItem10.SubItemsExpandWidth = 14;
-            this.buttonItem10.Text = "Salir del Sistema";
-            this.buttonItem10.Click += new System.EventHandler(this.buttonItem10_Click);
             // 
             // ribbonPanel3
             // 
@@ -852,217 +1076,6 @@
             this.buttonItem47.Text = "Resumen Despacho Gas";
             this.buttonItem47.Click += new System.EventHandler(this.buttonItem47_Click);
             // 
-            // ribbonPanel2
-            // 
-            this.ribbonPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel2.Controls.Add(this.procesos_gesgas);
-            this.ribbonPanel2.Controls.Add(this.procesos_gestickets);
-            this.ribbonPanel2.Controls.Add(this.procesos_gescombustible);
-            this.ribbonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel2.Location = new System.Drawing.Point(0, 53);
-            this.ribbonPanel2.Name = "ribbonPanel2";
-            this.ribbonPanel2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel2.Size = new System.Drawing.Size(1027, 99);
-            // 
-            // 
-            // 
-            this.ribbonPanel2.Style.Class = "";
-            this.ribbonPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel2.StyleMouseDown.Class = "";
-            this.ribbonPanel2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel2.StyleMouseOver.Class = "";
-            this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel2.TabIndex = 2;
-            this.ribbonPanel2.Visible = false;
-            // 
-            // procesos_gesgas
-            // 
-            this.procesos_gesgas.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.procesos_gesgas.BackgroundMouseOverStyle.Class = "";
-            this.procesos_gesgas.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.procesos_gesgas.BackgroundStyle.Class = "";
-            this.procesos_gesgas.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.procesos_gesgas.ContainerControlProcessDialogKey = true;
-            this.procesos_gesgas.Dock = System.Windows.Forms.DockStyle.Left;
-            this.procesos_gesgas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.procesos_gesgas.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem20});
-            this.procesos_gesgas.Location = new System.Drawing.Point(508, 0);
-            this.procesos_gesgas.Name = "procesos_gesgas";
-            this.procesos_gesgas.Size = new System.Drawing.Size(139, 96);
-            this.procesos_gesgas.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.procesos_gesgas.TabIndex = 2;
-            this.procesos_gesgas.Text = "GESTION DE GAS";
-            // 
-            // 
-            // 
-            this.procesos_gesgas.TitleStyle.Class = "";
-            this.procesos_gesgas.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.procesos_gesgas.TitleStyleMouseOver.Class = "";
-            this.procesos_gesgas.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // buttonItem20
-            // 
-            this.buttonItem20.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem20.Image")));
-            this.buttonItem20.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem20.Name = "buttonItem20";
-            this.buttonItem20.SubItemsExpandWidth = 14;
-            this.buttonItem20.Text = "Despacho Gas";
-            this.buttonItem20.Click += new System.EventHandler(this.buttonItem20_Click);
-            // 
-            // procesos_gestickets
-            // 
-            this.procesos_gestickets.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.procesos_gestickets.BackgroundMouseOverStyle.Class = "";
-            this.procesos_gestickets.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.procesos_gestickets.BackgroundStyle.Class = "";
-            this.procesos_gestickets.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.procesos_gestickets.ContainerControlProcessDialogKey = true;
-            this.procesos_gestickets.Dock = System.Windows.Forms.DockStyle.Left;
-            this.procesos_gestickets.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.procesos_gestickets.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnRegistroEntradaTicket,
-            this.buttonItem18,
-            this.buttonItem29});
-            this.procesos_gestickets.Location = new System.Drawing.Point(279, 0);
-            this.procesos_gestickets.Name = "procesos_gestickets";
-            this.procesos_gestickets.Size = new System.Drawing.Size(229, 96);
-            this.procesos_gestickets.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.procesos_gestickets.TabIndex = 1;
-            this.procesos_gestickets.Text = "GESTION DE TICKETS";
-            // 
-            // 
-            // 
-            this.procesos_gestickets.TitleStyle.Class = "";
-            this.procesos_gestickets.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.procesos_gestickets.TitleStyleMouseOver.Class = "";
-            this.procesos_gestickets.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // btnRegistroEntradaTicket
-            // 
-            this.btnRegistroEntradaTicket.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistroEntradaTicket.Image")));
-            this.btnRegistroEntradaTicket.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnRegistroEntradaTicket.Name = "btnRegistroEntradaTicket";
-            this.btnRegistroEntradaTicket.SubItemsExpandWidth = 14;
-            this.btnRegistroEntradaTicket.Text = "Registro Entrada";
-            this.btnRegistroEntradaTicket.Click += new System.EventHandler(this.buttonItem19_Click);
-            // 
-            // buttonItem18
-            // 
-            this.buttonItem18.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem18.Image")));
-            this.buttonItem18.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem18.Name = "buttonItem18";
-            this.buttonItem18.SubItemsExpandWidth = 14;
-            this.buttonItem18.Text = "Despacho Ticket";
-            this.buttonItem18.Click += new System.EventHandler(this.buttonItem18_Click);
-            // 
-            // buttonItem29
-            // 
-            this.buttonItem29.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem29.Image")));
-            this.buttonItem29.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem29.Name = "buttonItem29";
-            this.buttonItem29.SubItemsExpandWidth = 14;
-            this.buttonItem29.Text = "Despacho Ticket x Departamentos";
-            this.buttonItem29.Click += new System.EventHandler(this.buttonItem29_Click);
-            // 
-            // procesos_gescombustible
-            // 
-            this.procesos_gescombustible.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.procesos_gescombustible.BackgroundMouseOverStyle.Class = "";
-            this.procesos_gescombustible.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.procesos_gescombustible.BackgroundStyle.Class = "";
-            this.procesos_gescombustible.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.procesos_gescombustible.ContainerControlProcessDialogKey = true;
-            this.procesos_gescombustible.Dock = System.Windows.Forms.DockStyle.Left;
-            this.procesos_gescombustible.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.procesos_gescombustible.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnSolicitudCmb,
-            this.btnEntradaCmb,
-            this.buttonItem14,
-            this.btnDespachoEmbarcacion});
-            this.procesos_gescombustible.Location = new System.Drawing.Point(3, 0);
-            this.procesos_gescombustible.Name = "procesos_gescombustible";
-            this.procesos_gescombustible.Size = new System.Drawing.Size(276, 96);
-            this.procesos_gescombustible.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.procesos_gescombustible.TabIndex = 0;
-            this.procesos_gescombustible.Text = "GESTION DE COMBUSTIBLE";
-            // 
-            // 
-            // 
-            this.procesos_gescombustible.TitleStyle.Class = "";
-            this.procesos_gescombustible.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.procesos_gescombustible.TitleStyleMouseOver.Class = "";
-            this.procesos_gescombustible.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // btnSolicitudCmb
-            // 
-            this.btnSolicitudCmb.Image = ((System.Drawing.Image)(resources.GetObject("btnSolicitudCmb.Image")));
-            this.btnSolicitudCmb.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnSolicitudCmb.Name = "btnSolicitudCmb";
-            this.btnSolicitudCmb.SubItemsExpandWidth = 14;
-            this.btnSolicitudCmb.Text = "Solicitud";
-            this.btnSolicitudCmb.Click += new System.EventHandler(this.buttonItem1_Click);
-            // 
-            // btnEntradaCmb
-            // 
-            this.btnEntradaCmb.Image = ((System.Drawing.Image)(resources.GetObject("btnEntradaCmb.Image")));
-            this.btnEntradaCmb.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnEntradaCmb.Name = "btnEntradaCmb";
-            this.btnEntradaCmb.SubItemsExpandWidth = 14;
-            this.btnEntradaCmb.Text = "Entrada";
-            this.btnEntradaCmb.Click += new System.EventHandler(this.buttonItem11_Click);
-            // 
-            // buttonItem14
-            // 
-            this.buttonItem14.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem14.Image")));
-            this.buttonItem14.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem14.Name = "buttonItem14";
-            this.buttonItem14.SubItemsExpandWidth = 14;
-            this.buttonItem14.Text = "Despacho Terrestre";
-            this.buttonItem14.Click += new System.EventHandler(this.buttonItem14_Click);
-            // 
-            // btnDespachoEmbarcacion
-            // 
-            this.btnDespachoEmbarcacion.Image = ((System.Drawing.Image)(resources.GetObject("btnDespachoEmbarcacion.Image")));
-            this.btnDespachoEmbarcacion.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnDespachoEmbarcacion.Name = "btnDespachoEmbarcacion";
-            this.btnDespachoEmbarcacion.SubItemsExpandWidth = 14;
-            this.btnDespachoEmbarcacion.Text = "Despacho Embarcacion";
-            this.btnDespachoEmbarcacion.Click += new System.EventHandler(this.btnDespachoEmbarcacion_Click);
-            // 
             // office2007StartButton1
             // 
             this.office2007StartButton1.AutoExpandOnClick = true;
@@ -1284,11 +1297,11 @@
             this.Load += new System.EventHandler(this.frmMenu_Load);
             this.ribbonControl1.ResumeLayout(false);
             this.ribbonControl1.PerformLayout();
-            this.ribbonPanel5.ResumeLayout(false);
             this.ribbonPanel1.ResumeLayout(false);
+            this.ribbonPanel2.ResumeLayout(false);
+            this.ribbonPanel5.ResumeLayout(false);
             this.ribbonPanel3.ResumeLayout(false);
             this.ribbonPanel4.ResumeLayout(false);
-            this.ribbonPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -1376,5 +1389,6 @@
         private DevComponents.DotNetBar.ButtonItem buttonItem46;
         private DevComponents.DotNetBar.ButtonItem buttonItem47;
         private DevComponents.DotNetBar.ButtonItem buttonItem5;
+        private DevComponents.DotNetBar.ButtonItem buttonItem11;
     }
 }

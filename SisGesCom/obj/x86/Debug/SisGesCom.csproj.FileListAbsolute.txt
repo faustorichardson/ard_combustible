@@ -70,3 +70,4 @@ C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\obj\x86\Debug\SisGesCom.frm
 C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\obj\x86\Debug\SisGesCom.frmSuplidor.resources
 C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\obj\x86\Debug\SisGesCom.frmPrintDespachoGasEst.resources
 C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\obj\x86\Debug\SisGesCom.frmEstacionCombustible.resources
+C:\Users\fausto\GitProjects\ardcombustible\SisGesCom\obj\x86\Debug\SisGesCom.frmDespachoEstaciones.resources
